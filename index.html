@@ -1,0 +1,2462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yixing - Clay &amp; Bamboo - Watch | Vision MD Outing 2026</title>
+  <style>
+    :root {
+      --xuan-paper: #f5f2eb;
+      --xuan-warm: #ece7dc;
+      --silk-card: #faf8f4;
+      --ink-deep: #1b1d1c;
+      --ink-medium: #4a4f4c;
+      --ink-light: #7c827d;
+      --celadon: #3b5749;
+      --celadon-mist: #dfe7e2;
+      --zisha-clay: #6e483b;
+      --cinnabar: #9b3528;
+      --gold-leaf: #b08d57;
+      --hairline: rgba(27, 29, 28, 0.14);
+      --hairline-strong: rgba(27, 29, 28, 0.32);
+      --serif: "Playfair Display", "Songti SC", "STSong", "Noto Serif SC", Georgia, "Times New Roman", serif;
+      --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--xuan-paper);
+      color: var(--ink-deep);
+      font-family: var(--sans);
+      line-height: 1.75;
+      overflow-x: hidden;
+      background-image:
+        radial-gradient(circle at 15% 10%, rgba(215, 224, 218, 0.45) 0%, transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(226, 216, 200, 0.5) 0%, transparent 50%);
+    }
+
+    /* ==========================================================
+       MUSEUM EXHIBITION ENTRANCE PAVILION (WELCOME COVER)
+       ========================================================== */
+    #entry-pavilion {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1000;
+      background: var(--xuan-paper);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    #entry-pavilion.hidden {
+      display: none !important;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .pavilion-frame {
+      max-width: 980px;
+      width: 100%;
+      background: var(--silk-card);
+      border: 1px solid var(--hairline-strong);
+      padding: 12px;
+      box-shadow: 0 30px 80px rgba(27, 29, 28, 0.08);
+    }
+
+    .pavilion-inner {
+      border: 1px solid var(--hairline);
+      padding: 48px 56px;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+    }
+
+    @media (max-width: 780px) {
+      .pavilion-inner {
+        grid-template-columns: 1fr;
+        padding: 36px 28px;
+        gap: 32px;
+      }
+    }
+
+    /* Moon Gate (月洞门) Vector Window */
+    .moon-gate-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .moon-gate {
+      width: 224px;
+      height: 224px;
+      border-radius: 50%;
+      border: 1px solid var(--hairline-strong);
+      padding: 8px;
+      position: relative;
+      background: linear-gradient(180deg, #e7ece8 0%, #f3efe6 100%);
+      box-shadow: inset 0 4px 20px rgba(59, 87, 73, 0.08);
+    }
+
+    .moon-gate svg {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      display: block;
+    }
+
+    /* Cinnabar Seal Stamp (印章) */
+    .cinnabar-seal {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: var(--cinnabar);
+      color: #f9f5f0;
+      font-family: var(--serif);
+      font-size: 0.72rem;
+      line-height: 1.15;
+      letter-spacing: 0.08em;
+      padding: 6px 5px;
+      border: 1px solid #7d2519;
+      border-radius: 2px;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+      user-select: none;
+    }
+
+    .exhibition-kicker {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+    }
+
+    .pavilion-title {
+      font-family: var(--serif);
+      font-size: 2.25rem;
+      font-weight: 400;
+      line-height: 1.18;
+      letter-spacing: 0.01em;
+      margin-bottom: 14px;
+      color: var(--ink-deep);
+      white-space: nowrap;
+    }
+
+    .pavilion-subtitle {
+      font-size: 0.95rem;
+      color: var(--ink-medium);
+      margin-bottom: 24px;
+      font-weight: 300;
+    }
+
+    .pavilion-highlights {
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+      padding: 16px 0;
+      margin-bottom: 28px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 24px;
+      font-size: 0.85rem;
+      color: var(--ink-medium);
+    }
+
+    .pavilion-highlights span {
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+    }
+
+    .pavilion-highlights span strong {
+      font-family: var(--serif);
+      color: var(--cinnabar);
+      font-weight: 400;
+      margin-right: 6px;
+    }
+
+    .btn-ink {
+      width: 100%;
+      padding: 14px 24px;
+      background: var(--celadon);
+      color: #f6f4ef;
+      border: 1px solid var(--celadon);
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.25s, border-color 0.25s;
+    }
+
+    .btn-ink:hover {
+      background: var(--ink-deep);
+      border-color: var(--ink-deep);
+    }
+
+    /* ==========================================================
+       TOP GALLERY NAVIGATION
+       ========================================================== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(245, 242, 235, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .gallery-topbar {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 18px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .museum-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-title {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      letter-spacing: 0.08em;
+      font-weight: 400;
+    }
+
+    .brand-sub {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      border-left: 1px solid var(--hairline-strong);
+      padding-left: 14px;
+    }
+
+    .visitor-pass-bar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-medium);
+    }
+
+    /* Horizontal Chapter Navigation (壹 贰 叁 肆 伍) */
+    .chapter-nav {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 32px;
+      border-top: 1px solid var(--hairline);
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .chapter-tab {
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      padding: 16px 28px 14px 0;
+      margin-right: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      color: var(--ink-light);
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .chapter-tab .cn-num {
+      font-family: var(--serif);
+      font-size: 0.95rem;
+      color: var(--cinnabar);
+      opacity: 0.65;
+    }
+
+    .chapter-tab .en-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .chapter-tab:hover,
+    .chapter-tab.active {
+      color: var(--ink-deep);
+    }
+
+    .chapter-tab.active {
+      border-bottom-color: var(--cinnabar);
+    }
+
+    .chapter-tab.active .cn-num {
+      opacity: 1;
+    }
+
+    /* ==========================================================
+       MAIN EXHIBITION HALL LAYOUT
+       ========================================================== */
+    main {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 56px 32px 96px;
+    }
+
+    .hall-panel {
+      display: none;
+      
+    }
+
+    .hall-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeGallery {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Editorial Hero Grid with Vertical Chinese Calligraphy Column */
+    .exhibition-hero {
+      display: grid;
+      grid-template-columns: 52px 1fr 1.18fr;
+      gap: 48px;
+      align-items: center;
+      padding-bottom: 56px;
+      border-bottom: 1px solid var(--hairline);
+      margin-bottom: 56px;
+    }
+
+    @media (max-width: 900px) {
+      .exhibition-hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .vertical-scroll-col {
+        display: none;
+      }
+    }
+
+    .vertical-scroll-col {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      white-space: nowrap;
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      letter-spacing: 0.26em;
+      color: var(--ink-medium);
+      border-left: 1px solid var(--hairline-strong);
+      padding-left: 16px;
+      height: auto;
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+
+    .hero-editorial .catalog-no {
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--cinnabar);
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .hero-editorial h1 {
+      font-family: var(--serif);
+      font-size: 2.75rem;
+      font-weight: 400;
+      line-height: 1.18;
+      margin-bottom: 20px;
+      color: var(--ink-deep);
+    }
+
+    .hero-editorial p.lead {
+      font-size: 1rem;
+      color: var(--ink-medium);
+      margin-bottom: 24px;
+      max-width: 560px;
+    }
+
+    .metadata-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 28px;
+      padding: 12px 0;
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+      font-size: 0.78rem;
+      color: var(--ink-medium);
+    }
+
+    .metadata-strip span strong {
+      color: var(--ink-deep);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      margin-right: 6px;
+    }
+
+    /* Museum Acoustic Guide Player */
+    .acoustic-player {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 20px;
+      background: var(--silk-card);
+      border: 1px solid var(--hairline-strong);
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+
+    .acoustic-player:hover {
+      border-color: var(--celadon);
+      background: #fff;
+    }
+
+    .play-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--celadon);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .player-meta {
+      text-align: left;
+    }
+
+    .player-meta .track-kicker {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+
+    .player-meta .track-title {
+      font-family: var(--serif);
+      font-size: 0.9rem;
+      color: var(--ink-deep);
+    }
+
+    /* Jiangnan Architectural Window Artwork Card */
+    .art-vitrine {
+      background: var(--silk-card);
+      border: 1px solid var(--hairline-strong);
+      padding: 28px;
+      position: relative;
+    }
+
+    .vitrine-canvas {
+      aspect-ratio: 4 / 3;
+      background: linear-gradient(180deg, #e5ebe7 0%, #efeae0 100%);
+      border: 1px solid var(--hairline);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .vitrine-caption {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.78rem;
+      color: var(--ink-light);
+      border-top: 1px solid var(--hairline);
+      padding-top: 12px;
+    }
+
+    .vitrine-caption strong {
+      font-family: var(--serif);
+      font-weight: 400;
+      color: var(--ink-deep);
+      font-size: 0.92rem;
+    }
+
+    /* ==========================================================
+       CURATED TIMELINE / ARTIFACT PLACARDS
+       ========================================================== */
+    .section-header-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .section-header-row h2 {
+      font-family: var(--serif);
+      font-size: 1.75rem;
+      font-weight: 400;
+    }
+
+    .section-header-row span {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+
+    .itinerary-scroll {
+      border-top: 1px solid var(--hairline-strong);
+    }
+
+    .itinerary-row {
+      display: grid;
+      grid-template-columns: 135px 105px 1fr auto;
+      align-items: center;
+      gap: 20px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--hairline);
+      transition: background 0.2s;
+    }
+
+    @media (max-width: 780px) {
+      .itinerary-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+    }
+
+    .itinerary-time {
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-medium);
+      font-weight: 500;
+    }
+
+    .itinerary-chapter {
+      font-family: var(--serif);
+      color: var(--cinnabar);
+      font-size: 0.84rem;
+    }
+
+    .itinerary-body h3 {
+      font-family: var(--serif);
+      font-size: 1.02rem;
+      font-weight: 400;
+      line-height: 1.45;
+      margin-bottom: 2px;
+    }
+
+    .itinerary-body p {
+      font-size: 0.84rem;
+      color: var(--ink-light);
+      max-width: 640px;
+      margin-top: 2px;
+    }
+
+    .curated-link {
+      background: none;
+      border: 1px solid var(--hairline-strong);
+      padding: 8px 16px;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-deep);
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .curated-link:hover {
+      background: var(--ink-deep);
+      color: var(--xuan-paper);
+    }
+
+    /* 3-Column Museum Placard Grid */
+    .placard-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    @media (max-width: 900px) {
+      .placard-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .placard {
+      background: var(--silk-card);
+      border: 1px solid var(--hairline);
+      padding: 32px 28px;
+      position: relative;
+      transition: border-color 0.25s;
+    }
+
+    .placard:hover {
+      border-color: var(--hairline-strong);
+    }
+
+    .placard-num {
+      font-family: var(--serif);
+      font-size: 0.78rem;
+      color: var(--cinnabar);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .placard h3 {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .placard p {
+      font-size: 0.9rem;
+      color: var(--ink-medium);
+    }
+
+    /* Museum Mineral Swatches (Five-Color Earth) */
+    .mineral-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 56px;
+    }
+
+    @media (max-width: 860px) {
+      .mineral-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .mineral-card {
+      background: var(--silk-card);
+      border: 1px solid var(--hairline-strong);
+      padding: 28px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .mineral-specimen {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      border: 1px solid var(--hairline-strong);
+      flex-shrink: 0;
+      box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Curated Footnote / Gallery Callout Box */
+    .museum-codex {
+      margin-top: 56px;
+      background: var(--silk-card);
+      border: 1px solid var(--hairline-strong);
+      padding: 40px;
+    }
+
+    .codex-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--hairline);
+    }
+
+    @media (max-width: 900px) {
+      .codex-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .codex-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .codex-item h4 {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 400;
+      margin-bottom: 6px;
+      color: var(--ink-deep);
+    }
+
+    .codex-item p {
+      font-size: 0.86rem;
+      color: var(--ink-medium);
+    }
+
+    /* ==========================================================
+       SECTION IV ILLUSTRATED INFOGRAPHIC & TABLE STYLES
+       ========================================================== */
+    .alchemy-duo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 56px;
+    }
+
+    @media (max-width: 920px) {
+      .alchemy-duo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .illustrated-plate {
+      background: var(--silk-card);
+      border: 1px solid var(--hairline-strong);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .plate-quote {
+      margin-top: 20px;
+      padding-top: 14px;
+      border-top: 1px solid var(--hairline);
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 0.92rem;
+      color: var(--zisha-clay);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .plate-quote .cn-motto {
+      font-style: normal;
+      color: var(--cinnabar);
+      letter-spacing: 0.12em;
+      font-size: 0.88rem;
+    }
+
+    /* 10-Step Flowchart Grid */
+    .flowchart-container {
+      background: var(--silk-card);
+      border: 1px solid var(--hairline-strong);
+      padding: 36px 32px;
+      margin-bottom: 56px;
+    }
+
+    .flowchart-steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 960px) {
+      .flowchart-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 540px) {
+      .flowchart-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .flow-node {
+      border: 1px solid var(--hairline);
+      background: var(--xuan-paper);
+      padding: 18px 16px;
+      position: relative;
+      text-align: center;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .flow-node:hover {
+      border-color: var(--zisha-clay);
+      transform: translateY(-2px);
+    }
+
+    .flow-step-badge {
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--cinnabar);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .flow-node svg {
+      width: 48px;
+      height: 48px;
+      margin: 4px auto 10px;
+      display: block;
+    }
+
+    .flow-node h4 {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--ink-deep);
+      margin-bottom: 4px;
+    }
+
+    .flow-node .cn-sub {
+      font-family: var(--serif);
+      font-size: 0.82rem;
+      color: var(--zisha-clay);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .flow-node p {
+      font-size: 0.78rem;
+      color: var(--ink-medium);
+      line-height: 1.45;
+    }
+
+    /* Clay Characteristics Comparison Table */
+    .museum-table-wrap {
+      background: var(--silk-card);
+      border: 1px solid var(--hairline-strong);
+      padding: 36px 32px;
+      margin-bottom: 56px;
+      overflow-x: auto;
+    }
+
+    .zisha-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      min-width: 680px;
+    }
+
+    .zisha-table th {
+      text-align: left;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: var(--ink-light);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--hairline-strong);
+      background: rgba(236, 231, 220, 0.45);
+    }
+
+    .zisha-table td {
+      padding: 18px 16px;
+      border-bottom: 1px solid var(--hairline);
+      color: var(--ink-deep);
+      vertical-align: middle;
+    }
+
+    .swatch-dot {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 8px;
+      border: 1px solid rgba(27, 29, 28, 0.3);
+    }
+
+    .table-note-pill {
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 0.74rem;
+      color: var(--cinnabar);
+      background: rgba(155, 53, 40, 0.08);
+      border: 1px solid rgba(155, 53, 40, 0.25);
+      padding: 2px 8px;
+    }
+
+    footer {
+      border-top: 1px solid var(--hairline);
+      padding: 36px 32px;
+      text-align: center;
+      font-size: 0.76rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+
+    /* Responsive Classes for Gastronomy & Monograph Banner */
+    .gastronomy-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .monograph-banner {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    /* ==========================================================
+       COMPREHENSIVE MOBILE / PHONE OPTIMIZATION (<= 768px)
+       ========================================================== */
+    @media (max-width: 768px) {
+      #entry-pavilion {
+        padding: 12px;
+        align-items: flex-start;
+        overflow-y: auto;
+      }
+
+      .pavilion-frame {
+        padding: 8px;
+        margin: auto 0;
+      }
+
+      .pavilion-inner {
+        grid-template-columns: 1fr;
+        padding: 36px 20px 24px;
+        gap: 20px;
+      }
+
+      .moon-gate {
+        width: 150px;
+        height: 150px;
+      }
+
+      .exhibition-kicker {
+        white-space: normal;
+        flex-wrap: wrap;
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+        gap: 6px;
+      }
+
+      .pavilion-title {
+        white-space: normal;
+        font-size: 1.65rem;
+        line-height: 1.25;
+      }
+
+      .pavilion-subtitle {
+        font-size: 0.88rem;
+        margin-bottom: 16px;
+        line-height: 1.6;
+      }
+
+      .pavilion-highlights {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 12px 0;
+        margin-bottom: 20px;
+        font-size: 0.84rem;
+      }
+
+      .pavilion-highlights span {
+        white-space: normal;
+      }
+
+      .gallery-topbar {
+        padding: 12px 16px;
+        gap: 8px;
+      }
+
+      .brand-title {
+        font-size: 0.96rem;
+      }
+
+      .brand-sub {
+        display: none;
+      }
+
+      .visitor-pass-bar {
+        gap: 8px;
+      }
+
+      .chapter-nav {
+        padding: 0 16px;
+      }
+
+      .chapter-tab {
+        padding: 12px 18px 10px 0;
+        margin-right: 6px;
+      }
+
+      .chapter-tab .en-label {
+        font-size: 0.74rem;
+        letter-spacing: 0.08em;
+      }
+
+      main {
+        padding: 24px 16px 64px;
+      }
+
+      .exhibition-hero {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding-bottom: 32px;
+        margin-bottom: 32px;
+      }
+
+      .vertical-scroll-col {
+        display: none;
+      }
+
+      .hero-editorial h1 {
+        font-size: 1.75rem;
+        line-height: 1.25;
+        margin-bottom: 14px;
+      }
+
+      .hero-editorial p.lead {
+        font-size: 0.92rem;
+        line-height: 1.65;
+        margin-bottom: 16px;
+      }
+
+      .metadata-strip {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 0;
+        margin-bottom: 16px;
+      }
+
+      .section-header-row {
+        margin-bottom: 20px;
+      }
+
+      .section-header-row h2 {
+        font-size: 1.38rem;
+      }
+
+      .itinerary-row {
+        grid-template-columns: auto 1fr;
+        gap: 6px 12px;
+        padding: 14px 0;
+      }
+
+      .itinerary-time {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--ink-deep);
+      }
+
+      .itinerary-chapter {
+        font-size: 0.8rem;
+        justify-self: start;
+      }
+
+      .itinerary-body {
+        grid-column: 1 / -1;
+      }
+
+      .itinerary-body h3 {
+        font-size: 0.96rem;
+      }
+
+      .itinerary-body p {
+        font-size: 0.82rem;
+      }
+
+      .itinerary-row .curated-link {
+        grid-column: 1 / -1;
+        justify-self: start;
+        margin-top: 4px;
+      }
+
+      .placard {
+        padding: 22px 18px;
+      }
+
+      .museum-codex {
+        padding: 24px 18px;
+        margin-top: 36px;
+      }
+
+      .gastronomy-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .monograph-banner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .illustrated-plate,
+      .flowchart-container,
+      .museum-table-wrap {
+        padding: 22px 16px;
+        margin-bottom: 36px;
+      }
+
+      .flowchart-steps {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .flow-node {
+        padding: 12px 10px;
+      }
+    }
+
+  </style>
+  <script>
+
+    window.closePavilion = function() {
+      var el = document.getElementById("entry-pavilion");
+      if (el) {
+        el.classList.add("hidden");
+        el.style.display = "none";
+      }
+    };
+    window.reopenPavilion = function() {
+      var el = document.getElementById("entry-pavilion");
+      if (el) {
+        el.classList.remove("hidden");
+        el.style.display = "flex";
+      }
+    };
+    window.openHall = function(hallId, tabEl) {
+      document.querySelectorAll(".hall-panel").forEach(function(p) { p.classList.remove("active"); });
+      document.querySelectorAll(".chapter-tab").forEach(function(t) { t.classList.remove("active"); });
+      var target = document.getElementById("hall-" + hallId);
+      if (target) target.classList.add("active");
+      if (tabEl) tabEl.classList.add("active");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+    window.jumpToHall = function(hallId, idx) {
+      var tabs = document.querySelectorAll(".chapter-tab");
+      window.openHall(hallId, tabs[idx]);
+    };
+  
+
+    function closePavilion() {
+      var el = document.getElementById("entry-pavilion");
+      if (el) {
+        el.classList.add("hidden");
+        el.style.display = "none";
+      }
+    }
+
+    function reopenPavilion() {
+      var el = document.getElementById("entry-pavilion");
+      if (el) {
+        el.classList.remove("hidden");
+        el.style.display = "flex";
+      }
+    }
+
+    function openHall(hallId, tabEl) {
+      document.querySelectorAll(".hall-panel").forEach(p => p.classList.remove("active"));
+      document.querySelectorAll(".chapter-tab").forEach(t => t.classList.remove("active"));
+      document.getElementById("hall-" + hallId).classList.add("active");
+      if (tabEl) tabEl.classList.add("active");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function jumpToHall(hallId, idx) {
+      const tabs = document.querySelectorAll(".chapter-tab");
+      openHall(hallId, tabs[idx]);
+    }
+
+    let currentLang = "en";
+
+    const ZH_PAIRS = [
+      // Cover & Topbar
+      ["JIANGNAN CULTURAL OUTING", "江南秋日雅集"],
+      ["Watch | Vision 2026 MD Outing", "Watch | Vision 2026 MD 团队秋游"],
+      ["Lake Taihu & Yangxian", "太湖之滨 · 古阳羡"],
+      ["Yixing: Clay, Mist & Bamboo", "宜兴：紫砂、烟岚与竹海"],
+      ["An autumn cultural journey into the heart of Jiangnan—tracing seven millennia of pottery heritage, the Ming-Qing bluestone lanes of Shushan, the hand-built craft of Zisha purple clay, and the emerald expanse of the Bamboo Sea.",
+       "一场深入江南腹地的秋日人文之旅——寻访七千年陶都文脉、漫步蜀山明清青石古巷、体验全手工紫砂制器技艺，并登临万顷碧波的宜兴竹海。"],
+      ["<strong>🗓️</strong> Curated Event Chronicle", "<strong>🗓️</strong> 活动行程总览"],
+      ["<strong>🍵</strong> Yangxian & Yixing City", "<strong>🍵</strong> 阳羡与宜兴风物"],
+      ["<strong>🏮</strong> Shushan & Gunan Street", "<strong>🏮</strong> 蜀山与古南街"],
+      ["<strong>🏺</strong> Zisha Clay Workshop", "<strong>🏺</strong> 紫砂手作工坊"],
+      ["<strong>🎋</strong> Zhuhai Bamboo Reserve", "<strong>🎋</strong> 宜兴竹海风景区"],
+      ["Enter the Exhibition →", "步入展厅 →"],
+      ["YIXING CULTURAL PAVILION", "宜兴人文艺术馆"],
+      ["Exhibition Cover", "返回封面"],
+
+      // Chapter Tabs
+      ["Event Chronicle", "活动行程"],
+      ["Yangxian & Yixing", "阳羡与宜兴"],
+      ["Shushan & Gunan Street", "蜀山古南街"],
+      ["Zisha Clay Studio", "紫砂手作工坊"],
+      ["Zhuhai Bamboo Sea", "竹海风景区"],
+
+      // Hall I: Event Chronicle
+      ["Exhibition Catalogue · Hall I", "行程导览 · 第一章"],
+      ["A Day in the Capital of Pottery & Bamboo", "陶都与竹海的一日文化之旅"],
+      ["Rooted in the literati aesthetics of Jiangnan, our outing traces the footsteps of Song Dynasty poet Su Dongpo—from the ancient waterfront kilns of Shushan and the tactile craft of purple clay to the mist-veiled peaks of the Bamboo Sea.",
+       "植根于江南文人美学，本次行程追随北宋文豪苏东坡的足迹——从蜀山古南街的千年窑火、紫砂泥片的指尖造物，一路走向云雾缭绕的华东第一竹海。"],
+      ["<strong>Destination</strong> Yixing, Jiangsu (宜兴)", "<strong>目的地</strong> 江苏宜兴（古称阳羡）"],
+      ["<strong>Region</strong> West Shore of Lake Taihu", "<strong>地理区域</strong> 太湖西岸 · 苏浙皖三省交界"],
+      ["<strong>Keepsake</strong> Hand-Built Zisha Vessel", "<strong>专属手作</strong> 个人定制紫砂杯（烧制后寄回）"],
+      ["Outing Schedule & Itinerary", "活动日程安排"],
+      ["07:30 – 17:30 · Full-Day Schedule", "07:30 – 17:30 · 全天行程时间表"],
+      ["📍 Suzhou", "📍 集合"],
+      ["Gather at designated meeting point in Suzhou", "在苏州指定集合点集合"],
+      ["🚌 Departure", "🚌 出发"],
+      ["Depart promptly for Dingshu Town, Yixing (approx. 1h 30m drive)", "准时出发前往宜兴丁蜀镇（车程约1小时30分钟）"],
+      ["Explore Yixing →", "了解宜兴 →"],
+      ["🏮 Heritage", "🏮 古街"],
+      ["Visit Shushan Ancient South Street (45 min)", "游览蜀山古南街（45分钟）"],
+      ["Explore Shushan →", "了解古南街 →"],
+      ["🚌 Transfer", "🚌 乘车"],
+      ["Transfer by bus to the Pottery DIY Workshop (approx. 15 min drive)", "乘大巴前往紫砂手作工坊（车程约15分钟）"],
+      ["🏺 Craft", "🏺 手作"],
+      ["Pottery DIY Workshop: make purple clay (zisha) cups", "紫砂DIY手作体验：亲手制作紫砂杯"],
+      ["All participants start simultaneously, divided into 2 rooms", "全员同时开始制作，分两个教室进行"],
+      ["Zisha Workshop →", "了解紫砂工坊 →"],
+      ["Transfer by bus to lunch restaurant", "乘大巴前往午餐餐厅"],
+      ["🥢 Dining", "🥢 午餐"],
+      ["Group lunch in Dingshu Town", "丁蜀镇团队午餐"],
+      ["Cutlery provided; caters to both Chinese and Western palates; please notify dietary restrictions in advance", "提供刀叉餐具，兼顾中西饮食口味；如有饮食禁忌请提前告知"],
+      ["Culinary Notes →", "特色美食 →"],
+      ["Transfer by bus to Yixing Bamboo Sea (approx. 30 min drive)", "乘大巴前往宜兴竹海风景区（车程约30分钟）"],
+      ["🚡 Cable Car", "🚡 索道"],
+      ["Ticket check & park entry; take shuttle bus to cable car station; ride cable car up the mountain (8 pax/car)", "检票入园；换乘景区接驳车至索道站；乘缆车上山（8人/车厢）"],
+      ["Queuing expected for shuttle bus and cable car", "接驳车与索道可能需排队等候"],
+      ["🎋 Nature", "🎋 竹海"],
+      ["Tour Yixing Bamboo Sea (80 min, hike down the mountain)", "游览宜兴竹海（80分钟，徒步下山）"],
+      ["Forest trails are relatively narrow; proceed sequentially in groups", "山林步道较窄，请以小组为单位依次有序前行"],
+      ["Explore Zhuhai →", "了解竹海 →"],
+      ["🚌 Shuttle", "🚌 接驳"],
+      ["Take shuttle bus to the park exit", "乘景区接驳车前往园区出口"],
+      ["🚌 Return", "🚌 返程"],
+      ["Assemble at the exit for headcount; depart on time back to Suzhou", "在景区出口集合清点人数；准时乘车返回苏州"],
+      ["🏁 Arrival", "🏁 抵达"],
+      ["Arrive in Suzhou; trip concludes", "抵达苏州，愉快结束行程"],
+      ["Visitor Preparation & Field Notes", "出行准备与温馨提示"],
+      ["Outing Advisory", "行前须知"],
+      ["👟 Footwear for Bluestone", "👟 舒适步行鞋履"],
+      ["Gunan Street is paved with historic Ming-Qing stone slabs and Zhuhai Reserve features mountain steps; comfortable walking shoes are recommended.",
+       "古南街为明清青石板路，竹海景区含山林步道，建议穿着轻便防滑的运动鞋或休闲鞋。"],
+      ["💍 Studio Etiquette", "💍 手作工坊提示"],
+      ["During the afternoon Zisha workshop, rings and bracelets may be removed while working with natural purple clay (which rinses clean with water).",
+       "下午体验紫砂拍打成型时，可暂时取下戒指与手链；天然紫砂泥极其细腻，清水一冲即净。"],
+      ["🧥 Mountain Microclimate", "🧥 竹海山林温差"],
+      ["Beneath the dense bamboo canopy and at the 611.5-meter summit of Yunu Peak, temperatures are 3–4°C cooler than the valley floor.",
+       "竹海林荫深处及海拔611.5米的玉女峰顶气温比市区低约3–4°C，建议备一件轻便外套。"],
+      ["📦 Kiln Firing & Delivery", "📦 窑烧与成品寄送"],
+      ["Completed Zisha mugs air-dry slowly for seven days before firing at 1180°C; finished pieces will be delivered after kiln cooling.",
+       "手作紫砂杯需在工坊自然阴干约七天，再经1180°C高温窑烧；出窑冷却后将统一寄回。"],
+
+      // Hall II: Yangxian & Yixing
+      ["Exhibition Catalogue · Hall II", "展厅导览 · 第二厅"],
+      ["Yangxian: The Literati Sanctuary of Jiangnan", "古阳羡：江南文人的山水栖居地"],
+      ['Situated at the geometric heart of the Shanghai–Nanjing–Hangzhou cultural triangle on the western bank of Lake Taihu, Yixing was known in antiquity as <em>Yangxian (陽羨)</em>. Geographers describe its topography as <strong>"Three Mountains, Two Waters, and Five Parts Fields."</strong>',
+       '宜兴地处沪宁杭几何中心、太湖西岸，古称<em>「阳羡」</em>。境内山环水抱，素有<strong>「三山二水五分田」</strong>的江南绝佳地貌。'],
+      ["<strong>Ancient Name</strong> Yangxian (陽羨 · 221 BCE)", "<strong>古称</strong> 阳羡（始建于公元前221年秦代）"],
+      ["<strong>Ceramic Heritage</strong> 7,000+ Years", "<strong>制陶历史</strong> 七千余年薪火相传"],
+      ["<strong>Forest Cover</strong> 18,000+ Hectares of Bamboo", "<strong>生态竹林</strong> 逾1.8万公顷翠竹覆盖"],
+      ["Six Cultural Pillars of Yixing", "宜兴六大人文底蕴"],
+      ["History · Craft · Ecology", "历史 · 匠心 · 生态"],
+      ["Artifact 01 · 陶都", "名片 01 · 中国陶都"],
+      ["Seven Millennia of Pottery", "七千年窑火不绝"],
+      ["Centered in Dingshu Town, Yixing’s ceramic kilns have burned continuously since the Neolithic era. In the Ming Dynasty, scholars discovered that unglazed <em>Zisha</em> clay preserved the pure essence of steeped tea, making Yixing ware the most prized teaware in East Asia and 17th-century Europe.",
+       "以丁蜀镇为中心，宜兴自新石器时代起便窑火不绝。明代文人发现不施釉的紫砂壶能完美留存茶汤真香，使宜兴紫砂成为享誉东亚并远销17世纪欧洲的茶器珍品。"],
+      ["Artifact 02 · 陽羨貢茶", "名片 02 · 阳羡贡茶"],
+      ["Tang Imperial Tribute Tea", "唐代皇室阳羡贡茶"],
+      ['Centuries before purple clay teapots, Yixing was famous for <strong>Yangxian Tea</strong>. Tang poet Lu Tong wrote: <em>"The Sovereign has not yet tasted Yangxian tea, yet ten thousand plants bloom."</em> Each spring, fast riders carried fresh Yixing tea leaves to the imperial court in Chang’an.',
+       '早在紫砂壶流行之前，宜兴便以<strong>阳羡茶</strong>名扬天下。唐代诗人卢仝曾赞咏：<em>「天子未尝阳羡茶，百草不敢先开花。」</em>每年春茶采摘后皆由驿骑疾驰送往长安宫廷。'],
+      ["Artifact 03 · 東坡終老", "名片 03 · 东坡买田"],
+      ["Su Dongpo’s Second Homeland", "苏东坡的第二故乡"],
+      ['Song Dynasty poet and statesman <strong>Su Shi (Su Dongpo)</strong> fell so deeply in love with Yixing’s streams and tea that he purchased land here, writing: <em>"Buying fields in Yangxian, I shall grow old here; from the beginning, it was only for the beauty of its溪山 (streams and hills)."</em>',
+       '北宋大文豪<strong>苏轼（苏东坡）</strong>深爱宜兴的山水与茶风，在此置田定居，并留下千古名句：<em>「买田阳羡吾将老，从初只为溪山好。」</em>'],
+      ["Artifact 04 · 洞天世界", "名片 04 · 洞天世界"],
+      ["The Karst Cave Sanctuaries", "八十余座喀斯特奇洞"],
+      ["Beneath Yixing’s lush hills lie more than 80 subterranean limestone caverns, led by <strong>Shanjuan Cave (善卷洞)</strong>—celebrated as the historical setting of China’s classic romance <em>The Butterfly Lovers (Liang Shanbo & Zhu Yingtai)</em>.",
+       "宜兴群山之下分布着八十余座天然石灰岩溶洞，其中最为著名的<strong>善卷洞</strong>更是中国千古爱情传说<em>《梁山伯与祝英台》</em>的发源地。"],
+      ["Artifact 05 · 竹的海洋", "名片 05 · 竹的海洋"],
+      ["The Ecological Bamboo Sea", "浩瀚苍翠的竹海生态"],
+      ["Over 18,000 hectares of Moso bamboo blanket Yixing’s southern mountains. Rainwater filtered through deep bamboo rhizomes emerges as sweet mineral springs—the primary headwaters feeding Lake Taihu.",
+       "宜兴南部山区绵延逾1.8万公顷毛竹林。山雨经深厚竹根层层过滤，化作甘冽山泉喷涌而出，汇聚成太湖第一源头活水。"],
+      ["Artifact 06 · 人文淵藪", "名片 06 · 院士与大师之乡"],
+      ["Cradle of Modern Masters", "书画巨匠与科学摇篮"],
+      ["This tranquil county town nurtured 20th-century painting masters <strong>Xu Beihong (徐悲鸿)</strong> and <strong>Wu Guanzhong (吴冠中)</strong>, Zisha grandmaster <strong>Gu Jingzhou</strong>, and more than thirty Academicians of Science and Engineering.",
+       "这座温润的江南小城孕育了近现代书画巨匠<strong>徐悲鸿</strong>、<strong>吴冠中</strong>，紫砂泰斗<strong>顾景舟</strong>，以及三十余位两院院士。"],
+      ["Seasonal Gastronomy of Yangxian", "阳羡时令风物志"],
+      ["Three Culinary Traditions", "三大必尝地道风味"],
+      ["Wumi Black Rice (乌米饭)", "南烛乌米饭"],
+      ["Glutinous rice steeped in the wild leaf extract of <em>Vaccinium bracteatum</em> (Nanzhu tree), steaming into a lustrous ink-black grain served with osmanthus honey.",
+       "采摘山野南烛树叶捣汁浸染太湖糯米，蒸熟后乌黑油亮、清香扑鼻，佐以桂花白糖食用最为地道。"],
+      ["Mountain Bamboo Shoots (竹海鲜笋)", "竹海鲜笋（油焖笋 / 咸肉煨笋）"],
+      ["Harvested directly from the Zhuhai forest floor and slow-braised in soy or simmered with cured pork in clear mountain spring broth.",
+       "取自宜兴竹海深处的新鲜春冬山笋，脆嫩清甜，无论是重油慢焖还是与咸肉山泉同煨皆极其鲜美。"],
+      ["Yangxian Red & Snow Tea (阳羡茶)", "阳羡红茶与阳羡雪芽"],
+      ["Velvety local black tea (*Yangxian Hong*) with notes of dried longan and orchid, alongside crisp spring green tea.",
+       "兼具桂圆兰花香气的宜兴红茶（阳羡红）与清冽甘醇的阳羡雪芽绿茶，配以紫砂茗壶冲泡相得益彰。"],
+
+      // Hall III: Shushan & Gunan Street
+      ["Exhibition Catalogue · Hall III", "展厅导览 · 第三厅"],
+      ["Shushan & Gunan Street: The Living Quarter", "蜀山古南街：活态传承的紫砂古巷"],
+      ["Resting at the foot of Shushan Hill along the ancient <strong>Li River (蠡河)</strong> canal, this 500-meter bluestone lane is the historic birthplace of Zisha ware. More than eighty percent of China’s celebrated purple-clay masters lived, fired kilns, and traded teaware along these waterfront courtyards.",
+       "依偎于蜀山脚下、古老<strong>蠡河</strong>之畔，这条五百米长的明清青石板巷是宜兴紫砂真正的摇篮。历史上逾八成的紫砂名家巨匠皆曾在此临水而居、抟埴制壶。"],
+      ["<strong>Architecture</strong> Ming & Qing Waterfront", "<strong>建筑风貌</strong> 明清临水古街"],
+      ["<strong>Layout</strong> Shop in Front, Studio in Back", "<strong>空间格局</strong> 前店后坊 · 临河驳岸"],
+      ["<strong>Landmark</strong> 600-Year Qianshu Dragon Kiln", "<strong>文化地标</strong> 六百年明代前墅古龙窑"],
+      ["Six Landmarks of Gunan Street", "古南街六大漫步看点"],
+      ["Walking Exhibition Route", "古街人文导览"],
+      ["Site 01 · 東坡命名", "看点 01 · 东坡命名"],
+      ['Why It Is Called "Shushan" (蜀山)', "「蜀山」之名的由来"],
+      ['The hill beside the street originally stood isolated on the plain and was called <em>Dushan</em> ("Lonely Hill"). When Song poet Su Dongpo—a native of Shu (Sichuan)—settled here, its silhouette reminded him of home, and he renamed it <strong>Shushan ("Hill of Shu")</strong>.',
+       '古街旁的小山原名<em>「独山」</em>。北宋文豪苏东坡（四川眉山人，古称蜀地）定居于此时，感念此山风貌颇似故乡蜀地山川，遂将其改名为<strong>「蜀山」</strong>。'],
+      ["Site 02 · 前店後坊", "看点 02 · 前店后坊"],
+      ['"Shop in Front, Studio in Back"', "「前店后坊」的水乡格局"],
+      ["Sandwiched between Shushan Hill and the Li River, every townhouse follows a dual layout: wooden-shuttered showrooms face the bluestone street, while rear stone steps descend directly into the canal where cargo boats loaded fired pottery.",
+       "古南街夹于蜀山与蠡河之间，家家户户皆呈「前店后坊」格局：前门木排门临青石街展售紫砂，后门石阶直通蠡河水埠，便于陶器装船远航。"],
+      ["Site 03 · 顧景舟故居", "看点 03 · 大师旧居"],
+      ["Residence of Grandmaster Gu Jingzhou", "紫砂泰斗顾景舟故居"],
+      ['Visit the quiet courtyard where <strong>Gu Jingzhou (1915–1996)</strong>—revered as the modern "Sage of Zisha"—lived and refined minimalist geometric teapots. Today, single works from his hand command tens of millions at international auctions.',
+       '探访<strong>顾景舟（1915–1996）</strong>早年居住与制壶的静谧院落。作为近代「壶艺泰斗」，他将文人光素器推向巅峰，其代表作今日在拍场屡创数千万元纪录。'],
+      ["Site 04 · 前墅古龍窯", "看点 04 · 千年活窑"],
+      ["The 600-Year Ming Dragon Kiln", "六百年明代前墅古龙窑"],
+      ["First lit in the Ming Dynasty and still firing today, the <strong>Qianshu Dragon Kiln</strong> ascends the hillside for 43.4 meters. Potters feed pine branches into 42 pairs of side stoke-holes (*Linmu*) to reach 1180°C in a living wood-ash atmosphere.",
+       "创烧于明代、至今仍在柴烧的<strong>前墅古龙窑</strong>依山势蜿蜒而上，全长43.4米。窑工通过两侧42对「鳞眼洞」投以松枝，在1180°C烈焰中烧造传统紫砂与日用陶。"],
+      ["Site 05 · 蠡河古韻", "看点 05 · 蠡河古韵"],
+      ["The 2,400-Year Li River Canal", "两千四百年蠡河古运河"],
+      ['Excavated under the guidance of minister Fan Li during the Spring and Autumn Period, this artificial waterway served as the "Ceramic Silk Road," linking Shushan’s kilns directly to Lake Taihu and the Grand Canal.',
+       '相传为春秋时期范蠡率众开凿的人工运河，数百年来一直是宜兴紫砂通往太湖、京杭大运河乃至海外贸易的「水上陶瓷之路」。'],
+      ["Site 06 · 東坡書院", "看点 06 · 东坡书院"],
+      ["Dongpo Academy (东坡书院)", "蜀山东坡书院"],
+      ["At the eastern foot of Shushan stands the classical academy built on the site where Su Dongpo lectured local scholars and planted crabapple trees, preserving Ming-Qing halls and inscribed stone tablets.",
+       "坐落于蜀山东麓，为纪念苏东坡在此讲学、手植海棠而建，院内古木参天，留存有明清讲堂建筑与历代碑刻。"],
+
+      // Hall IV: Zisha Clay Studio
+      ["Exhibition Catalogue · Hall IV", "展厅导览 · 第四厅"],
+      ["The Zisha Studio: Hand-Built Purple Clay", "紫砂工坊：五色灵土与手工造物"],
+      ["Unlike porcelain spun on a potter’s wheel, authentic Yixing Zisha ware is <strong>never thrown</strong>. Because purple clay stone-ore is rich in quartz, mica, and hematite, artisans developed the intangible heritage technique of <strong>Slab-Beating (*Da Shentong* 打身筒)</strong>—pounding clay sheets with wooden paddles and joining vessels entirely by hand.",
+       "与景德镇瓷器的轮制拉坯截然不同，正宗宜兴紫砂<strong>从不拉坯</strong>。因紫砂原矿富含石英、云母与赤铁矿，匠人独创了国家级非遗<strong>「打身筒」与「镶身筒」</strong>技艺——以木搭子拍打泥片，全凭双手拍筑成型。"],
+      ["<strong>Microstructure</strong> Double-Pore Breathability", "<strong>微观结构</strong> 双气孔透气结构（泡茶不失原味）"],
+      ["<strong>Primary Tools</strong> Wooden Paddle & Buffalo Horn", "<strong>核心工具</strong> 木搭子（拍打）与牛角明针（修光）"],
+      ["<strong>Kiln Firing</strong> ~1180°C Oxidation", "<strong>窑烧温度</strong> ~1180°C 氧化焰烧成"],
+      ["Step-by-Step: Make Your Own Purple Clay Cup", "图文详解：亲手制作紫砂杯全步骤"],
+      ['"Five-Color Earth" (五色土): The Three Classic Ores', "「五色土」：黄龙山三大经典原矿泥料"],
+      ["Huanglongshan Mineral Specimens", "黄龙山原矿泥料标本"],
+      ["Specimen I · 紫泥", "标本一 · 紫泥"],
+      ["Zini (Purple-Brown Clay)", "紫泥（深紫褐温润之泥）"],
+      ["Mined from deep rock strata, Zini fires to a warm chestnut-aubergine hue. Its balanced plasticity makes it ideal for hand-building and exceptional for black tea, oolong, and coffee.",
+       "采自黄龙山深层岩矿，烧成后呈温润的栗紫褐色。泥性沉稳、可塑性极佳，最适冲泡普洱、红茶、乌龙及浓醇咖啡。"],
+      ["Specimen II · 朱泥", "标本二 · 朱泥 / 红泥"],
+      ["Zhuni (Vermilion Clay)", "朱泥（朱红清脆之泥）"],
+      ["High in natural iron oxide, Zhuni contracts tightly in the kiln to produce a luminous cinnabar-terracotta surface with a clear, bell-like resonance when tapped.",
+       "天然氧化铁含量极高，窑烧收缩率大，成品朱红明润、结晶度高，轻击之有铿锵金石之音，最能逼出高香茶韵。"],
+      ["Specimen III · 段泥 / 綠泥", "标本三 · 段泥 / 绿泥"],
+      ["Duanni & Lvni (Beige / Green Ore)", "段泥与绿泥（米黄共生矿）"],
+      ["A natural geological intergrowth of green and purple mudstone that fires to warm antique beige-gold with subtle quartz speckles—prized for showcasing calligraphic engravings.",
+       "本山绿泥与紫泥的天然共生矿料，烧成后呈古雅的米黄或素浅绿色，金砂隐现，尤为适合展现文人书画陶刻。"],
+      ["The Alchemy of Raw Ore Clay", "原矿泥料炼金术"],
+      ["Illustrated Study · 原礦泥料煉金術", "图谱研究 · 原矿泥料炼金术"],
+      ['The "Alchemy" of Raw Ore Clay', "原矿泥料的「炼金术」"],
+      ["Unlike river clay, Zisha begins as solid rock strata deep inside Huanglongshan. Through open-air weathering, dark cellar aging (<em>Chenfu</em>), and intensive kneading (<em>Lianni</em>), stone is transformed into supple, living clay.",
+       "紫砂并非普通河泥，而是深藏于黄龙山岩层中的坚硬矿石。唯有历经露天风化、粉碎过筛、暗窖恒湿<em>「陈腐」</em>与反复锤炼<em>「炼泥」</em>，方能化顽石为温润柔韧的熟泥。"],
+      ["1. Mine / Raw Ore", "1. 原矿开采"],
+      ["2. Cellar Aging", "2. 暗窖陈腐"],
+      ["Sealed Damp Storage", "恒湿封存熟成"],
+      ["3. Kneading Clay", "3. 锤炼熟泥"],
+      ["4. Lustrous Vessel", "4. 拍筑茗器"],
+      ['"The longer the aging time, the warmer and smoother the quality."', "「陈腐时间越久，泥料品质越温润如玉。」"],
+      ["Zisha Teapot & Vessel Making Process Flowchart", "紫砂制壶与手作工艺流程图"],
+      ["紫砂製壺工藝流程圖 · 10 Traditional Stages", "紫砂制壶工艺流程图 · 传统十大工序"],
+      ["Every authentic Yixing vessel passes through ten disciplined hand-building stages before entering the kiln:",
+       "每一件传统全手工紫砂器，在入窑浴火之前皆需经历十道严谨的手作工序："],
+      ["Step 01", "工序 01"],
+      ["Clay Preparation", "泥料准备"],
+      ["Selecting weathered raw ore & aged cellar mudstone.", "甄选风化原矿与陈腐熟泥。"],
+      ["Step 02", "工序 02"],
+      ["Kneading & Refining", "炼泥"],
+      ["Consolidating damp clay to remove air pockets & align grains.", "反复捶打揉练，排尽泥中空气。"],
+      ["Step 03", "工序 03"],
+      ["Beating the Slab", "打身"],
+      ["Pounding clay with a heavy wooden paddle into an even slab.", "用木搭子将泥块拍打成均匀泥片。"],
+      ["Step 04", "工序 04"],
+      ["Paddling the Body", "拍身 (围身筒)"],
+      ["Wrapping the clay strip into a hollow cylinder on the turntable.", "在木转盘上将泥条围成圆筒壶身。"],
+      ["Step 05", "工序 05"],
+      ["Refining the Form", "拍身定型"],
+      ["Gently paddling the cylinder walls to curve and burnish the body.", "轻拍筒身收口定型，牛角明针修光。"],
+      ["Step 06", "工序 06"],
+      ["Making the Spout", "制作壶流"],
+      ["Rolling and tapering a hollow clay cone for a smooth water pour.", "搓卷泥片制成出水流畅的壶嘴。"],
+      ["Step 07", "工序 07"],
+      ["Spout & Handle", "制作壶流 / 把手"],
+      ["Sculpting an balanced handle & aligning it with the spout.", "捏塑壶把，讲究三点一线重心平衡。"],
+      ["Step 08", "工序 08"],
+      ["Vessel Assembly", "组装"],
+      ["Joining body, foot, handle, and spout with fine clay slip.", "以脂泥浆将壶身、流、把严密衔接。"],
+      ["Step 09", "工序 09"],
+      ["Natural Drying", "干燥"],
+      ["Slow shade-drying to evaporate moisture without cracking.", "室内缓慢自然阴干，防止开裂变形。"],
+      ["Step 10", "工序 10"],
+      ["Kiln Firing", "烧制"],
+      ["High-temperature sintering at 1160–1250°C to vitrify the ore.", "1160–1250°C高温窑烧，双气孔定型。"],
+      ['"Traditional handmade craftsmanship, constantly striving for perfection."', "「传统手作工艺，精益求精」"],
+      ["Comparison of Zisha Clay Characteristics", "紫砂泥料特性对比表"],
+      ["泥料特性對比表 · Technical Specifications", "泥料特性对比表 · 物理与茶道参数"],
+      ["How raw mineral color, kiln firing temperature, shrinkage rate, and pore density determine the ideal tea pairing:",
+       "不同原矿泥料的色泽、烧结温度与收缩率，决定了各自独特的透气性与适泡茶类："],
+      ["Clay Type (泥料)", "泥料名称"],
+      ["Raw Ore Color (原礦顏色)", "原矿颜色"],
+      ["Fired Color (成品顏色)", "烧成颜色"],
+      ["Firing Temp (燒結溫度)", "烧结温度"],
+      ["Shrinkage (收縮率)", "收缩率"],
+      ["Recommended Teas (適泡茶類)", "适泡茶类"],
+      ["Purple Clay (紫泥 Zi Ni)", "紫泥"],
+      ['<span class="swatch-dot" style="background: #4b342f;"></span>Dark Purplish-Brown (深紫褐)', '<span class="swatch-dot" style="background: #4b342f;"></span>深紫褐色'],
+      ['<span class="swatch-dot" style="background: #6e483b;"></span>Brownish-Red (棕紅褐)', '<span class="swatch-dot" style="background: #6e483b;"></span>棕红褐色'],
+      ["Pu’er, Dark Tea (普洱、黑茶) & Rich Coffee", "普洱、黑茶及醇厚咖啡"],
+      ["Red / Cinnabar Clay (紅泥 / 朱泥)", "红泥 / 朱泥"],
+      ["朱泥難做：收縮高 · High shrinkage makes Zhu Ni challenging to craft", "朱泥难做：收缩率极高，极考匠人功力"],
+      ['<span class="swatch-dot" style="background: #b85d38;"></span>Reddish-Orange Brown (紅橙褐)', '<span class="swatch-dot" style="background: #b85d38;"></span>红橙褐色'],
+      ['<span class="swatch-dot" style="background: #a83829;"></span>Vermilion / Reddish-Brown (朱紅/紅褐)', '<span class="swatch-dot" style="background: #a83829;"></span>朱红 / 红褐色'],
+      ["Oolong, Black Tea (烏龍、紅茶)", "高香乌龙茶、红茶"],
+      ["Green / Fortified Clay (綠泥 / 段泥)", "绿泥 / 段泥"],
+      ["米黃 / 段泥 · Beige & Golden Symbiosis Clay", "米黄 / 段泥 · 天然共生矿料"],
+      ['<span class="swatch-dot" style="background: #8fa08e;"></span>Pale Celadon-Grey (青灰/素淺綠)', '<span class="swatch-dot" style="background: #8fa08e;"></span>青灰 / 素浅绿'],
+      ['<span class="swatch-dot" style="background: #cdb083;"></span>Warm Beige / Antique Gold (米黃/段泥)', '<span class="swatch-dot" style="background: #cdb083;"></span>米黄 / 古金黄'],
+      ["Green Tea, White Tea & Light Oolong (綠茶、白茶)", "绿茶、白茶、轻焙火乌龙"],
+      ["Interactive Visual Monograph · 紫砂手作圖譜", "交互式图文专集 · 紫砂手作图谱"],
+      ["Step-by-Step Guide: Making Your Own Purple Clay Cup", "紫砂手作图谱：一步步教你做专属紫砂杯"],
+      ["Explore the complete visual walkthrough of every tool, hand gesture, and stage of crafting your custom Zisha cup from raw mineral slab to finished vessel.",
+       "点击查看完整图文与视频分解教学，了解从拍打泥片、围筑杯身、捏塑杯把到镌刻落款的每一个细节。"],
+      ["View Step-by-Step Purple Clay Cup Guide →", "打开紫砂杯制作步骤图谱 →"],
+
+      // Hall V: Zhuhai Bamboo Sea
+      ["Exhibition Catalogue · Hall V", "展厅导览 · 第五厅"],
+      ["Zhuhai Reserve: The Sea of Bamboo", "宜兴竹海：华东第一竹海"],
+      ['Acclaimed as the <strong>"First Bamboo Sea of East China" (华东第一竹海)</strong>, this ecological sanctuary spans more than 10,000 hectares across the mountain border where <strong>Jiangsu, Zhejiang, and Anhui</strong> meet—forming an unbroken ocean of swaying Moso bamboo and mirror-like spring lakes.',
+       '被誉为<strong>「华东第一竹海」</strong>，这片国家级生态胜境横跨<strong>苏、浙、皖三省</strong>交界群山，绵延逾万公顷翠竹，微风吹拂下碧波万顷，山泉澄澈如镜。'],
+      ["<strong>Summit</strong> Yunu Peak · 611.5m (Roof of Sunan)", "<strong>最高峰</strong> 玉女峰 · 海拔611.5米（苏南第一峰）"],
+      ["<strong>Hydrology</strong> First Source of Lake Taihu", "<strong>水系源头</strong> 太湖第一源"],
+      ["<strong>Air Quality</strong> 10× Negative Oxygen Ions", "<strong>森林氧吧</strong> 负氧离子含量超城区十倍"],
+      ["Six Scenic Wonders of the Reserve", "竹海六大核心景致"],
+      ["Natural Landmarks", "山林胜迹"],
+      ["Landmark 01 · 鏡湖攬勝", "胜景 01 · 镜湖揽胜"],
+      ["Mirror Lake & Ancient Jellyfish", "镜湖秀色与桃花水母"],
+      ["Cradled between two emerald ridges, Mirror Lake is fed by bamboo-filtered spring water so pure that it sustains translucent <strong>Peach Blossom Jellyfish (<em>Craspedacusta</em> 桃花水母)</strong>—a living fossil lineage dating back 500 million years.",
+       "镶嵌于两道翠竹山谷之间，镜湖汇聚竹根过滤的纯净山泉，水质清冽见底，更栖息着距今五亿年的珍稀「活化石」——<strong>桃花水母</strong>。"],
+      ["Landmark 02 · 玉女峰巔", "胜景 02 · 玉女峰巅"],
+      ["Yunu Peak (611.5m · Roof of Sunan)", "玉女峰（海拔611.5米 · 苏南第一峰）"],
+      ["The highest summit in southern Jiangsu. From <strong>Lingyun Pavilion (凌云阁)</strong> at the crest, visitors gaze across rolling waves of bamboo spanning three provinces simultaneously: Jiangsu, Zhejiang, and Anhui.",
+       "苏南地区最高峰。登临峰顶<strong>凌云阁</strong>极目远眺，脚下浩瀚竹海横跨江苏、浙江、安徽三省，一峰览三省，气象万千。"],
+      ["Landmark 03 · 寂照禪寺", "胜景 03 · 寂照禅寺"],
+      ["Jizhao Zen Temple & Ancient Ginkgo", "寂照禅寺与千年古银杏"],
+      ["Pause at the centuries-old <strong>Jizhao Zen Temple (寂照禅寺)</strong> tucked quietly amid golden autumn ginkgo trees and deep bamboo groves, or cross the wooden suspension bridge over Mirror Lake.",
+       "隐匿于万竹深处的百年古刹<strong>寂照禅寺</strong>，秋日金黄银杏与明黄院墙相映成趣，禅意幽深；亦可漫步镜湖水上索桥饱览山色。"],
+      ["Landmark 04 · 翡翠長廊", "胜景 04 · 翡翠长廊"],
+      ["The Emerald Bamboo Corridor", "翡翠长廊竹荫步道"],
+      ["A winding stone-paved avenue completely vaulted over by towering Moso bamboo culms. Sunlight filters through the canopy in shifting jade-green ripples.",
+       "修竹夹道、枝叶交错拱成天然的翠绿穹顶。漫步青石阶上，阳光透过竹叶洒下斑驳碎金，清风习习。"],
+      ["Landmark 05 · 太湖第一源", "胜景 05 · 太湖第一源"],
+      ["First Source of Lake Taihu", "太湖第一源山泉溪流"],
+      ["Deep within the valley, rainwater purified by tens of thousands of acres of bamboo roots wells up from rock fissures to form a crystal-clear mountain stream—the very first headwater of Lake Taihu.",
+       "深谷之中，经数万亩竹根净化的山雨自岩隙涌出，汇成清澈甘冽的「海底」溪流，这里便是万里太湖的第一源头。"],
+      ["Landmark 06 · 竹海索道", "胜景 06 · 竹海索道"],
+      ["The Canopy Gondola", "竹海凌空索道"],
+      ['Stretching 1,500 meters from the valley floor to Yunu Peak, the aerial cableway glides directly above the treetops, offering panoramic views of the wind-swept "bamboo waves" (*Zhuhai*).',
+       "全长1500米的空中索道自山谷直达玉女峰顶，乘缆车凌空掠过竹梢，可俯瞰群山间随风起伏的壮阔「竹海碧波」。"],
+      ["YIXING CULTURAL PAVILION · 陽羨雅集 · JIANGNAN AUTUMN EXHIBITION", "宜兴人文艺术馆 · 阳羡雅集 · 江南秋日特展"]
+    ];
+
+    function normStr(s) {
+      return s.replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
+    }
+
+    const EN_TO_ZH_MAP = new Map();
+    for (const [en, zh] of ZH_PAIRS) {
+      EN_TO_ZH_MAP.set(normStr(en), zh);
+    }
+
+    function toggleLanguage() {
+      currentLang = currentLang === "en" ? "zh" : "en";
+      const selector = "h1, h2, h3, h4, p, span, a, button, th, td, strong, text, .itinerary-time, .itinerary-chapter";
+      document.querySelectorAll(selector).forEach(el => {
+        if (el.classList.contains("lang-toggle-btn")) {
+          el.textContent = currentLang === "en" ? "中文 / EN" : "EN / 中文";
+          return;
+        }
+        if (el.dataset.origEn === undefined) {
+          const normalized = normStr(el.innerHTML);
+          if (EN_TO_ZH_MAP.has(normalized)) {
+            el.dataset.origEn = el.innerHTML;
+            el.dataset.zhHtml = EN_TO_ZH_MAP.get(normalized);
+          }
+        }
+        if (el.dataset.origEn !== undefined) {
+          el.innerHTML = currentLang === "zh" ? el.dataset.zhHtml : el.dataset.origEn;
+        }
+      });
+    }
+
+  
+</script>
+</head>
+<body>
+
+  <!-- ==========================================================
+       1. MUSEUM ENTRY PAVILION (EXHIBITION COVER)
+       ========================================================== -->
+  <div id="entry-pavilion">
+    <div class="pavilion-frame">
+      <div class="pavilion-inner">
+        <button class="curated-link lang-toggle-btn" style="position: absolute; top: 18px; right: 20px; padding: 6px 14px; z-index: 10;" onclick="toggleLanguage()">中文 / EN</button>
+        <!-- Left: Jiangnan Moon Gate (月洞门) Ink-Wash Landscape -->
+        <div class="moon-gate-wrap">
+          <div class="moon-gate">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <!-- Distant Misty Taihu Mountains -->
+              <path d="M0,130 Q45,85 95,115 T200,105 L200,200 L0,200 Z" fill="#c7d3cc" opacity="0.6"/>
+              <path d="M0,150 Q70,115 130,138 T200,130 L200,200 L0,200 Z" fill="#8ea498" opacity="0.55"/>
+              <!-- Minimalist Zisha Teapot Silhouette in Foreground -->
+              <ellipse cx="105" cy="158" rx="28" ry="18" fill="#6e483b"/>
+              <path d="M77,156 Q62,148 58,155" stroke="#6e483b" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M132,152 Q148,148 140,164 Q134,166 131,162" stroke="#6e483b" stroke-width="3.5" fill="none"/>
+              <ellipse cx="105" cy="140" rx="14" ry="3" fill="#54352b"/>
+              <circle cx="105" cy="136" r="3" fill="#54352b"/>
+              <!-- Slender Bamboo Stalks -->
+              <line x1="42" y1="20" x2="42" y2="175" stroke="#3b5749" stroke-width="2"/>
+              <line x1="52" y1="35" x2="52" y2="180" stroke="#3b5749" stroke-width="1.3" opacity="0.75"/>
+              <path d="M42,55 Q25,48 18,56 Q30,60 42,55 Z" fill="#3b5749"/>
+              <path d="M42,85 Q60,78 68,86 Q54,90 42,85 Z" fill="#3b5749"/>
+            </svg>
+          </div>
+          <div style="margin-top: 18px; display: flex; align-items: center; gap: 10px;">
+            <span class="cinnabar-seal">陽羨<br>雅集</span>
+            <span style="font-family: var(--serif); font-size: 0.85rem; color: var(--ink-medium); letter-spacing: 0.12em;">
+              JIANGNAN CULTURAL OUTING
+            </span>
+          </div>
+        </div>
+
+        <!-- Right: Exhibition Introduction -->
+        <div>
+          <div class="exhibition-kicker">
+            <span>Watch | Vision 2026 MD Outing</span>
+            <span>·</span>
+            <span>Lake Taihu &amp; Yangxian</span>
+          </div>
+          <h1 class="pavilion-title">Yixing: Clay, Mist &amp; Bamboo</h1>
+          <p class="pavilion-subtitle">
+            An autumn cultural journey into the heart of Jiangnan—tracing seven millennia of pottery heritage, the Ming-Qing bluestone lanes of Shushan, the hand-built craft of Zisha purple clay, and the emerald expanse of the Bamboo Sea.
+          </p>
+
+          <div class="pavilion-highlights">
+            <span><strong>🗓️</strong> Curated Event Chronicle</span>
+            <span><strong>🍵</strong> Yangxian &amp; Yixing City</span>
+            <span><strong>🏮</strong> Shushan &amp; Gunan Street</span>
+            <span><strong>🏺</strong> Zisha Clay Workshop</span>
+            <span><strong>🎋</strong> Zhuhai Bamboo Reserve</span>
+          </div>
+
+          <button class="btn-ink" onclick="closePavilion()">Enter the Exhibition →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================
+       2. GALLERY HEADER & CHAPTER TABS
+       ========================================================== -->
+  <header>
+    <div class="gallery-topbar">
+      <div class="museum-brand">
+        <span class="cinnabar-seal" style="font-size: 0.62rem; padding: 4px;">宜興</span>
+        <span class="brand-title">YIXING CULTURAL PAVILION</span>
+        <span class="brand-sub">Watch | Vision 2026 MD Outing</span>
+      </div>
+      <div class="visitor-pass-bar">
+        <button class="curated-link" style="padding: 5px 12px;" onclick="reopenPavilion()" id="cover-btn">Exhibition Cover</button>
+        <button class="curated-link lang-toggle-btn" style="padding: 5px 14px; background: var(--celadon); color: #f6f4ef; border-color: var(--celadon);" onclick="toggleLanguage()">中文 / EN</button>
+      </div>
+    </div>
+
+    <nav class="chapter-nav">
+      <button class="chapter-tab active" onclick="openHall('agenda', this)">
+        <span class="cn-num">🗓️</span>
+        <span class="en-label">Event Chronicle</span>
+      </button>
+      <button class="chapter-tab" onclick="openHall('yixing', this)">
+        <span class="cn-num">🍵</span>
+        <span class="en-label">Yangxian &amp; Yixing</span>
+      </button>
+      <button class="chapter-tab" onclick="openHall('shushan', this)">
+        <span class="cn-num">🏮</span>
+        <span class="en-label">Shushan &amp; Gunan Street</span>
+      </button>
+      <button class="chapter-tab" onclick="openHall('diy', this)">
+        <span class="cn-num">🏺</span>
+        <span class="en-label">Zisha Clay Studio</span>
+      </button>
+      <button class="chapter-tab" onclick="openHall('zhuhai', this)">
+        <span class="cn-num">🎋</span>
+        <span class="en-label">Zhuhai Bamboo Sea</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ==========================================================
+       3. EXHIBITION HALLS (MAIN CONTENT)
+       ========================================================== -->
+  <main>
+
+    <!-- =====================================================
+         HALL I: EVENT CHRONICLE & AGENDA
+         ===================================================== -->
+    <section id="hall-agenda" class="hall-panel active">
+      <div class="exhibition-hero">
+        <div class="vertical-scroll-col">
+          <span>溪山清遠 · 陽羨秋遊</span>
+        </div>
+
+        <div class="hero-editorial">
+          <span class="catalog-no">Exhibition Catalogue · Hall I</span>
+          <h1>A Day in the Capital of Pottery &amp; Bamboo</h1>
+          <p class="lead">
+            Rooted in the literati aesthetics of Jiangnan, our outing traces the footsteps of Song Dynasty poet Su Dongpo—from the ancient waterfront kilns of Shushan and the tactile craft of purple clay to the mist-veiled peaks of the Bamboo Sea.
+          </p>
+          <div class="metadata-strip">
+            <span><strong>Destination</strong> Yixing, Jiangsu (宜兴)</span>
+            <span><strong>Region</strong> West Shore of Lake Taihu</span>
+            <span><strong>Keepsake</strong> Hand-Built Zisha Vessel</span>
+          </div>
+        </div>
+
+        <div class="art-vitrine" style="padding: 16px;">
+          <img src="assets/yixing_photo_01.jpg" decoding="async" alt="Yixing Aerial View of Lingyun Pavilion and Mountains" style="width: 100%; height: 295px; object-fit: cover; object-position: center 42%; display: block; border: 1px solid var(--hairline); margin-bottom: 12px;" />
+          <img src="assets/yixing_photo_02.jpg" decoding="async" alt="Handcrafted Zisha Teapot" style="width: 100%; height: auto; display: block; border: 1px solid var(--hairline);" />
+        </div>
+      </div>
+
+      <!-- Curated Schedule -->
+      <div class="section-header-row">
+        <h2>Outing Schedule &amp; Itinerary</h2>
+        <span>07:30 – 17:30 · Full-Day Schedule</span>
+      </div>
+
+      <div class="itinerary-scroll">
+        <div class="itinerary-row">
+          <div class="itinerary-time">07:30</div>
+          <div class="itinerary-chapter">📍 Suzhou</div>
+          <div class="itinerary-body">
+            <h3>Gather at designated meeting point in Suzhou</h3>
+          </div>
+          <span></span>
+        </div>
+
+        <div class="itinerary-row">
+          <div class="itinerary-time">07:45 – 09:15</div>
+          <div class="itinerary-chapter">🚌 Departure</div>
+          <div class="itinerary-body">
+            <h3>Depart promptly for Dingshu Town, Yixing (approx. 1h 30m drive)</h3>
+          </div>
+          <button class="curated-link" onclick="jumpToHall('yixing', 1)">Explore Yixing →</button>
+        </div>
+
+        <div class="itinerary-row">
+          <div class="itinerary-time">09:15 – 10:00</div>
+          <div class="itinerary-chapter">🏮 Heritage</div>
+          <div class="itinerary-body">
+            <h3>Visit Shushan Ancient South Street (45 min)</h3>
+          </div>
+          <button class="curated-link" onclick="jumpToHall('shushan', 2)">Explore Shushan →</button>
+        </div>
+
+        <div class="itinerary-row">
+          <div class="itinerary-time">10:00 – 10:15</div>
+          <div class="itinerary-chapter">🚌 Transfer</div>
+          <div class="itinerary-body">
+            <h3>Transfer by bus to the Pottery DIY Workshop (approx. 15 min drive)</h3>
+          </div>
+          <span></span>
+        </div>
+
+        <div class="itinerary-row">
+          <div class="itinerary-time">10:15 – 11:45</div>
+          <div class="itinerary-chapter">🏺 Craft</div>
+          <div class="itinerary-body">
+            <h3>Pottery DIY Workshop: make purple clay (zisha) cups</h3>
+            <p>All participants start simultaneously, divided into 2 rooms</p>
+          </div>
+          <button class="curated-link" onclick="jumpToHall('diy', 3)">Zisha Workshop →</button>
+        </div>
+
+        <div class="itinerary-row">
+          <div class="itinerary-time">11:45 – 12:00</div>
+          <div class="itinerary-chapter">🚌 Transfer</div>
+          <div class="itinerary-body">
+            <h3>Transfer by bus to lunch restaurant</h3>
+          </div>
+          <span></span>
+        </div>
+
+        <div class="itinerary-row">
+          <div class="itinerary-time">12:00 – 13:00</div>
+          <div class="itinerary-chapter">🥢 Dining</div>
+          <div class="itinerary-body">
+            <h3>Group lunch in Dingshu Town</h3>
+            <p>Cutlery provided; caters to both Chinese and Western palates; please notify dietary restrictions in advance</p>
+          </div>
+          <button class="curated-link" onclick="jumpToHall('yixing', 1)">Culinary Notes →</button>
+        </div>
+
+        <div class="itinerary-row">
+          <div class="itinerary-time">13:00 – 13:30</div>
+          <div class="itinerary-chapter">🚌 Transfer</div>
+          <div class="itinerary-body">
+            <h3>Transfer by bus to Yixing Bamboo Sea (approx. 30 min drive)</h3>
+          </div>
+          <span></span>
+        </div>
+
+        <div class="itinerary-row">
+          <div class="itinerary-time">13:30 – 14:10</div>
+          <div class="itinerary-chapter">🚡 Cable Car</div>
+          <div class="itinerary-body">
+            <h3>Ticket check &amp; park entry; take shuttle bus to cable car station; ride cable car up the mountain (8 pax/car)</h3>
+            <p>Queuing expected for shuttle bus and cable car</p>
+          </div>
+          <span></span>
+        </div>
+
+        <div class="itinerary-row">
+          <div class="itinerary-time">14:10 – 15:30</div>
+          <div class="itinerary-chapter">🎋 Nature</div>
+          <div class="itinerary-body">
+            <h3>Tour Yixing Bamboo Sea (80 min, hike down the mountain)</h3>
+            <p>Forest trails are relatively narrow; proceed sequentially in groups</p>
+          </div>
+          <button class="curated-link" onclick="jumpToHall('zhuhai', 4)">Explore Zhuhai →</button>
+        </div>
+
+        <div class="itinerary-row">
+          <div class="itinerary-time">15:30 – 16:00</div>
+          <div class="itinerary-chapter">🚌 Shuttle</div>
+          <div class="itinerary-body">
+            <h3>Take shuttle bus to the park exit</h3>
+          </div>
+          <span></span>
+        </div>
+
+        <div class="itinerary-row">
+          <div class="itinerary-time">16:00</div>
+          <div class="itinerary-chapter">🚌 Return</div>
+          <div class="itinerary-body">
+            <h3>Assemble at the exit for headcount; depart on time back to Suzhou</h3>
+          </div>
+          <span></span>
+        </div>
+
+        <div class="itinerary-row">
+          <div class="itinerary-time">17:30</div>
+          <div class="itinerary-chapter">🏁 Arrival</div>
+          <div class="itinerary-body">
+            <h3>Arrive in Suzhou; trip concludes</h3>
+          </div>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- Practical Curatorial Notes -->
+      <div class="museum-codex">
+        <div class="section-header-row" style="margin-bottom: 0;">
+          <h2>Visitor Preparation &amp; Field Notes</h2>
+          <span>Outing Advisory</span>
+        </div>
+        <div class="codex-grid">
+          <div class="codex-item">
+            <h4>👟 Footwear for Bluestone</h4>
+            <p>Gunan Street is paved with historic Ming-Qing stone slabs and Zhuhai Reserve features mountain steps; comfortable walking shoes are recommended.</p>
+          </div>
+          <div class="codex-item">
+            <h4>💍 Studio Etiquette</h4>
+            <p>During the afternoon Zisha workshop, rings and bracelets may be removed while working with natural purple clay (which rinses clean with water).</p>
+          </div>
+          <div class="codex-item">
+            <h4>🧥 Mountain Microclimate</h4>
+            <p>Beneath the dense bamboo canopy and at the 611.5-meter summit of Yunu Peak, temperatures are 3–4°C cooler than the valley floor.</p>
+          </div>
+          <div class="codex-item">
+            <h4>📦 Kiln Firing &amp; Delivery</h4>
+            <p>Completed Zisha mugs air-dry slowly for seven days before firing at 1180°C; finished pieces will be delivered after kiln cooling.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         HALL II: YANGXIAN & YIXING CITY
+         ===================================================== -->
+    <section id="hall-yixing" class="hall-panel">
+      <div class="exhibition-hero">
+        <div class="vertical-scroll-col">
+          <span>買田陽羨吾將老</span>
+        </div>
+        <div class="hero-editorial">
+          <span class="catalog-no">Exhibition Catalogue · Hall II</span>
+          <h1>Yangxian: The Literati Sanctuary of Jiangnan</h1>
+          <p class="lead">
+            Situated at the geometric heart of the Shanghai–Nanjing–Hangzhou cultural triangle on the western bank of Lake Taihu, Yixing was known in antiquity as <em>Yangxian (陽羨)</em>. Geographers describe its topography as <strong>"Three Mountains, Two Waters, and Five Parts Fields."</strong>
+          </p>
+          <div class="metadata-strip">
+            <span><strong>Ancient Name</strong> Yangxian (陽羨 · 221 BCE)</span>
+            <span><strong>Ceramic Heritage</strong> 7,000+ Years</span>
+            <span><strong>Forest Cover</strong> 18,000+ Hectares of Bamboo</span>
+          </div>
+        </div>
+
+        <div class="art-vitrine" style="padding: 16px;">
+          <img src="assets/yixing_photo_03.jpg" decoding="async" alt="Yixing Emerald Waters and Bamboo Hills" style="width: 100%; max-height: 380px; object-fit: cover; object-position: center bottom; display: block; border: 1px solid var(--hairline);" />
+        </div>
+      </div>
+
+      <div class="section-header-row">
+        <h2>Six Cultural Pillars of Yixing</h2>
+        <span>History · Craft · Ecology</span>
+      </div>
+
+      <div class="placard-grid">
+        <div class="placard">
+          <span class="placard-num">Artifact 01 · 陶都</span>
+          <h3>Seven Millennia of Pottery</h3>
+          <p>Centered in Dingshu Town, Yixing’s ceramic kilns have burned continuously since the Neolithic era. In the Ming Dynasty, scholars discovered that unglazed <em>Zisha</em> clay preserved the pure essence of steeped tea, making Yixing ware the most prized teaware in East Asia and 17th-century Europe.</p>
+        </div>
+
+        <div class="placard">
+          <span class="placard-num">Artifact 02 · 陽羨貢茶</span>
+          <h3>Tang Imperial Tribute Tea</h3>
+          <p>Centuries before purple clay teapots, Yixing was famous for <strong>Yangxian Tea</strong>. Tang poet Lu Tong wrote: <em>"The Sovereign has not yet tasted Yangxian tea, yet ten thousand plants bloom."</em> Each spring, fast riders carried fresh Yixing tea leaves to the imperial court in Chang’an.</p>
+        </div>
+
+        <div class="placard">
+          <span class="placard-num">Artifact 03 · 東坡終老</span>
+          <h3>Su Dongpo’s Second Homeland</h3>
+          <p>Song Dynasty poet and statesman <strong>Su Shi (Su Dongpo)</strong> fell so deeply in love with Yixing’s streams and tea that he purchased land here, writing: <em>"Buying fields in Yangxian, I shall grow old here; from the beginning, it was only for the beauty of its溪山 (streams and hills)."</em></p>
+        </div>
+
+        <div class="placard">
+          <span class="placard-num">Artifact 04 · 洞天世界</span>
+          <h3>The Karst Cave Sanctuaries</h3>
+          <p>Beneath Yixing’s lush hills lie more than 80 subterranean limestone caverns, led by <strong>Shanjuan Cave (善卷洞)</strong>—celebrated as the historical setting of China’s classic romance <em>The Butterfly Lovers (Liang Shanbo &amp; Zhu Yingtai)</em>.</p>
+        </div>
+
+        <div class="placard">
+          <span class="placard-num">Artifact 05 · 竹的海洋</span>
+          <h3>The Ecological Bamboo Sea</h3>
+          <p>Over 18,000 hectares of Moso bamboo blanket Yixing’s southern mountains. Rainwater filtered through deep bamboo rhizomes emerges as sweet mineral springs—the primary headwaters feeding Lake Taihu.</p>
+        </div>
+
+        <div class="placard">
+          <span class="placard-num">Artifact 06 · 人文淵藪</span>
+          <h3>Cradle of Modern Masters</h3>
+          <p>This tranquil county town nurtured 20th-century painting masters <strong>Xu Beihong (徐悲鸿)</strong> and <strong>Wu Guanzhong (吴冠中)</strong>, Zisha grandmaster <strong>Gu Jingzhou</strong>, and more than thirty Academicians of Science and Engineering.</p>
+        </div>
+      </div>
+
+      <!-- Gastronomy Codex -->
+      <div class="museum-codex">
+        <div class="section-header-row" style="margin-bottom: 0;">
+          <h2>Seasonal Gastronomy of Yangxian</h2>
+          <span>Three Culinary Traditions</span>
+        </div>
+        <div class="codex-grid gastronomy-grid">
+          <div class="codex-item">
+            <div style="border: 1px solid var(--hairline-strong); padding: 8px; background: var(--xuan-paper); margin-bottom: 14px; overflow: hidden;">
+              <img src="assets/yixing_photo_04.jpg" decoding="async" alt="Wumi Black Rice" style="width: 100%; height: 220px; object-fit: cover; object-position: center 40%; display: block; transform: scale(1.08);" />
+            </div>
+            <h4>Wumi Black Rice (乌米饭)</h4>
+            <p>Glutinous rice steeped in the wild leaf extract of <em>Vaccinium bracteatum</em> (Nanzhu tree), steaming into a lustrous ink-black grain served with osmanthus honey.</p>
+          </div>
+          <div class="codex-item">
+            <div style="border: 1px solid var(--hairline-strong); padding: 8px; background: var(--xuan-paper); margin-bottom: 14px; overflow: hidden;">
+              <img src="assets/yixing_photo_05.jpg" decoding="async" alt="Mountain Bamboo Shoots" style="width: 100%; height: 220px; object-fit: cover; object-position: center 48%; display: block; transform: scale(1.08);" />
+            </div>
+            <h4>Mountain Bamboo Shoots (竹海鲜笋)</h4>
+            <p>Harvested directly from the Zhuhai forest floor and slow-braised in soy or simmered with cured pork in clear mountain spring broth.</p>
+          </div>
+          <div class="codex-item">
+            <div style="border: 1px solid var(--hairline-strong); padding: 8px; background: var(--xuan-paper); margin-bottom: 14px; overflow: hidden;">
+              <img src="assets/yixing_photo_06.jpg" decoding="async" alt="Yangxian Red and Snow Tea" style="width: 100%; height: 220px; object-fit: cover; object-position: center 52%; display: block;" />
+            </div>
+            <h4>Yangxian Red &amp; Snow Tea (阳羡茶)</h4>
+            <p>Velvety local black tea (*Yangxian Hong*) with notes of dried longan and orchid, alongside crisp spring green tea.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         HALL III: SHUSHAN & GUNAN STREET
+         ===================================================== -->
+    <section id="hall-shushan" class="hall-panel">
+      <div class="exhibition-hero">
+        <div class="vertical-scroll-col">
+          <span>蜀山古南 · 窯火千年</span>
+        </div>
+        <div class="hero-editorial">
+          <span class="catalog-no">Exhibition Catalogue · Hall III</span>
+          <h1>Shushan &amp; Gunan Street: The Living Quarter</h1>
+          <p class="lead">
+            Resting at the foot of Shushan Hill along the ancient <strong>Li River (蠡河)</strong> canal, this 500-meter bluestone lane is the historic birthplace of Zisha ware. More than eighty percent of China’s celebrated purple-clay masters lived, fired kilns, and traded teaware along these waterfront courtyards.
+          </p>
+          <div class="metadata-strip">
+            <span><strong>Architecture</strong> Ming &amp; Qing Waterfront</span>
+            <span><strong>Layout</strong> Shop in Front, Studio in Back</span>
+            <span><strong>Landmark</strong> 600-Year Qianshu Dragon Kiln</span>
+          </div>
+        </div>
+
+        <div class="art-vitrine" style="padding: 16px;">
+          <img src="assets/yixing_photo_07.jpg" decoding="async" alt="Shushan and Gunan Street along the Li River Canal" style="width: 100%; max-height: 380px; object-fit: cover; object-position: center; display: block; border: 1px solid var(--hairline);" />
+        </div>
+      </div>
+
+      <div class="section-header-row">
+        <h2>Six Landmarks of Gunan Street</h2>
+        <span>Walking Exhibition Route</span>
+      </div>
+
+      <div class="placard-grid">
+        <div class="placard">
+          <span class="placard-num">Site 01 · 東坡命名</span>
+          <h3>Why It Is Called "Shushan" (蜀山)</h3>
+          <p>The hill beside the street originally stood isolated on the plain and was called <em>Dushan</em> ("Lonely Hill"). When Song poet Su Dongpo—a native of Shu (Sichuan)—settled here, its silhouette reminded him of home, and he renamed it <strong>Shushan ("Hill of Shu")</strong>.</p>
+        </div>
+
+        <div class="placard">
+          <span class="placard-num">Site 02 · 前店後坊</span>
+          <h3>"Shop in Front, Studio in Back"</h3>
+          <p>Sandwiched between Shushan Hill and the Li River, every townhouse follows a dual layout: wooden-shuttered showrooms face the bluestone street, while rear stone steps descend directly into the canal where cargo boats loaded fired pottery.</p>
+        </div>
+
+        <div class="placard">
+          <span class="placard-num">Site 03 · 顧景舟故居</span>
+          <h3>Residence of Grandmaster Gu Jingzhou</h3>
+          <p>Visit the quiet courtyard where <strong>Gu Jingzhou (1915–1996)</strong>—revered as the modern "Sage of Zisha"—lived and refined minimalist geometric teapots. Today, single works from his hand command tens of millions at international auctions.</p>
+        </div>
+
+        <div class="placard">
+          <span class="placard-num">Site 04 · 前墅古龍窯</span>
+          <h3>The 600-Year Ming Dragon Kiln</h3>
+          <p>First lit in the Ming Dynasty and still firing today, the <strong>Qianshu Dragon Kiln</strong> ascends the hillside for 43.4 meters. Potters feed pine branches into 42 pairs of side stoke-holes (*Linmu*) to reach 1180°C in a living wood-ash atmosphere.</p>
+        </div>
+
+        <div class="placard">
+          <span class="placard-num">Site 05 · 蠡河古韻</span>
+          <h3>The 2,400-Year Li River Canal</h3>
+          <p>Excavated under the guidance of minister Fan Li during the Spring and Autumn Period, this artificial waterway served as the "Ceramic Silk Road," linking Shushan’s kilns directly to Lake Taihu and the Grand Canal.</p>
+        </div>
+
+        <div class="placard">
+          <span class="placard-num">Site 06 · 東坡書院</span>
+          <h3>Dongpo Academy (东坡书院)</h3>
+          <p>At the eastern foot of Shushan stands the classical academy built on the site where Su Dongpo lectured local scholars and planted crabapple trees, preserving Ming-Qing halls and inscribed stone tablets.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         HALL IV: ZISHA CLAY STUDIO (DIY MUG)
+         ===================================================== -->
+    <section id="hall-diy" class="hall-panel">
+      <div class="exhibition-hero">
+        <div class="vertical-scroll-col">
+          <span>五色靈土 · 手築成器</span>
+        </div>
+        <div class="hero-editorial">
+          <span class="catalog-no">Exhibition Catalogue · Hall IV</span>
+          <h1>The Zisha Studio: Hand-Built Purple Clay</h1>
+          <p class="lead">
+            Unlike porcelain spun on a potter’s wheel, authentic Yixing Zisha ware is <strong>never thrown</strong>. Because purple clay stone-ore is rich in quartz, mica, and hematite, artisans developed the intangible heritage technique of <strong>Slab-Beating (*Da Shentong* 打身筒)</strong>—pounding clay sheets with wooden paddles and joining vessels entirely by hand.
+          </p>
+          <div class="metadata-strip">
+            <span><strong>Microstructure</strong> Double-Pore Breathability</span>
+            <span><strong>Primary Tools</strong> Wooden Paddle &amp; Buffalo Horn</span>
+            <span><strong>Kiln Firing</strong> ~1180°C Oxidation</span>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center;">
+            <a href="purple-clay-cup-showcase.html" target="_blank" rel="noopener" class="btn-ink" style="width: auto; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px;">
+              <span>Step-by-Step: Make Your Own Purple Clay Cup</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="art-vitrine" style="padding: 16px;">
+          <img src="assets/yixing_photo_08.jpg" decoding="async" alt="Zisha Teapots" style="width: 100%; height: auto; display: block; border: 1px solid var(--hairline);" />
+        </div>
+      </div>
+
+      <!-- Mineral Specimens: Five-Color Earth -->
+      <div class="section-header-row">
+        <h2>"Five-Color Earth" (五色土): The Three Classic Ores</h2>
+        <span>Huanglongshan Mineral Specimens</span>
+      </div>
+
+      <div class="mineral-grid">
+        <div class="mineral-card">
+          <div class="mineral-specimen" style="background: #684337;"></div>
+          <div>
+            <span class="placard-num" style="margin-bottom: 4px;">Specimen I · 紫泥</span>
+            <h3 style="font-family: var(--serif); font-size: 1.18rem; font-weight: 400; margin-bottom: 6px;">Zini (Purple-Brown Clay)</h3>
+            <p style="font-size: 0.88rem; color: var(--ink-medium);">Mined from deep rock strata, Zini fires to a warm chestnut-aubergine hue. Its balanced plasticity makes it ideal for hand-building and exceptional for black tea, oolong, and coffee.</p>
+          </div>
+        </div>
+
+        <div class="mineral-card">
+          <div class="mineral-specimen" style="background: #a84232;"></div>
+          <div>
+            <span class="placard-num" style="margin-bottom: 4px;">Specimen II · 朱泥</span>
+            <h3 style="font-family: var(--serif); font-size: 1.18rem; font-weight: 400; margin-bottom: 6px;">Zhuni (Vermilion Clay)</h3>
+            <p style="font-size: 0.88rem; color: var(--ink-medium);">High in natural iron oxide, Zhuni contracts tightly in the kiln to produce a luminous cinnabar-terracotta surface with a clear, bell-like resonance when tapped.</p>
+          </div>
+        </div>
+
+        <div class="mineral-card">
+          <div class="mineral-specimen" style="background: #cdb083;"></div>
+          <div>
+            <span class="placard-num" style="margin-bottom: 4px;">Specimen III · 段泥 / 綠泥</span>
+            <h3 style="font-family: var(--serif); font-size: 1.18rem; font-weight: 400; margin-bottom: 6px;">Duanni &amp; Lvni (Beige / Green Ore)</h3>
+            <p style="font-size: 0.88rem; color: var(--ink-medium);">A natural geological intergrowth of green and purple mudstone that fires to warm antique beige-gold with subtle quartz speckles—prized for showcasing calligraphic engravings.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- =====================================================
+           THE ALCHEMY OF RAW ORE CLAY DIAGRAM
+           ===================================================== -->
+      <div class="section-header-row">
+        <h2>The Alchemy of Raw Ore Clay</h2>
+        <span>原礦泥料煉金術</span>
+      </div>
+
+      <div class="illustrated-plate" style="margin-bottom: 56px;">
+        <div>
+          <span class="placard-num">Illustrated Study · 原礦泥料煉金術</span>
+          <h3 style="font-family: var(--serif); font-size: 1.4rem; font-weight: 400; margin-bottom: 8px;">
+            The "Alchemy" of Raw Ore Clay
+          </h3>
+          <p style="font-size: 0.88rem; color: var(--ink-medium); margin-bottom: 20px;">
+            Unlike river clay, Zisha begins as solid rock strata deep inside Huanglongshan. Through open-air weathering, dark cellar aging (<em>Chenfu</em>), and intensive kneading (<em>Lianni</em>), stone is transformed into supple, living clay.
+          </p>
+
+          <!-- Custom SVG Illustration: Mine Ore -> Aging Cellar -> Kneading -> Brewing Teapot -->
+          <div style="background: linear-gradient(180deg, #eae6dc 0%, #f4f1ea 100%); border: 1px solid var(--hairline); padding: 20px 12px;">
+            <svg viewBox="0 0 520 145" width="100%" height="145" xmlns="http://www.w3.org/2000/svg">
+              <!-- Step 1: Raw Ore Stone (矿山/矿石) -->
+              <g transform="translate(15, 20)">
+                <polygon points="15,65 30,30 65,25 85,55 70,78 25,78" fill="#5c4942" stroke="#1b1d1c" stroke-width="1.2"/>
+                <polyline points="30,30 50,52 85,55" fill="none" stroke="#ece7dc" stroke-width="0.9"/>
+                <text x="50" y="98" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#1b1d1c">1. Mine / Raw Ore</text>
+                <text x="50" y="114" text-anchor="middle" font-family="serif" font-size="11" fill="#9b3528">礦山原礦石</text>
+              </g>
+
+              <!-- Arrow 1 -->
+              <path d="M112,68 L138,68" stroke="#7c827d" stroke-width="1.2"/>
+              <polygon points="138,65 144,68 138,71" fill="#7c827d"/>
+
+              <!-- Step 2: Aging / Weathering (陈腐) -->
+              <g transform="translate(145, 20)">
+                <ellipse cx="48" cy="36" rx="22" ry="6" fill="#6e483b" stroke="#1b1d1c" stroke-width="1.2"/>
+                <path d="M26,36 Q20,60 30,78 L66,78 Q76,60 70,36" fill="#7c5646" stroke="#1b1d1c" stroke-width="1.2"/>
+                <rect x="36" y="48" width="24" height="18" fill="#9b3528" opacity="0.85"/>
+                <text x="48" y="61" text-anchor="middle" font-family="serif" font-size="9" fill="#fff">陳腐</text>
+                <text x="48" y="98" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#1b1d1c">2. Cellar Aging</text>
+                <text x="48" y="114" text-anchor="middle" font-family="serif" font-size="10" fill="#4a4f4c">Sealed Damp Storage</text>
+              </g>
+
+              <!-- Arrow 2 -->
+              <path d="M242,68 L268,68" stroke="#7c827d" stroke-width="1.2"/>
+              <polygon points="268,65 274,68 268,71" fill="#7c827d"/>
+
+              <!-- Step 3: Kneading / Refining (炼泥) -->
+              <g transform="translate(275, 20)">
+                <rect x="20" y="40" width="56" height="34" rx="5" fill="#8b5a47" stroke="#1b1d1c" stroke-width="1.2"/>
+                <line x1="34" y1="40" x2="34" y2="74" stroke="#ece7dc" stroke-width="1"/>
+                <line x1="48" y1="40" x2="48" y2="74" stroke="#ece7dc" stroke-width="1"/>
+                <line x1="62" y1="40" x2="62" y2="74" stroke="#ece7dc" stroke-width="1"/>
+                <text x="48" y="98" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#1b1d1c">3. Kneading Clay</text>
+                <text x="48" y="114" text-anchor="middle" font-family="serif" font-size="11" fill="#9b3528">煉泥成條</text>
+              </g>
+
+              <!-- Arrow 3 -->
+              <path d="M372,68 L398,68" stroke="#7c827d" stroke-width="1.2"/>
+              <polygon points="398,65 404,68 398,71" fill="#7c827d"/>
+
+              <!-- Step 4: Brewing & Pouring Tea (泡茶温润) -->
+              <g transform="translate(405, 20)">
+                <ellipse cx="52" cy="58" rx="26" ry="17" fill="#6e483b" stroke="#1b1d1c" stroke-width="1.2"/>
+                <path d="M26,55 Q14,48 10,56" stroke="#6e483b" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                <path d="M78,52 Q92,50 84,65" stroke="#6e483b" stroke-width="3" fill="none"/>
+                <path d="M10,58 Q6,68 12,76" stroke="#3b5749" stroke-width="1.5" stroke-dasharray="2,2" fill="none"/>
+                <text x="52" y="98" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#1b1d1c">4. Lustrous Vessel</text>
+                <text x="52" y="114" text-anchor="middle" font-family="serif" font-size="11" fill="#3b5749">茗香溫潤</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="plate-quote">
+          <span>"The longer the aging time, the warmer and smoother the quality."</span>
+          <span class="cn-motto">「陳腐時間越久，品質越溫潤」</span>
+        </div>
+      </div>
+
+      <!-- =====================================================
+           NEW: 10-STAGE ZISHA TEAPOT & VESSEL MAKING FLOWCHART
+           ===================================================== -->
+      <div class="flowchart-container">
+        <div class="section-header-row" style="margin-bottom: 6px;">
+          <h2>Zisha Teapot &amp; Vessel Making Process Flowchart</h2>
+          <span>紫砂製壺工藝流程圖 · 10 Traditional Stages</span>
+        </div>
+        <p style="font-size: 0.9rem; color: var(--ink-medium);">
+          Every authentic Yixing vessel passes through ten disciplined hand-building stages before entering the kiln:
+        </p>
+
+        <div class="flowchart-steps">
+          <!-- Step 1 -->
+          <div class="flow-node">
+            <span class="flow-step-badge">Step 01</span>
+            <svg viewBox="0 0 48 48" fill="none">
+              <polygon points="10,34 18,16 34,14 40,28 32,38 14,38" fill="#dfd9ce" stroke="#1b1d1c" stroke-width="1.4"/>
+              <circle cx="25" cy="26" r="3" fill="#6e483b"/>
+            </svg>
+            <h4>Clay Preparation</h4>
+            <span class="cn-sub">泥料準備</span>
+            <p>Selecting weathered raw ore &amp; aged cellar mudstone.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flow-node">
+            <span class="flow-step-badge">Step 02</span>
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="10" y="18" width="28" height="16" rx="3" fill="#6e483b" stroke="#1b1d1c" stroke-width="1.4"/>
+              <line x1="19" y1="18" x2="19" y2="34" stroke="#faf8f4" stroke-width="1.2"/>
+              <line x1="29" y1="18" x2="29" y2="34" stroke="#faf8f4" stroke-width="1.2"/>
+            </svg>
+            <h4>Kneading &amp; Refining</h4>
+            <span class="cn-sub">煉泥</span>
+            <p>Consolidating damp clay to remove air pockets &amp; align grains.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flow-node">
+            <span class="flow-step-badge">Step 03</span>
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="8" y="32" width="32" height="5" fill="#6e483b"/>
+              <rect x="20" y="10" width="8" height="18" rx="1.5" fill="#ece7dc" stroke="#1b1d1c" stroke-width="1.4"/>
+            </svg>
+            <h4>Beating the Slab</h4>
+            <span class="cn-sub">打身</span>
+            <p>Pounding clay with a heavy wooden paddle into an even slab.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flow-node">
+            <span class="flow-step-badge">Step 04</span>
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="14" y="14" width="20" height="24" rx="2" fill="#7c5646" stroke="#1b1d1c" stroke-width="1.4"/>
+              <line x1="10" y1="38" x2="38" y2="38" stroke="#1b1d1c" stroke-width="1.5"/>
+            </svg>
+            <h4>Paddling the Body</h4>
+            <span class="cn-sub">拍身 (圍身筒)</span>
+            <p>Wrapping the clay strip into a hollow cylinder on the turntable.</p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="flow-node">
+            <span class="flow-step-badge">Step 05</span>
+            <svg viewBox="0 0 48 48" fill="none">
+              <ellipse cx="24" cy="26" rx="14" ry="11" fill="#6e483b" stroke="#1b1d1c" stroke-width="1.4"/>
+              <path d="M36,14 L42,20" stroke="#9b3528" stroke-width="1.6"/>
+            </svg>
+            <h4>Refining the Form</h4>
+            <span class="cn-sub">拍身定型</span>
+            <p>Gently paddling the cylinder walls to curve and burnish the body.</p>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="flow-node">
+            <span class="flow-step-badge">Step 06</span>
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M16,32 Q22,16 34,18 L32,26 Q24,25 22,34 Z" fill="#6e483b" stroke="#1b1d1c" stroke-width="1.4"/>
+            </svg>
+            <h4>Making the Spout</h4>
+            <span class="cn-sub">製作壺流</span>
+            <p>Rolling and tapering a hollow clay cone for a smooth water pour.</p>
+          </div>
+
+          <!-- Step 7 -->
+          <div class="flow-node">
+            <span class="flow-step-badge">Step 07</span>
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M18,14 Q34,14 34,26 Q34,38 18,38" stroke="#6e483b" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+            </svg>
+            <h4>Spout &amp; Handle</h4>
+            <span class="cn-sub">製作壺流 / 把手</span>
+            <p>Sculpting an balanced handle &amp; aligning it with the spout.</p>
+          </div>
+
+          <!-- Step 8 -->
+          <div class="flow-node">
+            <span class="flow-step-badge">Step 08</span>
+            <svg viewBox="0 0 48 48" fill="none">
+              <ellipse cx="24" cy="27" rx="12" ry="9" fill="#6e483b" stroke="#1b1d1c" stroke-width="1.3"/>
+              <path d="M12,26 Q6,22 5,26" stroke="#6e483b" stroke-width="2.5" fill="none"/>
+              <path d="M36,24 Q42,24 38,31" stroke="#6e483b" stroke-width="2.5" fill="none"/>
+            </svg>
+            <h4>Vessel Assembly</h4>
+            <span class="cn-sub">組裝</span>
+            <p>Joining body, foot, handle, and spout with fine clay slip.</p>
+          </div>
+
+          <!-- Step 9 -->
+          <div class="flow-node">
+            <span class="flow-step-badge">Step 09</span>
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M10,20 Q24,14 38,20" stroke="#3b5749" stroke-width="1.4" fill="none"/>
+              <path d="M12,28 Q24,22 36,28" stroke="#3b5749" stroke-width="1.4" fill="none"/>
+              <line x1="10" y1="36" x2="38" y2="36" stroke="#1b1d1c" stroke-width="1.2"/>
+            </svg>
+            <h4>Natural Drying</h4>
+            <span class="cn-sub">乾燥</span>
+            <p>Slow shade-drying to evaporate moisture without cracking.</p>
+          </div>
+
+          <!-- Step 10 -->
+          <div class="flow-node">
+            <span class="flow-step-badge">Step 10</span>
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M24,10 Q34,22 28,36 Q24,40 20,36 Q14,22 24,10 Z" fill="#9b3528" opacity="0.85"/>
+              <path d="M24,18 Q29,26 26,35 Q24,37 22,35 Q19,26 24,18 Z" fill="#e09f5a"/>
+            </svg>
+            <h4>Kiln Firing</h4>
+            <span class="cn-sub">燒製</span>
+            <p>High-temperature sintering at 1160–1250°C to vitrify the ore.</p>
+          </div>
+        </div>
+
+        <div class="plate-quote">
+          <span>"Traditional handmade craftsmanship, constantly striving for perfection."</span>
+          <span class="cn-motto">「傳統手作工藝，精益求精」</span>
+        </div>
+      </div>
+
+      <!-- =====================================================
+           NEW: COMPARISON OF CLAY CHARACTERISTICS TABLE (泥料特性对比)
+           ===================================================== -->
+      <div class="museum-table-wrap">
+        <div class="section-header-row" style="margin-bottom: 4px;">
+          <h2>Comparison of Zisha Clay Characteristics</h2>
+          <span>泥料特性對比表 · Technical Specifications</span>
+        </div>
+        <p style="font-size: 0.9rem; color: var(--ink-medium);">
+          How raw mineral color, kiln firing temperature, shrinkage rate, and pore density determine the ideal tea pairing:
+        </p>
+
+        <table class="zisha-table">
+          <thead>
+            <tr>
+              <th>Clay Type (泥料)</th>
+              <th>Raw Ore Color (原礦顏色)</th>
+              <th>Fired Color (成品顏色)</th>
+              <th>Firing Temp (燒結溫度)</th>
+              <th>Shrinkage (收縮率)</th>
+              <th>Recommended Teas (適泡茶類)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong style="font-family: var(--serif); font-size: 1rem;">Purple Clay (紫泥 Zi Ni)</strong>
+              </td>
+              <td>
+                <span class="swatch-dot" style="background: #4b342f;"></span>Dark Purplish-Brown (深紫褐)
+              </td>
+              <td>
+                <span class="swatch-dot" style="background: #6e483b;"></span>Brownish-Red (棕紅褐)
+              </td>
+              <td><strong>1160–1200°C</strong></td>
+              <td><strong>10–12%</strong></td>
+              <td>Pu’er, Dark Tea (普洱、黑茶) &amp; Rich Coffee</td>
+            </tr>
+            <tr>
+              <td>
+                <strong style="font-family: var(--serif); font-size: 1rem;">Red / Cinnabar Clay (紅泥 / 朱泥)</strong><br/>
+                <span class="table-note-pill">朱泥難做：收縮高 · High shrinkage makes Zhu Ni challenging to craft</span>
+              </td>
+              <td>
+                <span class="swatch-dot" style="background: #b85d38;"></span>Reddish-Orange Brown (紅橙褐)
+              </td>
+              <td>
+                <span class="swatch-dot" style="background: #a83829;"></span>Vermilion / Reddish-Brown (朱紅/紅褐)
+              </td>
+              <td><strong>1180–1250°C</strong></td>
+              <td><strong>14–18%</strong></td>
+              <td>Oolong, Black Tea (烏龍、紅茶)</td>
+            </tr>
+            <tr>
+              <td>
+                <strong style="font-family: var(--serif); font-size: 1rem;">Green / Fortified Clay (綠泥 / 段泥)</strong><br/>
+                <span style="font-size: 0.78rem; color: var(--ink-light);">米黃 / 段泥 · Beige &amp; Golden Symbiosis Clay</span>
+              </td>
+              <td>
+                <span class="swatch-dot" style="background: #8fa08e;"></span>Pale Celadon-Grey (青灰/素淺綠)
+              </td>
+              <td>
+                <span class="swatch-dot" style="background: #cdb083;"></span>Warm Beige / Antique Gold (米黃/段泥)
+              </td>
+              <td><strong>1170–1200°C</strong></td>
+              <td><strong>11–13%</strong></td>
+              <td>Green Tea, White Tea &amp; Light Oolong (綠茶、白茶)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Featured Link Banner to Step-by-Step Purple Clay Cup Showcase -->
+      <div class="museum-codex monograph-banner">
+        <div style="border: 1px solid var(--hairline-strong); padding: 10px; background: var(--xuan-paper);">
+          <img src="assets/yixing_photo_09.jpg" decoding="async" alt="Making Your Own Purple Clay Cup" style="width: 100%; height: 210px; object-fit: cover; object-position: center; display: block; border: 1px solid var(--hairline);" />
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px;">
+          <span class="placard-num" style="margin-bottom: 0;">Interactive Visual Monograph · 紫砂手作圖譜</span>
+          <h3 style="font-family: var(--serif); font-size: 1.6rem; font-weight: 400; margin-bottom: 0;">
+            Step-by-Step Guide: Making Your Own Purple Clay Cup
+          </h3>
+          <p style="font-size: 0.94rem; color: var(--ink-medium); max-width: 620px; margin-bottom: 6px;">
+            Explore the complete visual walkthrough of every tool, hand gesture, and stage of crafting your custom Zisha cup from raw mineral slab to finished vessel.
+          </p>
+          <a href="purple-clay-cup-showcase.html" target="_blank" rel="noopener" class="btn-ink" style="width: auto; text-decoration: none; padding: 14px 28px; white-space: nowrap;">
+            View Step-by-Step Purple Clay Cup Guide →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         HALL V: ZHUHAI BAMBOO SEA
+         ===================================================== -->
+    <section id="hall-zhuhai" class="hall-panel">
+      <div class="exhibition-hero">
+        <div class="vertical-scroll-col">
+          <span>華東竹海 · 太湖之源</span>
+        </div>
+        <div class="hero-editorial">
+          <span class="catalog-no">Exhibition Catalogue · Hall V</span>
+          <h1>Zhuhai Reserve: The Sea of Bamboo</h1>
+          <p class="lead">
+            Acclaimed as the <strong>"First Bamboo Sea of East China" (华东第一竹海)</strong>, this ecological sanctuary spans more than 10,000 hectares across the mountain border where <strong>Jiangsu, Zhejiang, and Anhui</strong> meet—forming an unbroken ocean of swaying Moso bamboo and mirror-like spring lakes.
+          </p>
+          <div class="metadata-strip">
+            <span><strong>Summit</strong> Yunu Peak · 611.5m (Roof of Sunan)</span>
+            <span><strong>Hydrology</strong> First Source of Lake Taihu</span>
+            <span><strong>Air Quality</strong> 10× Negative Oxygen Ions</span>
+          </div>
+        </div>
+
+        <div class="art-vitrine" style="padding: 16px;">
+          <img src="assets/yixing_photo_10.jpg" decoding="async" alt="Zhuhai Bamboo Sea" style="width: 100%; max-height: 380px; object-fit: cover; object-position: center; display: block; border: 1px solid var(--hairline);" />
+        </div>
+      </div>
+
+      <div class="section-header-row">
+        <h2>Six Scenic Wonders of the Reserve</h2>
+        <span>Natural Landmarks</span>
+      </div>
+
+      <div class="placard-grid">
+        <div class="placard">
+          <div style="border: 1px solid var(--hairline-strong); padding: 8px; background: var(--xuan-paper); margin-bottom: 16px;">
+            <img src="assets/yixing_photo_11.jpg" decoding="async" alt="Mirror Lake in Zhuhai Reserve" style="width: 100%; height: 200px; object-fit: cover; object-position: center; display: block;" />
+          </div>
+          <span class="placard-num">Landmark 01 · 鏡湖攬勝</span>
+          <h3>Mirror Lake &amp; Ancient Jellyfish</h3>
+          <p>Cradled between two emerald ridges, Mirror Lake is fed by bamboo-filtered spring water so pure that it sustains translucent <strong>Peach Blossom Jellyfish (<em>Craspedacusta</em> 桃花水母)</strong>—a living fossil lineage dating back 500 million years.</p>
+        </div>
+
+        <div class="placard">
+          <div style="border: 1px solid var(--hairline-strong); padding: 8px; background: var(--xuan-paper); margin-bottom: 16px;">
+            <img src="assets/yixing_photo_12.jpg" decoding="async" alt="Yunu Peak and Lingyun Pavilion" style="width: 100%; height: 200px; object-fit: cover; object-position: center; display: block;" />
+          </div>
+          <span class="placard-num">Landmark 02 · 玉女峰巔</span>
+          <h3>Yunu Peak (611.5m · Roof of Sunan)</h3>
+          <p>The highest summit in southern Jiangsu. From <strong>Lingyun Pavilion (凌云阁)</strong> at the crest, visitors gaze across rolling waves of bamboo spanning three provinces simultaneously: Jiangsu, Zhejiang, and Anhui.</p>
+        </div>
+
+        <div class="placard">
+          <div style="border: 1px solid var(--hairline-strong); padding: 8px; background: var(--xuan-paper); margin-bottom: 16px;">
+            <img src="assets/yixing_photo_13.jpg" decoding="async" alt="Jizhao Zen Temple and Golden Ginkgo" style="width: 100%; height: 200px; object-fit: cover; object-position: center; display: block;" />
+          </div>
+          <span class="placard-num">Landmark 03 · 寂照禪寺</span>
+          <h3>Jizhao Zen Temple &amp; Ancient Ginkgo</h3>
+          <p>Pause at the centuries-old <strong>Jizhao Zen Temple (寂照禅寺)</strong> tucked quietly amid golden autumn ginkgo trees and deep bamboo groves, or cross the wooden suspension bridge over Mirror Lake.</p>
+        </div>
+
+        <div class="placard">
+          <span class="placard-num">Landmark 04 · 翡翠長廊</span>
+          <h3>The Emerald Bamboo Corridor</h3>
+          <p>A winding stone-paved avenue completely vaulted over by towering Moso bamboo culms. Sunlight filters through the canopy in shifting jade-green ripples.</p>
+        </div>
+
+        <div class="placard">
+          <span class="placard-num">Landmark 05 · 太湖第一源</span>
+          <h3>First Source of Lake Taihu</h3>
+          <p>Deep within the valley, rainwater purified by tens of thousands of acres of bamboo roots wells up from rock fissures to form a crystal-clear mountain stream—the very first headwater of Lake Taihu.</p>
+        </div>
+
+        <div class="placard">
+          <span class="placard-num">Landmark 06 · 竹海索道</span>
+          <h3>The Canopy Gondola</h3>
+          <p>Stretching 1,500 meters from the valley floor to Yunu Peak, the aerial cableway glides directly above the treetops, offering panoramic views of the wind-swept "bamboo waves" (*Zhuhai*).</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>YIXING CULTURAL PAVILION · 陽羨雅集 · JIANGNAN AUTUMN EXHIBITION</span>
+  </footer>
+
+  </body>
+</html>

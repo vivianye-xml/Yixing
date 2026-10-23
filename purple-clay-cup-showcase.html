@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Handcrafted Purple Clay Cup · Workshop Guide</title>
+  <style>
+    :root {
+      --bg: #f6f1eb;
+      --surface: #ffffff;
+      --surface-alt: #efe6dc;
+      --clay-dark: #432821;
+      --clay-main: #7b4b3a;
+      --clay-mid: #9c6652;
+      --clay-light: #c89b86;
+      --clay-slip: #d8bca9;
+      --wood: #c69c6d;
+      --wood-dark: #8c6239;
+      --metal: #7f8c8d;
+      --accent: #b84a39;
+      --gold: #b07d3b;
+      --success: #2e6f40;
+      --text: #2c1e1a;
+      --text-muted: #6e5850;
+      --border: #dfd3c6;
+      --shadow: 0 8px 24px rgba(67, 40, 33, 0.08);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    /* Header / Hero */
+    .hero {
+      background: linear-gradient(135deg, #3a221c 0%, #643b2e 60%, #835240 100%);
+      color: #fdfaf6;
+      padding: 44px 24px 36px;
+      border-bottom: 4px solid var(--wood);
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      color: #f9ece4;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      margin-bottom: 10px;
+    }
+
+    .hero p.subtitle {
+      font-size: 16px;
+      color: #e7d5c9;
+      max-width: 800px;
+      margin-bottom: 24px;
+    }
+
+    .spec-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 12px;
+      background: rgba(25, 13, 10, 0.35);
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .spec-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .spec-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #d4b8a7;
+    }
+
+    .spec-value {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 2px;
+    }
+
+    .spec-note {
+      font-size: 12px;
+      color: #cdb2a2;
+    }
+
+    /* Section Headings */
+    .section {
+      margin-top: 36px;
+      padding: 0 20px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--clay-dark);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 24px;
+      background: var(--accent);
+      border-radius: 4px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* Interactive Walkthrough Studio */
+    .studio-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .step-tabs {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      background: var(--surface-alt);
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+    }
+
+    .step-tab {
+      appearance: none;
+      border: none;
+      background: transparent;
+      padding: 14px 8px;
+      cursor: pointer;
+      text-align: center;
+      border-right: 1px solid var(--border);
+      transition: all 0.2s ease;
+      font-family: inherit;
+      color: var(--text-muted);
+    }
+
+    .step-tab:last-child {
+      border-right: none;
+    }
+
+    .step-tab:hover {
+      background: rgba(123, 75, 58, 0.08);
+    }
+
+    .step-tab.active {
+      background: var(--surface);
+      color: var(--clay-dark);
+      font-weight: 700;
+      box-shadow: inset 0 3px 0 var(--accent);
+    }
+
+    .step-tab .tab-num {
+      display: block;
+      font-size: 11px;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .step-tab .tab-name {
+      display: block;
+      font-size: 13px;
+      margin-top: 2px;
+      white-space: nowrap;
+    }
+
+    .studio-body {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 28px;
+      padding: 28px;
+      align-items: center;
+    }
+
+    @media (max-width: 820px) {
+      .studio-body {
+        grid-template-columns: 1fr;
+      }
+      .step-tabs {
+        grid-template-columns: repeat(3, minmax(120px, 1fr));
+      }
+    }
+
+    .diagram-stage {
+      background: #fbf8f4;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 320px;
+      position: relative;
+    }
+
+    .time-pill {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--clay-dark);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    .caption-pill {
+      margin-top: 12px;
+      background: var(--surface-alt);
+      color: var(--clay-dark);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      border: 1px dashed var(--clay-light);
+      text-align: center;
+    }
+
+    .step-info h3 {
+      font-size: 22px;
+      color: var(--clay-dark);
+      margin-bottom: 6px;
+    }
+
+    .step-info .en-title {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .step-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .step-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14.5px;
+    }
+
+    .step-points li .dot {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--surface-alt);
+      color: var(--clay-main);
+      font-weight: 700;
+      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .pro-tip-box {
+      background: #fff7ed;
+      border-left: 4px solid var(--gold);
+      padding: 12px 14px;
+      border-radius: 0 10px 10px 0;
+      font-size: 13.5px;
+      color: #5c3d1e;
+      margin-bottom: 18px;
+    }
+
+    .studio-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .btn {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--clay-dark);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn:hover {
+      background: var(--surface-alt);
+    }
+
+    .btn-primary {
+      background: var(--clay-main);
+      color: #fff;
+      border-color: var(--clay-main);
+    }
+
+    .btn-primary:hover {
+      background: var(--clay-dark);
+    }
+
+    /* All-at-a-glance 6 Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 18px;
+    }
+
+    .process-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.18s ease, border-color 0.18s ease;
+      cursor: pointer;
+    }
+
+    .process-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--clay-main);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .step-number {
+      font-size: 12px;
+      font-weight: 700;
+      background: var(--clay-main);
+      color: #fff;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    .step-time {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+
+    .mini-diagram {
+      background: #faf6f1;
+      border: 1px solid #e9dfd5;
+      border-radius: 10px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      padding: 10px;
+    }
+
+    .process-card h4 {
+      font-size: 17px;
+      color: var(--clay-dark);
+      margin-bottom: 6px;
+    }
+
+    .process-card p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .key-tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .key-tag {
+      font-size: 11.5px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: var(--surface-alt);
+      color: var(--clay-dark);
+      font-weight: 600;
+    }
+
+    .key-tag.warn {
+      background: #fde8e4;
+      color: #9e2f20;
+    }
+
+    /* Toolbench & Calculator 2-Column Layout */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 22px;
+    }
+
+    @media (max-width: 860px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 12px;
+    }
+
+    .tool-item {
+      background: #faf6f1;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .tool-icon {
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 6px;
+    }
+
+    .tool-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--clay-dark);
+    }
+
+    .tool-role {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Calculator */
+    .calc-row {
+      margin-bottom: 14px;
+    }
+
+    .calc-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13.5px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--clay-main);
+    }
+
+    .mark-input-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .mark-input {
+      flex: 1;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-family: inherit;
+      color: var(--clay-dark);
+      background: #faf6f1;
+    }
+
+    .calc-results {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      background: var(--surface-alt);
+      padding: 14px;
+      border-radius: 12px;
+      margin-top: 14px;
+    }
+
+    .calc-box {
+      background: var(--surface);
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .calc-box .lbl {
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+
+    .calc-box .val {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--clay-dark);
+    }
+
+    .pattern-selector {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .pattern-btn {
+      flex: 1;
+      padding: 7px 10px;
+      font-size: 12.5px;
+      border: 1px solid var(--border);
+      background: #faf6f1;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--clay-dark);
+    }
+
+    .pattern-btn.active {
+      background: var(--clay-main);
+      color: #fff;
+      border-color: var(--clay-main);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO HEADER -->
+  <header class="hero">
+    <div class="container">
+      <div class="badge-row" style="justify-content: space-between; align-items: center;">
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <span class="badge">🏺 Traditional Yixing Zisha Craft</span>
+          <span class="badge">🖐️ Hand-Built Slab Method</span>
+          <span class="badge">✨ Beginner Workshop Guide</span>
+        </div>
+        <button class="btn" id="showcaseLangBtn" style="background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.45); padding: 6px 16px; border-radius: 999px;" onclick="toggleShowcaseLang()">中文 / EN</button>
+      </div>
+      <h1>How to Make a Purple Clay Cup · Visual Guide</h1>
+      <p class="subtitle">
+        Unlike wheel-thrown porcelain, Yixing purple clay is prized for its sandy, double-porosity mineral structure and is shaped by <strong>beating clay slabs, wrapping the cylinder body, and joining with clay slip</strong>. Follow the 6 core stages below to craft and personalize your own cup.
+      </p>
+      <div class="spec-strip">
+        <div class="spec-item">
+          <span class="spec-label">Sizing Template Disc</span>
+          <span class="spec-value">5.0 mm</span>
+          <span class="spec-note">Defines the cup diameter</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Wall & Base Slab</span>
+          <span class="spec-value">3.0 – 3.5 mm</span>
+          <span class="spec-note">Beaten flat and uniform</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Seam & Base Joints</span>
+          <span class="spec-value">45° Bevel Cut</span>
+          <span class="spec-note">Maximizes bonding area</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Bonding Paste</span>
+          <span class="spec-value">Clay Slip</span>
+          <span class="spec-note">Seals the base & cylinder</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Leak Prevention</span>
+          <span class="spec-value">Plug Pinhole</span>
+          <span class="spec-note">Seal center compass hole</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- INTERACTIVE STEP-BY-STEP STUDIO -->
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Interactive 6-Step Making Process</h2>
+          <p class="section-desc">Click any step tab below or use the Previous / Next buttons to explore each stage in detail.</p>
+        </div>
+        <div>
+          <button class="btn" id="autoplayBtn" onclick="toggleAutoplay()">▶ Auto-Play Walkthrough</button>
+        </div>
+      </div>
+
+      <div class="studio-card">
+        <div class="step-tabs" id="stepTabs"></div>
+        <div class="studio-body">
+          <div class="diagram-stage">
+            <span class="time-pill" id="stageTime">Stage 01</span>
+            <div id="stageSvgContainer" style="width:100%; max-width:400px;"></div>
+            <div class="caption-pill" id="stageCaption">Key Action</div>
+          </div>
+          <div class="step-info">
+            <h3 id="stageTitle">Step 1</h3>
+            <div class="en-title" id="stageEnTitle"></div>
+            <ul class="step-points" id="stagePoints"></ul>
+            <div class="pro-tip-box" id="stageTip"></div>
+            <div class="studio-controls">
+              <button class="btn" onclick="prevStep()">← Previous</button>
+              <span id="stepCounter" style="font-size:13px; color:var(--text-muted); font-weight:600;">1 / 6</span>
+              <button class="btn btn-primary" onclick="nextStep()">Next Step →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALL 6 STEPS VISUAL STORYBOARD GRID -->
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Complete Process Blueprint</h2>
+          <p class="section-desc">An at-a-glance overview from raw purple clay block to your finished, personalized cup (click any card to view details above).</p>
+        </div>
+      </div>
+      <div class="cards-grid" id="cardsGrid"></div>
+    </section>
+
+    <!-- TOOLBENCH & INTERACTIVE SLAB CALCULATOR -->
+    <section class="section">
+      <div class="two-col">
+        <!-- Toolbench -->
+        <div class="panel">
+          <h2 class="section-title" style="margin-bottom:6px;">Essential Workshop Tools</h2>
+          <p class="section-desc" style="margin-bottom:18px;">The 8 traditional tools used throughout the cup-making process:</p>
+          <div class="tools-grid">
+            <div class="tool-item">
+              <div class="tool-icon">
+                <svg width="56" height="44" viewBox="0 0 56 44">
+                  <rect x="6" y="12" width="28" height="22" rx="4" fill="#c69c6d" stroke="#5c3d1e" stroke-width="2"/>
+                  <rect x="34" y="19" width="18" height="8" rx="3" fill="#a67c52" stroke="#5c3d1e" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="tool-name">Wooden Mallet</div>
+              <div class="tool-role">Beats clay blocks into flat, even slabs</div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">
+                <svg width="56" height="44" viewBox="0 0 56 44">
+                  <circle cx="28" cy="28" r="12" fill="#95a5a6" stroke="#2c3e50" stroke-width="2"/>
+                  <path d="M28 8 L28 28 M20 14 L38 14 L38 26" fill="none" stroke="#2c3e50" stroke-width="2.5"/>
+                  <circle cx="28" cy="28" r="2" fill="#c0392b"/>
+                </svg>
+              </div>
+              <div class="tool-name">Compass Cutter</div>
+              <div class="tool-role">Cuts precise circular clay discs</div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">
+                <svg width="56" height="44" viewBox="0 0 56 44">
+                  <rect x="6" y="16" width="44" height="12" fill="#bdc3c7" stroke="#34495e" stroke-width="2"/>
+                  <line x1="14" y1="16" x2="14" y2="22" stroke="#34495e" stroke-width="1.5"/>
+                  <line x1="22" y1="16" x2="22" y2="24" stroke="#c0392b" stroke-width="1.5"/>
+                  <line x1="30" y1="16" x2="30" y2="22" stroke="#34495e" stroke-width="1.5"/>
+                  <line x1="38" y1="16" x2="38" y2="24" stroke="#c0392b" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="tool-name">Steel Ruler & Knife</div>
+              <div class="tool-role">3-point marking & 45° bevel cutting</div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">
+                <svg width="56" height="44" viewBox="0 0 56 44">
+                  <ellipse cx="28" cy="20" rx="22" ry="7" fill="#7f8c8d" stroke="#2c3e50" stroke-width="2"/>
+                  <rect x="20" y="26" width="16" height="8" fill="#576574" stroke="#2c3e50" stroke-width="2"/>
+                  <ellipse cx="28" cy="35" rx="16" ry="4" fill="#576574" stroke="#2c3e50" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="tool-name">Banding Wheel</div>
+              <div class="tool-role">Smooth rotation for shaping & trimming</div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">
+                <svg width="56" height="44" viewBox="0 0 56 44">
+                  <path d="M8 26 Q28 12 48 20 L46 28 Q28 22 8 32 Z" fill="#d2b48c" stroke="#5c3d1e" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="tool-name">Wooden Paddle</div>
+              <div class="tool-role">Compacts base disc onto cylinder body</div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">
+                <svg width="56" height="44" viewBox="0 0 56 44">
+                  <rect x="10" y="14" width="36" height="20" rx="2" fill="#dcd6ce" stroke="#7f8c8d" stroke-width="2"/>
+                  <ellipse cx="28" cy="24" rx="11" ry="6" fill="#9c6652"/>
+                </svg>
+              </div>
+              <div class="tool-name">Clay Slip & Slab</div>
+              <div class="tool-role">Adhesive clay paste for joining the base</div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">
+                <svg width="56" height="44" viewBox="0 0 56 44">
+                  <path d="M12 16 Q28 24 44 16 L40 32 Q28 26 16 32 Z" fill="#c59b6d" stroke="#6e4720" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="tool-name">Damp Chamois Cloth</div>
+              <div class="tool-role">Polishes and rounds the drinking rim</div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">
+                <svg width="56" height="44" viewBox="0 0 56 44">
+                  <line x1="14" y1="32" x2="38" y2="12" stroke="#8c6239" stroke-width="4" stroke-linecap="round"/>
+                  <polygon points="10,36 16,30 18,34" fill="#d8bca9"/>
+                </svg>
+              </div>
+              <div class="tool-name">Stylus / Fine Brush</div>
+              <div class="tool-role">Adds your unique personal marking</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calculator & Customizer -->
+        <div class="panel">
+          <h2 class="section-title" style="margin-bottom:6px;">Cup Dimension & Marking Simulator</h2>
+          <p class="section-desc" style="margin-bottom:14px;">Adjust your cup dimensions and test your own unique personal marking before crafting:</p>
+
+          <div class="calc-row">
+            <div class="calc-label">
+              <span>Target Cup Diameter</span>
+              <span id="diamVal">75 mm</span>
+            </div>
+            <input type="range" id="diamSlider" min="55" max="95" value="75" oninput="updateCalc()" />
+          </div>
+
+          <div class="calc-row">
+            <div class="calc-label">
+              <span>Target Cup Height</span>
+              <span id="heightVal">65 mm</span>
+            </div>
+            <input type="range" id="heightSlider" min="45" max="90" value="65" oninput="updateCalc()" />
+          </div>
+
+          <div class="calc-row">
+            <div class="calc-label">
+              <span>Your Unique Personal Marking (Initials / Symbol / Date)</span>
+            </div>
+            <div class="mark-input-row">
+              <input type="text" id="customMarkInput" class="mark-input" maxlength="8" value="MY CUP" placeholder="Enter initials or symbol..." oninput="updateCalc()" />
+            </div>
+            <div class="pattern-selector">
+              <button class="pattern-btn active" onclick="setMarkStyle('engraved', this)">Engraved Seal</button>
+              <button class="pattern-btn" onclick="setMarkStyle('slip', this)">Contrasting Slip</button>
+              <button class="pattern-btn" onclick="setMarkStyle('minimal', this)">Base-Only Mark</button>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:center; justify-content:space-around; margin-top:16px; background:#faf6f1; border:1px solid var(--border); border-radius:12px; padding:12px;">
+            <div id="customCupSvg"></div>
+            <div style="font-size:12.5px; color:var(--text-muted); max-width:200px;">
+              <div><strong>3-Point Ruler Marks:</strong></div>
+              <div id="threePointText" style="margin-top:4px; color:var(--clay-dark);">Mark height at 2cm, 12cm, and 22cm along the slab, then connect to cut straight.</div>
+              <div style="margin-top:8px;"><strong>Post-Firing Size (-9% Shrinkage):</strong></div>
+              <div id="firedSpecText" style="color:var(--accent); font-weight:600;">Approx. Ø68 × 59 mm</div>
+            </div>
+          </div>
+
+          <div class="calc-results">
+            <div class="calc-box">
+              <div class="lbl">Unfolded Slab Length (incl. 45° bevel)</div>
+              <div class="val" id="slabLenVal">246 mm</div>
+            </div>
+            <div class="calc-box">
+              <div class="lbl">Estimated Fired Capacity</div>
+              <div class="val" id="cupVolVal">~215 mL</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const steps = [
+      {
+        num: "01",
+        shortName: "Round Disc & Plug Hole",
+        time: "Stage 01 · Round Plate & Pinhole Seal",
+        title: "Step 1: Cut Round Plate & Immediately Fill Center Hole",
+        enTitle: "Determines cup diameter & prevents future leaks right away",
+        caption: "Key Spec: Beat clay flat → Cut circle with compass cutter → Immediately plug center pinhole",
+        points: [
+          "Cut a block of purple clay and beat it flat using the heavy <strong>wooden mallet</strong> (5 mm for the sizing template disc, and 3–3.5 mm for the bottom round plate).",
+          "Place the slab on the center of the banding wheel and spin it steadily while cutting a clean circle with the <strong>compass cutter</strong>.",
+          "<strong>Right after cutting the round plate, immediately fill and smooth the tiny center pinhole</strong> left by the compass pivot while the disc is lying flat on the wheel—this is much easier now and guarantees the cup won't leak!"
+        ],
+        tip: "💡 Why Fill the Pinhole Right After Step 1? Sealing the compass needle hole while the round plate rests flat on the wheel is effortless and ensures you never forget it before attaching the base.",
+        tags: ["Sets Cup Diameter", "Compass Circle Cut", "Plug Center Hole Immediately"],
+        svg: `
+          <svg viewBox="0 0 360 220" width="100%" height="210">
+            <!-- Left: Turntable & Compass Cutter -->
+            <ellipse cx="105" cy="158" rx="85" ry="24" fill="#95a5a6" stroke="#2c3e50" stroke-width="2"/>
+            <ellipse cx="105" cy="150" rx="52" ry="14" fill="#8c5846" stroke="#432821" stroke-width="2"/>
+            <line x1="105" y1="52" x2="105" y2="150" stroke="#2c3e50" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="105" y1="80" x2="155" y2="98" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+            <line x1="155" y1="98" x2="155" y2="150" stroke="#c0392b" stroke-width="2.5"/>
+            <circle cx="105" cy="150" r="3.5" fill="#ffeb3b" stroke="#c0392b" stroke-width="1.5"/>
+            <text x="26" y="200" fill="#432821" font-size="11.5" font-weight="bold">① Cut Round Plate on Wheel</text>
+
+            <!-- Arrow between 1 and 2 -->
+            <path d="M 186 125 L 210 125" stroke="#b84a39" stroke-width="2.5"/>
+            <polygon points="214,125 206,120 206,130" fill="#b84a39"/>
+
+            <!-- Right: Immediately Fill Center Pinhole -->
+            <rect x="220" y="38" width="126" height="142" rx="10" fill="#efe6dc" stroke="#dfd3c6"/>
+            <circle cx="283" cy="108" r="42" fill="#8c5846" stroke="#432821" stroke-width="2"/>
+            <circle cx="283" cy="108" r="6" fill="#ffeb3b" stroke="#c0392b" stroke-width="2"/>
+            <!-- Small clay pellet & finger/tool pressing into hole -->
+            <path d="M 283 62 L 283 96" stroke="#2e6f40" stroke-width="2.5" stroke-dasharray="3 2"/>
+            <polygon points="283,99 279,91 287,91" fill="#2e6f40"/>
+            <text x="230" y="56" fill="#2e6f40" font-size="11" font-weight="bold">Easy While Flat!</text>
+            <text x="218" y="198" fill="#c0392b" font-size="11.5" font-weight="bold">② Fill Center Hole Right Away</text>
+          </svg>
+        `
+      },
+      {
+        num: "02",
+        shortName: "Body Slab & 3-Point Cut",
+        time: "Stage 02 · Rectangular Wall Slab",
+        title: "Step 2: Beat the Body Strip & Cut via 3-Point Method",
+        enTitle: "Uniform 3–3.5 mm thickness with parallel edges",
+        caption: "Key Spec: Beat long & even (3–3.5 mm) → Mark 3 points with a ruler for a straight cut",
+        points: [
+          "Cut a long rectangular block of clay and beat it outward from the center until it is <strong>long, flat, and uniform</strong>.",
+          "Target a thickness of <strong>3 to 3.5 mm</strong> so the finished cup feels balanced and refined in the hand.",
+          "<strong>3-Point Alignment Trick:</strong> Trim one straight baseline first, then measure the cup height at <strong>three points (left, center, right)</strong> with a ruler. Connect the three dots with your steel ruler to slice a perfectly parallel rectangle."
+        ],
+        tip: "💡 Beginner Pro-Tip: Measuring only two points can still leave a slight curve or tilt. Marking three points guarantees that your top rim and bottom edge are completely parallel.",
+        tags: ["3–3.5mm Thickness", "3-Point Alignment", "Parallel Rectangle"],
+        svg: `
+          <svg viewBox="0 0 360 220" width="100%" height="210">
+            <!-- Clay Slab -->
+            <path d="M 35 65 Q 20 115 35 165 L 325 165 Q 340 115 325 65 Z" fill="#9c6652" stroke="#432821" stroke-width="2"/>
+            <!-- Trimmed Rectangle Area -->
+            <rect x="52" y="82" width="256" height="68" fill="#8c5846" stroke="#fff" stroke-width="2" stroke-dasharray="6 4"/>
+            <!-- 3 Reference Points -->
+            <circle cx="85" cy="82" r="5" fill="#ffeb3b" stroke="#b84a39" stroke-width="2"/>
+            <circle cx="180" cy="82" r="5" fill="#ffeb3b" stroke="#b84a39" stroke-width="2"/>
+            <circle cx="275" cy="82" r="5" fill="#ffeb3b" stroke="#b84a39" stroke-width="2"/>
+            <text x="68" y="72" fill="#432821" font-size="11" font-weight="bold">Point 1</text>
+            <text x="163" y="72" fill="#432821" font-size="11" font-weight="bold">Point 2</text>
+            <text x="258" y="72" fill="#432821" font-size="11" font-weight="bold">Point 3</text>
+            <!-- Steel Ruler -->
+            <rect x="44" y="150" width="272" height="18" fill="#bdc3c7" stroke="#2c3e50" stroke-width="1.5"/>
+            <text x="86" y="163" fill="#2c3e50" font-size="11" font-weight="bold">Align Steel Ruler Across 3 Points to Cut Straight</text>
+            <!-- Thickness Badge -->
+            <rect x="105" y="182" width="150" height="24" rx="12" fill="#432821"/>
+            <text x="120" y="198" fill="#fff" font-size="12" font-weight="bold">Slab Thickness: 3–3.5 mm</text>
+          </svg>
+        `
+      },
+      {
+        num: "03",
+        shortName: "Wrap & 45° Seam",
+        time: "Stage 03 · Cylinder Forming",
+        title: "Step 3: Wrap Cylinder & Cut a 45° Bevel Seam",
+        enTitle: "Join the cylinder wall seamlessly around the template disc",
+        caption: "Key Spec: Wrap around 5mm disc → Slice overlap at 45° → Smooth outer & inner seam",
+        points: [
+          "Stand the rectangular clay strip upright on the banding wheel and <strong>wrap it snugly around the 5 mm sizing disc</strong> from Step 1.",
+          "Where the two ends overlap, hold your knife at a <strong>45-degree diagonal angle</strong> and slice through both layers at once so the beveled edges meet flush.",
+          "Compress and smooth the outer seam line with your blade, then support the outside wall with one hand while smoothing the <strong>interior seam</strong> with a wooden rib. Gently remove the 5 mm sizing disc."
+        ],
+        tip: "💡 Why a 45° Bevel Cut? A diagonal 45° miter joint creates ~40% more contact surface than a straight 90° butt joint, preventing the seam from cracking during drying and firing.",
+        tags: ["45° Bevel Cut", "Smooth Inside & Out", "Seamless Cylinder"],
+        svg: `
+          <svg viewBox="0 0 360 220" width="100%" height="210">
+            <!-- Left: 3D Cylinder with 2-Layer Overlap & Knife Cutting at 45° -->
+            <ellipse cx="98" cy="160" rx="56" ry="15" fill="#643b2e"/>
+            <path d="M 42 76 L 42 160 A 56 15 0 0 0 154 160 L 154 76 Z" fill="#8c5846" stroke="#432821" stroke-width="2"/>
+            <ellipse cx="98" cy="76" rx="56" ry="15" fill="#5a3428" stroke="#432821" stroke-width="2"/>
+            <!-- Outer overlapping flap on cylinder -->
+            <path d="M 122 88 L 122 172 C 136 171, 146 168, 152 164 L 152 80 C 146 84, 136 87, 122 88 Z" fill="#9c6652" stroke="#432821" stroke-width="1.8"/>
+            <!-- 45° Knife slicing vertically through the overlap -->
+            <polygon points="134,38 146,44 142,118 130,112" fill="#bdc3c7" stroke="#2c3e50" stroke-width="1.5"/>
+            <line x1="136" y1="86" x2="136" y2="170" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="4 3"/>
+            <text x="18" y="198" fill="#432821" font-size="11.5" font-weight="bold">Slice overlap &amp; smooth inside/out</text>
+
+            <!-- Right: Top-Down View showing 45° cut through TWO overlapping wall layers -->
+            <rect x="190" y="26" width="158" height="168" rx="10" fill="#efe6dc" stroke="#dfd3c6"/>
+            <text x="200" y="46" fill="#432821" font-size="11.5" font-weight="bold">Top View: 2-Layer Overlap</text>
+
+            <!-- Inner sizing disc (5mm template) -->
+            <circle cx="266" cy="114" r="30" fill="#d8bca9" opacity="0.45"/>
+
+            <!-- Inner Wall Layer (Layer 1) wrapping around and ending in overlap zone -->
+            <path d="M 294 126 A 35 35 0 1 1 284 84" fill="none" stroke="#7b4b3a" stroke-width="10" stroke-linecap="butt"/>
+            <!--Inner layer excess tip (to be trimmed off) -->
+            <path d="M 284 84 A 35 35 0 0 1 301 112" fill="none" stroke="#7b4b3a" stroke-width="10" stroke-dasharray="3 2" opacity="0.55"/>
+
+            <!-- Outer Overlapping Wall Layer (Layer 2) wrapping over Layer 1 -->
+            <path d="M 294 126 A 45 45 0 0 0 296 80" fill="none" stroke="#9c6652" stroke-width="10" stroke-linecap="butt"/>
+            <!-- Outer layer excess tip (to be trimmed off) -->
+            <path d="M 296 80 A 45 45 0 0 0 266 69" fill="none" stroke="#9c6652" stroke-width="10" stroke-dasharray="3 2" opacity="0.55"/>
+
+            <!-- 45° Diagonal Blade Cut slicing through BOTH overlapping layers -->
+            <line x1="272" y1="112" x2="318" y2="78" stroke="#c0392b" stroke-width="3.5" stroke-linecap="round"/>
+            <polygon points="318,78 309,79 314,86" fill="#c0392b"/>
+
+            <!-- Labels for the two layers and cut -->
+            <text x="236" y="118" fill="#432821" font-size="10" font-weight="bold">Inner Wall</text>
+            <text x="292" y="138" fill="#432821" font-size="10" font-weight="bold">Outer Overlap</text>
+            <text x="200" y="170" fill="#c0392b" font-size="11" font-weight="bold">Red Line: 45° Cut Through</text>
+            <text x="200" y="184" fill="#c0392b" font-size="11" font-weight="bold">Both Overlapping Layers</text>
+          </svg>
+        `
+      },
+      {
+        num: "04",
+        shortName: "Slip & Attach Base",
+        time: "Stage 04 · Base Attachment",
+        title: "Step 4: Bevel Cylinder Edge, Apply Slip & Paddle Base Tight",
+        enTitle: "Bond the pre-sealed bottom round plate onto the cylinder body",
+        caption: "Key Spec: 45° inner rim bevel → Apply clay slip evenly → Place pre-sealed base & paddle tight",
+        points: [
+          "Cut a <strong>45° inner bevel</strong> along the top edge of the cylinder wall to create a wide bonding channel.",
+          "Mix smooth purple <strong>clay slip (paste)</strong> on your stone slab and apply it evenly all the way around the 45° beveled rim.",
+          "Place your <strong>pre-sealed bottom round plate</strong> (with its center hole already filled in Step 1) flat on top, press gently, then tap firmly around the edge with the <strong>wooden paddle</strong> and trim the bottom neatly on the spinning wheel."
+        ],
+        tip: "💡 Smooth Bonding: Because you already filled the center compass hole right after Step 1, you can lay the bottom plate directly onto the slip-coated rim and paddle it tight without worrying about center leaks.",
+        tags: ["45° Rim Bevel", "Even Clay Slip", "Paddle & Trim Base"],
+        svg: `
+          <svg viewBox="0 0 360 220" width="100%" height="210">
+            <!-- Left: 45° Inner Bevel & Applying Clay Slip -->
+            <ellipse cx="95" cy="160" rx="54" ry="14" fill="#643b2e"/>
+            <path d="M 41 82 L 41 160 A 54 14 0 0 0 149 160 L 149 82 Z" fill="#8c5846" stroke="#432821" stroke-width="2"/>
+            <ellipse cx="95" cy="82" rx="54" ry="14" fill="#5a3428" stroke="#d8bca9" stroke-width="4.5"/>
+            <!-- Spatula applying slip -->
+            <line x1="125" y1="74" x2="172" y2="45" stroke="#c69c6d" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="122" cy="76" r="5" fill="#d8bca9" stroke="#b84a39" stroke-width="1.5"/>
+            <text x="20" y="196" fill="#432821" font-size="11.5" font-weight="bold">① 45° Bevel + Even Clay Slip</text>
+
+            <!-- Right: Cross section of attaching pre-sealed base with paddle -->
+            <rect x="205" y="95" width="12" height="72" fill="#8c5846" stroke="#432821" stroke-width="1.5"/>
+            <rect x="307" y="95" width="12" height="72" fill="#8c5846" stroke="#432821" stroke-width="1.5"/>
+            <!-- 45 deg slip joint -->
+            <circle cx="211" cy="92" r="5" fill="#d8bca9" stroke="#b84a39" stroke-width="1.5"/>
+            <circle cx="313" cy="92" r="5" fill="#d8bca9" stroke="#b84a39" stroke-width="1.5"/>
+            <!-- Top pre-sealed base slab -->
+            <rect x="202" y="76" width="120" height="14" rx="2" fill="#9c6652" stroke="#432821" stroke-width="2"/>
+            <circle cx="262" cy="83" r="4" fill="#2e6f40"/>
+            <!-- Wooden Paddle pressing down -->
+            <rect x="212" y="42" width="100" height="18" rx="4" fill="#c69c6d" stroke="#5c3d1e" stroke-width="2"/>
+            <path d="M 262 62 L 262 73" stroke="#b84a39" stroke-width="3"/>
+            <text x="195" y="34" fill="#432821" font-size="11.5" font-weight="bold">② Paddle Pre-Sealed Base Tight</text>
+            <text x="195" y="196" fill="#2e6f40" font-size="11.5" font-weight="bold">Center hole already sealed in Step 1</text>
+          </svg>
+        `
+      },
+      {
+        num: "05",
+        shortName: "Flip & Polish Rim",
+        time: "Stage 05 · Rim Burnishing",
+        title: "Step 5: Flip Upright & Burnish the Mouth Rim",
+        enTitle: "Round off the sharp knife-cut edge for a silky lip feel",
+        caption: "Key Spec: Gently flip cup upright → Wrap damp chamois cloth over rim → Spin wheel to round",
+        points: [
+          "Once the bottom is sealed and trimmed, gently lift the cup and <strong>flip it right-side up</strong> on the center of the turntable.",
+          "At this stage, the knife-cut top rim is still sharp and slightly rough.",
+          "Fold a damp <strong>chamois leather or smoothing cloth</strong> over the rim while spinning the wheel so the edge becomes smooth, rounded, and pleasant to drink from."
+        ],
+        tip: "💡 Comfort Detail: A well-burnished rim not only feels soft against the lips when sipping tea, but also compresses the clay particles along the rim to resist chipping.",
+        tags: ["Flip Cup Upright", "Chamois Cloth Polish", "Rounded Drinking Lip"],
+        svg: `
+          <svg viewBox="0 0 360 220" width="100%" height="210">
+            <!-- Turntable -->
+            <ellipse cx="180" cy="175" rx="115" ry="26" fill="#95a5a6" stroke="#2c3e50" stroke-width="2"/>
+            <!-- Upright Cup -->
+            <path d="M 120 75 L 120 162 A 60 15 0 0 0 240 162 L 240 75 Z" fill="#8c5846" stroke="#432821" stroke-width="2"/>
+            <ellipse cx="180" cy="75" rx="60" ry="15" fill="#5a3428" stroke="#d8bca9" stroke-width="3"/>
+            <!-- Chamois Cloth Draping Rim -->
+            <path d="M 215 55 Q 242 52 252 80 L 230 92 Q 225 72 205 70 Z" fill="#c69c6d" stroke="#6e4720" stroke-width="2"/>
+            <text x="256" y="72" fill="#6e4720" font-size="12" font-weight="bold">Damp Chamois</text>
+            <text x="256" y="88" fill="#6e4720" font-size="11">Spin & polish rim</text>
+            <!-- Before/After Rim Zoom -->
+            <rect x="16" y="52" width="90" height="74" rx="8" fill="#efe6dc" stroke="#dfd3c6"/>
+            <text x="24" y="72" fill="#6e5850" font-size="11">Before: Sharp edge</text>
+            <text x="24" y="106" fill="#2e6f40" font-size="11" font-weight="bold">After: Smooth lip</text>
+          </svg>
+        `
+      },
+      {
+        num: "06",
+        shortName: "Unique Marking",
+        time: "Stage 06 · Personal Signature",
+        title: "Step 6: Make Your Own Unique Personal Marking",
+        enTitle: "Sign, engrave, or brush your personal motif on the body or base",
+        caption: "Key Spec: Engrave initials/emblem or brush contrasting slip → Ready for drying & kiln firing",
+        points: [
+          "Now that your handleless purple clay cup has a clean, balanced silhouette, make it unmistakably yours by adding a <strong>unique personal marking</strong>.",
+          "<strong>Option A (Engraved Seal / Initials):</strong> Use a wooden or metal stylus while the clay is leather-hard to incise your initials, date, or personal symbol on the lower wall or center base.",
+          "<strong>Option B (Contrasting Clay Slip):</strong> Use a fine brush with contrasting white clay slip to paint a minimalist line motif on the cup or spin-brush concentric rings on the underside."
+        ],
+        tip: "🎨 Participant Tip: Always include your initials or a recognizable personal mark on the underside of the base so you can easily identify your cup after everyone's pieces come out of the kiln!",
+        tags: ["Personal Signature", "Engrave or Slip Brush", "Identify After Firing"],
+        svg: `
+          <svg viewBox="0 0 360 220" width="100%" height="210">
+            <!-- Left: Handleless Cup with Custom Personal Mark -->
+            <path d="M 65 65 L 65 168 A 56 15 0 0 0 177 168 L 177 65 Z" fill="#8c5846" stroke="#432821" stroke-width="2"/>
+            <ellipse cx="121" cy="65" rx="56" ry="14" fill="#5a3428" stroke="#432821" stroke-width="2"/>
+            <!-- Custom Stamp/Mark Box on Cup -->
+            <rect x="103" y="102" width="36" height="36" rx="4" fill="none" stroke="#f7f3ee" stroke-width="2" stroke-dasharray="3 2"/>
+            <text x="121" y="125" text-anchor="middle" fill="#f7f3ee" font-size="13" font-weight="bold">YOUR</text>
+            <text x="121" y="135" text-anchor="middle" fill="#f7f3ee" font-size="8">MARK</text>
+            <text x="48" y="196" fill="#432821" font-size="12" font-weight="bold">Custom Motif / Initials on Wall</text>
+
+            <!-- Right: Underside Base Signature & Spiral -->
+            <circle cx="276" cy="116" r="52" fill="#8c5846" stroke="#432821" stroke-width="2"/>
+            <circle cx="276" cy="116" r="38" fill="none" stroke="#d8bca9" stroke-width="2" stroke-dasharray="160 20"/>
+            <rect x="258" y="98" width="36" height="36" rx="4" fill="#643b2e" stroke="#f7f3ee" stroke-width="1.5"/>
+            <text x="276" y="120" text-anchor="middle" fill="#f7f3ee" font-size="11" font-weight="bold">SIGN</text>
+            <!-- Stylus -->
+            <line x1="296" y1="92" x2="344" y2="54" stroke="#8c6239" stroke-width="4.5" stroke-linecap="round"/>
+            <polygon points="290,97 296,89 300,94" fill="#f7f3ee"/>
+            <text x="214" y="196" fill="#432821" font-size="12" font-weight="bold">Or Sign the Cup Base</text>
+          </svg>
+        `
+      }
+    ];
+
+    let currentStep = 0;
+    let autoplayTimer = null;
+    let markStyle = 'engraved';
+
+    function renderStudio() {
+      const tabsEl = document.getElementById('stepTabs');
+      const stepWord = (typeof showcaseLang !== 'undefined' && showcaseLang === 'zh') ? '步骤' : 'STEP';
+      tabsEl.innerHTML = steps.map((s, idx) => `
+        <button class="step-tab ${idx === currentStep ? 'active' : ''}" onclick="goToStep(${idx})">
+          <span class="tab-num">${stepWord} ${s.num}</span>
+          <span class="tab-name">${s.shortName}</span>
+        </button>
+      `).join('');
+
+      const s = steps[currentStep];
+      document.getElementById('stageTime').textContent = s.time;
+      document.getElementById('stageSvgContainer').innerHTML = s.svg;
+      document.getElementById('stageCaption').textContent = s.caption;
+      document.getElementById('stageTitle').textContent = s.title;
+      document.getElementById('stageEnTitle').textContent = s.enTitle;
+      document.getElementById('stagePoints').innerHTML = s.points.map((p, i) => `
+        <li><span class="dot">${i + 1}</span><span>${p}</span></li>
+      `).join('');
+      document.getElementById('stageTip').innerHTML = s.tip;
+      document.getElementById('stepCounter').textContent =
+        (typeof showcaseLang !== 'undefined' && showcaseLang === 'zh')
+          ? `第 ${currentStep + 1} / ${steps.length} 步`
+          : `Step ${currentStep + 1} of ${steps.length}`;
+    }
+
+    function renderCardsGrid() {
+      const grid = document.getElementById('cardsGrid');
+      const stepWord = (typeof showcaseLang !== 'undefined' && showcaseLang === 'zh') ? '步骤' : 'STEP';
+      grid.innerHTML = steps.map((s, idx) => `
+        <div class="process-card" onclick="goToStep(${idx}); window.scrollTo({top: 260, behavior: 'smooth'});">
+          <div>
+            <div class="card-top">
+              <span class="step-number">${stepWord} ${s.num} · ${s.shortName}</span>
+              <span class="step-time">${s.time.split('·')[0]}</span>
+            </div>
+            <div class="mini-diagram">${s.svg}</div>
+            <h4>${s.title.replace(/^(Step \d:|第 \d 步：)\s*/, '')}</h4>
+            <p>${s.points[0].replace(/<[^>]+>/g, '')} ${s.points[1].replace(/<[^>]+>/g, '')}</p>
+          </div>
+          <div class="key-tag-row">
+            ${s.tags.map(t => `<span class="key-tag ${t.includes('Pinhole') || t.includes('针孔') || t.includes('45') ? 'warn' : ''}">${t}</span>`).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function goToStep(idx) {
+      currentStep = idx;
+      renderStudio();
+    }
+
+    function nextStep() {
+      currentStep = (currentStep + 1) % steps.length;
+      renderStudio();
+    }
+
+    function prevStep() {
+      currentStep = (currentStep - 1 + steps.length) % steps.length;
+      renderStudio();
+    }
+
+    function toggleAutoplay() {
+      const btn = document.getElementById('autoplayBtn');
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+        btn.textContent = '▶ Auto-Play Walkthrough';
+      } else {
+        btn.textContent = '⏸ Pause Auto-Play';
+        autoplayTimer = setInterval(nextStep, 3200);
+      }
+    }
+
+    function setMarkStyle(style, btnEl) {
+      markStyle = style;
+      document.querySelectorAll('.pattern-btn').forEach(b => b.classList.remove('active'));
+      btnEl.classList.add('active');
+      updateCalc();
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/[&<>"']/g, c => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      }[c]));
+    }
+
+    function updateCalc() {
+      const d = parseInt(document.getElementById('diamSlider').value, 10);
+      const h = parseInt(document.getElementById('heightSlider').value, 10);
+      const rawMark = (document.getElementById('customMarkInput').value || 'MY CUP').trim();
+      const safeMark = escapeHtml(rawMark);
+
+      document.getElementById('diamVal').textContent = `${d} mm`;
+      document.getElementById('heightVal').textContent = `${h} mm`;
+
+      // Slab length = pi * d + ~10mm for 45-degree bevel overlap
+      const slabLen = Math.round(Math.PI * d + 10);
+      document.getElementById('slabLenVal').textContent = `${slabLen} mm`;
+
+      // Fired dimensions (~9% shrinkage for Yixing purple clay)
+      const firedD = Math.round(d * 0.91);
+      const firedH = Math.round(h * 0.91);
+      const innerR = (firedD - 6.4) / 20; // cm
+      const innerH = (firedH - 3.5) / 10; // cm
+      const vol = Math.round(Math.PI * innerR * innerR * innerH);
+      document.getElementById('cupVolVal').textContent = `~${vol} mL`;
+      document.getElementById('firedSpecText').textContent =
+        (typeof showcaseLang !== 'undefined' && showcaseLang === 'zh')
+          ? `约 Ø${firedD} × ${firedH} mm`
+          : `Approx. Ø${firedD} × ${firedH} mm`;
+
+      const p1 = 2;
+      const p2 = Math.round(slabLen / 20);
+      const p3 = Math.round(slabLen / 10) - 2;
+      document.getElementById('threePointText').textContent =
+        (typeof showcaseLang !== 'undefined' && showcaseLang === 'zh')
+          ? `在泥条 ${p1}cm、${p2}cm、${p3}cm 处量出高度 (${(h / 10).toFixed(1)} cm) 点记号，连线一刀裁直。`
+          : `Mark height (${(h / 10).toFixed(1)} cm) at ${p1}cm, ${p2}cm, and ${p3}cm along the slab, then connect to cut straight.`;
+
+      // Render dynamic Handleless Cup SVG preview
+      const wScale = Math.round(d * 1.15);
+      const hScale = Math.round(h * 1.15);
+      const cx = 80;
+      const topY = 26;
+      const botY = topY + hScale;
+      const rx = Math.round(wScale / 2);
+      const midY = Math.round(topY + hScale * 0.56);
+
+      let motifSvg = '';
+      if (markStyle === 'engraved') {
+        motifSvg = `
+          <rect x="${cx - 26}" y="${midY - 14}" width="52" height="24" rx="4" fill="#643b2e" stroke="#432821" stroke-width="1.2"/>
+          <text x="${cx}" y="${midY + 2}" text-anchor="middle" fill="#e7d5c9" font-size="11" font-weight="bold" letter-spacing="0.8">${safeMark}</text>
+        `;
+      } else if (markStyle === 'slip') {
+        motifSvg = `
+          <text x="${cx}" y="${midY + 3}" text-anchor="middle" fill="#f7f3ee" font-size="13" font-weight="bold" letter-spacing="1">${safeMark}</text>
+          <path d="M ${cx - 22} ${midY + 9} Q ${cx} ${midY + 14} ${cx + 22} ${midY + 9}" fill="none" stroke="#f7f3ee" stroke-width="2" stroke-linecap="round"/>
+        `;
+      } else {
+        motifSvg = `
+          <text x="${cx}" y="${botY - 6}" text-anchor="middle" fill="#d8bca9" font-size="9.5" font-style="italic">(Signed "${safeMark}" under base)</text>
+        `;
+      }
+
+      document.getElementById('customCupSvg').innerHTML = `
+        <svg width="160" height="145" viewBox="0 0 160 145">
+          <!-- Handleless Cup Body -->
+          <path d="M ${cx - rx} ${topY} L ${cx - rx} ${botY} A ${rx} 10 0 0 0 ${cx + rx} ${botY} L ${cx + rx} ${topY} Z"
+                fill="#8c5846" stroke="#432821" stroke-width="2"/>
+          <ellipse cx="${cx}" cy="${topY}" rx="${rx}" ry="10" fill="#5a3428" stroke="#432821" stroke-width="2"/>
+          ${motifSvg}
+        </svg>
+      `;
+    }
+
+    const stepsEn = steps.map(s => JSON.parse(JSON.stringify(s)));
+    const stepsZh = [
+      {
+        num: "01",
+        shortName: "切圆底片与补中心孔",
+        time: "阶段 01 · 切圆片与封圆心针孔",
+        title: "第 1 步：旋切圆形泥片并立即填补圆心小孔",
+        enTitle: "决定杯身直径，并从源头杜绝杯底漏水",
+        caption: "关键操作：木槌拍打泥片 → 矩车旋切圆片 → 趁平放立即填补圆心针孔",
+        points: [
+          "切取一块紫砂泥，用<strong>木搭子（木槌）</strong>均匀拍打成平整泥片（定型规片厚约 5 mm，杯底圆片厚约 3–3.5 mm）。",
+          "将泥片置于转盘中央，稳步转动转盘，同时用<strong>矩车（圆规刀）</strong>旋切出规整的圆形泥片。",
+          "<strong>切好圆片后，趁圆片平放在转盘上，立即用泥星填平并抹光圆心留下的圆规针孔</strong>——此时平放修补最为省力，能100%确保烧制后杯底不漏水！"
+        ],
+        tip: "💡 为什么在第 1 步就补圆心孔？趁底片平放在转盘上时修补针孔最为顺手，也能避免后续装底时遗忘而导致茶杯漏水。",
+        tags: ["决定杯口直径", "矩车旋切圆片", "立即填补圆心针孔"],
+        svg: stepsEn[0].svg
+          .replace("① Cut Round Plate on Wheel", "① 在转盘上旋切圆泥片")
+          .replace("Easy While Flat!", "平放最易修补！")
+          .replace("② Fill Center Hole Right Away", "② 立即填平圆心针孔")
+      },
+      {
+        num: "02",
+        shortName: "拍打泥条与三点裁切",
+        time: "阶段 02 · 拍打杯身泥片",
+        title: "第 2 步：拍打长条泥片并用「三点定位法」裁切",
+        enTitle: "保持 3–3.5 mm 均匀厚度与上下平行边缘",
+        caption: "关键操作：由中心向外拍打均匀 (3–3.5 mm) → 直尺三点定位裁出平行长方形",
+        points: [
+          "切取长条紫砂泥块，由中心向四周均匀拍打，使其成为<strong>长条、平整、厚薄一致</strong>的泥片。",
+          "泥片目标厚度控制在 <strong>3 至 3.5 mm</strong>，使烧成后的紫砂杯上手轻重适度、线条雅致。",
+          "<strong>三点定位裁切法：</strong>先裁出一条笔直基准边，再用钢尺在<strong>左、中、右三处</strong>量出杯身高度并点出记号，将三点连线一刀裁出上下完全平行的长方形泥条。"
+        ],
+        tip: "💡 新手实用技巧：只量两点容易因泥片微弧而裁斜；定出左、中、右三点再下刀，能保证杯口与杯底绝对平行。",
+        tags: ["3–3.5mm 均匀厚度", "三点定位法", "上下边缘平行"],
+        svg: stepsEn[1].svg
+          .replace("Point 1", "定位点 1")
+          .replace("Point 2", "定位点 2")
+          .replace("Point 3", "定位点 3")
+          .replace("Align Steel Ruler Across 3 Points to Cut Straight", "钢尺连接左、中、右三点，一刀裁直")
+          .replace("Slab Thickness: 3–3.5 mm", "泥片厚度：3–3.5 mm")
+      },
+      {
+        num: "03",
+        shortName: "围身筒与45°斜接",
+        time: "阶段 03 · 围筑杯身圆筒",
+        title: "第 3 步：围筑圆筒并以 45° 斜角裁切接缝",
+        enTitle: "围绕定型圆片严密合缝，内外抹平不留痕迹",
+        caption: "关键操作：围绕 5mm 规片成筒 → 45°斜角同时裁切重叠层 → 内外抹平接缝",
+        points: [
+          "将长方形泥条竖立在转盘上，<strong>紧密围绕第 1 步切好的 5 mm 定型圆片</strong>围成圆筒。",
+          "在泥条首尾重叠处，手持泥刀呈 <strong>45 度斜角</strong>一次性斜切穿透两层泥片，使两侧斜面严丝合缝贴合。",
+          "用刀面压实并抹平外侧接缝，再以一手托住外壁、一手用木篦子<strong>抹平内壁接缝</strong>，最后轻轻取出 5 mm 定型圆片。"
+        ],
+        tip: "💡 为什么要 45° 斜切？45° 斜面拼接比 90° 垂直对接增加约 40% 的贴合面积，能有效防止干燥和高温窑烧时接缝开裂。",
+        tags: ["45° 斜角裁切", "内外接缝抹平", "无缝圆筒杯身"],
+        svg: stepsEn[2].svg
+          .replace("Slice overlap &amp; smooth inside/out", "斜切重叠处并内外抹平")
+          .replace("Top View: 2-Layer Overlap", "俯视图：双层泥片重叠处")
+          .replace("Inner Wall", "内层杯壁")
+          .replace("Outer Overlap", "外层重叠")
+          .replace("Red Line: 45° Cut Through", "红线：呈 45° 斜角")
+          .replace("Both Overlapping Layers", "同时切透内外两层泥片")
+      },
+      {
+        num: "04",
+        shortName: "涂脂泥与镶接杯底",
+        time: "阶段 04 · 镶接杯底圆片",
+        title: "第 4 步：内口切 45° 斜坡、涂抹脂泥并拍紧杯底",
+        enTitle: "将已封好圆心孔的底片牢固镶接在杯筒上",
+        caption: "关键操作：杯沿内侧切 45° 斜角 → 均匀涂抹脂泥浆 → 放上底片并用木拍子拍实",
+        points: [
+          "沿着圆筒上沿内侧切出一圈 <strong>45° 内斜坡</strong>，形成宽阔稳固的粘接槽。",
+          "在石板上调好细腻的紫砂<strong>脂泥浆（粘合泥浆）</strong>，沿着 45° 斜坡边缘均匀涂抹一圈。",
+          "将第 1 步<strong>已补好中心孔的杯底圆片</strong>平放在涂好脂泥的杯沿上，轻压贴合，再用<strong>木拍子</strong>沿边缘拍打紧实，并在转盘上旋削修齐底足外沿。"
+        ],
+        tip: "💡 牢固封底秘诀：由于第 1 步已提前填平圆心针孔，此时可直接将底片扣合拍紧，无需担心翻面后中心漏水。",
+        tags: ["杯沿 45° 内斜坡", "均匀涂抹脂泥", "拍实并修齐杯底"],
+        svg: stepsEn[3].svg
+          .replace("① 45° Bevel + Even Clay Slip", "① 切 45° 内斜坡 + 涂匀脂泥")
+          .replace("② Paddle Pre-Sealed Base Tight", "② 用木拍子拍实已封孔底片")
+          .replace("Center hole already sealed in Step 1", "圆心针孔已于第 1 步提前封妥")
+      },
+      {
+        num: "05",
+        shortName: "翻正杯身与水布润口",
+        time: "阶段 05 · 杯口修光润圆",
+        title: "第 5 步：翻正杯身并用湿水布润圆杯口",
+        enTitle: "消除刀切生硬棱角，打造温润舒适的品茗杯口",
+        caption: "关键操作：轻托翻正紫砂杯 → 湿水布（鹿皮）包覆杯沿 → 转动转盘润圆口沿",
+        points: [
+          "杯底镶接修整完毕后，双手轻托杯身，将其<strong>正面朝上翻正</strong>置于转盘中央。",
+          "此时刀切出的杯口边缘仍带有锋利棱角与毛刺。",
+          "将湿润的<strong>水布（或鹿皮布）</strong>轻搭包覆在杯口边缘，一手扶稳、一手匀速转动转盘，使杯口瞬间变得圆润光滑、触唇舒适。"
+        ],
+        tip: "💡 细节决定质感：经过水布与明针润圆的杯口不仅饮茶时触感温润，还能压实口沿泥料颗粒，日常使用不易磕口。",
+        tags: ["翻正杯身", "水布包覆润口", "圆润品茗杯沿"],
+        svg: stepsEn[4].svg
+          .replace("Damp Chamois", "湿润水布/鹿皮")
+          .replace("Spin & polish rim", "转盘旋转润圆杯口")
+          .replace("Before: Sharp edge", "修前：刀口生硬")
+          .replace("After: Smooth lip", "修后：圆润贴唇")
+      },
+      {
+        num: "06",
+        shortName: "专属镌刻与落款",
+        time: "阶段 06 · 个人专属印记",
+        title: "第 6 步：镌刻或绘写个人专属落款印记",
+        enTitle: "在杯壁或杯底留下独一无二的签名、图案或日期",
+        caption: "关键操作：竹刀/刻刀镌刻姓名缩写或毛笔泥绘 → 自然阴干后入窑烧制",
+        points: [
+          "当你的紫砂杯成型修光完毕后，最后一步是为它赋予<strong>独一无二的个人专属印记</strong>。",
+          "<strong>方式 A（陶刻落款 / 印章）：</strong>趁泥坯半干（皮革硬度）时，用刻刀或竹笔在杯壁下方或杯底中央刻上你的姓名缩写、日期或专属符号。",
+          "<strong>方式 B（异色泥浆彩绘）：</strong>用细毛笔蘸取浅色泥浆，在杯身绘制极简线条图案，或在旋转的杯底刷出同心圆纹饰。"
+        ],
+        tip: "🎨 重要提醒：请务必在杯底刻上清晰的个人姓名缩写或专属记号，以便所有人的作品出窑后能一眼认出自己的杯子！",
+        tags: ["个人专属落款", "陶刻或泥绘装饰", "出窑轻松认领"],
+        svg: stepsEn[5].svg
+          .replace("Custom Motif / Initials on Wall", "杯壁镌刻专属图案或缩写")
+          .replace("Or Sign the Cup Base", "或在杯底刻写个人落款")
+      }
+    ];
+
+    let showcaseLang = "en";
+
+    const SHOWCASE_PAIRS = [
+      ["🏺 Traditional Yixing Zisha Craft", "🏺 宜兴传统紫砂非遗工艺"],
+      ["🖐️ Hand-Built Slab Method", "🖐️ 全手工打泥片围筑法"],
+      ["✨ Beginner Workshop Guide", "✨ 零基础手作体验指南"],
+      ["How to Make a Purple Clay Cup · Visual Guide", "紫砂杯全手工制作 · 图解教学指南"],
+      ["Unlike wheel-thrown porcelain, Yixing purple clay is prized for its sandy, double-porosity mineral structure and is shaped by <strong>beating clay slabs, wrapping the cylinder body, and joining with clay slip</strong>. Follow the 6 core stages below to craft and personalize your own cup.",
+       "与轮制拉坯的瓷器不同，宜兴紫砂以其独特的「双气孔」砂质矿物结构著称，采用<strong>拍打泥片、围筑身筒、涂抹脂泥镶接</strong>的全手工技法成型。跟随以下 6 个核心步骤，亲手打造你的专属紫砂杯。"],
+      ["Sizing Template Disc", "定型圆规片"],
+      ["Defines the cup diameter", "决定杯身内径尺寸"],
+      ["Wall & Base Slab", "杯壁与杯底泥片"],
+      ["Beaten flat and uniform", "木槌拍打平整均匀"],
+      ["Seam & Base Joints", "身筒与杯底接缝"],
+      ["45° Bevel Cut", "45° 斜角裁切"],
+      ["Maximizes bonding area", "最大化泥片贴合面积"],
+      ["Bonding Paste", "粘接泥浆"],
+      ["Clay Slip", "紫砂脂泥浆"],
+      ["Seals the base & cylinder", "严密粘合杯底与杯筒"],
+      ["Leak Prevention", "防漏水关键"],
+      ["Plug Pinhole", "填补圆心针孔"],
+      ["Seal center compass hole", "切圆片后立即封妥针孔"],
+      ["Interactive 6-Step Making Process", "交互式 6 步手作分解教学"],
+      ["Click any step tab below or use the Previous / Next buttons to explore each stage in detail.", "点击下方任意步骤标签，或使用「上一步 / 下一步」按钮查看每道工序的图文详解。"],
+      ["▶ Auto-Play Walkthrough", "▶ 自动播放步骤演示"],
+      ["⏸ Pause Auto-Play", "⏸ 暂停自动播放"],
+      ["← Previous", "← 上一步"],
+      ["Next Step →", "下一步 →"],
+      ["Complete Process Blueprint", "六步全流程总览图谱"],
+      ["An at-a-glance overview from raw purple clay block to your finished, personalized cup (click any card to view details above).", "从原矿紫砂泥块到专属成品茶杯的一览图谱（点击任意卡片可在上方查看详解）。"],
+      ["Essential Workshop Tools", "工坊八大传统工具"],
+      ["The 8 traditional tools used throughout the cup-making process:", "制作紫砂杯过程中使用的 8 件传统手作工具："],
+      ["Wooden Mallet", "木搭子（拍泥槌）"],
+      ["Beats clay blocks into flat, even slabs", "将泥块拍打成厚薄均匀的泥片"],
+      ["Compass Cutter", "矩车（旋切圆规）"],
+      ["Cuts precise circular clay discs", "旋切出尺寸精准的圆形泥片"],
+      ["Steel Ruler & Knife", "钢尺与泥刀"],
+      ["3-point marking & 45° bevel cutting", "三点定位量高与 45° 斜角裁切"],
+      ["Banding Wheel", "木转盘 / 铁转盘"],
+      ["Smooth rotation for shaping & trimming", "平稳旋转，辅助围筒与修口"],
+      ["Wooden Paddle", "木拍子"],
+      ["Compacts base disc onto cylinder body", "拍合压实杯底与修饰杯身线条"],
+      ["Clay Slip & Slab", "脂泥浆与调泥板"],
+      ["Adhesive clay paste for joining the base", "用于粘接杯底与身筒的细腻泥浆"],
+      ["Damp Chamois Cloth", "水布（湿鹿皮布）"],
+      ["Polishes and rounds the drinking rim", "包覆杯口旋转润圆，触唇舒适"],
+      ["Stylus / Fine Brush", "竹刻刀 / 细毛笔"],
+      ["Adds your unique personal marking", "镌刻姓名落款或绘制泥浆纹饰"],
+      ["Cup Dimension & Marking Simulator", "杯型尺寸与落款模拟器"],
+      ["Adjust your cup dimensions and test your own unique personal marking before crafting:", "动手前先调节理想杯型尺寸，并预览你的个人专属落款效果："],
+      ["Target Cup Diameter", "目标杯口直径"],
+      ["Target Cup Height", "目标杯身高度"],
+      ["Your Unique Personal Marking (Initials / Symbol / Date)", "个人专属落款印记（姓名缩写 / 符号 / 日期）"],
+      ["Engraved Seal", "陶刻阴文印记"],
+      ["Contrasting Slip", "浅色泥绘落款"],
+      ["Base-Only Mark", "仅在杯底落款"],
+      ["3-Point Ruler Marks:", "三点定位量尺刻度："],
+      ["Post-Firing Size (-9% Shrinkage):", "窑烧后预估成品尺寸（约 -9% 收缩）："],
+      ["Unfolded Slab Length (incl. 45° bevel)", "泥条展开总长度（含 45° 斜接余量）"],
+      ["Estimated Fired Capacity", "烧成后预估容量"]
+    ];
+
+    function normShowcaseStr(s) {
+      return s.replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
+    }
+
+    const SHOWCASE_MAP = new Map();
+    for (const [en, zh] of SHOWCASE_PAIRS) {
+      SHOWCASE_MAP.set(normShowcaseStr(en), zh);
+    }
+
+    function toggleShowcaseLang() {
+      showcaseLang = showcaseLang === "en" ? "zh" : "en";
+      const activeSource = showcaseLang === "zh" ? stepsZh : stepsEn;
+      for (let i = 0; i < steps.length; i++) {
+        Object.assign(steps[i], activeSource[i]);
+      }
+
+      document.querySelectorAll("h1, h2, h3, h4, p, span, div.tool-name, div.tool-role, div.lbl, button, strong").forEach(el => {
+        if (el.id === "showcaseLangBtn") {
+          el.textContent = showcaseLang === "en" ? "中文 / EN" : "EN / 中文";
+          return;
+        }
+        if (el.dataset.origEn === undefined) {
+          const n = normShowcaseStr(el.innerHTML);
+          if (SHOWCASE_MAP.has(n)) {
+            el.dataset.origEn = el.innerHTML;
+            el.dataset.zhHtml = SHOWCASE_MAP.get(n);
+          }
+        }
+        if (el.dataset.origEn !== undefined) {
+          el.innerHTML = showcaseLang === "zh" ? el.dataset.zhHtml : el.dataset.origEn;
+        }
+      });
+
+      renderStudio();
+      renderCardsGrid();
+      updateCalc();
+    }
+
+    renderStudio();
+    renderCardsGrid();
+    updateCalc();
+  </script>
+</body>
+</html>
