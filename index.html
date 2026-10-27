@@ -1300,7 +1300,7 @@
     }
     .stop-audio-box {
       margin-top: 18px;
-      padding: 12px 14px;
+      padding: 14px 16px;
       background: var(--xuan-paper);
       border: 1px solid var(--hairline-strong);
       border-left: 3px solid var(--celadon);
@@ -1309,17 +1309,68 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
       font-size: 0.74rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--celadon);
       font-weight: 600;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+    }
+    .stop-play-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 12px 16px;
+      margin-bottom: 10px;
+      background: var(--celadon);
+      color: #f6f4ef;
+      border: 1px solid var(--celadon);
+      border-radius: 6px;
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .stop-play-btn:hover {
+      background: var(--ink-deep);
+      border-color: var(--ink-deep);
+    }
+    .stop-play-btn.playing {
+      background: var(--cinnabar);
+      border-color: var(--cinnabar);
     }
     .stop-audio-box audio {
       width: 100%;
-      height: 36px;
+      height: 40px;
       display: block;
+    }
+    .placard-wide {
+      grid-column: span 2;
+    }
+    @media (max-width: 900px) {
+      .placard-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .placard,
+      .placard-wide {
+        grid-column: 1 / -1 !important;
+      }
+      .tour-jump-bar {
+        padding: 12px 14px;
+        gap: 8px;
+      }
+      .tour-num-pill {
+        flex: 1 1 calc(50% - 8px);
+        justify-content: flex-start;
+        padding: 8px 10px;
+      }
     }
     .stop-script-details {
       margin-top: 10px;
@@ -1346,6 +1397,34 @@
   <script>
 
     
+    window.toggleStopAudio = function(btn) {
+      var box = btn.closest(".stop-audio-box");
+      if (!box) return;
+      var audio = box.querySelector("audio");
+      if (!audio) return;
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    };
+
+    function syncStopButtons() {
+      var isZh = (typeof currentLang !== "undefined" && currentLang === "zh");
+      document.querySelectorAll(".stop-audio-box").forEach(function(box) {
+        var audio = box.querySelector("audio");
+        var btn = box.querySelector(".stop-play-btn");
+        if (!audio || !btn) return;
+        if (!audio.paused && !audio.ended) {
+          btn.classList.add("playing");
+          btn.innerHTML = isZh ? "⏸ 暂停语音导览 (Pause Audio)" : "⏸ Pause Audio Guide";
+        } else {
+          btn.classList.remove("playing");
+          btn.innerHTML = isZh ? "▶ 点击播放本站语音导览" : "▶ Tap to Play Audio Guide";
+        }
+      });
+    }
+
     document.addEventListener("play", function(e) {
       if (e.target && e.target.tagName === "AUDIO") {
         document.querySelectorAll("audio").forEach(function(a) {
@@ -1353,6 +1432,19 @@
             a.pause();
           }
         });
+        syncStopButtons();
+      }
+    }, true);
+
+    document.addEventListener("pause", function(e) {
+      if (e.target && e.target.tagName === "AUDIO") {
+        syncStopButtons();
+      }
+    }, true);
+
+    document.addEventListener("ended", function(e) {
+      if (e.target && e.target.tagName === "AUDIO") {
+        syncStopButtons();
       }
     }, true);
 
@@ -1707,6 +1799,8 @@
       ["View Step-by-Step Purple Clay Cup Guide →", "打开紫砂杯制作步骤图谱 →"],
 
             // Hall V: Updated 9-Stop Audio Tour
+      ["▶ Tap to Play Audio Guide", "▶ 点击播放本站语音导览"],
+      ["⏸ Pause Audio Guide", "⏸ 暂停语音导览 (Pause Audio)"],
       ["Audio Tour Stop 01 · 景區導覽開場", "语音导览第 01 站 · 景区导览开场"],
       ['Located 31 km southwest of downtown Yixing in Hufu Town, the reserve sits right where <strong>Jiangsu, Zhejiang, and Anhui</strong> meet. Spanning 180,000 <em>mu</em> of bamboo across Yixing, it is acclaimed as the <strong>"First Bamboo Sea of East China" (华东第一竹海)</strong>. Our route today is effortless: ride the 1,500m cable car up to the summit, then hike leisurely down through crystal springs and ancient Zen temples.',
        '位于宜兴市区西南31公里的湖滏镇，地处<strong>江苏、浙江、安徽三省</strong>交界处，全市坐拥18万亩翠竹，被誉为<strong>「华东第一竹海」</strong>。今天的游览方式惬意轻松：先乘1500米索道凌空上山俯瞰竹海，再伴着山泉与古寺一路徒步下山。'],
@@ -2730,6 +2824,7 @@
               <span>🎧 Stop 01 Audio Guide · Welcome &amp; Route Overview</span>
               <span>0:38 · Guzheng &amp; Dizi Intro</span>
             </div>
+            <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
             <audio controls preload="none">
               <source src="assets/audio/zhuhai_01_intro.mp3" type="audio/mpeg" />
             </audio>
@@ -2781,6 +2876,7 @@
               <span>🎧 Stop 02 Audio</span>
               <span>0:43 · Water &amp; Guzheng</span>
             </div>
+            <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
             <audio controls preload="none">
               <source src="assets/audio/zhuhai_02_mirror_lake.mp3" type="audio/mpeg" />
             </audio>
@@ -2808,6 +2904,7 @@
               <span>🎧 Stop 03 Audio</span>
               <span>0:32 · Kung Fu Bamboo Wind</span>
             </div>
+            <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
             <audio controls preload="none">
               <source src="assets/audio/zhuhai_03_cable_car.mp3" type="audio/mpeg" />
             </audio>
@@ -2835,6 +2932,7 @@
               <span>🎧 Stop 04 Audio</span>
               <span>0:41 · Summit Bamboo Flute</span>
             </div>
+            <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
             <audio controls preload="none">
               <source src="assets/audio/zhuhai_04_yunu_peak.mp3" type="audio/mpeg" />
             </audio>
@@ -2862,6 +2960,7 @@
               <span>🎧 Stop 05 Audio</span>
               <span>0:28 · Mountain Breeze &amp; Chime</span>
             </div>
+            <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
             <audio controls preload="none">
               <source src="assets/audio/zhuhai_05_skywalk.mp3" type="audio/mpeg" />
             </audio>
@@ -2889,6 +2988,7 @@
               <span>🎧 Stop 06 Audio</span>
               <span>0:40 · Classical Guzheng</span>
             </div>
+            <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
             <audio controls preload="none">
               <source src="assets/audio/zhuhai_06_emerald_corridor.mp3" type="audio/mpeg" />
             </audio>
@@ -2916,6 +3016,7 @@
               <span>🎧 Stop 07 Audio</span>
               <span>0:34 · Brook &amp; Guzheng</span>
             </div>
+            <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
             <audio controls preload="none">
               <source src="assets/audio/zhuhai_07_taihu_source.mp3" type="audio/mpeg" />
             </audio>
@@ -2943,6 +3044,7 @@
               <span>🎧 Stop 08 Audio</span>
               <span>0:40 · Zen Muyu &amp; Bronze Bell</span>
             </div>
+            <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
             <audio controls preload="none">
               <source src="assets/audio/zhuhai_08_jizhao_temple.mp3" type="audio/mpeg" />
             </audio>
@@ -2954,7 +3056,7 @@
         </div>
 
         <!-- STOP 09: BAMBOO GARDEN & RARE CURIOSITIES -->
-        <div class="placard" id="zhuhai-stop-09" style="grid-column: span 2;">
+        <div class="placard placard-wide" id="zhuhai-stop-09">
           <div class="stop-badge-row">
             <span class="stop-number-circle">09</span>
             <span class="stop-route-tag">Finale &amp; Bonus Lore · 宜兴竹园与奇竹异兽彩蛋</span>
@@ -2970,6 +3072,7 @@
               <span>🎧 Stop 09 Audio · Rare Curiosities &amp; Tour Finale</span>
               <span>0:41 · Guzheng &amp; Dizi Finale</span>
             </div>
+            <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
             <audio controls preload="none">
               <source src="assets/audio/zhuhai_09_curiosities_outro.mp3" type="audio/mpeg" />
             </audio>
