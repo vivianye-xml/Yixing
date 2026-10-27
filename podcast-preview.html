@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yixing Bamboo Sea — Solo English Podcast Preview</title>
+  <style>
+    :root {
+      --bg: #0c1712;
+      --card: #13241c;
+      --card-border: rgba(114, 186, 141, 0.22);
+      --accent: #52b788;
+      --accent-soft: rgba(82, 183, 136, 0.15);
+      --text: #ecfdf5;
+      --muted: #95b8a6;
+      --gold: #e9c46a;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+      background: radial-gradient(circle at top right, #1b3b2b 0%, var(--bg) 65%);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 32px 20px 60px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+      margin-bottom: 28px;
+    }
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .badge {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid rgba(82, 183, 136, 0.3);
+    }
+    .badge.gold {
+      background: rgba(233, 196, 106, 0.14);
+      color: var(--gold);
+      border-color: rgba(233, 196, 106, 0.35);
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 22px;
+    }
+    .player-box {
+      background: rgba(9, 18, 14, 0.75);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 20px;
+    }
+    audio {
+      width: 100%;
+      height: 42px;
+      outline: none;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #081c15;
+    }
+    .btn-primary:hover {
+      background: #74c69d;
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.07);
+      color: var(--text);
+      border: 1px solid var(--card-border);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.13);
+    }
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .chapter {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 20px 22px;
+      margin-bottom: 14px;
+      transition: border-color 0.2s;
+    }
+    .chapter:hover {
+      border-color: var(--accent);
+    }
+    .chapter-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .chapter-name {
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--accent);
+    }
+    .sfx-tag {
+      font-size: 12px;
+      color: var(--gold);
+      background: rgba(233, 196, 106, 0.12);
+      padding: 3px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(233, 196, 106, 0.28);
+    }
+    .chapter p {
+      font-size: 14.5px;
+      color: #d8f3dc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero-card">
+      <div class="badge-row">
+        <span class="badge">Solo Host Audio Guide</span>
+        <span class="badge gold">Chinese Guzheng &amp; Dizi SFX</span>
+        <span class="badge">Duration: 4m 22s</span>
+      </div>
+      <h1>Into the Emerald Ocean: The Yixing Bamboo Sea</h1>
+      <p class="subtitle">
+        A humorous, story-driven English solo podcast episode adapted faithfully from the 8 chapters of the Yixing Bamboo Sea (宜兴竹海) tour guide script.
+      </p>
+
+      <div class="player-box">
+        <audio id="podcastAudio" controls preload="metadata">
+          <source src="assets/yixing_bamboo_sea_podcast.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="assets/yixing_bamboo_sea_podcast.mp3" download="yixing_bamboo_sea_podcast.mp3">
+          ⬇️ Download MP3 (4.0 MB)
+        </a>
+        <a class="btn btn-secondary" href="podcast://example.com/private/yixing-podcast-feed.xml" title="Demo URL scheme for Apple Podcasts">
+          🎙️ Subscribe in Apple Podcasts (Private Feed Demo)
+        </a>
+      </div>
+    </div>
+
+    <div class="section-title">📜 Episode Chapters &amp; Script (Aligned with Chinese Original)</div>
+
+    <div class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-name">1. 开场 · Welcome &amp; The Ocean of Bamboo</span>
+        <span class="sfx-tag">🎵 SFX: Guzheng Glissando + Dizi Melody</span>
+      </div>
+      <p>
+        "Hello everyone, and welcome to the Yixing Bamboo Sea! I am thrilled to be your guide today as we step into what is officially crowned the Number One Bamboo Sea in East China. Located in Hufu Town, right where Jiangsu, Zhejiang, and Anhui provinces meet, hundreds of thousands of acres of emerald bamboo stretch across three borders like a living green ocean. Today, our game plan is effortless: first, we will ride a cable car up to the mountain peak for a bird-eye view, and then hike leisurely down through crystal springs and ancient Zen temples. Let us dive right in!"
+      </p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-name">2. 镜湖秀色 · Mirror Lake &amp; 650-Million-Year-Old Jellyfish</span>
+        <span class="sfx-tag">🎵 SFX: Mirror Lake Water Drops &amp; Guzheng</span>
+      </div>
+      <p>
+        "Our very first stop at the foot of the mountain is Mirror Lake. Sandwiched between two green peaks, this ten-meter-deep lake lies as flat as a giant mirror, reflecting the blue sky and bamboo forest beside the Yingzhu Pavilion. And swimming beneath this calm surface is a group of prehistoric royalty: the Peach Blossom Jellyfish. These tiny creatures appeared 650 million years ago—hundreds of millions of years before the dinosaurs! Known as Underwater Giant Pandas, thousands of them bloom like translucent flower petals every autumn. Because they have zero tolerance for pollution, their thriving presence here proves Mirror Lake is nature’s purest mineral water."
+      </p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-name">3. 索道凌空 · Cable Car in the Clouds (Crouching Tiger Moment)</span>
+        <span class="sfx-tag">🎵 SFX: Kung Fu Whoosh &amp; Mountain Bamboo Wind</span>
+      </div>
+      <p>
+        "Next, we hop onto the 1,500-meter cable car, rising 400 meters up the mountain. As our cabin lifts into the clouds, look down beneath your feet: endless waves of bamboo tips ripple and roll in the mountain wind. If you have ever watched Crouching Tiger, Hidden Dragon, this is your moment! For fifteen minutes, you feel like a martial arts master gliding weightlessly across the treetops."
+      </p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-name">4. 苏南第一峰·玉女峰 · Jade Maiden Peak: One Foot in Three Provinces</span>
+        <span class="sfx-tag">🎵 SFX: Panoramic Summit Bamboo Flute</span>
+      </div>
+      <p>
+        "Stepping off the cable car, we climb to the summit: Jade Maiden Peak. At 611.5 meters, it is the Number One Peak in Southern Jiangsu. Standing at Lingyun Pavilion, you have one foot in three provinces: look north to Jiangsu, west to Anhui, and south to Zhejiang! Far below, Mirror Lake gleams like a piece of jade embedded in a green ocean, while right on the summit sits Maolong Pond, a miraculous mountain spring that never dries up and is home to rare protected tree frogs."
+      </p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-name">5 &amp; 6. 悬空栈道与翡翠长廊 · Skywalk, Emerald Corridor &amp; Su Dongpo</span>
+        <span class="sfx-tag">🎵 SFX: Classical Guzheng Interlude</span>
+      </div>
+      <p>
+        "Now begins our relaxing hike down the mountain! First, we cross the Suspended Skywalk along the cliffside—a true natural oxygen bar packed with negative ions to wash away all your city stress. Then we enter the Emerald Corridor, where bamboo arches overhead like a glowing green tunnel. The legendary Song Dynasty poet Su Dongpo loved Yixing so much he bought farmland here, famously writing: I would rather eat meals without meat than live without bamboo. No meat makes you thin, but no bamboo makes you vulgar! Think about that—the man who invented Dongpo braised pork belly was willing to give up meat for bamboo! To Chinese scholars, bamboo—hollow inside and unbreakable in the wind—is the ultimate symbol of a noble spirit."
+      </p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-name">7 &amp; 8. 竹林溪涧与索桥凌波 · The Number One Source of Lake Taihu</span>
+        <span class="sfx-tag">🎵 SFX: Mountain Brook &amp; Guzheng Arpeggio</span>
+      </div>
+      <p>
+        "Continuing down, the mountain streams grow louder. Because these mountains feed directly into Lake Taihu, this crystal-clear brook—rich in healthy minerals like selenium and lithium—is celebrated as the Number One Source of Lake Taihu. Down at the bottom of the Bamboo Sea, we cross the swaying suspension bridge and touch the cool spring water right where Lake Taihu begins."
+      </p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-name">9. 寂照禅寺 · Jizhao Zen Temple &amp; The 1,000-Year-Old Tree Roommates</span>
+        <span class="sfx-tag">🎵 SFX: Zen Muyu Taps &amp; Deep Bronze Temple Bell</span>
+      </div>
+      <p>
+        "Deep in the quiet forest lies our final stop: Jizhao Zen Temple. Right outside stands a magnificent 1,000-year-old Ginkgo tree, thirty meters tall. Look closely at the fork of its ancient branches, and you will see a live Chinese Hackberry tree growing right out of the Ginkgo! For centuries, it has lived rent-free off the Ginkgo’s nutrients, creating a miraculous Tree-Inside-a-Tree. Listening to the temple bell echo under a thousand-year-old canopy, every bit of daily stress simply melts away."
+      </p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-name">10. 奇竹彩蛋与结束语 · Square Bamboo Legend &amp; Finale</span>
+        <span class="sfx-tag">🎵 SFX: Guzheng &amp; Dizi Finale</span>
+      </div>
+      <p>
+        "Before you leave, if you visit the Yixing Bamboo Garden with its 140 bamboo species, keep an eye out for Human-Face Bamboo, Solid Bamboo, and the legendary Square Bamboo—said to have sprouted when Emperor Qianlong stuck his square chopsticks upside-down into the earth! From Mirror Lake and Jade Maiden Peak to Su Dongpo’s Emerald Corridor and the thousand-year-old temple, thank you for exploring the Yixing Bamboo Sea with me today. Stay green, stay humble, and stay unbothered like bamboo!"
+      </p>
+    </div>
+  </div>
+</body>
+</html>
