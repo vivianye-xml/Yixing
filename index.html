@@ -1550,6 +1550,8 @@
       ["<strong>🏺</strong> Zisha Clay Workshop", "<strong>🏺</strong> 紫砂手作工坊"],
       ["<strong>🎋</strong> Zhuhai Bamboo Reserve", "<strong>🎋</strong> 宜兴竹海风景区"],
       ["Enter the Exhibition →", "步入展厅 →"],
+      ["🎧 Enter Audio Guide →", "🎧 进入实景语音导览 →"],
+      ["🎧 Enter Audio Guide", "🎧 实景语音导览"],
       ["YIXING CULTURAL PAVILION", "宜兴人文艺术馆"],
       ["Exhibition Cover", "返回封面"],
 
@@ -2005,7 +2007,10 @@
             <span><strong>🎋</strong> Zhuhai Bamboo Reserve</span>
           </div>
 
-          <button class="btn-ink" onclick="closePavilion()">Enter the Exhibition →</button>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <button class="btn-ink" onclick="closePavilion()">Enter the Exhibition →</button>
+            <a href="audio-guide.html" class="btn-ink" style="background: var(--cinnabar); border-color: var(--cinnabar); text-align: center; text-decoration: none; display: block;">🎧 Enter Audio Guide →</a>
+          </div>
         </div>
       </div>
     </div>
@@ -2022,6 +2027,7 @@
         <span class="brand-sub">Watch | Vision 2026 MD Outing</span>
       </div>
       <div class="visitor-pass-bar">
+        <a href="audio-guide.html" class="curated-link" style="padding: 5px 12px; background: var(--cinnabar); color: #f9f5f0; border-color: var(--cinnabar); text-decoration: none;">🎧 Enter Audio Guide</a>
         <button class="curated-link" style="padding: 5px 12px;" onclick="reopenPavilion()" id="cover-btn">Exhibition Cover</button>
         <button class="curated-link lang-toggle-btn" style="padding: 5px 14px; background: var(--celadon); color: #f6f4ef; border-color: var(--celadon);" onclick="toggleLanguage()">中文 / EN</button>
       </div>
@@ -2374,7 +2380,7 @@
 
       <div class="section-header-row">
         <h2>Six Landmarks of Gunan Street</h2>
-        <span>Walking Exhibition Route</span>
+        <a href="audio-guide.html#zone-gunan" class="curated-link" style="background: var(--cinnabar); color: #fff; border-color: var(--cinnabar); text-decoration: none;">🎧 Listen to Gunan Street Audio Guide (01–09) →</a>
       </div>
 
       <div class="placard-grid">
@@ -2822,7 +2828,7 @@
           <div class="stop-audio-box" id="zhuhai-stop-01">
             <div class="stop-audio-header">
               <span>🎧 Stop 01 Audio Guide · Welcome &amp; Route Overview</span>
-              <span>0:38 · Guzheng &amp; Dizi Intro</span>
+              <span>1:46 · Guzheng &amp; Dizi Intro</span>
             </div>
             <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
             <audio controls preload="none">
@@ -2830,7 +2836,7 @@
             </audio>
             <details class="stop-script-details">
               <summary>Read Audio Script / 查看讲解词</summary>
-              <p>"Stop Number One: Welcome to the Yixing Bamboo Sea! Located in Hufu Town right where Jiangsu, Zhejiang, and Anhui provinces meet, hundreds of thousands of acres of emerald bamboo stretch across three borders like a living green ocean—earning it the title Number One Bamboo Sea in East China. Yixing is Jiangsu’s premier bamboo hometown with over 180,000 mu of bamboo groves. Our route today is effortless: first, we take the cable car up to the mountain summit for an aerial view, and then we hike leisurely down through crystal springs and ancient Zen temples!"</p>
+              <p>Hello everyone! Welcome to the Yixing Bamboo Sea Scenic Area. It is my great honor to accompany you as we stroll through this vast bamboo forest, covering tens of thousands of acres, to experience the refreshing coolness and poetic beauty of what is known as the "First Bamboo Sea in East China." Before we officially head into the mountains, please take a look at this map for a general idea of today's itinerary. The Yixing Bamboo Sea is located in Hufu Town, about 31 kilometers southwest of downtown Yixing. It sits right at the junction of three provinces: Jiangsu, Zhejiang, and Anhui. With hundreds of thousands of acres of lush bamboo connecting across these three provinces, it truly is an "ocean of bamboo." Because it is the largest bamboo resource scenic area in East China, it has earned that resounding title—the "First Bamboo Sea in East China." Our tour today will be very relaxing. We will first take the cable car up the mountain to get a bird's-eye view of the bamboo sea, and then we will hike all the way down to fully appreciate the beautiful scenery. Through this journey up and down, the joy of the mountains and the charm of the forests and springs will unfold before your eyes. Before we enter, let me briefly mention the deep connection between Yixing and bamboo. Yixing itself is a famous "bamboo town" and the most important producing area of Moso bamboo in Jiangsu Province, with 180,000 acres of bamboo forests citywide. In the southern mountainous area where we are now, there are about 12,000 hectares of Moso bamboo, making it the largest bamboo production base in the province. The bamboo sea before you is the absolute essence of this region.</p>
             </details>
           </div>
         </div>
@@ -2874,8 +2880,214 @@
           <div class="stop-audio-box">
             <div class="stop-audio-header">
               <span>🎧 Stop 02 Audio</span>
-              <span>0:43 · Water &amp; Guzheng</span>
+              <span>1:53 · Water &amp; Guzheng</span>
             </div>
+            <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
+            <audio controls preload="none">
+              <source src="assets/audio/zhuhai_02_mirror_lake.mp3" type="audio/mpeg" />
+            </audio>
+            <details class="stop-script-details">
+              <summary>Read Audio Script / 查看讲解词</summary>
+              <p>Entering the scenic area and walking along the path, the first spot we encounter is Jing Lake, or Mirror Lake. Look over there—nestled between two mountains lies a tranquil lake. The water surface is as flat as a giant mirror, perfectly reflecting the blue sky, white clouds, green mountains, and emerald bamboo, which is exactly how it got its name. The lake covers an area of 30,000 square meters, holds 150,000 cubic meters of water, and reaches a depth of 10 meters. The water is crystal clear all year round. As the local saying goes, "Bamboo grows in the water, and water flows through the bamboo," creating a beautiful contrast between the lake and the forest. The pavilion by the lake is called Yingzhu Pavilion. If you stand here and look towards the mountains, the sparkling water, the emerald bamboo, and the blue sky come together like a rich, vibrant landscape painting. You might not expect this, but living beneath the surface of this lake is a group of incredible "ancestors." Jing Lake is home to a rare creature called the Peach Blossom Jellyfish. It first appeared 650 million years ago, hundreds of millions of years before the dinosaurs! It is a "living fossil" for evolutionary research and is often praised as the "Giant Panda of the Water." From August to November, thousands of these jellyfish gather in the water near the Jellyfish Pavilion on the east side of the lake. The larger ones are about the size of a coin, while most are the size of a contact lens. As they swim and pulse, they look like crystal-clear petals blooming in the water. The Peach Blossom Jellyfish requires extremely high water quality and cannot tolerate even the slightest pollution. The fact that they thrive here proves just how incredibly pure the water of Jing Lake is.</p>
+            </details>
+          </div>
+        </div>
+
+        <!-- STOP 03: CABLE CAR UP -->
+        <div class="placard" id="zhuhai-stop-03">
+          <div class="stop-badge-row">
+            <span class="stop-number-circle">03</span>
+            <span class="stop-route-tag">Ascent · 乘索道上山</span>
+          </div>
+          <div style="border: 1px solid var(--hairline-strong); padding: 8px; background: var(--xuan-paper); margin-bottom: 16px;">
+            <img src="assets/zhuhai_stop3.jpg" alt="Cable Car over Bamboo Waves" style="width: 100%; height: 210px; object-fit: cover; display: block;" />
+          </div>
+          <span class="placard-num">Stop 03 · 索道凌空</span>
+          <h3>The 1,500m Canopy Gondola (Kung Fu Flight)</h3>
+          <p>Stretching 1,500 meters with a 400-meter vertical rise across 96 cabins, the cableway glides high above undulating green waves of bamboo. For 15 minutes, you feel just like a martial arts master in <em>Crouching Tiger, Hidden Dragon</em> performing weightless <em>Qinggong</em> across the treetops!</p>
+          <div class="stop-audio-box">
+            <div class="stop-audio-header">
+              <span>🎧 Stop 03 Audio</span>
+              <span>0:56 · Kung Fu Bamboo Wind</span>
+            </div>
+            <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
+            <audio controls preload="none">
+              <source src="assets/audio/zhuhai_03_cable_car.mp3" type="audio/mpeg" />
+            </audio>
+            <details class="stop-script-details">
+              <summary>Read Audio Script / 查看讲解词</summary>
+              <p>Now that we've seen Jing Lake, it's time to take the cable car up the mountain. Please follow me to the left; we'll reach the boarding station in just a few minutes. As you can see, this cableway is 1,500 meters long with a vertical drop of 400 meters between the top and bottom stations. Equipped with 96 cabins, it is one of the more advanced sightseeing cableways in the country. Once you're in the cabin and we slowly ascend, please look down. The mountains covered in bamboo will glide beneath you, with the bamboo tops rolling and surging in the wind. It feels as if we are martial arts masters from a movie, using "lightness skills" to fly swiftly over the bamboo canopy. It's a magical feeling you can only understand by experiencing it yourself. I highly recommend using these ten minutes in the air to take out your phones and shoot your very own aerial blockbuster of the bamboo sea.</p>
+            </details>
+          </div>
+        </div>
+
+        <!-- STOP 04: YUNU PEAK -->
+        <div class="placard" id="zhuhai-stop-04">
+          <div class="stop-badge-row">
+            <span class="stop-number-circle">04</span>
+            <span class="stop-route-tag">Summit 611.5m · 登顶最高峰</span>
+          </div>
+          <div style="border: 1px solid var(--hairline-strong); padding: 8px; background: var(--xuan-paper); margin-bottom: 16px;">
+            <img src="data:image/jpeg;base64,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" alt="Yunu Peak View over Bamboo Sea" style="width: 100%; height: 210px; object-fit: cover; display: block;" />
+          </div>
+          <span class="placard-num">Stop 04 · 蘇南第一峰 · 玉女峰</span>
+          <h3>Jade Maiden Peak: One Foot in 3 Provinces</h3>
+          <p>Towering at 611.5m, Yunu Peak is the highest summit in southern Jiangsu. From <strong>Lingyun Pavilion (凌云阁)</strong>, look north to Jiangsu, west to Anhui, and south to Zhejiang! The summit also holds the never-drying <strong>Maolong Pond (冒龙池)</strong> spring, home to state-protected tree frogs.</p>
+          <div class="stop-audio-box">
+            <div class="stop-audio-header">
+              <span>🎧 Stop 04 Audio</span>
+              <span>2:26 · Summit Bamboo Flute</span>
+            </div>
+            <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
+            <audio controls preload="none">
+              <source src="assets/audio/zhuhai_04_yunu_peak.mp3" type="audio/mpeg" />
+            </audio>
+            <details class="stop-script-details">
+              <summary>Read Audio Script / 查看讲解词</summary>
+              <p>We've arrived at the top station. Please watch your step as you exit the cable car. We just need to climb a short flight of stairs to reach the highest point of the bamboo sea—Yunv Peak. Everyone, the place we are standing right now is the famous "Highest Peak in Southern Jiangsu." With an altitude of 611.5 meters, it sits exactly at the junction of Jiangsu, Zhejiang, and Anhui provinces. It is the highest peak in this vast mountainous region. Once you've caught your breath, look far out in every direction. The mountains are deep and elegant, the breeze is refreshing, and the scenery of the three provinces is fully in view. Interestingly, if you look north, that's Yixing in Jiangsu; look west, and you see Xuancheng in Anhui; look south, and that's Huzhou in Zhejiang. It's not every day you get to stand with one foot in three different provinces! The pavilion here at the summit is called Lingyun Pavilion. If you climb up, you can enjoy a 360-degree panoramic view. On a clear day, you can even see the shimmering waters of Taihu Lake in the distance. Look around as the mountain wind blows—the endless bamboo forest rolls and surges just like the waves of the ocean, while Jing Lake down below looks like a piece of emerald quietly embedded in the forest. This is exactly where the name "Bamboo Sea" comes from, and it is truly its most moving moment. At the top of Yunv Peak, there is also a clear spring that never dries up all year round. Locals call it Maolong Pool. It is formed by spring water gathering from the underground mountain range. Because the bamboo sea is part of the Tianmu Mountain range, the vegetation is lush and water resources are abundant, forming a massive underground reservoir. Even during long droughts, the trees here still receive plenty of nutrients. Next to this clear spring lives a protected species—the tree frog. If we're lucky, we might just spot one today. Now that we've enjoyed the breeze and taken enough photos at the summit, we will begin the most relaxing part of today's journey: hiking down the mountain. As we descend, the sound of the streams will grow louder. We will be accompanied by the babbling spring water all the way down, feeling as if we are walking inside a painting. Please follow me, slow down your pace, and truly enjoy this time deep in the bamboo forest.</p>
+            </details>
+          </div>
+        </div>
+
+        <!-- STOP 05: SUSPENDED SKYWALK -->
+        <div class="placard" id="zhuhai-stop-05">
+          <div class="stop-badge-row">
+            <span class="stop-number-circle">05</span>
+            <span class="stop-route-tag">Start Descent · 徒步下山首段</span>
+          </div>
+          <div style="border: 1px solid var(--hairline-strong); padding: 8px; background: var(--xuan-paper); margin-bottom: 16px;">
+            <img src="assets/yixing_photo_10.jpg" alt="Suspended Skywalk in Bamboo Sea" style="width: 100%; height: 210px; object-fit: cover; display: block;" />
+          </div>
+          <span class="placard-num">Stop 05 · 懸空棧道</span>
+          <h3>Suspended Cliff Skywalk (Natural Oxygen Bar)</h3>
+          <p>Beginning our walk down from Lingyun Pavilion, the Suspended Skywalk hugs the mountain cliff with bamboo waves rolling right beneath your feet. Packed with 10× negative oxygen ions, a deep breath here is a five-star spa treatment for your lungs.</p>
+          <div class="stop-audio-box">
+            <div class="stop-audio-header">
+              <span>🎧 Stop 05 Audio</span>
+              <span>0:35 · Mountain Breeze &amp; Chime</span>
+            </div>
+            <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
+            <audio controls preload="none">
+              <source src="assets/audio/zhuhai_05_skywalk.mp3" type="audio/mpeg" />
+            </audio>
+            <details class="stop-script-details">
+              <summary>Read Audio Script / 查看讲解词</summary>
+              <p>The first section of our descent is the Suspended Boardwalk right next to Lingyun Pavilion. This boardwalk is suspended in mid-air with layers of bamboo waves right beneath your feet. Walking on it during foggy weather feels like strolling through the clouds above the bamboo sea, just like a fairyland. I highly suggest taking a deep breath while walking on this boardwalk. The air here has an extremely high concentration of negative oxygen ions. It is a true "natural oxygen bar," perfect for cleansing your lungs and leaving you feeling completely refreshed.</p>
+            </details>
+          </div>
+        </div>
+
+        <!-- STOP 06: EMERALD CORRIDOR & SU DONGPO -->
+        <div class="placard" id="zhuhai-stop-06">
+          <div class="stop-badge-row">
+            <span class="stop-number-circle">06</span>
+            <span class="stop-route-tag">Mid-Mountain · 竹荫古道</span>
+          </div>
+          <div style="border: 1px solid var(--hairline-strong); padding: 8px; background: var(--xuan-paper); margin-bottom: 16px;">
+            <img src="assets/zhuhai_stop6.jpg" alt="Emerald Bamboo Corridor" style="width: 100%; height: 210px; object-fit: cover; display: block;" />
+          </div>
+          <span class="placard-num">Stop 06 · 翡翠長廊</span>
+          <h3>Emerald Corridor &amp; Su Dongpo’s Paradox</h3>
+          <p>Vaulted over by jade-green bamboo stalks, this corridor echoes Song poet <strong>Su Dongpo</strong>, who bought land in Yixing and wrote: <em>"I would rather eat meals without meat than live without bamboo!"</em> Yes—the inventor of <strong>Dongpo Pork</strong> was willing to give up meat for the noble humility of bamboo!</p>
+          <div class="stop-audio-box">
+            <div class="stop-audio-header">
+              <span>🎧 Stop 06 Audio</span>
+              <span>1:24 · Classical Guzheng</span>
+            </div>
+            <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
+            <audio controls preload="none">
+              <source src="assets/audio/zhuhai_06_emerald_corridor.mp3" type="audio/mpeg" />
+            </audio>
+            <details class="stop-script-details">
+              <summary>Read Audio Script / 查看讲解词</summary>
+              <p>After passing the suspended boardwalk, we arrive at the Emerald Corridor. Look at the tall, graceful bamboo on both sides—they are as green as emeralds. The bamboo branches above our heads intertwine to form a natural corridor. As sunlight filters through the leaves, it creates beautiful, dappled shadows on the ground. Walking through here, every step offers a new scenic view, and any photo you take will look like a classic masterpiece. Speaking of bamboo, let's take a moment to appreciate the special love Chinese people have for it. The great poet Su Dongpo from the Song Dynasty once wrote: "I would rather eat a meal without meat than live in a place without bamboo. A lack of meat makes one thin, but a lack of bamboo makes one vulgar." Su Dongpo had a deep connection with Yixing; he even bought land here with the intention of retiring. It was likely his deep affection for bamboo that made him linger among the mountains and waters of Yixing. Because bamboo is hollow inside but stands tall and straight, and grows tenaciously anywhere, it has always been viewed by Chinese people as a symbol of a gentleman's noble character. That's why bamboo is honored as one of the "Four Noble Men" of plants in traditional culture. By walking through this bamboo sea today, we can all consider ourselves "refined" people!</p>
+            </details>
+          </div>
+        </div>
+
+        <!-- STOP 07: FIRST SOURCE OF TAIHU & SUSPENSION BRIDGE -->
+        <div class="placard" id="zhuhai-stop-07">
+          <div class="stop-badge-row">
+            <span class="stop-number-circle">07</span>
+            <span class="stop-route-tag">Valley Stream · 竹林溪涧至海底</span>
+          </div>
+          <div style="border: 1px solid var(--hairline-strong); padding: 8px; background: var(--xuan-paper); margin-bottom: 16px;">
+            <img src="assets/zhuhai_stop7.jpg" alt="First Source of Lake Taihu Stream" style="width: 100%; height: 210px; object-fit: cover; display: block;" />
+          </div>
+          <span class="placard-num">Stop 07 · 太湖第一源 · 索橋凌波</span>
+          <h3>No.1 Source of Lake Taihu &amp; Suspension Bridge</h3>
+          <p>Following the singing brook down to the "Seabed" (海底) at the mountain base, rainwater filtered through bamboo roots emerges rich in selenium, lithium, germanium, and calcium. Touch the headwater by the <em>Source of Taihu</em> stone and cross the swaying suspension bridge!</p>
+          <div class="stop-audio-box">
+            <div class="stop-audio-header">
+              <span>🎧 Stop 07 Audio</span>
+              <span>0:41 · Brook &amp; Guzheng</span>
+            </div>
+            <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
+            <audio controls preload="none">
+              <source src="assets/audio/zhuhai_07_taihu_source.mp3" type="audio/mpeg" />
+            </audio>
+            <details class="stop-script-details">
+              <summary>Read Audio Script / 查看讲解词</summary>
+              <p>Continuing our way down, the mountain streams gradually grow larger. The Yixing Bamboo Sea is located in the Hufu mountainous area, which is the closest and most distinct watershed to Taihu Lake. The mountain springs flow through the ravines, babbling all the way down until they finally merge into Taihu Lake. Because of this, the stream flowing down from the bamboo sea has a very proud name: "The First Source of Taihu Lake." This spring flows endlessly year-round and the water is incredibly pure. Experts have tested it and found it contains various healthy minerals like germanium, lithium, selenium, and calcium.</p>
+            </details>
+          </div>
+        </div>
+
+        <!-- STOP 08: JIZHAO ZEN TEMPLE -->
+        <div class="placard" id="zhuhai-stop-08">
+          <div class="stop-badge-row">
+            <span class="stop-number-circle">08</span>
+            <span class="stop-route-tag">Deep Grove · 千年古刹</span>
+          </div>
+          <div style="border: 1px solid var(--hairline-strong); padding: 8px; background: var(--xuan-paper); margin-bottom: 16px;">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAACgKADAAQAAAABAAAB3wAAAAD/wAARCAHfAoADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwADAwMDAwMGAwMGCAYGBggLCAgICAsNCwsLCwsNEA0NDQ0NDRAQEBAQEBAQExMTExMTFxcXFxcaGhoaGhoaGhoa/9sAQwEEBAQGBgYLBgYLGxIPEhsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsb/90ABAAo/9oADAMBAAIRAxEAPwD06TSYrS+fVrGwFxN5SeW5yCByNwXp8p781ladrTWyzRNcvNcWFkqyvEw3OrSk7WkIwNoxkA8nPpXUaTdyjT4LWcvCsmUjjkB8sMOp+7ng8jkCuH1DxObW8NvdxxG1dtkvk4Qup5BLDjK8+3rX4JklfmruniUpJq2t7LS1/l5H3mKhKUfcW2vmz0rwTaeH7q3Ou6dDHHNJkOqnPl4JA+Uk7Sy4z612JnSSc+QeUYRyceucfkawvBthpFnoqXGjowjuSZS8gG9sk4Jx2x93tip9bgmeAwea0a7t0KpjlsHccDGevPPvX7Viq1fKssw88NC6jbmS7NPb52Pgo06eLxtVVJb3s36l0XOp/wBsfZlhVrQRjMwIz5mAT8uc4P0rTjZSxkQghj1HsMVxNlqul6DLEt7cyR3V4HLuqnlUxxtfjJU47d6tprYOpjSBA3lKW3rwHIzuUjnGMfrXkZbxvQpJYavGV9d3fW+i2vb/AICOrFcP1JtzpNW9LaIqw6VYWniC+MkhSOZDMEVdrMxHzBZPQEbj05FZGnaxYabcWb4NxdSsYJDEQ+wmThSuc55O4jryeldFgGzjh8tm2OAz7Sw2k/P5rdAc8qVry/xoNPsNTuJfDce2F1LO6MTtkbGGTptznPqD9a+DwXEWJjmsvaNwXNzJPVW101730PovqEKlBU7XbVr/AIHrltqcVsL22m85mssu5mGMhsuApPYDivPfF2saxqWhCHQ3NstwDJuYfMR0ZNwPHOQOMnI6V0c3n2um22valcRyGa1EEqFhmVcbjuKn5SRyG/DHNUltYyy3sVu0D26GQoWJkAZSEA5JJPfAIr1qnF+IxdGjTmnGN7O2176K++2pzUMqo0ak6tk30+7X8TxLw3Jpnhu2+2aPeSW93AChMx27zjIKM+FwTwwYZxg8V2F55Oq6LD498U3JW8mDKiHHLx5A4GMEAYHJ65JrWttRjsnV/FVpC98xKeXHtaMpjd82ejcndxyeK4b7FoWqulrLNcN... (line truncated to 2000 chars)
+          </div>
+          <span class="placard-num">Stop 08 · 寂照禪寺</span>
+          <h3>Jizhao Zen Temple &amp; "Tree-Inside-a-Tree"</h3>
+          <p>Outside serene <strong>Jizhao Zen Temple</strong> stands a 1,000-year-old Ginkgo tree (5m around, 30m tall). Growing right out of its upper fork is a live Chinese Hackberry (朴树) thriving symbiotically off the Ginkgo—a "freeloading roommate" for centuries!</p>
+          <div class="stop-audio-box">
+            <div class="stop-audio-header">
+              <span>🎧 Stop 08 Audio</span>
+              <span>0:44 · Zen Muyu &amp; Bronze Bell</span>
+            </div>
+            <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
+            <audio controls preload="none">
+              <source src="assets/audio/zhuhai_08_jizhao_temple.mp3" type="audio/mpeg" />
+            </audio>
+            <details class="stop-script-details">
+              <summary>Read Audio Script / 查看讲解词</summary>
+              <p>Finally, we arrive at Jizhao Temple, hidden deep within the bamboo forest. The temple sits beside ancient trees in a wonderfully serene environment. In front of the temple stands a thousand-year-old ginkgo tree. It is over 30 meters tall with a trunk circumference of 5 meters. What's even more fascinating is that right in the middle of this ancient ginkgo's branches grows a hackberry tree. It survives by drawing nutrients from the ginkgo, creating an absolute botanical marvel known as the "Tree within a Tree." Deep in the bamboo sea, listening to the temple bell and gazing at the ancient tree, our restless minds can finally find peace.</p>
+            </details>
+          </div>
+        </div>
+
+        <!-- STOP 09: BAMBOO GARDEN & RARE CURIOSITIES -->
+        <div class="placard placard-wide" id="zhuhai-stop-09">
+          <div class="stop-badge-row">
+            <span class="stop-number-circle">09</span>
+            <span class="stop-route-tag">Finale &amp; Bonus Lore · 宜兴竹园与奇竹异兽彩蛋</span>
+          </div>
+          <div style="border: 1px solid var(--hairline-strong); padding: 8px; background: var(--xuan-paper); margin-bottom: 16px;">
+            <img src="assets/zhuhai_stop9.jpg" alt="Yixing Bamboo Garden and Rare Bamboo Species" style="width: 100%; height: 240px; object-fit: cover; display: block;" />
+          </div>
+          <span class="placard-num">Stop 09 · 宜興竹園 · 奇竹異獸與結語</span>
+          <h3>Square Bamboo Legend, 140 Species &amp; Tour Finale</h3>
+          <p>The Yixing Bamboo Garden gathers <strong>140+ bamboo species</strong> across scenic pavilions. Look out for four botanical wonders: <strong>Phoenix-Tail Bamboo (凤尾竹)</strong>; <strong>Human-Face Bamboo (人面竹)</strong> whose nodes resemble smiling faces; <strong>Solid Bamboo (实心竹)</strong> with no hollow core; and <strong>Square Bamboo (四方竹)</strong>—legend says Emperor Qianlong stuck his square chopsticks upside-down in the soil during his southern tour, and they grew into square-stemmed bamboo! The mountains also shelter the rare legless <strong>Brittle Glass Lizard (脆蛇蜥)</strong>.</p>
+          <div class="stop-audio-box">
+            <div class="stop-audio-header">
+              <span>🎧 Stop 09 Audio · Rare Curiosities &amp; Tour Finale</span>
+              <span>1:55 · Guzheng &amp; Dizi Finale</span>
+            </div>
+            <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
+            <audio controls preload="none">
+              <source src="assets/audio/zhuhai_09_curiosities_outro.mp3" type="audio/mpeg" />
+            </audio>
+            <details class="stop-script-details">
+              <summary>Read Audio Script / 查看讲解词</summary>
+              <p>Let me also share some extra facts about the area before we part ways. Inside the scenic area is the Yixing Bamboo Garden, which has introduced over 140 species of bamboo, totaling 162,000 plants, along with various ornamental trees and plants. The garden features many beautifully designed pavilions and gathers a wide variety of unique and exotic bamboos, each with its own graceful posture. Among the rare bamboos, you can find the Phoenix-tail Bamboo, which looks beautifully like the tail feathers of a phoenix. There is the Human-face Bamboo, where the patterns on the trunk closely resemble human faces—some looking like old men and others like children, making it very rare and precious. We also have the Square Bamboo, which actually has a square trunk. Legend has it that Emperor Qianlong planted his chopsticks upside down during a tour, and they grew into this bamboo. Finally, there is the Solid Bamboo. While most bamboos are hollow, this rare type is completely solid inside, making it an excellent material for bamboo crafts. As for rare animals, besides the ancient Peach Blossom Jellyfish in Jing Lake that we mentioned earlier, the bamboo sea is also home to the Snake Lizard. This is a rare and endangered wild animal that looks like a snake because its legs have degenerated from living underground for so long. In Jiangsu Province, it can only be found right here in the Yixing mountains. The scenic area boasts many major attractions, such as the First Source of Taihu Lake, the Highest Peak in Southern Jiangsu, Jing Lake, Jizhao Temple, the Emerald Corridor, and the Suspended Boardwalk. Whether they are grand and majestic, quiet and profound, or winding and mysterious, each has its own unique charm. Thank you all for joining me today, and I hope you had a wonderful time!</p>
+            </details>
+          </div>
+        </div>
             <button type="button" class="stop-play-btn" onclick="toggleStopAudio(this)">▶ Tap to Play Audio Guide</button>
             <audio controls preload="none">
               <source src="assets/audio/zhuhai_02_mirror_lake.mp3" type="audio/mpeg" />
