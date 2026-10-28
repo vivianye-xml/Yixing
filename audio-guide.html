@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yixing Audio Guide · 宜兴实景语音导览 (Gunan Street &amp; Bamboo Sea)</title>
+  <title>Yixing Audio Guide — Shushan Gunan Street &amp; Bamboo Sea</title>
   <style>
     :root {
       --xuan-paper: #f5f2eb;
@@ -115,6 +115,12 @@
       color: var(--xuan-paper);
     }
 
+    .btn-lang {
+      background: var(--celadon);
+      color: #f6f4ef;
+      border-color: var(--celadon);
+    }
+
     .zone-switcher {
       max-width: 920px;
       margin: 0 auto;
@@ -140,6 +146,7 @@
       gap: 8px;
       transition: all 0.2s;
       text-decoration: none;
+      text-align: center;
     }
 
     .zone-tab.active-gunan {
@@ -170,7 +177,7 @@
 
     .guide-banner h1 {
       font-family: var(--serif);
-      font-size: 1.65rem;
+      font-size: 1.6rem;
       font-weight: 400;
       margin-bottom: 8px;
     }
@@ -217,10 +224,9 @@
       font-weight: 600;
     }
 
-    /* Quick Number Keypad */
     .keypad-bar {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
       gap: 8px;
       margin-bottom: 22px;
       padding: 14px;
@@ -239,7 +245,7 @@
       border-radius: 6px;
       text-decoration: none;
       color: var(--ink-deep);
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 600;
       transition: all 0.18s;
     }
@@ -253,7 +259,7 @@
       border-radius: 50%;
       background: var(--cinnabar);
       color: #fff;
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       flex-shrink: 0;
     }
 
@@ -266,7 +272,6 @@
       color: #fff;
     }
 
-    /* Audio Stop Row Card */
     .audio-list {
       display: flex;
       flex-direction: column;
@@ -417,7 +422,7 @@
         padding: 0 14px 10px;
       }
       .zone-tab {
-        font-size: 0.84rem;
+        font-size: 0.82rem;
         padding: 10px 8px;
       }
       .stop-title {
@@ -431,440 +436,412 @@
   <header>
     <div class="topbar">
       <a href="index.html" class="brand">
-        <span class="seal">宜興<br>導覽</span>
-        <span class="brand-title">YIXING AUDIO GUIDE · 语音导览</span>
+        <span class="seal">宜興</span>
+        <span class="brand-title" data-en="YIXING AUDIO GUIDE" data-zh="宜兴实景语音导览">YIXING AUDIO GUIDE</span>
       </a>
       <div class="top-actions">
-        <a href="index.html" class="btn-top">← Back to Main Site / 返回主页</a>
+        <a href="index.html" class="btn-top" data-en="← Back to Main Site" data-zh="← 返回主站">← Back to Main Site</a>
+        <button type="button" class="btn-top btn-lang" id="lang-btn" onclick="toggleGuideLanguage()">中文 / EN</button>
       </div>
     </div>
     <div class="zone-switcher">
-      <a href="#zone-gunan" class="zone-tab active-gunan">🏮 Part I: Gunan Street (01–09)</a>
-      <a href="#zone-bamboo" class="zone-tab active-bamboo">🎋 Part II: Bamboo Sea (01–11)</a>
+      <a href="#zone-gunan" class="zone-tab active-gunan" data-en="🏮 Part I: Gunan Street (01–09)" data-zh="🏮 第一部分：蜀山古南街 (01–09)">🏮 Part I: Gunan Street (01–09)</a>
+      <a href="#zone-bamboo" class="zone-tab active-bamboo" data-en="🎋 Part II: Bamboo Sea (01–11)" data-zh="🎋 第二部分：宜兴竹海 (01–11)">🎋 Part II: Bamboo Sea (01–11)</a>
     </div>
   </header>
 
   <main>
     <div class="guide-banner">
-      <h1>🎧 Press Station Number to Play · 按数字键即点即听</h1>
-      <p>
-        Follow your tour guide and tap the corresponding station number below to play the English audio commentary with traditional Chinese Guzheng &amp; Dizi sound effects. Playing any track automatically pauses others.
-        <br />跟随导游步伐，点击对应景点数字或大播放键即可收听英文语音导览（含古筝竹笛中国风音效）。
+      <h1 data-en="🎧 Press Station Number to Play" data-zh="🎧 按景点数字键即点即听">🎧 Press Station Number to Play</h1>
+      <p data-en="Follow your tour guide and tap the corresponding station number below to play the English audio commentary with traditional Chinese Guzheng and Dizi sound effects. Playing any track automatically pauses others." data-zh="跟随导游步伐，点击下方对应景点数字或大播放键即可收听英文语音导览（配古筝与竹笛中国风音效）。播放任意一段时会自动暂停其他音频。">
+        Follow your tour guide and tap the corresponding station number below to play the English audio commentary with traditional Chinese Guzheng and Dizi sound effects. Playing any track automatically pauses others.
       </p>
     </div>
 
-    <!-- ==========================================================
-         ZONE 1: SHUSHAN GUNAN STREET (01 - 09)
-         ========================================================== -->
     <section id="zone-gunan" class="zone-section">
       <div class="zone-header">
-        <h2>🏮 Part I · Shushan Ancient South Street (蜀山古南街)</h2>
-        <span>9 Audio Stops · 01 – 09</span>
+        <h2 data-en="🏮 Part I · Shushan Ancient South Street" data-zh="🏮 第一部分 · 蜀山古南街">🏮 Part I · Shushan Ancient South Street</h2>
+        <span data-en="9 Audio Stops · 01 – 09" data-zh="共 9 站语音导览 · 01 – 09">9 Audio Stops · 01 – 09</span>
       </div>
 
-      <div class="keypad-bar">
-        <a href="#gunan-01" class="key-btn"><strong>01</strong><span>开场导览</span></a>
-        <a href="#gunan-02" class="key-btn"><strong>02</strong><span>小方窑</span></a>
-        <a href="#gunan-03" class="key-btn"><strong>03</strong><span>金砂阁</span></a>
-        <a href="#gunan-04" class="key-btn"><strong>04</strong><span>陶园顾脉</span></a>
-        <a href="#gunan-05" class="key-btn"><strong>05</strong><span>季益顺居</span></a>
-        <a href="#gunan-06" class="key-btn"><strong>06</strong><span>徐汉棠居</span></a>
-        <a href="#gunan-07" class="key-btn"><strong>07</strong><span>农业银行</span></a>
-        <a href="#gunan-08" class="key-btn"><strong>08</strong><span>同业公会</span></a>
-        <a href="#gunan-09" class="key-btn"><strong>09</strong><span>得义楼</span></a>
-      </div>
-
-      <div class="audio-list">
-        <!-- Gunan 01 -->
-        <div class="audio-card" id="gunan-01">
-          <div class="card-top">
-            <div class="num-badge">01</div>
-            <div class="title-wrap">
-              <span class="stop-kicker">Gunan Stop 01 · 1:27 · Guzheng &amp; Dizi Intro</span>
-              <div class="stop-title">Welcome to Gunan Street &amp; Su Dongpo’s "Shushan"</div>
-              <div class="stop-sub">古南街开场导览 · “紫砂源泉、大师摇篮”与苏东坡“此山似蜀”</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn gunan-btn" onclick="toggleCardAudio(this)">▶ Play Stop 01 · 播放第 01 站 (Gunan Intro)</button>
-          <audio controls preload="none"><source src="assets/audio/gunan_01_intro.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>Hello everyone! Welcome to Shushan Ancient South Street, or Gunan Street. It is my great honor to accompany you today as we explore this historic neighborhood. First, please take a look at this map. We are currently standing at the entrance of Gunan Street, nestled between mountains and water. To our east is ancient Shushan Hill, where dragon kilns have climbed the slopes since the Song and Yuan dynasties, becoming the primary center for firing Zisha purple clay teapots in the Ming Dynasty. To our west flows the ancient Li River canal, providing convenient water transport. Firing kilns on the hill above and trading teaware at the foot below—that is the essence of Gunan Street, summed up in two phrases: "The Fountainhead of Zisha, and the Cradle of Masters." Now, let's step onto these ancient bluestone slabs and experience the charm of Gunan Street firsthand! Stretching over 900 meters, the street preserves a rich collection of Ming and Qing dynasty architecture. Everything here begins with Shushan Hill to the east. Originally called Dushan, or "Lonely Hill," because it stood alone on the flat plain, it got its current name when the great Song Dynasty poet Su Dongpo arrived here, bought farmland intending to retire, and exclaimed: "This hill looks just like my homeland of Shu in Sichuan!" Ever since, generations have called it Shushan.</p>
-          </details>
-        </div>
-
-        <!-- Gunan 02 -->
-        <div class="audio-card" id="gunan-02">
-          <div class="card-top">
-            <div class="num-badge">02</div>
-            <div class="title-wrap">
-              <span class="stop-kicker">Gunan Stop 02 · 0:58 · Guzheng Glissando</span>
-              <div class="stop-title">Small Square Kiln (Downdraft Kiln) &amp; Hexin Factory</div>
-              <div class="stop-sub">小方窑（倒烟窑）与原宜兴合新陶瓷厂历史</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn gunan-btn" onclick="toggleCardAudio(this)">▶ Play Stop 02 · 播放第 02 站 (Small Square Kiln)</button>
-          <audio controls preload="none"><source src="assets/audio/gunan_02_xiaofang_kiln.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>On our left is the "Downdraft Kiln," locally known as the "Small Square Kiln." This chimney belonged to the former Yixing Hexin Ceramic Factory. In a downdraft kiln, the smoke and flames circulate up and down inside the chamber for even heat transfer. It was simple to build, low-cost, and kept temperature differences very small. However, because it is an intermittent kiln with high heat loss and heavy emissions, its use is now restricted for environmental protection. The Yixing Hexin Ceramic Factory—originally founded in 1958 by merging 28 local Zisha workshops—was one of the key predecessors of the famous Yixing Zisha Craft Factory, employing over 3,000 artisans at its peak. In 1959, Grandmaster Gu Jingzhou was appointed deputy director of technical research here, helping design the Jiangsu Hall in Beijing's Great Hall of the People and crafting state tea sets exported worldwide.</p>
-          </details>
-        </div>
-
-        <!-- Gunan 03 -->
-        <div class="audio-card" id="gunan-03">
-          <div class="card-top">
-            <div class="num-badge">03</div>
-            <div class="title-wrap">
-              <span class="stop-kicker">Gunan Stop 03 · 1:01 · Water &amp; Guzheng</span>
-              <div class="stop-title">Jinsha Pavilion (Gu Jingzhou Plaque) &amp; "Shop in Front, Studio in Back"</div>
-              <div class="stop-sub">金砂阁（顾景舟题匾、9300万拍卖纪录）与明清“前店后坊”格局</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn gunan-btn" onclick="toggleCardAudio(this)">▶ Play Stop 03 · 播放第 03 站 (Jinsha Pavilion)</button>
-          <audio controls preload="none"><source src="assets/audio/gunan_03_jinshage.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>Look up at the plaque above this doorway reading "Jinsha Pavilion." Those three characters were personally inscribed by the legendary Grandmaster of Zisha, Gu Jingzhou! A single teapot made by Gu Jingzhou holds the all-time auction record for Zisha ware at an astonishing 93 million RMB! Let's step inside for a look—rumor has it the family here still treasures a teapot by Gu Jingzhou. They are original residents of this street, where crafting teapots and sipping tea is simply everyday life. As you can see, the buildings along the entire street are two-story Ming and Qing wooden townhouses built between the hill and the canal. The ground floor features removable wooden shop planks, while the upper floor serves as living quarters with carved wooden lattice windows. Over half the families here craft and trade Zisha ware using the classic "Shop in Front, Workshop in Back" layout—selling teapots in the front room facing the street, and hand-building them in the back courtyard.</p>
-          </details>
-        </div>
-
-        <!-- Gunan 04 -->
-        <div class="audio-card" id="gunan-04">
-          <div class="card-top">
-            <div class="num-badge">04</div>
-            <div class="title-wrap">
-              <span class="stop-kicker">Gunan Stop 04 · 0:52 · Bamboo Flute</span>
-              <div class="stop-title">Shushan Gallery, Gu Shaopei Residence &amp; Dragon Kiln Saggars</div>
-              <div class="stop-sub">蜀山展示馆、陶园顾脉（顾绍培旧居）与龙窑烧制容器“匣钵（得管）”</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn gunan-btn" onclick="toggleCardAudio(this)">▶ Play Stop 04 · 播放第 04 站 (Taoyuan &amp; Saggars)</button>
-          <audio controls preload="none"><source src="assets/audio/gunan_04_taoyuan_xiabo.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>Right here is the Shushan Exhibition Hall, a community gallery that hosts rotating local art exhibitions. And just ahead is "Taoyuan Gumai," the former residence of Chinese Arts and Crafts Master Gu Shaopei. As we mentioned earlier, Gunan Street is truly the cradle of Zisha masters, and nearly every great master's story is intertwined with this lane. Please take a look at these round ceramic cylinders—we call them "Saggars," or "Deguan" in the local dialect. Artisans place raw Zisha teapots inside these protective clay containers before loading them into the Dragon Kiln. The saggar shields the delicate purple clay from direct open flames and flying wood ash, preventing surface blisters and uneven coloring. Today, authentic dragon-kiln saggars like these have become a rare sight.</p>
-          </details>
-        </div>
-
-        <!-- Gunan 05 -->
-        <div class="audio-card" id="gunan-05">
-          <div class="card-top">
-            <div class="num-badge">05</div>
-            <div class="title-wrap">
-              <span class="stop-kicker">Gunan Stop 05 · 0:47 · Guzheng Interlude</span>
-              <div class="stop-title">Master Ji Yishun Residence &amp; Ming-Qing Commercial Hub</div>
-              <div class="stop-sub">季益顺旧居与古南街“因商而成、因市而荣”的百业风貌</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn gunan-btn" onclick="toggleCardAudio(this)">▶ Play Stop 05 · 播放第 05 站 (Ji Yishun Residence)</button>
-          <audio controls preload="none"><source src="assets/audio/gunan_05_jiyishun_street.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>Next, we pass the former residence of Master Ji Yishun, born right here on Gunan Street in 1960. Crowned both a Chinese Arts and Crafts Master and a Ceramic Art Master, his works are celebrated for their poetic themes and ingenious, lifelike forms. Protected as a Jiangsu Provincial Historic Preservation District, Gunan Street was once the bustling "Wall Street of Zisha." During the Ming and Qing dynasties, it served as Yixing's commercial and passenger transport hub. Beyond pottery workshops, the street was packed with grocery emporiums, tea houses, silk draperies, bamboo craft shops, clockmakers, and clinics—a vibrant, self-contained riverside town.</p>
-          </details>
-        </div>
-
-        <!-- Gunan 06 -->
-        <div class="audio-card" id="gunan-06">
-          <div class="card-top">
-            <div class="num-badge">06</div>
-            <div class="title-wrap">
-              <span class="stop-kicker">Gunan Stop 06 · 0:45 · Canal Water &amp; Guzheng</span>
-              <div class="stop-title">Grandmaster Xu Hantang Residence &amp; The Kiln-to-Canal Lane</div>
-              <div class="stop-sub">徐汉棠旧居（顾老第一弟子、“汉棠盆”）与连通蜀山龙窑和蠡河的唯一古道</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn gunan-btn" onclick="toggleCardAudio(this)">▶ Play Stop 06 · 播放第 06 站 (Xu Hantang &amp; Canal Lane)</button>
-          <audio controls preload="none"><source src="assets/audio/gunan_06_xuhantang_lane.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>Here stands the former residence of Grandmaster Xu Hantang, born in 1932 and honored with the Chinese Arts and Crafts Lifetime Achievement Award. In 1954, he became the very first disciple of Grandmaster Gu Jingzhou. Master Xu is renowned for his ice-crackle glaze textures and his exquisite miniature bonsai pots, celebrated by collectors as "Hantang Pots." Notice this narrow lane beside us: it was the sole passageway connecting the dragon kilns on Shushan Hill with the Li River canal. Freshly fired teapots were carried down this very path to waiting cargo boats on the Li River, embarking on their waterborne journey to tea lovers around the world.</p>
-          </details>
-        </div>
-
-        <!-- Gunan 07 -->
-        <div class="audio-card" id="gunan-07">
-          <div class="card-top">
-            <div class="num-badge">07</div>
-            <div class="title-wrap">
-              <span class="stop-kicker">Gunan Stop 07 · 0:29 · Breeze &amp; Chime</span>
-              <div class="stop-title">Prosperous Corner &amp; 1934 Shushan Agricultural Bank</div>
-              <div class="stop-sub">繁华街角商号与民国23年（1934）蜀山农业银行旧址</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn gunan-btn" onclick="toggleCardAudio(this)">▶ Play Stop 07 · 播放第 07 站 (1934 Agricultural Bank)</button>
-          <audio controls preload="none"><source src="assets/audio/gunan_07_ag_bank.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>Rounding the corner, we enter what was once the most prosperous commercial section of Gunan Street, lined with pottery shops, general stores, teahouses, and bakeries. On our left stands the former site of the Shushan Agricultural Bank. Back in April 1934, the Yixing branch of the Jiangsu Farmers Bank established a granary warehouse right here, allowing local farmers and potters to store agricultural goods as collateral for loans.</p>
-          </details>
-        </div>
-
-        <!-- Gunan 08 -->
-        <div class="audio-card" id="gunan-08">
-          <div class="card-top">
-            <div class="num-badge">08</div>
-            <div class="title-wrap">
-              <span class="stop-kicker">Gunan Stop 08 · 0:46 · Classical Guzheng</span>
-              <div class="stop-title">Zisha Trade Guild &amp; Five-Color Raw Mineral Ores</div>
-              <div class="stop-sub">紫砂同业公会旧址、紫泥/红泥/绿泥原矿石与紫砂厂老照片展</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn gunan-btn" onclick="toggleCardAudio(this)">▶ Play Stop 08 · 播放第 08 站 (Zisha Trade Guild &amp; Ores)</button>
-          <audio controls preload="none"><source src="assets/audio/gunan_08_zisha_guild.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>We have now arrived at the former site of the Zisha Trade Guild—the historical equivalent of today's industry association. In its heyday, the guild played a vital role in regulating quality standards, stabilizing teapot prices, and promoting Yixing Zisha across China. Displayed right in front of us are the raw Zisha mineral ores—Purple Clay, Red Clay, and Green Clay. Dug from deep rock strata, these stone-like ores must undergo months of open-air weathering, crushing, screening, water mixing, and aging before they transform into the supple clay used to hand-build teapots. Inside the hall, you can also see historical photographs and artifacts from the 20th-century Zisha Craft Factory era.</p>
-          </details>
-        </div>
-
-        <!-- Gunan 09 -->
-        <div class="audio-card" id="gunan-09">
-          <div class="card-top">
-            <div class="num-badge">09</div>
-            <div class="title-wrap">
-              <span class="stop-kicker">Gunan Stop 09 · 1:02 · Guzheng &amp; Dizi Finale</span>
-              <div class="stop-title">Century-Old Deyilou Teahouse &amp; The "Seven Old Masters" Finale</div>
-              <div class="stop-sub">百年老字号“得义楼”茶馆与1954年宜兴紫砂工艺厂“七大老艺人”传奇</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn gunan-btn" onclick="toggleCardAudio(this)">▶ Play Stop 09 · 播放第 09 站 (Deyilou Teahouse &amp; Finale)</button>
-          <audio controls preload="none"><source src="assets/audio/gunan_09_deyilou_closing.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>Finally, look at the century-old "Deyilou Teahouse" before us. Back in the 1920s, Shushan Town had barely 300 households and fewer than 2,000 residents—yet it boasted seven lively teahouses! Every morning, every single table was packed. Gathering here for morning tea wasn't just a daily habit; it was the town's social network where potters and merchants exchanged news and forged friendships. Before we conclude, one last piece of history: nearby stands the former site of the state-owned Yixing Zisha Craft Factory, founded at the end of 1954 by the legendary "Seven Old Masters of Zisha"—Wu Yungen, Pei Shimin, Ren Ganting, Wang Yinchun, Zhu Kexin, Gu Jingzhou, and Jiang Rong. Over four decades, it nurtured generations of national masters and shaped modern Zisha history. That concludes our guided walk through Shushan Gunan Street today—thank you all for joining!</p>
-          </details>
-        </div>
-      </div>
+      <div class="keypad-bar" id="keypad-gunan"></div>
+      <div class="audio-list" id="list-gunan"></div>
     </section>
 
-    <!-- ==========================================================
-         ZONE 2: YIXING BAMBOO SEA (01 - 11)
-         ========================================================== -->
     <section id="zone-bamboo" class="zone-section">
       <div class="zone-header bamboo">
-        <h2>🎋 Part II · Yixing Bamboo Sea (宜兴竹海风景区)</h2>
-        <span>11 Audio Stops · 01 – 11</span>
+        <h2 data-en="🎋 Part II · Yixing Bamboo Sea Scenic Area" data-zh="🎋 第二部分 · 宜兴竹海风景区">🎋 Part II · Yixing Bamboo Sea Scenic Area</h2>
+        <span data-en="11 Audio Stops · 01 – 11" data-zh="共 11 站语音导览 · 01 – 11">11 Audio Stops · 01 – 11</span>
       </div>
 
-      <div class="keypad-bar">
-        <a href="#bamboo-01" class="key-btn bamboo"><strong>01</strong><span>开场总览</span></a>
-        <a href="#bamboo-02" class="key-btn bamboo"><strong>02</strong><span>镜湖水母</span></a>
-        <a href="#bamboo-03" class="key-btn bamboo"><strong>03</strong><span>索道凌空</span></a>
-        <a href="#bamboo-04" class="key-btn bamboo"><strong>04</strong><span>玉女峰顶</span></a>
-        <a href="#bamboo-05" class="key-btn bamboo"><strong>05</strong><span>悬空栈道</span></a>
-        <a href="#bamboo-06" class="key-btn bamboo"><strong>06</strong><span>翡翠长廊</span></a>
-        <a href="#bamboo-07" class="key-btn bamboo"><strong>07</strong><span>太湖第一源</span></a>
-        <a href="#bamboo-08" class="key-btn bamboo"><strong>08</strong><span>海底索桥</span></a>
-        <a href="#bamboo-09" class="key-btn bamboo"><strong>09</strong><span>寂照禅寺</span></a>
-        <a href="#bamboo-10" class="key-btn bamboo"><strong>10</strong><span>行程结语</span></a>
-        <a href="#bamboo-11" class="key-btn bamboo"><strong>11</strong><span>奇竹彩蛋</span></a>
-      </div>
-
-      <div class="audio-list">
-        <!-- Bamboo 01 -->
-        <div class="audio-card" id="bamboo-01">
-          <div class="card-top">
-            <div class="num-badge bamboo">01</div>
-            <div class="title-wrap">
-              <span class="stop-kicker bamboo">Bamboo Sea Stop 01 · 1:46 · Guzheng &amp; Dizi Intro</span>
-              <div class="stop-title">Welcome &amp; Overview: "First Bamboo Sea in East China"</div>
-              <div class="stop-sub">开场导览 · 苏浙皖三省交界、18万亩竹乡与“索道上山、徒步下山”行程总览</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn" onclick="toggleCardAudio(this)">▶ Play Stop 01 · 播放第 01 站 (Welcome &amp; Overview)</button>
-          <audio controls preload="none"><source src="assets/audio/zhuhai_01_intro.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>Hello everyone! Welcome to the Yixing Bamboo Sea Scenic Area. It is my great honor to accompany you as we stroll through this vast bamboo forest, covering tens of thousands of acres, to experience the refreshing coolness and poetic beauty of what is known as the "First Bamboo Sea in East China." Before we officially head into the mountains, please take a look at this map for a general idea of today's itinerary. The Yixing Bamboo Sea is located in Hufu Town, about 31 kilometers southwest of downtown Yixing. It sits right at the junction of three provinces: Jiangsu, Zhejiang, and Anhui. With hundreds of thousands of acres of lush bamboo connecting across these three provinces, it truly is an "ocean of bamboo." Because it is the largest bamboo resource scenic area in East China, it has earned that resounding title—the "First Bamboo Sea in East China." Our tour today will be very relaxing. We will first take the cable car up the mountain to get a bird's-eye view of the bamboo sea, and then we will hike all the way down to fully appreciate the beautiful scenery. Through this journey up and down, the joy of the mountains and the charm of the forests and springs will unfold before your eyes. Before we enter, let me briefly mention the deep connection between Yixing and bamboo. Yixing itself is a famous "bamboo town" and the most important producing area of Moso bamboo in Jiangsu Province, with 180,000 acres of bamboo forests citywide. In the southern mountainous area where we are now, there are about 12,000 hectares of Moso bamboo, making it the largest bamboo production base in the province. The bamboo sea before you is the absolute essence of this region.</p>
-          </details>
-        </div>
-
-        <!-- Bamboo 02 -->
-        <div class="audio-card" id="bamboo-02">
-          <div class="card-top">
-            <div class="num-badge bamboo">02</div>
-            <div class="title-wrap">
-              <span class="stop-kicker bamboo">Bamboo Sea Stop 02 · 1:53 · Water Drops &amp; Guzheng</span>
-              <div class="stop-title">Mirror Lake &amp; The "Water Panda" (Peach Blossom Jellyfish)</div>
-              <div class="stop-sub">镜湖秀色、映竹轩与6.5亿年前的活化石“水中大熊猫”桃花水母</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn" onclick="toggleCardAudio(this)">▶ Play Stop 02 · 播放第 02 站 (Mirror Lake &amp; Jellyfish)</button>
-          <audio controls preload="none"><source src="assets/audio/zhuhai_02_mirror_lake.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>Entering the scenic area and walking along the path, the first spot we encounter is Jing Lake, or Mirror Lake. Look over there—nestled between two mountains lies a tranquil lake. The water surface is as flat as a giant mirror, perfectly reflecting the blue sky, white clouds, green mountains, and emerald bamboo, which is exactly how it got its name. The lake covers an area of 30,000 square meters, holds 150,000 cubic meters of water, and reaches a depth of 10 meters. The water is crystal clear all year round. As the local saying goes, "Bamboo grows in the water, and water flows through the bamboo," creating a beautiful contrast between the lake and the forest. The pavilion by the lake is called Yingzhu Pavilion. If you stand here and look towards the mountains, the sparkling water, the emerald bamboo, and the blue sky come together like a rich, vibrant landscape painting. You might not expect this, but living beneath the surface of this lake is a group of incredible "ancestors." Jing Lake is home to a rare creature called the Peach Blossom Jellyfish. It first appeared 650 million years ago, hundreds of millions of years before the dinosaurs! It is a "living fossil" for evolutionary research and is often praised as the "Giant Panda of the Water." From August to November, thousands of these jellyfish gather in the water near the Jellyfish Pavilion on the east side of the lake. The larger ones are about the size of a coin, while most are the size of a contact lens. As they swim and pulse, they look like crystal-clear petals blooming in the water. The Peach Blossom Jellyfish requires extremely high water quality and cannot tolerate even the slightest pollution. The fact that they thrive here proves just how incredibly pure the water of Jing Lake is.</p>
-          </details>
-        </div>
-
-        <!-- Bamboo 03 -->
-        <div class="audio-card" id="bamboo-03">
-          <div class="card-top">
-            <div class="num-badge bamboo">03</div>
-            <div class="title-wrap">
-              <span class="stop-kicker bamboo">Bamboo Sea Stop 03 · 0:56 · Kung Fu Bamboo Wind</span>
-              <div class="stop-title">Cable Car Ride (1,500m Aerial Gondola)</div>
-              <div class="stop-sub">索道凌空 · 全长1500米、落差400米，体验武侠轻功“凌波微步”掠过竹梢</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn" onclick="toggleCardAudio(this)">▶ Play Stop 03 · 播放第 03 站 (Cable Car Ride)</button>
-          <audio controls preload="none"><source src="assets/audio/zhuhai_03_cable_car.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>Now that we've seen Jing Lake, it's time to take the cable car up the mountain. Please follow me to the left; we'll reach the boarding station in just a few minutes. As you can see, this cableway is 1,500 meters long with a vertical drop of 400 meters between the top and bottom stations. Equipped with 96 cabins, it is one of the more advanced sightseeing cableways in the country. Once you're in the cabin and we slowly ascend, please look down. The mountains covered in bamboo will glide beneath you, with the bamboo tops rolling and surging in the wind. It feels as if we are martial arts masters from a movie, using "lightness skills" to fly swiftly over the bamboo canopy. It's a magical feeling you can only understand by experiencing it yourself. I highly recommend using these ten minutes in the air to take out your phones and shoot your very own aerial blockbuster of the bamboo sea.</p>
-          </details>
-        </div>
-
-        <!-- Bamboo 04 -->
-        <div class="audio-card" id="bamboo-04">
-          <div class="card-top">
-            <div class="num-badge bamboo">04</div>
-            <div class="title-wrap">
-              <span class="stop-kicker bamboo">Bamboo Sea Stop 04 · 2:26 · Summit Bamboo Flute</span>
-              <div class="stop-title">The Summit: Yunv Peak (611.5m · One Foot in Three Provinces)</div>
-              <div class="stop-sub">苏南第一峰·玉女峰 · 登凌云阁一脚踏三省、冒龙池不涸清泉与树蛙</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn" onclick="toggleCardAudio(this)">▶ Play Stop 04 · 播放第 04 站 (The Summit - Yunv Peak)</button>
-          <audio controls preload="none"><source src="assets/audio/zhuhai_04_yunu_peak.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>We've arrived at the top station. Please watch your step as you exit the cable car. We just need to climb a short flight of stairs to reach the highest point of the bamboo sea—Yunv Peak. Everyone, the place we are standing right now is the famous "Highest Peak in Southern Jiangsu." With an altitude of 611.5 meters, it sits exactly at the junction of Jiangsu, Zhejiang, and Anhui provinces. It is the highest peak in this vast mountainous region. Once you've caught your breath, look far out in every direction. The mountains are deep and elegant, the breeze is refreshing, and the scenery of the three provinces is fully in view. Interestingly, if you look north, that's Yixing in Jiangsu; look west, and you see Xuancheng in Anhui; look south, and that's Huzhou in Zhejiang. It's not every day you get to stand with one foot in three different provinces! The pavilion here at the summit is called Lingyun Pavilion. If you climb up, you can enjoy a 360-degree panoramic view. On a clear day, you can even see the shimmering waters of Taihu Lake in the distance. Look around as the mountain wind blows—the endless bamboo forest rolls and surges just like the waves of the ocean, while Jing Lake down below looks like a piece of emerald quietly embedded in the forest. This is exactly where the name "Bamboo Sea" comes from, and it is truly its most moving moment. At the top of Yunv Peak, there is also a clear spring that never dries up all year round. Locals call it Maolong Pool. It is formed by spring water gathering from the underground mountain range. Because the bamboo sea is part of the Tianmu Mountain range, the vegetation is lush and water resources are abundant, forming a massive underground reservoir. Even during long droughts, the trees here still receive plenty of nutrients. Next to this clear spring lives a protected species—the tree frog. If we're lucky, we might just spot one today. Now that we've enjoyed the breeze and taken enough photos at the summit, we will begin the most relaxing part of today's journey: hiking down the mountain. As we descend, the sound of the streams will grow louder. We will be accompanied by the babbling spring water all the way down, feeling as if we are walking inside a painting. Please follow me, slow down your pace, and truly enjoy this time deep in the bamboo forest.</p>
-          </details>
-        </div>
-
-        <!-- Bamboo 05 -->
-        <div class="audio-card" id="bamboo-05">
-          <div class="card-top">
-            <div class="num-badge bamboo">05</div>
-            <div class="title-wrap">
-              <span class="stop-kicker bamboo">Bamboo Sea Stop 05 · 0:35 · Breeze &amp; Chime</span>
-              <div class="stop-title">Suspended Boardwalk (Natural Oxygen Bar)</div>
-              <div class="stop-sub">悬空栈道 · 徒步下山首段，漫步竹海云端天然氧吧</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn" onclick="toggleCardAudio(this)">▶ Play Stop 05 · 播放第 05 站 (Suspended Boardwalk)</button>
-          <audio controls preload="none"><source src="assets/audio/zhuhai_05_skywalk.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>The first section of our descent is the Suspended Boardwalk right next to Lingyun Pavilion. This boardwalk is suspended in mid-air with layers of bamboo waves right beneath your feet. Walking on it during foggy weather feels like strolling through the clouds above the bamboo sea, just like a fairyland. I highly suggest taking a deep breath while walking on this boardwalk. The air here has an extremely high concentration of negative oxygen ions. It is a true "natural oxygen bar," perfect for cleansing your lungs and leaving you feeling completely refreshed.</p>
-          </details>
-        </div>
-
-        <!-- Bamboo 06 -->
-        <div class="audio-card" id="bamboo-06">
-          <div class="card-top">
-            <div class="num-badge bamboo">06</div>
-            <div class="title-wrap">
-              <span class="stop-kicker bamboo">Bamboo Sea Stop 06 · 1:24 · Classical Guzheng</span>
-              <div class="stop-title">Emerald Corridor &amp; Su Dongpo’s Love for Bamboo</div>
-              <div class="stop-sub">翡翠长廊 · 苏东坡“宁可食无肉，不可居无竹”与花中四君子</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn" onclick="toggleCardAudio(this)">▶ Play Stop 06 · 播放第 06 站 (Emerald Corridor)</button>
-          <audio controls preload="none"><source src="assets/audio/zhuhai_06_emerald_corridor.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>After passing the suspended boardwalk, we arrive at the Emerald Corridor. Look at the tall, graceful bamboo on both sides—they are as green as emeralds. The bamboo branches above our heads intertwine to form a natural corridor. As sunlight filters through the leaves, it creates beautiful, dappled shadows on the ground. Walking through here, every step offers a new scenic view, and any photo you take will look like a classic masterpiece. Speaking of bamboo, let's take a moment to appreciate the special love Chinese people have for it. The great poet Su Dongpo from the Song Dynasty once wrote: "I would rather eat a meal without meat than live in a place without bamboo. A lack of meat makes one thin, but a lack of bamboo makes one vulgar." Su Dongpo had a deep connection with Yixing; he even bought land here with the intention of retiring. It was likely his deep affection for bamboo that made him linger among the mountains and waters of Yixing. Because bamboo is hollow inside but stands tall and straight, and grows tenaciously anywhere, it has always been viewed by Chinese people as a symbol of a gentleman's noble character. That's why bamboo is honored as one of the "Four Noble Men" of plants in traditional culture. By walking through this bamboo sea today, we can all consider ourselves "refined" people!</p>
-          </details>
-        </div>
-
-        <!-- Bamboo 07 -->
-        <div class="audio-card" id="bamboo-07">
-          <div class="card-top">
-            <div class="num-badge bamboo">07</div>
-            <div class="title-wrap">
-              <span class="stop-kicker bamboo">Bamboo Sea Stop 07 · 0:41 · Mountain Brook &amp; Guzheng</span>
-              <div class="stop-title">The First Source of Taihu Lake (Bamboo Ravine Stream)</div>
-              <div class="stop-sub">竹林溪涧·太湖第一源 · 富含锗、锂、硒、钙等微量元素的纯净山泉</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn" onclick="toggleCardAudio(this)">▶ Play Stop 07 · 播放第 07 站 (First Source of Taihu Lake)</button>
-          <audio controls preload="none"><source src="assets/audio/zhuhai_07_taihu_source.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>Continuing our way down, the mountain streams gradually grow larger. The Yixing Bamboo Sea is located in the Hufu mountainous area, which is the closest and most distinct watershed to Taihu Lake. The mountain springs flow through the ravines, babbling all the way down until they finally merge into Taihu Lake. Because of this, the stream flowing down from the bamboo sea has a very proud name: "The First Source of Taihu Lake." This spring flows endlessly year-round and the water is incredibly pure. Experts have tested it and found it contains various healthy minerals like germanium, lithium, selenium, and calcium.</p>
-          </details>
-        </div>
-
-        <!-- Bamboo 08 -->
-        <div class="audio-card" id="bamboo-08">
-          <div class="card-top">
-            <div class="num-badge bamboo">08</div>
-            <div class="title-wrap">
-              <span class="stop-kicker bamboo">Bamboo Sea Stop 08 · 0:42 · Water Drops &amp; Guzheng</span>
-              <div class="stop-title">Sea Bottom &amp; Swaying Suspension Bridge (索桥凌波·太湖之源)</div>
-              <div class="stop-sub">山脚“海底”太湖之源刻石、源头活水池与横跨溪涧的索桥</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn" onclick="toggleCardAudio(this)">▶ Play Stop 08 · 播放第 08 站 (Sea Bottom &amp; Suspension Bridge)</button>
-          <audio controls preload="none"><source src="assets/audio/zhuhai_08_sea_bottom.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>We have now reached the foot of the mountain, known as the "Sea Bottom"—which simply means the bottom of the bamboo sea. Please look over here; there is a stone by the road engraved with the words "Source of Taihu Lake." Beneath the stone is a pool of crystal-clear water. The spring water from the mountain sets off from here and flows into Taihu Lake, hence the name. Standing here and touching the water from the very source of Taihu Lake is quite an elegant experience. To the west of the lake, there is also a swaying suspension bridge that spans across the stream. Walking on it with the water rushing beneath your feet is a lot of fun and adds a special charm to the trip.</p>
-          </details>
-        </div>
-
-        <!-- Bamboo 09 -->
-        <div class="audio-card" id="bamboo-09">
-          <div class="card-top">
-            <div class="num-badge bamboo">09</div>
-            <div class="title-wrap">
-              <span class="stop-kicker bamboo">Bamboo Sea Stop 09 · 0:44 · Zen Muyu &amp; Bronze Bell</span>
-              <div class="stop-title">Jizhao Temple &amp; The 1,000-Year-Old "Tree within a Tree"</div>
-              <div class="stop-sub">寂照禅寺 · 千年古银杏与寄生朴树“树中树”奇观</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn" onclick="toggleCardAudio(this)">▶ Play Stop 09 · 播放第 09 站 (Jizhao Temple)</button>
-          <audio controls preload="none"><source src="assets/audio/zhuhai_08_jizhao_temple.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>Finally, we arrive at Jizhao Temple, hidden deep within the bamboo forest. The temple sits beside ancient trees in a wonderfully serene environment. In front of the temple stands a thousand-year-old ginkgo tree. It is over 30 meters tall with a trunk circumference of 5 meters. What's even more fascinating is that right in the middle of this ancient ginkgo's branches grows a hackberry tree. It survives by drawing nutrients from the ginkgo, creating an absolute botanical marvel known as the "Tree within a Tree." Deep in the bamboo sea, listening to the temple bell and gazing at the ancient tree, our restless minds can finally find peace.</p>
-          </details>
-        </div>
-
-        <!-- Bamboo 10 -->
-        <div class="audio-card" id="bamboo-10">
-          <div class="card-top">
-            <div class="num-badge bamboo">10</div>
-            <div class="title-wrap">
-              <span class="stop-kicker bamboo">Bamboo Sea Stop 10 · 0:41 · Guzheng &amp; Flute</span>
-              <div class="stop-title">Closing Summary of the Bamboo Sea Journey</div>
-              <div class="stop-sub">结束语 · 一上一下之间看竹品绿，收获一整天的清静与惬意</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn" onclick="toggleCardAudio(this)">▶ Play Stop 10 · 播放第 10 站 (Closing Summary)</button>
-          <audio controls preload="none"><source src="assets/audio/zhuhai_10_closing.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>Ladies and gentlemen, as we reach this point, our bamboo sea tour today is coming to an end. We started from Jing Lake, took the cable car high up into the sky, climbed the highest peak in southern Jiangsu to overlook three provinces, and then hiked all the way down. We walked through the suspended boardwalk and the emerald corridor, visited the source of Taihu Lake, and paid our respects at a thousand-year-old temple. Through this journey up and down the mountain, we have seen the beautiful bamboo, tasted the vibrant greenery, breathed the refreshing air, and harvested a full day of peace and relaxation.</p>
-          </details>
-        </div>
-
-        <!-- Bamboo 11 -->
-        <div class="audio-card" id="bamboo-11">
-          <div class="card-top">
-            <div class="num-badge bamboo">11</div>
-            <div class="title-wrap">
-              <span class="stop-kicker bamboo">Bamboo Sea Stop 11 · 1:55 · Guzheng &amp; Dizi Finale</span>
-              <div class="stop-title">Extra Facts: 140 Bamboo Species, Square Bamboo &amp; Snake Lizard</div>
-              <div class="stop-sub">其他相关知识点 · 宜兴竹园、凤尾竹/人面竹/四方竹/实心竹与濒危脆蛇蜥</div>
-            </div>
-          </div>
-          <button type="button" class="big-play-btn" onclick="toggleCardAudio(this)">▶ Play Stop 11 · 播放第 11 站 (Extra Facts &amp; Rare Bamboos)</button>
-          <audio controls preload="none"><source src="assets/audio/zhuhai_09_curiosities_outro.mp3?v=p2" type="audio/mpeg" /></audio>
-          <details class="script-box">
-            <summary>Read Script / 查看英文讲解词</summary>
-            <p>Let me also share some extra facts about the area before we part ways. Inside the scenic area is the Yixing Bamboo Garden, which has introduced over 140 species of bamboo, totaling 162,000 plants, along with various ornamental trees and plants. The garden features many beautifully designed pavilions and gathers a wide variety of unique and exotic bamboos, each with its own graceful posture. Among the rare bamboos, you can find the Phoenix-tail Bamboo, which looks beautifully like the tail feathers of a phoenix. There is the Human-face Bamboo, where the patterns on the trunk closely resemble human faces—some looking like old men and others like children, making it very rare and precious. We also have the Square Bamboo, which actually has a square trunk. Legend has it that Emperor Qianlong planted his chopsticks upside down during a tour, and they grew into this bamboo. Finally, there is the Solid Bamboo. While most bamboos are hollow, this rare type is completely solid inside, making it an excellent material for bamboo crafts. As for rare animals, besides the ancient Peach Blossom Jellyfish in Jing Lake that we mentioned earlier, the bamboo sea is also home to the Snake Lizard. This is a rare and endangered wild animal that looks like a snake because its legs have degenerated from living underground for so long. In Jiangsu Province, it can only be found right here in the Yixing mountains. The scenic area boasts many major attractions, such as the First Source of Taihu Lake, the Highest Peak in Southern Jiangsu, Jing Lake, Jizhao Temple, the Emerald Corridor, and the Suspended Boardwalk. Whether they are grand and majestic, quiet and profound, or winding and mysterious, each has its own unique charm. Thank you all for joining me today, and I hope you had a wonderful time!</p>
-          </details>
-        </div>
-      </div>
+      <div class="keypad-bar" id="keypad-bamboo"></div>
+      <div class="audio-list" id="list-bamboo"></div>
     </section>
   </main>
 
   <script>
+    var guideLang = "en";
+
+    var GUNAN_STOPS = [
+      {
+        num: "01",
+        id: "gunan-01",
+        file: "assets/audio/gunan_01_intro.mp3?v=p2",
+        keyEn: "Intro",
+        keyZh: "开场导览",
+        kickerEn: "Gunan Stop 01 · 1:31 · Guzheng & Dizi Intro",
+        kickerZh: "古南街第 01 站 · 1:31 · 古筝与竹笛开场",
+        titleEn: "Welcome to Gunan Street & Su Dongpo’s \"Shushan\"",
+        titleZh: "古南街开场导览与苏东坡「此山似蜀」",
+        subEn: "The Fountainhead of Zisha, Cradle of Masters, and how Shushan Hill got its name",
+        subZh: "「紫砂源泉，大师摇篮」——依山建龙窑、临水通蠡河的明清石板老街",
+        scriptEn: "Hello everyone! Welcome to Shushan Ancient South Street—known in Chinese as Gunan Street. It is my great honor to accompany you today as we explore this historic neighborhood. First, please take a look at this map. We are currently standing at the entrance of Gunan Street, nestled between mountains and water. To our east is ancient Shushan Hill, where dragon kilns have climbed the slopes since the Song and Yuan dynasties, becoming the primary center for firing Zisha purple clay teapots in the Ming Dynasty. To our west flows the ancient Li River canal, providing convenient water transport. Firing kilns on the hill above and trading teaware at the foot below—that is the essence of Gunan Street, summed up in two phrases: \"The Fountainhead of Zisha, and the Cradle of Masters.\" Now, let's step onto these ancient bluestone slabs and experience the charm of Gunan Street firsthand! Stretching over 900 meters, the street preserves a rich collection of Ming and Qing dynasty architecture. Everything here begins with Shushan Hill to the east. Originally called Dushan, meaning \"Solitary Hill,\" because it stood alone on the flat plain, it got its current name when the great Song Dynasty poet Su Dongpo arrived here, bought farmland intending to retire, and exclaimed: \"This hill looks just like my homeland of Shu in Sichuan!\" Ever since, generations have called it Shushan, the Hill of Shu.",
+        scriptZh: "大家好！欢迎各位来到蜀山古南街，非常荣幸能陪同大家一起参观蜀山古南街。首先请各位看向这幅导览图，我们现在处于南街的入口位置，整条老街座落于山水之间，东面是古老的蜀山，早在宋元时期山坡上就遍布依山而建的龙窑，而到了明代开始这里更是集中烧造紫砂壶的重要窑场。西面是古运河“蠡河”，有着便利的水上运输通道。在这山上烧窑，山下买卖的地方，便是蜀山古南街，而整个南街的特色其实用八个字就可以概括：“紫砂源泉，大师摇篮”。接下来邀请大家踏上这古老的石板路，身临其境地感受下蜀山古南街的魅力！古南街全长900多米，保存了大量的明清建筑，脚下的石板路最有古韵。而这一切都要从东面的蜀山说起，蜀山原名独山，因方圆数里仅此一山而得名，宋代著名的大文豪苏东坡来到独山，买田置地，意欲归隐，感慨“此山似蜀”，后人便改作蜀山。"
+      },
+      {
+        num: "02",
+        id: "gunan-02",
+        file: "assets/audio/gunan_02_xiaofang_kiln.mp3?v=p2",
+        keyEn: "Square Kiln",
+        keyZh: "小方窑",
+        kickerEn: "Gunan Stop 02 · 0:59 · Guzheng Glissando",
+        kickerZh: "古南街第 02 站 · 0:59 · 古筝刮奏",
+        titleEn: "Small Square Kiln (Downdraft Kiln) & Hexin Factory",
+        titleZh: "小方窑（倒烟窑）与原合新陶瓷厂",
+        subEn: "Historic chimney of the 1958 Yixing Hexin Ceramic Factory where Gu Jingzhou led technical research",
+        subZh: "1958年由28家紫砂手工业户合并而成的合新陶瓷厂烟囱，顾景舟曾在此任技术研究副主任",
+        scriptEn: "On our left is the \"Downdraft Kiln,\" locally known as the \"Small Square Kiln.\" This chimney belonged to the former Yixing Hexin Ceramic Factory. In a downdraft kiln, the smoke and flames circulate up and down inside the chamber for even heat transfer. It was simple to build, low-cost, and kept temperature differences very small. However, because it is an intermittent kiln with high heat loss and heavy emissions, its use is now restricted for environmental protection. The Yixing Hexin Ceramic Factory—originally founded in 1958 by merging 28 local Zisha workshops in Shushan—was one of the key predecessors of the famous Yixing Zisha Craft Factory, employing over 3,000 artisans at its peak. In 1959, Grandmaster Gu Jingzhou was appointed deputy director of technical research here, helping design the Jiangsu Hall in Beijing's Great Hall of the People and crafting state tea sets exported worldwide.",
+        scriptZh: "我们左手边的是“倒烟窑”，也称作“小方窑”，为原合新陶瓷厂烧窑用的烟囱。倒烟窑，就是烧窑时烟在里面转来转去，以达到热传输的目的。它具有结构简单、建造费用低、窑内温差小、生产调节灵活方便等优点。但由于它属于间歇窑，窑的蓄热损失和散热损失大，污染大，所以现在已经是国家限制的窑炉之一了。宜兴合新陶瓷厂原名蜀山陶业生产合作社，是宜兴紫砂工艺厂的前身之一。该厂成立于1958年，由28个紫砂手工业户合并而成，初期拥有职工3000多人。1959年顾景舟被任命为技术研究副主任，参与北京人民大会堂江苏厅的布置设计并承制大型咖啡茶具出口多个国家。"
+      },
+      {
+        num: "03",
+        id: "gunan-03",
+        file: "assets/audio/gunan_03_jinshage.mp3?v=p2",
+        keyEn: "Jinsha Plaque",
+        keyZh: "金砂阁",
+        kickerEn: "Gunan Stop 03 · 1:03 · Water & Guzheng",
+        kickerZh: "古南街第 03 站 · 1:03 · 水滴与古筝",
+        titleEn: "Jinsha Pavilion & \"Shop in Front, Studio in Back\"",
+        titleZh: "金砂阁（顾景舟题匾）与明清「前店后坊」",
+        subEn: "Inscribed by Grandmaster Gu Jingzhou (record 93M RMB teapot) and Ming-Qing two-story townhouses",
+        subZh: "壶艺泰斗顾景舟亲笔题匾（其作品创9300万元拍卖纪录）与依山临水二层木楼格局",
+        scriptEn: "Look up at the plaque above this doorway reading \"Jinsha Pavilion,\" or Golden Clay Pavilion. Those three characters were personally inscribed by the legendary Grandmaster of Zisha, Gu Jingzhou! A single teapot made by Gu Jingzhou holds the all-time auction record for Zisha ware at an astonishing 93 million RMB! Let's step inside for a look—rumor has it the family here still treasures a teapot by Gu Jingzhou. They are original residents of Gunan Street, where crafting teapots and sipping tea is simply everyday life. As you can see, the buildings along the entire street are two-story Ming and Qing wooden townhouses built between Shushan Hill and the canal. The ground floor features removable wooden shop planks, while the upper floor serves as living quarters with carved wooden lattice windows. Over half the families here craft and trade Zisha ware using the classic \"Shop in Front, Workshop in Back\" layout—selling teapots in the front room facing the street, and hand-building them in the back courtyard.",
+        scriptZh: "大家抬头看，这个“金砂阁”的牌匾是壶艺泰斗顾景舟先生为他们家题写的。顾景舟的壶保留着紫砂壶拍卖的最高价9300万元！他们家是这里的原住民，做壶、喝茶就是他们每天的生活。整条街的建筑依山临水而建，多为明清时期的木结构二层楼，下层是长条木板拼门的店铺，上层为住房，靠街窗户均是雕花短木格窗。这里过半的住户从事紫砂生产和经营，后屋为制作生产坊，临街前屋则摆起货架设店经营，即所谓的“前店后坊”。"
+      },
+      {
+        num: "04",
+        id: "gunan-04",
+        file: "assets/audio/gunan_04_taoyuan_xiabo.mp3?v=p2",
+        keyEn: "Saggars",
+        keyZh: "陶园匣钵",
+        kickerEn: "Gunan Stop 04 · 0:52 · Bamboo Flute",
+        kickerZh: "古南街第 04 站 · 0:52 · 悠远竹笛",
+        titleEn: "Shushan Gallery, Gu Shaopei Residence & Kiln Saggars",
+        titleZh: "蜀山展示馆、陶园顾脉与龙窑匣钵（得管）",
+        subEn: "Former residence of Master Gu Shaopei and rare protective ceramic saggars used in dragon kilns",
+        subZh: "中国工艺美术大师顾绍培旧居，以及龙窑烧制中保护紫砂壶免受火焰直喷的圆形陶匣钵",
+        scriptEn: "Right here is the Shushan Exhibition Hall, a community gallery that hosts rotating local art exhibitions. And just ahead is \"Taoyuan Gumai,\" the former residence of Chinese Arts and Crafts Master Gu Shaopei. As we mentioned earlier, Gunan Street is truly the cradle of Zisha masters, and nearly every great master's story is intertwined with this lane. Please take a look at these round ceramic cylinders—we call them \"Saggars,\" or \"Deguan\" in the local dialect. Artisans place raw Zisha teapots inside these protective clay containers before loading them into the Dragon Kiln. The saggar shields the delicate purple clay from direct open flames and flying wood ash, preventing surface blisters and uneven coloring. Today, authentic dragon-kiln saggars like these have become a rare sight.",
+        scriptZh: "这里是蜀山展示馆，不定期举办各种小型艺术展。前面这间“陶园顾脉”是中国工艺美术大师顾绍培先生的旧居。各位请看这个圆形陶制品，我们称之为“匣钵”，当地人俗称“得管”。人们将它用作紫砂壶烧制过程中承装紫砂制品的容器。使用匣钵烧制可以避免火焰直接烧到产品，以防产品表面出现火刺、色泽不均等缺陷。现在这种用于龙窑烧制的匣钵已经很少见了。"
+      },
+      {
+        num: "05",
+        id: "gunan-05",
+        file: "assets/audio/gunan_05_jiyishun_street.mp3?v=p2",
+        keyEn: "Ji Yishun",
+        keyZh: "季益顺居",
+        kickerEn: "Gunan Stop 05 · 0:48 · Guzheng Interlude",
+        kickerZh: "古南街第 05 站 · 0:48 · 古筝间奏",
+        titleEn: "Master Ji Yishun Residence & Ming-Qing Commercial Hub",
+        titleZh: "季益顺旧居与明清「紫砂一条街」商市百态",
+        subEn: "Birthplace of Master Ji Yishun and the bustling historic marketplace of Gunan Street",
+        subZh: "中国工艺美术大师季益顺出生地，以及明清时期南北杂货、茶庄酒楼、绸缎钟表云集的繁华商埠",
+        scriptEn: "Next, we pass the former residence of Master Ji Yishun, born right here on Shushan Gunan Street in 1960. Crowned both a Chinese Arts and Crafts Master and a Ceramic Art Master, his works are celebrated for their poetic themes and ingenious, lifelike forms. Protected as a Jiangsu Provincial Historic Preservation District, Gunan Street was once the bustling \"Wall Street of Zisha.\" During the Ming and Qing dynasties, it served as Yixing's commercial and passenger transport hub. Beyond pottery workshops, the street was packed with grocery emporiums, tea houses, silk draperies, bamboo craft shops, clockmakers, and clinics—a vibrant, self-contained riverside town.",
+        scriptZh: "季益顺1960年出生于蜀山南街，是中国工艺美术大师、中国陶瓷艺术大师，作品以新、特、精、巧和实用著称。蜀山古南街作为江苏省第一批古建筑保护单位，旧时是繁华热闹的“紫砂一条街”，在明清时成为宜兴独立的商业和客运中心，具有“因商而成、因市而荣”的特征。除陶瓷作坊外，街上还有南北杂货、茶庄酒楼、布匹绸缎、竹木器物、钟表文具、中西医院等，极具生活气息。"
+      },
+      {
+        num: "06",
+        id: "gunan-06",
+        file: "assets/audio/gunan_06_xuhantang_lane.mp3?v=p2",
+        keyEn: "Xu Hantang",
+        keyZh: "徐汉棠居",
+        kickerEn: "Gunan Stop 06 · 0:45 · Canal Water & Guzheng",
+        kickerZh: "古南街第 06 站 · 0:45 · 流水与古筝",
+        titleEn: "Grandmaster Xu Hantang Residence & Kiln-to-Canal Lane",
+        titleZh: "徐汉棠旧居与蜀山通往蠡河的唯一古道",
+        subEn: "First disciple of Gu Jingzhou and the historic lane where fired teapots were carried to Li River boats",
+        subZh: "顾景舟第一弟子、「汉棠盆」名家徐汉棠旧居，以及龙窑茶壶运往蠡河装船出海的必经通道",
+        scriptEn: "Here stands the former residence of Grandmaster Xu Hantang, born in 1932 and honored with the Chinese Arts and Crafts Lifetime Achievement Award. In 1954, he became the very first disciple of Grandmaster Gu Jingzhou. Master Xu is renowned for his ice-crackle glaze textures and his exquisite miniature bonsai pots, celebrated by collectors as \"Hantang Pots.\" Notice this narrow lane beside us: it was the sole passageway connecting the dragon kilns on Shushan Hill with the Li River canal. Freshly fired teapots were carried down this very path to waiting cargo boats on the Li River, embarking on their waterborne journey to tea lovers around the world.",
+        scriptZh: "徐汉棠生于1932年，荣获中国工艺美术终身成就奖，1954年拜入顾景舟门下，为顾老第一弟子，以冰裂纹装饰与微型花盆“汉棠盆”见长。旁边这一条是连通蜀山和蠡河唯一的一条道路，蜀山上龙窑中烧制好的茶壶，通过这条道路运输到蠡河边，再通过水上运输送至世界各地。"
+      },
+      {
+        num: "07",
+        id: "gunan-07",
+        file: "assets/audio/gunan_07_ag_bank.mp3?v=p2",
+        keyEn: "1934 Bank",
+        keyZh: "农业银行",
+        kickerEn: "Gunan Stop 07 · 0:30 · Breeze & Chime",
+        kickerZh: "古南街第 07 站 · 0:30 · 清风雅音",
+        titleEn: "Prosperous Corner & 1934 Shushan Agricultural Bank",
+        titleZh: "繁华街区转弯处与民国23年蜀山农业银行旧址",
+        subEn: "Former granary warehouse established in April 1934 for agricultural collateral loans",
+        subZh: "民国23年（1934年）4月江苏省农业银行宜兴支行在此设立仓库，储存农产品作为贷款抵押",
+        scriptEn: "Rounding the corner, we enter what was once the most prosperous commercial section of Gunan Street, lined with pottery shops, general stores, teahouses, and bakeries. On our left stands the former site of the Shushan Agricultural Bank. Back in April 1934, the Yixing branch of the Jiangsu Farmers Bank established a granary warehouse right here in Shushan, allowing local farmers and potters to store agricultural goods as collateral for loans.",
+        scriptZh: "转弯后这一段是当时最繁华的街区，两边是大量的陶器店、南北货店、茶馆以及食品店。左手边可以看到“蜀山农业银行旧址”：民国23年（1934年）4月，江苏省农业银行宜兴支行在蜀山设立仓库，储存农产品为贷款作抵押。"
+      },
+      {
+        num: "08",
+        id: "gunan-08",
+        file: "assets/audio/gunan_08_zisha_guild.mp3?v=p2",
+        keyEn: "Zisha Guild",
+        keyZh: "同业公会",
+        kickerEn: "Gunan Stop 08 · 0:46 · Classical Guzheng",
+        kickerZh: "古南街第 08 站 · 0:46 · 典雅古筝",
+        titleEn: "Zisha Trade Guild & Raw Purple Clay Mineral Ores",
+        titleZh: "紫砂同业公会旧址与紫泥、红泥、绿泥原矿石",
+        subEn: "Historic industry association, raw stone ores (Zini, Hongni, Lüni), and 20th-century factory archives",
+        subZh: "旧时管理行业标准与物价的同业公会，展示需经翻晒、研磨、发酵方能制壶的原矿石与老物件",
+        scriptEn: "We have now arrived at the former site of the Zisha Trade Guild—the historical equivalent of today's industry association. In its heyday, the guild played a vital role in regulating quality standards, stabilizing teapot prices, and promoting Yixing Zisha across China. Displayed right in front of us are the raw Zisha mineral ores—Purple Clay, Red Clay, and Green Clay. Dug from deep rock strata, these stone-like ores must undergo months of open-air weathering, crushing, screening, water mixing, and aging before they transform into the supple clay used to hand-build teapots. Inside the hall, you can also see historical photographs and artifacts from the 20th-century Zisha Craft Factory era.",
+        scriptZh: "现在我们来到的是“紫砂同业公会”旧址，相当于现在的行业协会，当年对行业管理、物价稳定、宣传推广起到了非常大的作用。眼前看到的是紫砂原料矿石（紫泥、红泥、绿泥等），这些矿石需要经过翻晒、研磨、发酵等多个步骤才能变成泥巴开始制壶。展厅内还陈列着上世纪“紫砂工艺厂”时期的老照片与老物件。"
+      },
+      {
+        num: "09",
+        id: "gunan-09",
+        file: "assets/audio/gunan_09_deyilou_closing.mp3?v=p2",
+        keyEn: "Deyilou Finale",
+        keyZh: "得义楼结语",
+        kickerEn: "Gunan Stop 09 · 1:03 · Guzheng & Dizi Finale",
+        kickerZh: "古南街第 09 站 · 1:03 · 竹笛与古筝尾奏",
+        titleEn: "Century-Old Deyilou Teahouse & The \"Seven Old Masters\"",
+        titleZh: "百年老字号「得义楼」茶馆与紫砂一厂七大老艺人传奇",
+        subEn: "1920s morning tea culture and the 1954 Yixing Zisha Craft Factory founded by the Seven Old Masters",
+        subZh: "上世纪20年代座无虚席的早茶社交文化，以及1954年底由七大老艺人创立的宜兴紫砂工艺厂历史",
+        scriptEn: "Finally, look at the century-old \"Deyilou Teahouse\" before us. Back in the 1920s, Shushan Town had barely 300 households and fewer than 2,000 residents—yet it boasted seven lively teahouses! Every morning, every single table was packed. Gathering here for morning tea wasn't just a daily habit; it was the town's social network where potters and merchants exchanged news and forged friendships. Before we conclude, one last piece of history: nearby stands the former site of the state-owned Yixing Zisha Craft Factory, founded at the end of 1954 by the legendary \"Seven Old Masters of Zisha\"—Wu Yungen, Pei Shimin, Ren Ganting, Wang Yinchun, Zhu Kexin, Gu Jingzhou, and Jiang Rong. Over four decades, it nurtured generations of national masters and shaped modern Zisha history. That concludes our guided walk through Shushan Gunan Street today—thank you all for joining!",
+        scriptZh: "现在我们看到的就是百年老字号“得义楼”茶馆。上世纪20年代蜀山镇仅300多户人家、人口不足二千，却有7家茶社，每天早茶座无虚席，是当时人们交流信息、结交朋友的重要场所。此外，附近还有建于1954年底的江苏省宜兴紫砂工艺厂（紫砂一厂）旧址，由吴云根、裴石民、任淦庭、王寅春、朱可心、顾景舟、蒋蓉“七大老艺人”集中民间艺人成立，历时40余年培养了大批国大师与省大师。今天的古南街参观就到这里，谢谢大家！"
+      }
+    ];
+
+    var BAMBOO_STOPS = [
+      {
+        num: "01",
+        id: "bamboo-01",
+        file: "assets/audio/zhuhai_01_intro.mp3?v=p2",
+        keyEn: "Overview",
+        keyZh: "开场总览",
+        kickerEn: "Bamboo Sea Stop 01 · 1:46 · Guzheng & Dizi Intro",
+        kickerZh: "竹海第 01 站 · 1:46 · 古筝与竹笛开场",
+        titleEn: "Welcome & Overview: \"First Bamboo Sea in East China\"",
+        titleZh: "开场导览：「华东第一竹海」与行程总览",
+        subEn: "Junction of Jiangsu, Zhejiang, and Anhui provinces; 180,000 acres of bamboo; cable car up and hike down",
+        subZh: "苏、浙、皖三省交界万亩翠竹，18万亩竹乡精华，先乘索道上山俯瞰、再徒步下山",
+        scriptEn: "Hello everyone! Welcome to the Yixing Bamboo Sea Scenic Area. It is my great honor to accompany you as we stroll through this vast bamboo forest, covering tens of thousands of acres, to experience the refreshing coolness and poetic beauty of what is known as the \"First Bamboo Sea in East China.\" Before we officially head into the mountains, please take a look at this map for a general idea of today's itinerary. The Yixing Bamboo Sea is located in Hufu Town, about 31 kilometers southwest of downtown Yixing. It sits right at the junction of three provinces: Jiangsu, Zhejiang, and Anhui. With hundreds of thousands of acres of lush bamboo connecting across these three provinces, it truly is an \"ocean of bamboo.\" Because it is the largest bamboo resource scenic area in East China, it has earned that resounding title—the \"First Bamboo Sea in East China.\" Our tour today will be very relaxing. We will first take the cable car up the mountain to get a bird's-eye view of the bamboo sea, and then we will hike all the way down to fully appreciate the beautiful scenery. Through this journey up and down, the joy of the mountains and the charm of the forests and springs will unfold before your eyes. Before we enter, let me briefly mention the deep connection between Yixing and bamboo. Yixing itself is a famous \"bamboo town\" and the most important producing area of Moso bamboo in Jiangsu Province, with 180,000 acres of bamboo forests citywide. In the southern mountainous area where we are now, there are about 12,000 hectares of Moso bamboo, making it the largest bamboo production base in the province. The bamboo sea before you is the absolute essence of this region.",
+        scriptZh: "大家好！欢迎各位来到宜兴竹海风景区，非常荣幸能陪同大家一起漫步这万亩竹海，感受“华东第一竹海”的清凉与诗意。在正式进山之前，先请大家看这幅导览图，对今天的行程有个大致了解。我们所在的宜兴竹海，位于宜兴市区西南约31公里的湖滏镇境内，地处江苏、浙江、安徽三省交界处，方圆几十万亩翠竹连成一片，堪称“竹的海洋”，被誉为“华东第一竹海”。今天我们的游玩方式很惬意：先乘索道上山，从空中俯瞰竹海，再一路徒步下山。宜兴本身是著名的“竹乡”，全市有竹林18万亩，宜南山区有约12000公顷毛竹林，眼前这片竹海正是其中的精华所在。"
+      },
+      {
+        num: "02",
+        id: "bamboo-02",
+        file: "assets/audio/zhuhai_02_mirror_lake.mp3?v=p2",
+        keyEn: "Mirror Lake",
+        keyZh: "镜湖水母",
+        kickerEn: "Bamboo Sea Stop 02 · 1:53 · Water Drops & Guzheng",
+        kickerZh: "竹海第 02 站 · 1:53 · 镜湖水滴与古筝",
+        titleEn: "Mirror Lake & The \"Water Panda\" (Peach Blossom Jellyfish)",
+        titleZh: "镜湖秀色与「水中大熊猫」桃花水母",
+        subEn: "30,000 m² crystal lake, Yingzhu Pavilion, and 650-million-year-old living fossil jellyfish",
+        subZh: "两山夹峙的10米深清冽镜湖、阮文辉题写「映竹轩」与比恐龙还早几亿年的6.5亿岁桃花水母",
+        scriptEn: "Entering the scenic area and walking along the path, the first spot we encounter is Jing Lake, or Mirror Lake. Look over there—nestled between two mountains lies a tranquil lake. The water surface is as flat as a giant mirror, perfectly reflecting the blue sky, white clouds, green mountains, and emerald bamboo, which is exactly how it got its name. The lake covers an area of 30,000 square meters, holds 150,000 cubic meters of water, and reaches a depth of 10 meters. The water is crystal clear all year round. As the local saying goes, \"Bamboo grows in the water, and water flows through the bamboo,\" creating a beautiful contrast between the lake and the forest. The pavilion by the lake is called Yingzhu Pavilion. If you stand here and look towards the mountains, the sparkling water, the emerald bamboo, and the blue sky come together like a rich, vibrant landscape painting. You might not expect this, but living beneath the surface of this lake is a group of incredible \"ancestors.\" Jing Lake is home to a rare creature called the Peach Blossom Jellyfish. It first appeared 650 million years ago, hundreds of millions of years before the dinosaurs! It is a \"living fossil\" for evolutionary research and is often praised as the \"Giant Panda of the Water.\" From August to November, thousands of these jellyfish gather in the water near the Jellyfish Pavilion on the east side of the lake. The larger ones are about the size of a coin, while most are the size of a contact lens. As they swim and pulse, they look like crystal-clear petals blooming in the water. The Peach Blossom Jellyfish requires extremely high water quality and cannot tolerate even the slightest pollution. The fact that they thrive here proves just how incredibly pure the water of Jing Lake is.",
+        scriptZh: "进入景区顺着小道往前走，遇到的第一个景点便是镜湖。两山夹峙之间水面平得像一面巨大的镜子，面积3万平方米，最深处10米，“竹在水中长，水在竹间流”。湖边的亭子叫“映竹轩”，为国家级工艺美术大师阮文辉题写。在这片湖水下面还住着一群“老祖宗”——桃花水母，它出现于6.5亿年前，比恐龙还要早几亿年，被誉为“水中大熊猫”。每到8月至11月成千上万聚集在湖东水母亭下，宛如水中的花瓣。桃花水母对水质要求极高、容不得一丝污染，足见镜湖之水何等纯净。"
+      },
+      {
+        num: "03",
+        id: "bamboo-03",
+        file: "assets/audio/zhuhai_03_cable_car.mp3?v=p2",
+        keyEn: "Cable Car",
+        keyZh: "索道凌空",
+        kickerEn: "Bamboo Sea Stop 03 · 0:56 · Kung Fu Bamboo Wind",
+        kickerZh: "竹海第 03 站 · 0:56 · 武侠轻功与竹涛",
+        titleEn: "Cable Car Ride (1,500m Aerial Gondola)",
+        titleZh: "索道凌空（乘1500米索道上山）",
+        subEn: "400m vertical rise across 96 cabins—flying over undulating bamboo waves like martial arts masters",
+        subZh: "全长1500米、上下落差400米，俯瞰竹梢随风翻涌，体验武侠片大侠「凌波微步」飞驰竹林之巅",
+        scriptEn: "Now that we've seen Jing Lake, it's time to take the cable car up the mountain. Please follow me to the left; we'll reach the boarding station in just a few minutes. As you can see, this cableway is 1,500 meters long with a vertical drop of 400 meters between the top and bottom stations. Equipped with 96 cabins, it is one of the more advanced sightseeing cableways in the country. Once you're in the cabin and we slowly ascend, please look down. The mountains covered in bamboo will glide beneath you, with the bamboo tops rolling and surging in the wind. It feels as if we are martial arts masters from a movie, using \"lightness skills\" to fly swiftly over the bamboo canopy. It's a magical feeling you can only understand by experiencing it yourself. I highly recommend using these ten minutes in the air to take out your phones and shoot your very own aerial blockbuster of the bamboo sea.",
+        scriptZh: "看过了镜湖，接下来我们坐索道上山。这条索道全长1500米，上下站台落差400米，一共96个吊厢。坐进吊厢缓缓上升，请大家俯瞰脚下——满山遍野的竹林从身下掠过，竹梢在风中起伏翻涌，仿佛武侠片里的大侠施展轻功、脚尖轻点在竹林上飞驰，那种“凌波微步”的感觉只有身临其境才能体会。大家不妨趁在空中这十几分钟拍一段属于你的竹海航拍大片。"
+      },
+      {
+        num: "04",
+        id: "bamboo-04",
+        file: "assets/audio/zhuhai_04_yunu_peak.mp3?v=p2",
+        keyEn: "Yunv Peak",
+        keyZh: "玉女峰顶",
+        kickerEn: "Bamboo Sea Stop 04 · 2:28 · Summit Bamboo Flute",
+        kickerZh: "竹海第 04 站 · 2:28 · 山巅悠远竹笛",
+        titleEn: "The Summit: Yunv Peak (611.5m · One Foot in Three Provinces)",
+        titleZh: "苏南第一峰·玉女峰（海拔611.5米山顶）",
+        subEn: "Lingyun Pavilion 360° view across Jiangsu, Anhui, and Zhejiang; Maolong Pool & protected tree frogs",
+        subZh: "一脚踏三省（北看江苏宜兴、西看安徽宣城、南看浙江湖州），登凌云阁远眺太湖，探访冒龙池与树蛙",
+        scriptEn: "We've arrived at the top station. Please watch your step as you exit the cable car. We just need to climb a short flight of stairs to reach the highest point of the bamboo sea—Yunv Peak. Everyone, the place we are standing right now is the famous \"Highest Peak in Southern Jiangsu.\" With an altitude of 611.5 meters, it sits exactly at the junction of Jiangsu, Zhejiang, and Anhui provinces. It is the highest peak in this vast mountainous region. Once you've caught your breath, look far out in every direction. The mountains are deep and elegant, the breeze is refreshing, and the scenery of the three provinces is fully in view. Interestingly, if you look north, that's Yixing in Jiangsu; look west, and you see Xuancheng in Anhui; look south, and that's Huzhou in Zhejiang. It's not every day you get to stand with one foot in three different provinces! The pavilion here at the summit is called Lingyun Pavilion. If you climb up, you can enjoy a 360-degree panoramic view. On a clear day, you can even see the shimmering waters of Taihu Lake in the distance. Look around as the mountain wind blows—the endless bamboo forest rolls and surges just like the waves of the ocean, while Jing Lake down below looks like a piece of emerald quietly embedded in the forest. This is exactly where the name \"Bamboo Sea\" comes from, and it is truly its most moving moment. At the top of Yunv Peak, there is also a clear spring that never dries up all year round. Locals call it Maolong Pool. It is formed by spring water gathering from the underground mountain range. Because the bamboo sea is part of the Tianmu Mountain range, the vegetation is lush and water resources are abundant, forming a massive underground reservoir. Even during long droughts, the trees here still receive plenty of nutrients. Next to this clear spring lives a protected species—the tree frog. If we're lucky, we might just spot one today. Now that we've enjoyed the breeze and taken enough photos at the summit, we will begin the most relaxing part of today's journey: hiking down the mountain. As we descend, the sound of the streams will grow louder. We will be accompanied by the babbling spring water all the way down, feeling as if we are walking inside a painting. Please follow me, slow down your pace, and truly enjoy this time deep in the bamboo forest.",
+        scriptZh: "我们现在站立的地方就是大名鼎鼎的“苏南第一峰”——玉女峰，海拔611.5米，坐落在苏、浙、皖三省交界处：往北看是江苏宜兴，往西看是安徽宣城，往南看是浙江湖州，一脚踏三省！山顶上的凌云阁可360度观景，晴天能远眺太湖波光，脚下的镜湖如同翡翠镶嵌在翻涌的竹海之中。山顶还有一汪终年不涸的清泉“冒龙池”，旁有国家三级保护动物树蛙。在山顶吹够了风、拍够了照，接下来我们开始徒步下山，伴着潺潺泉水人在画中游。"
+      },
+      {
+        num: "05",
+        id: "bamboo-05",
+        file: "assets/audio/zhuhai_05_skywalk.mp3?v=p2",
+        keyEn: "Boardwalk",
+        keyZh: "悬空栈道",
+        kickerEn: "Bamboo Sea Stop 05 · 0:35 · Breeze & Chime",
+        kickerZh: "竹海第 05 站 · 0:35 · 清风竹韵",
+        titleEn: "Suspended Boardwalk (Natural Oxygen Bar)",
+        titleZh: "悬空栈道（云端天然氧吧）",
+        subEn: "Cliffside skywalk above rolling bamboo waves packed with ultra-high negative oxygen ions",
+        subZh: "紧邻凌云阁的下山首段，栈道悬于半空，脚下层层竹浪，深呼吸超高负氧离子洗净肺部浊气",
+        scriptEn: "The first section of our descent is the Suspended Boardwalk right next to Lingyun Pavilion. This boardwalk is suspended in mid-air with layers of bamboo waves right beneath your feet. Walking on it during foggy weather feels like strolling through the clouds above the bamboo sea, just like a fairyland. I highly suggest taking a deep breath while walking on this boardwalk. The air here has an extremely high concentration of negative oxygen ions. It is a true \"natural oxygen bar,\" perfect for cleansing your lungs and leaving you feeling completely refreshed.",
+        scriptZh: "下山的第一段是紧邻凌云阁的“悬空栈道”。栈道悬在半空，脚下就是层层竹浪，云雾天气时行走其上仿佛置身竹海云端，宛如仙境。大家不妨在这段栈道上深吸一口气——这里的空气中负氧离子含量极高，是名副其实的“天然氧吧”，把肺里的浊气好好洗一洗，一身轻松。"
+      },
+      {
+        num: "06",
+        id: "bamboo-06",
+        file: "assets/audio/zhuhai_06_emerald_corridor.mp3?v=p2",
+        keyEn: "Emerald Corridor",
+        keyZh: "翡翠长廊",
+        kickerEn: "Bamboo Sea Stop 06 · 1:23 · Classical Guzheng",
+        kickerZh: "竹海第 06 站 · 1:23 · 典雅古筝",
+        titleEn: "Emerald Corridor & Su Dongpo’s Love for Bamboo",
+        titleZh: "翡翠长廊与苏东坡「宁可食无肉，不可居无竹」",
+        subEn: "Natural jade-green bamboo tunnel and Song poet Su Dongpo’s tribute to the \"Four Noble Men\"",
+        subZh: "翠竹交错成廊、光影斑驳，品味苏东坡买田阳羡与「梅兰竹菊」四君子的高洁气节",
+        scriptEn: "After passing the suspended boardwalk, we arrive at the Emerald Corridor. Look at the tall, graceful bamboo on both sides—they are as green as emeralds. The bamboo branches above our heads intertwine to form a natural corridor. As sunlight filters through the leaves, it creates beautiful, dappled shadows on the ground. Walking through here, every step offers a new scenic view, and any photo you take will look like a classic masterpiece. Speaking of bamboo, let's take a moment to appreciate the special love Chinese people have for it. The great poet Su Dongpo from the Song Dynasty once wrote: \"I would rather eat a meal without meat than live in a place without bamboo. A lack of meat makes one thin, but a lack of bamboo makes one vulgar.\" Su Dongpo had a deep connection with Yixing; he even bought land here with the intention of retiring. It was likely his deep affection for bamboo that made him linger among the mountains and waters of Yixing. Because bamboo is hollow inside but stands tall and straight, and grows tenaciously anywhere, it has always been viewed by Chinese people as a symbol of a gentleman's noble character. That's why bamboo is honored as one of the \"Four Noble Men\" of plants in traditional culture. By walking through this bamboo sea today, we can all consider ourselves \"refined\" people!",
+        scriptZh: "走过悬空栈道，我们来到“翡翠长廊”。两旁的竹子绿得像翡翠一样，头顶竹枝交错成廊，阳光透过竹叶洒下斑驳光影。宋代大文豪苏东坡曾写下：“宁可食无肉，不可居无竹。无肉令人瘦，无竹令人俗。”苏东坡曾在宜兴蜀山买田置地意欲归隐。竹子虚心有节、挺拔向上，历来被中国人视为君子的品格，位列“梅兰竹菊”四君子之一。今天我们走在这片竹海之中，也算做了一回“不俗之人”。"
+      },
+      {
+        num: "07",
+        id: "bamboo-07",
+        file: "assets/audio/zhuhai_07_taihu_source.mp3?v=p2",
+        keyEn: "Taihu Source",
+        keyZh: "太湖第一源",
+        kickerEn: "Bamboo Sea Stop 07 · 0:41 · Mountain Brook & Guzheng",
+        kickerZh: "竹海第 07 站 · 0:41 · 山涧溪流与古筝",
+        titleEn: "The First Source of Taihu Lake (Bamboo Ravine Stream)",
+        titleZh: "竹林溪涧·太湖第一源",
+        subEn: "Pure year-round mountain spring rich in germanium, lithium, selenium, and calcium feeding Taihu Lake",
+        subZh: "离太湖最近、流域最明显的山涧清泉，富含锗、锂、硒、钙等有益健康的微量元素",
+        scriptEn: "Continuing our way down, the mountain streams gradually grow larger. The Yixing Bamboo Sea is located in the Hufu mountainous area, which is the closest and most distinct watershed to Taihu Lake. The mountain springs flow through the ravines, babbling all the way down until they finally merge into Taihu Lake. Because of this, the stream flowing down from the bamboo sea has a very proud name: \"The First Source of Taihu Lake.\" This spring flows endlessly year-round and the water is incredibly pure. Experts have tested it and found it contains various healthy minerals like germanium, lithium, selenium, and calcium.",
+        scriptZh: "继续往下走，山间的溪水渐渐大了起来。宜兴竹海地处湖滏山区，离太湖最近、流域最明显，山上的泉水穿涧而过一路叮咚作响，最终汇入太湖，因此得名“太湖第一源”。这泉水经年不息、水质极其纯净，专家测定其中含有锗、锂、硒、钙等多种有益健康的微量元素。"
+      },
+      {
+        num: "08",
+        id: "bamboo-08",
+        file: "assets/audio/zhuhai_08_sea_bottom.mp3?v=p2",
+        keyEn: "Sea Bottom",
+        keyZh: "海底索桥",
+        kickerEn: "Bamboo Sea Stop 08 · 0:42 · Water Drops & Guzheng",
+        kickerZh: "竹海第 08 站 · 0:42 · 清泉与古筝",
+        titleEn: "Sea Bottom & Swaying Suspension Bridge",
+        titleZh: "索桥凌波·太湖之源（山脚「海底」）",
+        subEn: "The \"Source of Taihu Lake\" engraved stone pool at the bottom of the bamboo sea and the suspension bridge",
+        subZh: "抵达竹海底部「海底」，亲手触摸「太湖之源」刻石下的源头活水，漫步横跨溪涧的晃悠索桥",
+        scriptEn: "We have now reached the foot of the mountain, known as the \"Sea Bottom\"—which simply means the bottom of the bamboo sea. Please look over here; there is a stone by the road engraved with the words \"Source of Taihu Lake.\" Beneath the stone is a pool of crystal-clear water. The spring water from the mountain sets off from here and flows into Taihu Lake, hence the name. Standing here and touching the water from the very source of Taihu Lake is quite an elegant experience. To the west of the lake, there is also a swaying suspension bridge that spans across the stream. Walking on it with the water rushing beneath your feet is a lot of fun and adds a special charm to the trip.",
+        scriptZh: "下到山脚“海底”——“海底”就是“竹海的底部”的意思——路边有一块石头刻着“太湖之源”四个字，石下一潭池水清澈见底。山上的泉水正是从这里出发汇入太湖。站在这里摸一摸太湖源头的水，也算一桩雅事。湖西还有一座晃晃悠悠的索桥横跨溪涧，走在上面脚下流水淙淙，别有情趣。"
+      },
+      {
+        num: "09",
+        id: "bamboo-09",
+        file: "assets/audio/zhuhai_08_jizhao_temple.mp3?v=p2",
+        keyEn: "Jizhao Temple",
+        keyZh: "寂照禅寺",
+        kickerEn: "Bamboo Sea Stop 09 · 0:44 · Zen Muyu & Bronze Bell",
+        kickerZh: "竹海第 09 站 · 0:44 · 禅寺木鱼与古钟",
+        titleEn: "Jizhao Temple & The 1,000-Year-Old \"Tree within a Tree\"",
+        titleZh: "寂照禅寺与千年银杏「树中树」奇观",
+        subEn: "Serene temple in the deep grove and a 30m millennial ginkgo hosting a symbiotic hackberry tree",
+        subZh: "竹林深处的清幽古刹，门前30多米高的千年古银杏树杈间寄生着一棵朴树，形成「树中树」奇观",
+        scriptEn: "Finally, we arrive at Jizhao Temple, hidden deep within the bamboo forest. The temple sits beside ancient trees in a wonderfully serene environment. In front of the temple stands a thousand-year-old ginkgo tree. It is over 30 meters tall with a trunk circumference of 5 meters. What's even more fascinating is that right in the middle of this ancient ginkgo's branches grows a hackberry tree. It survives by drawing nutrients from the ginkgo, creating an absolute botanical marvel known as the \"Tree within a Tree.\" Deep in the bamboo sea, listening to the temple bell and gazing at the ancient tree, our restless minds can finally find peace.",
+        scriptZh: "最后我们来到掩映在竹林深处的“寂照禅寺”。寺前有一株千年银杏，树身径围5米，高30多米。更有趣的是，这株千年银杏的树杈中间还寄生着一棵朴树，依靠银杏的养料存活下来，形成“树中树”的奇观，堪称一绝。在竹海深处听一听钟声、看一看古树，浮躁的心也慢慢静了下来。"
+      },
+      {
+        num: "10",
+        id: "bamboo-10",
+        file: "assets/audio/zhuhai_10_closing.mp3?v=p2",
+        keyEn: "Closing",
+        keyZh: "行程结语",
+        kickerEn: "Bamboo Sea Stop 10 · 0:42 · Guzheng & Flute",
+        kickerZh: "竹海第 10 站 · 0:42 · 古筝与竹笛",
+        titleEn: "Closing Summary of the Bamboo Sea Journey",
+        titleZh: "竹海之旅结束语",
+        subEn: "From Mirror Lake and the sky cableway to Yunv Peak, Emerald Corridor, Taihu Source, and Jizhao Temple",
+        subZh: "从镜湖、索道、玉女峰到悬空栈道、翡翠长廊、太湖之源与寂照禅寺，收获一整天的清静与惬意",
+        scriptEn: "Ladies and gentlemen, as we reach this point, our bamboo sea tour today is coming to an end. We started from Jing Lake, took the cable car high up into the sky, climbed the highest peak in southern Jiangsu to overlook three provinces, and then hiked all the way down. We walked through the suspended boardwalk and the emerald corridor, visited the source of Taihu Lake, and paid our respects at a thousand-year-old temple. Through this journey up and down the mountain, we have seen the beautiful bamboo, tasted the vibrant greenery, breathed the refreshing air, and harvested a full day of peace and relaxation.",
+        scriptZh: "各位，走到这里，今天的竹海之旅也接近尾声了。我们从镜湖出发，乘索道凌空而上，登上苏南第一峰玉女峰俯瞰三省风光，又一路徒步下山，穿过悬空栈道、翡翠长廊，探访太湖之源，礼遇千年古寺。这一上一下之间，我们看的是竹，品的是绿，呼吸的是沁人心脾的空气，收获的是一整天的清静与惬意。"
+      },
+      {
+        num: "11",
+        id: "bamboo-11",
+        file: "assets/audio/zhuhai_09_curiosities_outro.mp3?v=p2",
+        keyEn: "Extra Facts",
+        keyZh: "奇竹彩蛋",
+        kickerEn: "Bamboo Sea Stop 11 · 1:56 · Guzheng & Dizi Finale",
+        kickerZh: "竹海第 11 站 · 1:56 · 竹笛与古筝尾奏",
+        titleEn: "Extra Facts: 140 Bamboo Species, Square Bamboo & Snake Lizard",
+        titleZh: "其他相关知识点：宜兴竹园、四大奇竹与珍稀动物",
+        subEn: "Phoenix-tail, Human-face, Emperor Qianlong’s Square Bamboo, Solid Bamboo, and the endangered Snake Lizard",
+        subZh: "140余种竹子（凤尾竹、人面竹、乾隆倒插筷子四方竹、实心竹）以及江苏仅见于宜兴山区的濒危脆蛇蜥",
+        scriptEn: "Let me also share some extra facts about the area before we part ways. Inside the scenic area is the Yixing Bamboo Garden, which has introduced over 140 species of bamboo, totaling 162,000 plants, along with various ornamental trees and plants. The garden features many beautifully designed pavilions and gathers a wide variety of unique and exotic bamboos, each with its own graceful posture. Among the rare bamboos, you can find the Phoenix-tail Bamboo, which looks beautifully like the tail feathers of a phoenix. There is the Human-face Bamboo, where the patterns on the trunk closely resemble human faces—some looking like old men and others like children, making it very rare and precious. We also have the Square Bamboo, which actually has a square trunk. Legend has it that Emperor Qianlong planted his chopsticks upside down during a tour, and they grew into this bamboo. Finally, there is the Solid Bamboo. While most bamboos are hollow, this rare type is completely solid inside, making it an excellent material for bamboo crafts. As for rare animals, besides the ancient Peach Blossom Jellyfish in Jing Lake that we mentioned earlier, the bamboo sea is also home to the Snake Lizard. This is a rare and endangered wild animal that looks like a snake because its legs have degenerated from living underground for so long. In Jiangsu Province, it can only be found right here in the Yixing mountains. The scenic area boasts many major attractions, such as the First Source of Taihu Lake, the Highest Peak in Southern Jiangsu, Jing Lake, Jizhao Temple, the Emerald Corridor, and the Suspended Boardwalk. Whether they are grand and majestic, quiet and profound, or winding and mysterious, each has its own unique charm. Thank you all for joining me today, and I hope you had a wonderful time!",
+        scriptZh: "宜兴竹园引种竹子140余种、16.2万株，建有君子园、玲珑亭、竹里馆等景点。园中奇竹荟萃：凤尾竹形似凤凰尾；人面竹竹面花纹极似老人或孩子脸的轮廓；四方竹竹干呈四方形，相传为乾隆皇帝游江南时将筷子倒插而生；实心竹则产自福建一带，纤维长、质地细。珍稀动物除了6.5亿年前的“水中大熊猫”桃花水母外，还有因长期穴居导致四肢退化的珍稀濒危野生动物“脆蛇蜥”，在江苏仅见于宜兴山区。感谢大家今天的同行，祝大家旅途愉快！"
+      }
+    ];
+
+    function renderZone(stops, keypadId, listId, isBamboo) {
+      var keypadEl = document.getElementById(keypadId);
+      var listEl = document.getElementById(listId);
+      var isZh = guideLang === "zh";
+
+      keypadEl.innerHTML = stops.map(function(s) {
+        return '<a href="#' + s.id + '" class="key-btn' + (isBamboo ? ' bamboo' : '') + '">' +
+          '<strong>' + s.num + '</strong>' +
+          '<span>' + (isZh ? s.keyZh : s.keyEn) + '</span>' +
+        '</a>';
+      }).join("");
+
+      listEl.innerHTML = stops.map(function(s) {
+        var btnLabel = isZh
+          ? ("▶ 播放第 " + s.num + " 站语音导览")
+          : ("▶ Play Stop " + s.num + " Audio Guide");
+        var summaryLabel = isZh ? "查看本站讲解词原文" : "Read Audio Script";
+        return '<div class="audio-card" id="' + s.id + '">' +
+          '<div class="card-top">' +
+            '<div class="num-badge' + (isBamboo ? ' bamboo' : '') + '">' + s.num + '</div>' +
+            '<div class="title-wrap">' +
+              '<span class="stop-kicker' + (isBamboo ? ' bamboo' : '') + '">' + (isZh ? s.kickerZh : s.kickerEn) + '</span>' +
+              '<div class="stop-title">' + (isZh ? s.titleZh : s.titleEn) + '</div>' +
+              '<div class="stop-sub">' + (isZh ? s.subZh : s.subEn) + '</div>' +
+            '</div>' +
+          '</div>' +
+          '<button type="button" class="big-play-btn' + (isBamboo ? '' : ' gunan-btn') + '" data-default-label="' + btnLabel + '" onclick="toggleCardAudio(this)">' + btnLabel + '</button>' +
+          '<audio controls preload="none"><source src="' + s.file + '" type="audio/mpeg" /></audio>' +
+          '<details class="script-box">' +
+            '<summary>' + summaryLabel + '</summary>' +
+            '<p>' + (isZh ? s.scriptZh : s.scriptEn) + '</p>' +
+          '</details>' +
+        '</div>';
+      }).join("");
+    }
+
+    function renderAll() {
+      var isZh = guideLang === "zh";
+      document.querySelectorAll("[data-en]").forEach(function(el) {
+        el.textContent = isZh ? el.getAttribute("data-zh") : el.getAttribute("data-en");
+      });
+      var langBtn = document.getElementById("lang-btn");
+      if (langBtn) {
+        langBtn.textContent = isZh ? "EN / 中文" : "中文 / EN";
+      }
+      renderZone(GUNAN_STOPS, "keypad-gunan", "list-gunan", false);
+      renderZone(BAMBOO_STOPS, "keypad-bamboo", "list-bamboo", true);
+    }
+
+    function toggleGuideLanguage() {
+      guideLang = guideLang === "en" ? "zh" : "en";
+      renderAll();
+    }
+
     function toggleCardAudio(btn) {
       var card = btn.closest(".audio-card");
       if (!card) return;
@@ -878,21 +855,19 @@
     }
 
     function syncAllCards() {
+      var isZh = guideLang === "zh";
       document.querySelectorAll(".audio-card").forEach(function(card) {
         var audio = card.querySelector("audio");
         var btn = card.querySelector(".big-play-btn");
         if (!audio || !btn) return;
-        if (!btn.dataset.origLabel) {
-          btn.dataset.origLabel = btn.innerHTML;
-        }
         if (!audio.paused && !audio.ended) {
           btn.classList.add("playing");
           card.classList.add("active-playing");
-          btn.innerHTML = "⏸ Pause Audio · 点击暂停播放";
+          btn.textContent = isZh ? "⏸ 暂停播放" : "⏸ Pause Audio";
         } else {
           btn.classList.remove("playing");
           card.classList.remove("active-playing");
-          btn.innerHTML = btn.dataset.origLabel;
+          btn.textContent = btn.getAttribute("data-default-label");
         }
       });
     }
@@ -919,6 +894,8 @@
         syncAllCards();
       }
     }, true);
+
+    renderAll();
   </script>
 </body>
 </html>
