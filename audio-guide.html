@@ -561,30 +561,12 @@
 
     <section id="zone-cup" class="zone-section">
       <div class="zone-header" style="border-left-color: #7b4b3a;">
-        <h2 data-en="🍵 Part V · Handcrafted Purple Clay Cup Workshop" data-zh="🍵 第五部分 · 手工制作紫砂杯工坊导览">🍵 Part V · Handcrafted Purple Clay Cup Workshop</h2>
-        <span data-en="7 Audio Stops · 01 – 07 + Full MP3 &amp; PDF" data-zh="共 7 站语音导览 · 01 – 07 + 完整版音频与 PDF">7 Audio Stops · 01 – 07 + Full MP3 &amp; PDF</span>
+        <h2 data-en="🍵 Part V · Handcrafted Purple Clay Cup Workshop (Step-by-Step Visual &amp; Audio Guide)" data-zh="🍵 第五部分 · 手工制作紫砂杯（分步图解与语音讲解）">🍵 Part V · Handcrafted Purple Clay Cup Workshop (Step-by-Step Visual &amp; Audio Guide)</h2>
+        <a href="purple-clay-cup-showcase.html" class="btn-top" style="background: #7b4b3a; color: #fff; border-color: #7b4b3a;" data-en="↗ Open Full-Screen Page" data-zh="↗ 全屏打开此页">↗ Open Full-Screen Page</a>
       </div>
-
-      <div class="audio-card" style="margin-bottom: 18px; border-left: 4px solid #7b4b3a;">
-        <div class="card-top" style="margin-bottom: 10px;">
-          <div class="num-badge" style="background: #7b4b3a;">🎧</div>
-          <div class="title-wrap">
-            <span class="stop-kicker" style="color: #7b4b3a;" data-en="Full Master Track · 6:09 · MP3 &amp; Printable PDF Script" data-zh="完整连播音频 · 6:09 · MP3 下载与英文导览词 PDF">Full Master Track · 6:09 · MP3 &amp; Printable PDF Script</span>
-            <div class="stop-title" data-en="Handcrafted Purple Clay Cup Complete Workshop Audio Guide (All 7 Stops)" data-zh="手工制作紫砂杯完整英文语音教学（全 7 站合集）">Handcrafted Purple Clay Cup Complete Workshop Audio Guide (All 7 Stops)</div>
-          </div>
-        </div>
-        <audio controls preload="none" style="margin-bottom: 10px;">
-          <source src="assets/audio/cup_full_audio_guide.mp3?v=p1" type="audio/mpeg" />
-        </audio>
-        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-          <a href="assets/audio/cup_full_audio_guide.mp3?v=p1" download="Purple_Clay_Cup_Workshop_Full_Audio_Guide.mp3" class="btn-top" data-en="⬇️ Download Full MP3 (5.8 MB)" data-zh="⬇️ 下载完整 MP3 音频 (5.8 MB)">⬇️ Download Full MP3 (5.8 MB)</a>
-          <a href="assets/Purple_Clay_Cup_Workshop_Audio_Guide_Script_EN.pdf?v=p1" download="Purple_Clay_Cup_Workshop_Audio_Guide_Script_EN.pdf" class="btn-top btn-lang" data-en="📄 Download English Script PDF" data-zh="📄 下载英文导览词 PDF">📄 Download English Script PDF</a>
-          <a href="purple-clay-cup-showcase.html" class="btn-top" data-en="📐 Open Interactive Visual Guide →" data-zh="📐 打开交互式紫砂杯图解 →">📐 Open Interactive Visual Guide →</a>
-        </div>
+      <div style="border: 1px solid var(--hairline-strong); border-radius: 10px; overflow: hidden; background: #f6f1eb; box-shadow: 0 8px 24px rgba(67, 40, 33, 0.08);">
+        <iframe src="purple-clay-cup-showcase.html" title="Handcrafted Purple Clay Cup Step-by-Step Audio &amp; Visual Guide" style="width: 100%; height: 1550px; border: none; display: block;"></iframe>
       </div>
-
-      <div class="keypad-bar" id="keypad-cup"></div>
-      <div class="audio-list" id="list-cup"></div>
     </section>
   </main>
 
@@ -1375,7 +1357,6 @@
       renderZone(BAMBOO_STOPS, "keypad-bamboo", "list-bamboo", true);
       renderZone(SHANJUAN_STOPS, "keypad-shanjuan", "list-shanjuan", false);
       renderZone(MUSEUM_STOPS, "keypad-museum", "list-museum", false);
-      renderZone(CUP_STOPS, "keypad-cup", "list-cup", false);
     }
 
     function toggleGuideLanguage() {
