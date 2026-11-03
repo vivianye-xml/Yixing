@@ -173,9 +173,18 @@
 
     .num-key .short-label {
       font-size: 0.74rem;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--ink-deep);
       text-align: center;
+      line-height: 1.2;
+    }
+
+    .num-key .zh-sub-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--ink-medium);
+      text-align: center;
+      line-height: 1.2;
     }
 
     .num-key.playing {
@@ -188,7 +197,8 @@
       color: var(--cinnabar);
     }
 
-    .num-key.playing .short-label {
+    .num-key.playing .short-label,
+    .num-key.playing .zh-sub-label {
       color: #fff;
     }
 
@@ -490,7 +500,8 @@
       document.getElementById("keypad-grid").innerHTML = STEPS.map(function(st, i) {
         return '<button type="button" class="num-key" onclick="playStep(' + i + ')">' +
           '<span class="circle">' + st.num + '</span>' +
-          '<span class="short-label">' + (isZh ? st.shortZh : st.shortEn) + '</span>' +
+          '<span class="short-label">' + st.shortEn + '</span>' +
+          '<span class="zh-sub-label">' + st.shortZh + '</span>' +
         '</button>';
       }).join("");
 
