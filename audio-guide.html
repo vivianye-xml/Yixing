@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yixing Audio Guide — Gunan Street, Bamboo Sea &amp; Shanjuan Cave</title>
+  <title>Yixing Audio Guide — Gunan Street, Bamboo Sea, Shanjuan Cave &amp; Ceramics Museum</title>
   <style>
     :root {
       --xuan-paper: #f5f2eb;
@@ -126,8 +126,14 @@
       margin: 0 auto;
       padding: 0 20px 12px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 10px;
+    }
+
+    @media (min-width: 780px) {
+      .zone-switcher {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
 
     .zone-tab {
@@ -165,6 +171,12 @@
       background: var(--cinnabar);
       color: #fff;
       border-color: var(--cinnabar);
+    }
+
+    .zone-tab.active-museum {
+      background: var(--gold-leaf);
+      color: #fff;
+      border-color: var(--gold-leaf);
     }
 
     main {
@@ -454,6 +466,7 @@
       <a href="#zone-gunan" class="zone-tab active-gunan" data-en="🏮 Part I: Gunan Street (01–09)" data-zh="🏮 第一部分：蜀山古南街 (01–09)">🏮 Part I: Gunan Street (01–09)</a>
       <a href="#zone-bamboo" class="zone-tab active-bamboo" data-en="🎋 Part II: Bamboo Sea (01–11)" data-zh="🎋 第二部分：宜兴竹海 (01–11)">🎋 Part II: Bamboo Sea (01–11)</a>
       <a href="#zone-shanjuan" class="zone-tab active-shanjuan" data-en="🦋 Part III: Shanjuan Cave (01–08)" data-zh="🦋 第三部分：善卷洞 (01–08)">🦋 Part III: Shanjuan Cave (01–08)</a>
+      <a href="#zone-museum" class="zone-tab active-museum" data-en="🏺 Part IV: Ceramics Museum (01–13)" data-zh="🏺 第四部分：陶瓷博物馆 (01–13)">🏺 Part IV: Ceramics Museum (01–13)</a>
     </div>
   </header>
 
@@ -495,21 +508,48 @@
         <div class="card-top" style="margin-bottom: 10px;">
           <div class="num-badge">🎧</div>
           <div class="title-wrap">
-            <span class="stop-kicker" data-en="Full Master Track · 17:37 · MP3 &amp; Printable PDF Script" data-zh="完整连播音频 · 17:37 · MP3 下载与英文导览词 PDF">Full Master Track · 17:37 · MP3 &amp; Printable PDF Script</span>
+            <span class="stop-kicker" data-en="Full Master Track · 21:51 · MP3 &amp; Printable PDF Script" data-zh="完整连播音频 · 21:51 · MP3 下载与英文导览词 PDF">Full Master Track · 21:51 · MP3 &amp; Printable PDF Script</span>
             <div class="stop-title" data-en="Shanjuan Cave Complete Audio Guide (All 8 Stops Combined)" data-zh="善卷洞风景区完整英文语音导览（全 8 站合集）">Shanjuan Cave Complete Audio Guide (All 8 Stops Combined)</div>
           </div>
         </div>
         <audio controls preload="none" style="margin-bottom: 10px;">
-          <source src="assets/audio/shanjuan_full_audio_guide.mp3?v=p1" type="audio/mpeg" />
+          <source src="assets/audio/shanjuan_full_audio_guide.mp3?v=p2" type="audio/mpeg" />
         </audio>
         <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-          <a href="assets/audio/shanjuan_full_audio_guide.mp3" download="Shanjuan_Cave_Full_Audio_Guide.mp3" class="btn-top" data-en="⬇️ Download Full MP3 (16.5 MB)" data-zh="⬇️ 下载完整 MP3 音频 (16.5 MB)">⬇️ Download Full MP3 (16.5 MB)</a>
-          <a href="assets/Shanjuan_Cave_Audio_Guide_Script_EN.pdf" download="Shanjuan_Cave_Audio_Guide_Script_EN.pdf" class="btn-top btn-lang" data-en="📄 Download English Script PDF" data-zh="📄 下载英文导览词 PDF">📄 Download English Script PDF</a>
+          <a href="assets/audio/shanjuan_full_audio_guide.mp3?v=p2" download="Shanjuan_Cave_Full_Audio_Guide.mp3" class="btn-top" data-en="⬇️ Download Full MP3 (20.5 MB)" data-zh="⬇️ 下载完整 MP3 音频 (20.5 MB)">⬇️ Download Full MP3 (20.5 MB)</a>
+          <a href="assets/Shanjuan_Cave_Audio_Guide_Script_EN.pdf?v=p2" download="Shanjuan_Cave_Audio_Guide_Script_EN.pdf" class="btn-top btn-lang" data-en="📄 Download English Script PDF" data-zh="📄 下载英文导览词 PDF">📄 Download English Script PDF</a>
         </div>
       </div>
 
       <div class="keypad-bar" id="keypad-shanjuan"></div>
       <div class="audio-list" id="list-shanjuan"></div>
+    </section>
+
+    <section id="zone-museum" class="zone-section">
+      <div class="zone-header" style="border-left-color: var(--zisha-clay);">
+        <h2 data-en="🏺 Part IV · China Yixing Ceramics Museum" data-zh="🏺 第四部分 · 中国宜兴陶瓷博物馆">🏺 Part IV · China Yixing Ceramics Museum</h2>
+        <span data-en="13 Audio Stops · 01 – 13 + Full MP3 &amp; PDF" data-zh="共 13 站语音导览 · 01 – 13 + 完整版音频与 PDF">13 Audio Stops · 01 – 13 + Full MP3 &amp; PDF</span>
+      </div>
+
+      <div class="audio-card" style="margin-bottom: 18px; border-left: 4px solid var(--zisha-clay);">
+        <div class="card-top" style="margin-bottom: 10px;">
+          <div class="num-badge" style="background: var(--zisha-clay);">🎧</div>
+          <div class="title-wrap">
+            <span class="stop-kicker" style="color: var(--zisha-clay);" data-en="Full Master Track · 12:49 · MP3 &amp; Printable PDF Script" data-zh="完整连播音频 · 12:49 · MP3 下载与英文导览词 PDF">Full Master Track · 12:49 · MP3 &amp; Printable PDF Script</span>
+            <div class="stop-title" data-en="China Yixing Ceramics Museum Complete Audio Guide (All 13 Stops Combined)" data-zh="中国宜兴陶瓷博物馆完整英文语音导览（全 13 站合集）">China Yixing Ceramics Museum Complete Audio Guide (All 13 Stops Combined)</div>
+          </div>
+        </div>
+        <audio controls preload="none" style="margin-bottom: 10px;">
+          <source src="assets/audio/museum_full_audio_guide.mp3?v=p1" type="audio/mpeg" />
+        </audio>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <a href="assets/audio/museum_full_audio_guide.mp3?v=p1" download="Yixing_Ceramics_Museum_Full_Audio_Guide.mp3" class="btn-top" data-en="⬇️ Download Full MP3 (12.0 MB)" data-zh="⬇️ 下载完整 MP3 音频 (12.0 MB)">⬇️ Download Full MP3 (12.0 MB)</a>
+          <a href="assets/Yixing_Ceramics_Museum_Audio_Guide_Script_EN.pdf?v=p1" download="Yixing_Ceramics_Museum_Audio_Guide_Script_EN.pdf" class="btn-top btn-lang" data-en="📄 Download English Script PDF" data-zh="📄 下载英文导览词 PDF">📄 Download English Script PDF</a>
+        </div>
+      </div>
+
+      <div class="keypad-bar" id="keypad-museum"></div>
+      <div class="audio-list" id="list-museum"></div>
     </section>
   </main>
 
@@ -826,26 +866,26 @@
       {
         num: "01",
         id: "shanjuan-01",
-        file: "assets/audio/shanjuan_01_intro.mp3?v=p1",
+        file: "assets/audio/shanjuan_01_intro.mp3?v=p2",
         keyEn: "Intro",
         keyZh: "开场总览",
-        kickerEn: "Shanjuan Stop 01 · 1:37 · Guzheng & Dizi Intro",
-        kickerZh: "善卷洞第 01 站 · 1:37 · 古筝与竹笛开场",
+        kickerEn: "Shanjuan Stop 01 · 1:38 · Guzheng & Dizi Intro",
+        kickerZh: "善卷洞第 01 站 · 1:38 · 古筝与竹笛开场",
         titleEn: "Welcome & Overview: Birthplace of Cave Tourism in China",
         titleZh: "开场导览：中国溶洞旅游起源处与梁祝故里",
         subEn: "Visitor Center, Commercial Street, Mr. Chu Nanqiang’s 1934 Opening & The Three Great Wonder Caves of the World",
         subZh: "游客中心商业街、1934年储南强先生开创中国溶洞旅游先河，与比利时汉人洞、法国里昂洞并称「世界三大奇洞」",
-        scriptEn: "Hello everyone! Welcome to the Shanjuan Cave Scenic Area—celebrated as the birthplace of karst cave tourism in China and the legendary setting of the classic Chinese romance, The Butterfly Lovers (Liang Shanbo and Zhu Yingtai). It is a real pleasure to be your guide today and share the stories and wonders of Shanjuan Cave with you. As we walk through, if you have any questions at all, please feel free to ask! Please follow me this way. Right outside the Visitor Center on our left is the commercial street, which features newly introduced travel photography studios, convenience stores, the Limo Mountain House restaurant, and a themed cultural and creative shop. Located in Zhangzhu Town, about 23 kilometers southwest of downtown Yixing, the Shanjuan Cave Scenic Area is made up of five main themes: the karst caves, Butterfly Lovers culture, the Guoshan Stele, ancient and rare trees, and leisure attractions. Back in 1921, local visionary Mr. Chu Nanqiang began developing the cave. After thirteen years of tireless work, it officially opened to the public on November 11, 1934—pioneering cave tourism in China. Early on, it was hailed alongside the Caves of Han-sur-Lesse in Belgium and the caves of Lyon in France as one of the \"Three Great Wonder Caves of the World.\" Surrounded by lush hills and clear waters, the cave's natural rock formations are so breathtaking that ancient scholars praised it as an \"Ancient Sacred Marvel\" and a \"Fairy Capital in the Mortal World.\"",
+        scriptEn: "Hello everyone! Welcome to the Shanjuan Cave Scenic Area—celebrated as the birthplace of karst cave tourism in China and the legendary setting of the classic Chinese romance, The Butterfly Lovers (Liang Shanbo and Zhu Yingtai). It is a real pleasure to be your guide today and share the stories and wonders of Shanjuan Cave with you. Please follow me this way. Right outside the Visitor Center on our left is the commercial street, which features newly introduced travel photography studios, convenience stores, the Limo Mountain House restaurant, and a themed cultural and creative shop. Located in Zhangzhu Town, about 23 kilometers southwest of downtown Yixing, the Shanjuan Cave Scenic Area is made up of five main themes: the karst caves, Butterfly Lovers culture, the Guoshan Stele, ancient and rare trees, and leisure attractions. Back in 1921, local visionary Mr. Chu Nanqiang began developing the cave. After thirteen years of tireless work, it officially opened to the public on November 11, 1934—pioneering cave tourism in China. Early on, it was hailed alongside the Caves of Han-sur-Lesse in Belgium and the caves of Lyon in France as one of the \"Three Great Wonder Caves of the World.\" Surrounded by lush hills and clear waters, the cave's natural rock formations are so breathtaking that ancient scholars praised it as an \"Ancient Sacred Marvel\" and a \"Fairy Capital in the Mortal World.\"",
         scriptZh: "各位游客大家好！欢迎来到被誉为“中国溶洞旅游起源处、梁祝爱情故事发生地”的善卷洞风景区。出了游客中心左手边是商业街（旅拍、便利店、离墨山房餐饮及主题文创展示店）。善卷洞位于宜兴市张渚镇，距市区23公里，由溶洞、梁祝文化、国山碑、古树名木和休闲娱乐五部分组成。1921年由储南强先生历时十三年开发，于1934年11月11日正式开放，创中国溶洞旅游先河，早期与比利时汉人洞、法兰西里昂洞并称“世界三大奇洞”，素有“万古灵迹”“欲界仙都”之美誉。"
       },
       {
         num: "02",
         id: "shanjuan-02",
-        file: "assets/audio/shanjuan_02_pailou.mp3?v=p1",
+        file: "assets/audio/shanjuan_02_pailou.mp3?v=p2",
         keyEn: "Archway",
         keyZh: "善卷牌楼",
-        kickerEn: "Shanjuan Stop 02 · 2:19 · Guzheng Glissando",
-        kickerZh: "善卷洞第 02 站 · 2:19 · 古筝刮奏",
+        kickerEn: "Shanjuan Stop 02 · 2:50 · Guzheng Glissando",
+        kickerZh: "善卷洞第 02 站 · 2:50 · 古筝刮奏",
         titleEn: "The Grand Archway (Pailou) & The Ancient Names of Yixing",
         titleZh: "善卷洞牌楼与宜兴古称（荆溪、阳羡、义兴）",
         subEn: "Juntao Glazed Roof Tiles, Fei Xinwo’s Left-Handed Calligraphy & How Jingxi and Yangxian Became Yixing",
@@ -856,11 +896,11 @@
       {
         num: "03",
         id: "shanjuan-03",
-        file: "assets/audio/shanjuan_03_statue_museum.mp3?v=p1",
+        file: "assets/audio/shanjuan_03_statue_museum.mp3?v=p2",
         keyEn: "Master & Hall",
         keyZh: "善卷与展馆",
-        kickerEn: "Shanjuan Stop 03 · 1:58 · Breeze & Chime",
-        kickerZh: "善卷洞第 03 站 · 1:58 · 清风雅音",
+        kickerEn: "Shanjuan Stop 03 · 2:30 · Breeze & Chime",
+        kickerZh: "善卷洞第 03 站 · 2:30 · 清风雅音",
         titleEn: "Master Shanjuan Statue & Chu Nanqiang Exhibition Hall",
         titleZh: "善卷老人雕像（跖耒而耕）与储南强展馆",
         subEn: "The Sage Who Declined Emperor Shun’s Throne, the Ancient \"Lei\" Plow & The Pioneer of Chinese Cave Tourism",
@@ -871,11 +911,11 @@
       {
         num: "04",
         id: "shanjuan-04",
-        file: "assets/audio/shanjuan_04_middle_cave.mp3?v=p1",
+        file: "assets/audio/shanjuan_04_middle_cave.mp3?v=p2",
         keyEn: "Middle Cave",
         keyZh: "中洞狮象",
-        kickerEn: "Shanjuan Stop 04 · 3:28 · Water Drops & Guzheng",
-        kickerZh: "善卷洞第 04 站 · 3:28 · 水滴与古筝",
+        kickerEn: "Shanjuan Stop 04 · 4:22 · Water Drops & Guzheng",
+        kickerZh: "善卷洞第 04 站 · 4:22 · 水滴与古筝",
         titleEn: "The Middle Cave: Lion and Elephant Arena (Shixiang Dachang)",
         titleZh: "中洞·狮象大场（砥柱峰、青狮白象、紫砂观音海岛与欲界仙都）",
         subEn: "30,000-Year-Old Mainstay Peak, Green Lion & White Elephant, Zisha Guanyin Sea Island & \"Yujie Xiandu\"",
@@ -886,11 +926,11 @@
       {
         num: "05",
         id: "shanjuan-05",
-        file: "assets/audio/shanjuan_05_upper_cave.mp3?v=p1",
+        file: "assets/audio/shanjuan_05_upper_cave.mp3?v=p2",
         keyEn: "Upper Cave",
         keyZh: "上洞云雾",
-        kickerEn: "Shanjuan Stop 05 · 2:40 · Bamboo Flute Melody",
-        kickerZh: "善卷洞第 05 站 · 2:40 · 悠远竹笛",
+        kickerEn: "Shanjuan Stop 05 · 3:16 · Bamboo Flute Melody",
+        kickerZh: "善卷洞第 05 站 · 3:16 · 悠远竹笛",
         titleEn: "The Upper Cave: Cloud and Mist Arena (Yunwu Dachang)",
         titleZh: "上洞·云雾大场（四季23℃恒温、86版西游记取景地与盘古池）",
         subEn: "Year-Round 23°C Eternal Spring, Auspicious Stone Bats, 1986 Journey to the West Filming Site & Pangu Pool",
@@ -901,11 +941,11 @@
       {
         num: "06",
         id: "shanjuan-06",
-        file: "assets/audio/shanjuan_06_baibing_xiaochu.mp3?v=p1",
+        file: "assets/audio/shanjuan_06_baibing_xiaochu.mp3?v=p2",
         keyEn: "Rong Inscription",
         keyZh: "百病消除",
-        kickerEn: "Shanjuan Stop 06 · 1:35 · Classical Guzheng",
-        kickerZh: "善卷洞第 06 站 · 1:35 · 典雅古筝",
+        kickerEn: "Shanjuan Stop 06 · 2:00 · Classical Guzheng",
+        kickerZh: "善卷洞第 06 站 · 2:00 · 典雅古筝",
         titleEn: "The \"All Illnesses Vanish\" Inscription (Bai Bing Xiao Chu)",
         titleZh: "梯口石壁·荣德生与荣毅仁父子题写「百病消除」传奇",
         subEn: "The Touching Friendship of Industrialist Rong Desheng & Developer Chu Nanqiang, Re-inscribed by Rong Yiren",
@@ -916,11 +956,11 @@
       {
         num: "07",
         id: "shanjuan-07",
-        file: "assets/audio/shanjuan_07_lower_cave_waterfall.mp3?v=p1",
+        file: "assets/audio/shanjuan_07_lower_cave_waterfall.mp3?v=p2",
         keyEn: "Lower Cave",
         keyZh: "下洞飞瀑",
-        kickerEn: "Shanjuan Stop 07 · 2:05 · Waterfall & Chime",
-        kickerZh: "善卷洞第 07 站 · 2:05 · 飞瀑与古韵",
+        kickerEn: "Shanjuan Stop 07 · 2:34 · Waterfall & Chime",
+        kickerZh: "善卷洞第 07 站 · 2:34 · 飞瀑与古韵",
         titleEn: "The Lower Cave & The Subterranean Waterfall",
         titleZh: "下洞·十年人工隧洞、九叠池、佛手幕与悬崖飞瀑",
         subEn: "The 10-Year Hand-Chiseled 105-Step Tunnel, Nine-Tiered Pools, Buddha’s Hand Curtain & Underground Waterfall",
@@ -931,17 +971,215 @@
       {
         num: "08",
         id: "shanjuan-08",
-        file: "assets/audio/shanjuan_08_water_cave_closing.mp3?v=p1",
+        file: "assets/audio/shanjuan_08_water_cave_closing.mp3?v=p2",
         keyEn: "Water Cave",
         keyZh: "水洞泛舟",
-        kickerEn: "Shanjuan Stop 08 · 1:50 · Crystal River & Finale",
-        kickerZh: "善卷洞第 08 站 · 1:50 · 水晶宫泛舟与尾奏",
+        kickerEn: "Shanjuan Stop 08 · 2:16 · Crystal River & Finale",
+        kickerZh: "善卷洞第 08 站 · 2:16 · 水晶宫泛舟与尾奏",
         titleEn: "The Water Cave (Crystal Palace) Boat Ride & Finale",
         titleZh: "水洞（水晶宫）地下河泛舟与出「龙门」结语",
         subEn: "120-Meter Underground River Boat Ride Through Three Bends, the Water Pass & Passing Through the Dragon Gate",
         subZh: "乘船畅游120米三弯古老地下河，过水关、赏星河蝶影，船过龙门豁然开朗",
         scriptEn: "Walking back from the waterfall, we arrive at our final highlight—the Water Cave, also known as the Crystal Palace. Please watch your step as we board the boat! The Water Cave is an ancient underground river stretching 120 meters long, winding through three gentle bends. Right ahead is the \"Water Pass\" (Shuiguan), where the rock ceiling dips to its lowest point. As our boat glides forward, dreamy butterfly lights dance across the vaulted ceiling like floating clouds and starry reflections on the water—making you feel as if you are rowing through the Milky Way itself. Look closely at the walls of the Water Cave, and you'll notice countless smaller grottos, all interconnected. Every single one was carved by underground water dissolving the limestone over millions of years. In fact, a karst cave is never truly finished—it is still changing and evolving every single moment. With its winding river bends, sheer rock cliffs, low overhanging ceiling, and fantastical stone shapes, riding through here feels just like traveling through a tunnel in time. As the famous Chinese poem goes: \"Where hills and streams seem to end and no path remains, beyond shady willows and bright flowers another village appears!\" As our boat rounds the third and final bend and passes through the \"Dragon Gate\" (Longmen), daylight suddenly opens up before us—bringing our dreamlike underground journey to a wonderful close. Ladies and gentlemen, please stay seated until the boat comes to a complete stop, and then step off carefully and follow the path out of the cave in an orderly line. Thank you all for exploring Shanjuan Cave with me today, and I wish you a wonderful rest of your trip in Yixing!",
         scriptZh: "从瀑布往回走即达水洞——“水晶宫”。这条古老地下河长120米，曲折有三道弯，经过岩层最低处“水关”，头顶繁星蝶影宛若泛舟银河。洞壁无数小洞相连，展现出喀斯特地貌无时无刻不在变化的奇特魅力。“山穷水尽疑无路，柳暗花明又一村”，转过最后一道弯，船过“龙门”豁然开朗！请大家等船停稳后有序下船出洞，祝大家旅途愉快！"
+      }
+    ];
+
+    var MUSEUM_STOPS = [
+      {
+        num: "01",
+        id: "museum-01",
+        file: "assets/audio/museum_01_intro.mp3?v=p1",
+        keyEn: "Intro",
+        keyZh: "开场导览",
+        kickerEn: "Museum Stop 01 · 0:55 · Guzheng & Dizi Intro",
+        kickerZh: "陶博第 01 站 · 0:55 · 古筝与竹笛开场",
+        titleEn: "Welcome & Introduction: China Yixing Ceramics Museum",
+        titleZh: "开场导览：中国宜兴陶瓷博物馆（中国紫砂博物馆）",
+        subEn: "50,000 m² Ceramic Art Landmark, 107 Graded National Cultural Relics & The China Purple Clay Museum",
+        subZh: "占地5万平方米、馆藏107件国家定级文物，从史前陶器、晋代青瓷、宋元均陶到明清紫砂",
+        scriptEn: "Hello everyone, and welcome to the China Yixing Ceramics Museum! We are standing in one of the first museums in China dedicated entirely to ceramic art. The grounds cover over 50,000 square meters, and the collection takes you through thousands of years of history. As we walk through today, you will see everything from prehistoric pottery and Han Dynasty glazed wares to Jin Dynasty celadon, Song and Yuan Dynasty Jun pottery, and the world-famous Ming and Qing Purple Clay teapots. All together, the museum holds 107 graded national cultural relics. Over the years, this space has become a major cultural landmark, earning titles like the China Purple Clay Museum and a National 4A Tourist Attraction. Let's step inside and see where the story begins.",
+        scriptZh: "大家好，欢迎来到中国宜兴陶瓷博物馆！这是中国最早全面展示陶瓷艺术的专业博物馆之一，占地5万多平方米，馆藏国家定级文物107件，涵盖史前陶器、汉代釉陶、晋代青瓷、宋元均陶及明清紫砂名作，同时享有“中国紫砂博物馆”与国家4A级景区美誉。"
+      },
+      {
+        num: "02",
+        id: "museum-02",
+        file: "assets/audio/museum_02_hall1_ancient.mp3?v=p1",
+        keyEn: "Hall 1: Ancient",
+        keyZh: "古陶展厅",
+        kickerEn: "Museum Stop 02 · 1:07 · Guzheng Glissando",
+        kickerZh: "陶博第 02 站 · 1:07 · 古筝刮奏",
+        titleEn: "Hall 1: Ancient Ceramics Hall — 7,000 Years of Pottery",
+        titleZh: "第一展厅：古陶厅——七千年陶都窑火",
+        subEn: "From Prehistoric Taihu Civilization & Jin Celadon to Song–Qing Pottery Capital (Dingshu)",
+        subZh: "环太湖史前文明摇篮，宋代弃瓷专攻制陶，中国九大窑系中唯一专注制陶的陶都",
+        scriptEn: "Welcome to the Ancient Ceramics Hall. Yixing is known as China's Pottery Capital, and it is one of the cradles of prehistoric civilization around Lake Taihu. Archaeologists have found that people here started making pottery more than 7,000 years ago. As the centuries passed, local kilns kept evolving. By the Han Dynasty, Yixing was a major pottery center in southern China. During the Three Kingdoms and Jin periods, it became famous for celadon porcelain. Then, in the Song Dynasty, local potters made a major shift: they stopped making porcelain and focused entirely on pottery. By the Ming and Qing dynasties, the local town of Dingshu was famous around the world for its glazed pottery and Purple Clay wares. Even today, you can still hear the sound of clay being beaten in workshops across almost every neighborhood in Yixing. This unbroken tradition makes Yixing one of China's nine great kiln systems—and the only one dedicated to pottery rather than porcelain.",
+        scriptZh: "欢迎来到古陶展厅。宜兴被誉为“中国陶都”，制陶史逾7000年。汉代成为江南制陶中心，三国两晋以青瓷闻世，宋代起弃瓷专攻制陶，明清时期丁蜀镇的均陶与紫砂名扬天下，使宜兴成为中国九大窑系中唯一专注制陶的窑系。"
+      },
+      {
+        num: "03",
+        id: "museum-03",
+        file: "assets/audio/museum_03_celadon_jar.mp3?v=p1",
+        keyEn: "Celadon Jar",
+        keyZh: "青瓷谷仓罐",
+        kickerEn: "Museum Stop 03 · 1:31 · Breeze & Chime",
+        kickerZh: "陶博第 03 站 · 1:31 · 清风雅音",
+        titleEn: "Hall 1 Highlight: The Celadon Granary Jar (Western Jin Dynasty)",
+        titleZh: "古陶厅重器：西晋青瓷五管谷仓罐（国家一级文物）",
+        subEn: "1,700-Year-Old National First-Class Cultural Relic with 24 Solar-Term Birds, 5 Granary Tubes & 6 Dragons",
+        subZh: "1958年出土、距今1700余年，馆藏9件国家一级文物中唯一的瓷器，饰24节气飞鸟、五管丰登与六龙穿行",
+        scriptEn: "Let's pause here at our first highlight: the Celadon Granary Jar. China was the first country in the world to make true porcelain, and this piece is a remarkable early example. Unearthed in Yixing in 1958, it dates back over 1,700 years to the Western Jin Dynasty. Among the nine National First-Class Cultural Relics in our museum, this is the only piece made of porcelain. In ancient times, this jar had two uses: it was used in ceremonies to pray for a good harvest, and it was buried in tombs as a \"soul jar\" to accompany the dead. If you look closely, every single detail tells a story. Around the upper rim, 24 tiny birds represent the 24 solar terms of the traditional Chinese calendar. On the body, five vertical tubes stand for a rich harvest and a thriving family. Six dragons weave in and out of the clay, symbolizing good luck and the cycle of life. Around the little pavilion, seven figures press their hands together and look up toward the sky in prayer. A raised band wraps around the middle, dividing the jar into heaven, earth, and the underworld. Notice the texture of the glaze, too. Yixing celadon has a slightly porous clay body, so the greenish-yellow glaze sinks right into the clay, giving the jar a cool, solid, almost metallic feel.",
+        scriptZh: "西晋青瓷谷仓罐1958年出土于宜兴，距今1700多年，是馆藏9件国家一级文物中唯一的瓷器。古人将其用于祈求丰收与陪葬“魂瓶”：罐口24只小鸟代表二十四节气，罐身五管寓意五谷丰登、人丁兴旺，六龙穿梭象征吉祥轮回，楼阁旁七人合十祈祷。"
+      },
+      {
+        num: "04",
+        id: "museum-04",
+        file: "assets/audio/museum_04_red_clay_jar.mp3?v=p1",
+        keyEn: "Red Clay Jar",
+        keyZh: "双唇红陶罐",
+        kickerEn: "Museum Stop 04 · 1:03 · Water Drops & Guzheng",
+        kickerZh: "陶博第 04 站 · 1:03 · 水滴与古筝",
+        titleEn: "Hall 1 Highlight: The Double-Rimmed Red Clay Jar (Han Dynasty)",
+        titleZh: "古陶厅重器：汉代双唇红陶坛（古人天然冰箱）",
+        subEn: "2,000-Year-Old \"Ancient Natural Refrigerator\" with Water-Sealed Airtight Groove",
+        subZh: "距今2000余年汉代红陶储物坛，双沿凹槽注水加盖形成水封隔绝空气，如同现代泡菜坛",
+        scriptEn: "Now, let's move over to this large reddish vessel: the Double-Rimmed Red Clay Jar. This piece is over 2,000 years old, dating back to the Han Dynasty. It was unearthed locally in 1982 and later donated to the museum. Made from local red clay, this jar shows just how clever ancient potters were with everyday household items. Look at the top of the jar, and you will see a double rim—an outer lip and an inner lip with a deep groove between them. When people stored food inside, they poured clean water into that groove and placed a lid over it. The water blocked out the air and created an airtight seal, just like a modern pickle jar. You could call it an ancient natural refrigerator! The stamped patterns on the outside made the clay walls stronger, and the two loops on the shoulders let people thread a rope through to carry it easily. Even after 2,000 years, this jar is still completely intact.",
+        scriptZh: "汉代双唇红陶坛距今2000余年，1982年本地出土。坛口采用巧妙的“双唇”结构，内外唇之间有一道深槽，储藏食物时往槽内注水并盖上盖子即可隔绝空气形成密封，堪称两千年前的“天然冰箱”。"
+      },
+      {
+        num: "05",
+        id: "museum-05",
+        file: "assets/audio/museum_05_hall2_jun_pottery.mp3?v=p1",
+        keyEn: "Hall 2: Jun",
+        keyZh: "均陶展厅",
+        kickerEn: "Museum Stop 05 · 0:46 · Bamboo Flute Melody",
+        kickerZh: "陶博第 05 站 · 0:46 · 悠远竹笛",
+        titleEn: "Hall 2: Jun-Glazed Pottery Hall (\"Yijun\" & Thumb-Pressing Relief)",
+        titleZh: "第二展厅：均陶厅（「宜均」与国家级非遗大拇指堆花）",
+        subEn: "Song Dynasty Glazed Pottery Tradition & 2014 National Intangible Cultural Heritage",
+        subZh: "始于宋代的丁蜀宜均釉陶与2014年入选国家级非物质文化遗产的「大拇指堆花」绝技",
+        scriptEn: "Next, we are entering the Jun-Glazed Pottery Hall. Yixing Jun pottery—or \"Yijun\" for short—has been made in the Dingshu area since the Song Dynasty. Potters build these pieces by hand from clay slabs, brush on the glaze while the clay is still raw, and fire them once at high heat. All the materials come right from the local hills. What makes Yijun so special is its rich, warm glaze and a unique decorating method called \"thumb-pressing.\" Artisans use their bare thumbs to press and shape clay directly onto the pot, creating vivid 3D relief designs. In 2014, this traditional craft was named a National Intangible Cultural Heritage.",
+        scriptZh: "宜兴均陶（简称“宜均”）始于宋代，以温润如玉的窑变釉色与独树一帜的“大拇指堆花”技艺闻名——工匠直接用大拇指在陶坯上按压塑形出立体浮雕，2014年入选国家级非物质文化遗产。"
+      },
+      {
+        num: "06",
+        id: "museum-06",
+        file: "assets/audio/museum_06_dragon_lotus_vat.mp3?v=p1",
+        keyEn: "Lotus Vat",
+        keyZh: "龙头荷花缸",
+        kickerEn: "Museum Stop 06 · 0:44 · Guzheng Glissando",
+        kickerZh: "陶博第 06 站 · 0:44 · 古筝刮奏",
+        titleEn: "Hall 2 Highlight: The Dragon-Head Lotus Vat (Ming Dynasty)",
+        titleZh: "均陶厅重器：明代龙头四季花卉荷花缸",
+        subEn: "Four-Season Floral Panels, Dragon-Head Rainwater Drain Spout & Courtyard Fire-Fighting Vat",
+        subZh: "口沿下设龙头排水孔防雨水满溢，缸身饰牡丹、荷花、菊花、腊梅四季花卉，兼具庭院观赏与消防储水",
+        scriptEn: "Right in front of us is a great example from the Ming Dynasty: the Dragon-Head Lotus Vat. This massive jar was built by paddling slabs of clay together. Just below the wide rim, you can spot a sculpted dragon head—that is actually a spout to let rainwater drain out so the vat wouldn't overflow. Walk around the vat, and you will see four panels decorated with flowers for each season: peonies for spring, lotus for summer, chrysanthemums for autumn, and wintersweet for winter. Covered inside and out with a thick, glossy dark-red glaze, a vat like this sat in ancient courtyards both as a garden ornament and as a water tank to fight fires.",
+        scriptZh: "明代龙头荷花缸口沿下塑有龙头排水孔以防雨水溢缸，四周饰有春牡丹、夏荷花、秋菊花、冬腊梅四季花卉，内外施浓郁紫红釉，在古代庭院中既作观赏又作防火太平缸。"
+      },
+      {
+        num: "07",
+        id: "museum-07",
+        file: "assets/audio/museum_07_ou_and_ge_kilns.mp3?v=p1",
+        keyEn: "Ou & Ge Kilns",
+        keyZh: "欧窑与葛窑",
+        kickerEn: "Museum Stop 07 · 0:52 · Breeze & Chime",
+        kickerZh: "陶博第 07 站 · 0:52 · 清风雅音",
+        titleEn: "Hall 2 Highlight: The Ou Kiln (Ming) & Ge Kiln (Qing)",
+        titleZh: "均陶厅重器：明代「欧窑」（欧子明）与清代「葛窑」（葛氏兄弟）",
+        subEn: "Master Ou Ziming’s Legendary Glaze & The Ge Brothers’ Starry Bluish-Gray Export Wares",
+        subZh: "明代欧子明创烧的传奇「欧窑」与清代葛明祥、葛源祥兄弟远销日本及东南亚的繁星蓝斑「葛窑」",
+        scriptEn: "As we look at the glazed pieces in this case, two names stand out in the history of Yijun pottery: the Ou Kiln and the Ge Kiln. During the Ming Dynasty, a master potter named Ou Ziming created the \"Ou Kiln\" style. His glazes were so refined that his works became legendary, and very few survive today outside of museums. Later, in the Qing Dynasty, two brothers named Ge Mingxiang and Ge Yuanxiang took this craft to its peak with the \"Ge Kiln.\" Their pottery was shipped all across Japan, Southeast Asia, and beyond. Take a look at our Ge Kiln bluish-gray vase right here. The glaze is thick and smooth, filled with tiny blue specks that look like stars scattered across the night sky.",
+        scriptZh: "宜均史上最著名的两大名窑是明代欧子明创烧的“欧窑”与清代葛明祥、葛源祥兄弟创烧的“葛窑”。展柜中的葛窑灰蓝釉瓶釉质肥厚润泽，釉面细密蓝点宛若夜空繁星。"
+      },
+      {
+        num: "08",
+        id: "museum-08",
+        file: "assets/audio/museum_08_hall3_purple_clay.mp3?v=p1",
+        keyEn: "Hall 3: Zisha",
+        keyZh: "紫砂展厅",
+        kickerEn: "Museum Stop 08 · 0:52 · Classical Guzheng",
+        kickerZh: "陶博第 08 站 · 0:52 · 典雅古筝",
+        titleEn: "Hall 3: Purple Clay Hall — The Heart of Yixing’s Ceramic Fame",
+        titleZh: "第三展厅：紫砂厅——明代散茶冲泡革命与紫砂远销欧洲",
+        subEn: "Ming Steeped-Tea Revolution, Huanglong Mountain Purple Clay & 16th-Century Exports to Europe",
+        subZh: "14世纪散茶冲泡催生黄龙山紫砂泥片拍打成型技艺，16世纪末远销欧洲成为欧洲茶壶鼻祖",
+        scriptEn: "Now we have arrived at the heart of Yixing's ceramic fame: the Purple Clay Hall. Back in the 14th century, Chinese people changed the way they drank tea—instead of whisking powdered tea, they started steeping whole tea leaves. That new habit called for a new kind of teapot. By the mid-Ming Dynasty, Yixing potters discovered that the iron-rich purple clay from nearby Huanglong Mountain was perfect for tea. Instead of throwing clay on a wheel, they beat clay strips into slabs and joined them by hand. Scholars and emperors alike fell in love with Purple Clay teapots because the clay lets the tea breathe and keeps its flavor pure. By the late 16th century, merchants were shipping these teapots all the way to Europe, where they inspired the very first European teapots.",
+        scriptZh: "欢迎来到紫砂厅。14世纪明代饮茶方式由点茶改为散茶冲泡，黄龙山富含铁质的紫砂泥与独特的泥片拍打镶接成型技艺应运而生，透气不夺茶香，16世纪末更随商船远销欧洲，启发了欧洲第一批茶壶的诞生。"
+      },
+      {
+        num: "09",
+        id: "museum-09",
+        file: "assets/audio/museum_09_lotus_wine_set.mp3?v=p1",
+        keyEn: "Lotus Wine Set",
+        keyZh: "蒋蓉荷花酒具",
+        kickerEn: "Museum Stop 09 · 0:54 · Water Drops & Guzheng",
+        kickerZh: "陶博第 09 站 · 0:54 · 水滴与古筝",
+        titleEn: "Hall 3 Highlight: The Lotus Wine Set by Master Jiang Rong",
+        titleZh: "紫砂厅名作：蒋蓉大师《荷花酒具》（无盖倒装壶）",
+        subEn: "Lidless Bottom-Filled Wine Pot with Internal Conical Tube by the Only Female Among the Seven Old Masters",
+        subZh: "紫砂七老中唯一女泰斗蒋蓉代表作，顶部无盖、从壶底圆孔倒灌注酒，正放滴酒不漏的精妙花器",
+        scriptEn: "Let's look at this bright, lifelike set first: the Lotus Wine Set, created by Master Jiang Rong. Among the famous Seven Old Masters of modern Purple Clay, Jiang Rong was the only woman. She started learning the craft at age 11 and became famous for shaping clay into plants, flowers, and animals. At first glance, this looks like a lotus root with lotus leaves forming the handle and spout. But look closely at the top—there is no lid! So how do you pour wine into it? You actually turn the pot upside down and fill it through a hole in the bottom. Inside the pot is a cone-shaped tube that reaches higher than the spout. Once you flip the pot right-side up, the wine stays safely inside without spilling a drop. It is a brilliant mix of lifelike sculpture and clever engineering.",
+        scriptZh: "紫砂七大老艺人中唯一的女性大师蒋蓉所制《荷花酒具》。壶顶竟然没有壶盖，注酒时需将壶倒置从底部圆孔注入，壶内设有高于流口的圆锥形隔管，翻转放正后滴酒不漏，堪称仿生花器与物理巧思的完美结合。"
+      },
+      {
+        num: "10",
+        id: "museum-10",
+        file: "assets/audio/museum_10_wind_swept_mallow.mp3?v=p1",
+        keyEn: "Wind Mallow Pot",
+        keyZh: "杨凤年风卷葵",
+        kickerEn: "Museum Stop 10 · 0:52 · Breeze & Chime",
+        kickerZh: "陶博第 10 站 · 0:52 · 清风雅音",
+        titleEn: "Hall 3 Highlight: The Wind-Swept Mallow Teapot by Yang Fengnian",
+        titleZh: "紫砂厅镇馆之宝：清代杨凤年《风卷葵壶》（国家一级文物）",
+        subEn: "Qing Dynasty National First-Class Cultural Relic Capturing Invisible Wind in Solid Clay",
+        subZh: "清代著名女紫砂家杨凤年孤品，以随风偃仰的锦葵花叶筋纹将无形之风化作有形之壶",
+        scriptEn: "Over here is the centerpiece of our Purple Clay Hall and a National First-Class Cultural Relic: the Wind-Swept Mallow Teapot. It was made during the Qing Dynasty by Yang Fengnian, one of the most celebrated female Purple Clay artists in history, and it is the only surviving piece of its kind. How do you capture the invisible wind in solid clay? Yang Fengnian did it by shaping the pot like a mallow flower caught in a gust of wind. The body and lid are covered with sweeping, curved ribs that look like leaves blowing to one side. The spout is a rolled-up leaf, the lid knob is a flower bud, and the handle is a twisted stem with the artist's family seal stamped underneath. Even though the clay is completely still, the whole teapot feels full of movement and life.",
+        scriptZh: "紫砂厅镇馆之宝、国家一级文物——清代女名家杨凤年所制孤品《风卷葵壶》。壶身与壶盖以顺风弯曲的锦葵花瓣与卷叶入形，花蕾作钮、曲枝作把，在静止的紫砂泥中凝固了狂风拂过花枝的灵动瞬间。"
+      },
+      {
+        num: "11",
+        id: "museum-11",
+        file: "assets/audio/museum_11_hall4_gu_jingzhou.mp3?v=p1",
+        keyEn: "Hall 4: Master Gu",
+        keyZh: "顾景舟艺术馆",
+        kickerEn: "Museum Stop 11 · 0:26 · Bamboo Flute Melody",
+        kickerZh: "陶博第 11 站 · 0:26 · 悠远竹笛",
+        titleEn: "Hall 4: Gu Jingzhou Art Gallery",
+        titleZh: "第四展厅：顾景舟艺术馆（百年诞辰纪念专馆）",
+        subEn: "Centennial Tribute to the Greatest Purple Clay Grandmaster of the Modern Era",
+        subZh: "2015年顾景舟诞辰百年之际开放，展示一代壶艺泰斗的制壶工具、珍贵手稿与传世巨作",
+        scriptEn: "For the final part of our tour, let's step into the Gu Jingzhou Art Gallery. Opened in 2015 for the 100th anniversary of his birth, this quiet, classic space honors Gu Jingzhou—the greatest Purple Clay master of the modern era. Through his photos, tools, and masterpieces, you can see how he dedicated his entire life to perfecting purple clay art.",
+        scriptZh: "最后我们步入2015年为纪念顾景舟诞辰百年而设的“顾景舟艺术馆”，透过他的照片、自制工具与代表巨作，领略这位近现代紫砂泰斗毕生追求极致的光器美学。"
+      },
+      {
+        num: "12",
+        id: "museum-12",
+        file: "assets/audio/museum_12_tibi_tea_set.mp3?v=p1",
+        keyEn: "Tibi Tea Set",
+        keyZh: "提璧茶具",
+        kickerEn: "Museum Stop 12 · 1:09 · Guzheng Glissando",
+        kickerZh: "陶博第 12 站 · 1:09 · 古筝刮奏",
+        titleEn: "Hall 4 Highlight: The Tibi Tea Set (Gu Jingzhou & Prof. Gao Zhuang)",
+        titleZh: "顾景舟巅峰巨作：《提璧茶具》（国家一级文物）",
+        subEn: "20-Year Collaboration (1978), Ancient Jade \"Bi\" Lid, Custom Tools & 1994 National Postage Stamp Masterpiece",
+        subZh: "顾景舟与中央工艺美院高庄教授历时20余年于1978年定型，壶盖取意古玉璧，1994年唯一入选特种邮票的当代紫砂",
+        scriptEn: "Right here is Master Gu's crowning achievement and another National First-Class Cultural Relic: the Tibi Tea Set. Gu Jingzhou worked with Professor Gao Zhuang from the Central Academy of Arts and Design for more than 20 years to perfect this design, finally finishing it in 1978. Unlike the flower-shaped pots we saw earlier, this set has no added decoration at all. Its beauty comes entirely from its clean lines and proportions. The flat, round lid is modeled after an ancient ceremonial jade disc, called a \"bi.\" Above it, the high arched handle rises like a rainbow, blending square and round edges seamlessly. To get every curve and edge this sharp, Gu Jingzhou had to invent more than a dozen special tools of his own. It is not just beautiful to look at—it feels balanced in the hand and pours smoothly. In fact, when China issued special postage stamps for Yixing Purple Clay in 1994, this was the only modern artwork chosen for the set.",
+        scriptZh: "国家一级文物《提璧茶具》是顾景舟与中央工艺美术学院高庄教授历时20余年、于1978年定型的巅峰之作。全器无一丝繁琐装饰，壶盖酷似古代礼器玉璧，提梁如长虹凌空、寓圆于方。顾老为此专门自制十余件独门工具，1994年中国发行宜兴紫砂特种邮票时，它是唯一入选的当代作品。"
+      },
+      {
+        num: "13",
+        id: "museum-13",
+        file: "assets/audio/museum_13_monks_hat_closing.mp3?v=p1",
+        keyEn: "Monk’s Hat Finale",
+        keyZh: "僧帽壶结语",
+        kickerEn: "Museum Stop 13 · 1:01 · Water & Guzheng Finale",
+        kickerZh: "陶博第 13 站 · 1:01 · 古筝与竹笛尾奏",
+        titleEn: "Hall 4 Highlight & Finale: The Monk’s Hat Teapot (Sengmao Hu)",
+        titleZh: "顾景舟方器代表作：《僧帽壶》与陶博导览结语",
+        subEn: "Six-Sided Geometric Precision, Stepped Lotus Petals, Duck-Bill Spout & Tour Closing",
+        subZh: "源自元代瓷器造型的六方莲瓣僧帽壶，鸭嘴流、穿绳小孔与按指凹槽尽显巧思",
+        scriptEn: "Let's finish our tour at one more classic by Gu Jingzhou: the Monk's Hat Teapot. This shape evolved from Yuan Dynasty porcelain and gets its name because the top looks just like a traditional Buddhist monk's cap. Building a six-sided pot like this by hand is incredibly difficult because every flat wall and sharp corner has to line up perfectly. Notice the duck-bill spout and the stepped lotus petals rising around the rim. The round knob on top looks like the crown of a hat, and right inside the petals is a tiny loop where you can tie a string to keep the lid from falling off when you pour. On the handle, a small thumb rest makes it comfortable to hold. Every part flows into the next effortlessly. Thank you for joining me on this tour of the China Yixing Ceramics Museum. Take your time exploring the rest of the galleries, and enjoy your visit to China's Pottery Capital!",
+        scriptZh: "最后一站欣赏顾景舟方器经典《僧帽壶》。造型源于元代瓷器，六方块面挺括严谨，冠顶莲瓣层叠、鸭嘴流胥出自然，莲瓣内侧设系绳小孔防倾倒落盖，壶把设拇指按位。感谢各位今天的同行，祝大家在中国陶都宜兴旅途愉快！"
       }
     ];
 
@@ -993,6 +1231,7 @@
       renderZone(GUNAN_STOPS, "keypad-gunan", "list-gunan", false);
       renderZone(BAMBOO_STOPS, "keypad-bamboo", "list-bamboo", true);
       renderZone(SHANJUAN_STOPS, "keypad-shanjuan", "list-shanjuan", false);
+      renderZone(MUSEUM_STOPS, "keypad-museum", "list-museum", false);
     }
 
     function toggleGuideLanguage() {
