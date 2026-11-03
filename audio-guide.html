@@ -132,7 +132,7 @@
 
     @media (min-width: 780px) {
       .zone-switcher {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
       }
     }
 
@@ -177,6 +177,12 @@
       background: var(--gold-leaf);
       color: #fff;
       border-color: var(--gold-leaf);
+    }
+
+    .zone-tab.active-cup {
+      background: #7b4b3a;
+      color: #fff;
+      border-color: #7b4b3a;
     }
 
     main {
@@ -467,6 +473,7 @@
       <a href="#zone-bamboo" class="zone-tab active-bamboo" data-en="🎋 Part II: Bamboo Sea (01–11)" data-zh="🎋 第二部分：宜兴竹海 (01–11)">🎋 Part II: Bamboo Sea (01–11)</a>
       <a href="#zone-shanjuan" class="zone-tab active-shanjuan" data-en="🦋 Part III: Shanjuan Cave (01–08)" data-zh="🦋 第三部分：善卷洞 (01–08)">🦋 Part III: Shanjuan Cave (01–08)</a>
       <a href="#zone-museum" class="zone-tab active-museum" data-en="🏺 Part IV: Ceramics Museum (01–13)" data-zh="🏺 第四部分：陶瓷博物馆 (01–13)">🏺 Part IV: Ceramics Museum (01–13)</a>
+      <a href="#zone-cup" class="zone-tab active-cup" data-en="🍵 Part V: Clay Cup DIY (01–07)" data-zh="🍵 第五部分：手工紫砂杯 (01–07)">🍵 Part V: Clay Cup DIY (01–07)</a>
     </div>
   </header>
 
@@ -508,16 +515,16 @@
         <div class="card-top" style="margin-bottom: 10px;">
           <div class="num-badge">🎧</div>
           <div class="title-wrap">
-            <span class="stop-kicker" data-en="Full Master Track · 21:51 · MP3 &amp; Printable PDF Script" data-zh="完整连播音频 · 21:51 · MP3 下载与英文导览词 PDF">Full Master Track · 21:51 · MP3 &amp; Printable PDF Script</span>
+            <span class="stop-kicker" data-en="Full Master Track · 16:25 · MP3 &amp; Printable PDF Script" data-zh="完整连播音频 · 16:25 · MP3 下载与英文导览词 PDF">Full Master Track · 16:25 · MP3 &amp; Printable PDF Script</span>
             <div class="stop-title" data-en="Shanjuan Cave Complete Audio Guide (All 8 Stops Combined)" data-zh="善卷洞风景区完整英文语音导览（全 8 站合集）">Shanjuan Cave Complete Audio Guide (All 8 Stops Combined)</div>
           </div>
         </div>
         <audio controls preload="none" style="margin-bottom: 10px;">
-          <source src="assets/audio/shanjuan_full_audio_guide.mp3?v=p2" type="audio/mpeg" />
+          <source src="assets/audio/shanjuan_full_audio_guide.mp3?v=p3" type="audio/mpeg" />
         </audio>
         <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-          <a href="assets/audio/shanjuan_full_audio_guide.mp3?v=p2" download="Shanjuan_Cave_Full_Audio_Guide.mp3" class="btn-top" data-en="⬇️ Download Full MP3 (20.5 MB)" data-zh="⬇️ 下载完整 MP3 音频 (20.5 MB)">⬇️ Download Full MP3 (20.5 MB)</a>
-          <a href="assets/Shanjuan_Cave_Audio_Guide_Script_EN.pdf?v=p2" download="Shanjuan_Cave_Audio_Guide_Script_EN.pdf" class="btn-top btn-lang" data-en="📄 Download English Script PDF" data-zh="📄 下载英文导览词 PDF">📄 Download English Script PDF</a>
+          <a href="assets/audio/shanjuan_full_audio_guide.mp3?v=p3" download="Shanjuan_Cave_Full_Audio_Guide.mp3" class="btn-top" data-en="⬇️ Download Full MP3 (15.4 MB)" data-zh="⬇️ 下载完整 MP3 音频 (15.4 MB)">⬇️ Download Full MP3 (15.4 MB)</a>
+          <a href="assets/Shanjuan_Cave_Audio_Guide_Script_EN.pdf?v=p3" download="Shanjuan_Cave_Audio_Guide_Script_EN.pdf" class="btn-top btn-lang" data-en="📄 Download English Script PDF" data-zh="📄 下载英文导览词 PDF">📄 Download English Script PDF</a>
         </div>
       </div>
 
@@ -535,21 +542,49 @@
         <div class="card-top" style="margin-bottom: 10px;">
           <div class="num-badge" style="background: var(--zisha-clay);">🎧</div>
           <div class="title-wrap">
-            <span class="stop-kicker" style="color: var(--zisha-clay);" data-en="Full Master Track · 12:49 · MP3 &amp; Printable PDF Script" data-zh="完整连播音频 · 12:49 · MP3 下载与英文导览词 PDF">Full Master Track · 12:49 · MP3 &amp; Printable PDF Script</span>
+            <span class="stop-kicker" style="color: var(--zisha-clay);" data-en="Full Master Track · 12:28 · MP3 &amp; Printable PDF Script" data-zh="完整连播音频 · 12:28 · MP3 下载与英文导览词 PDF">Full Master Track · 12:28 · MP3 &amp; Printable PDF Script</span>
             <div class="stop-title" data-en="China Yixing Ceramics Museum Complete Audio Guide (All 13 Stops Combined)" data-zh="中国宜兴陶瓷博物馆完整英文语音导览（全 13 站合集）">China Yixing Ceramics Museum Complete Audio Guide (All 13 Stops Combined)</div>
           </div>
         </div>
         <audio controls preload="none" style="margin-bottom: 10px;">
-          <source src="assets/audio/museum_full_audio_guide.mp3?v=p1" type="audio/mpeg" />
+          <source src="assets/audio/museum_full_audio_guide.mp3?v=p2" type="audio/mpeg" />
         </audio>
         <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-          <a href="assets/audio/museum_full_audio_guide.mp3?v=p1" download="Yixing_Ceramics_Museum_Full_Audio_Guide.mp3" class="btn-top" data-en="⬇️ Download Full MP3 (12.0 MB)" data-zh="⬇️ 下载完整 MP3 音频 (12.0 MB)">⬇️ Download Full MP3 (12.0 MB)</a>
-          <a href="assets/Yixing_Ceramics_Museum_Audio_Guide_Script_EN.pdf?v=p1" download="Yixing_Ceramics_Museum_Audio_Guide_Script_EN.pdf" class="btn-top btn-lang" data-en="📄 Download English Script PDF" data-zh="📄 下载英文导览词 PDF">📄 Download English Script PDF</a>
+          <a href="assets/audio/museum_full_audio_guide.mp3?v=p2" download="Yixing_Ceramics_Museum_Full_Audio_Guide.mp3" class="btn-top" data-en="⬇️ Download Full MP3 (11.7 MB)" data-zh="⬇️ 下载完整 MP3 音频 (11.7 MB)">⬇️ Download Full MP3 (11.7 MB)</a>
+          <a href="assets/Yixing_Ceramics_Museum_Audio_Guide_Script_EN.pdf?v=p2" download="Yixing_Ceramics_Museum_Audio_Guide_Script_EN.pdf" class="btn-top btn-lang" data-en="📄 Download English Script PDF" data-zh="📄 下载英文导览词 PDF">📄 Download English Script PDF</a>
         </div>
       </div>
 
       <div class="keypad-bar" id="keypad-museum"></div>
       <div class="audio-list" id="list-museum"></div>
+    </section>
+
+    <section id="zone-cup" class="zone-section">
+      <div class="zone-header" style="border-left-color: #7b4b3a;">
+        <h2 data-en="🍵 Part V · Handcrafted Purple Clay Cup Workshop" data-zh="🍵 第五部分 · 手工制作紫砂杯工坊导览">🍵 Part V · Handcrafted Purple Clay Cup Workshop</h2>
+        <span data-en="7 Audio Stops · 01 – 07 + Full MP3 &amp; PDF" data-zh="共 7 站语音导览 · 01 – 07 + 完整版音频与 PDF">7 Audio Stops · 01 – 07 + Full MP3 &amp; PDF</span>
+      </div>
+
+      <div class="audio-card" style="margin-bottom: 18px; border-left: 4px solid #7b4b3a;">
+        <div class="card-top" style="margin-bottom: 10px;">
+          <div class="num-badge" style="background: #7b4b3a;">🎧</div>
+          <div class="title-wrap">
+            <span class="stop-kicker" style="color: #7b4b3a;" data-en="Full Master Track · 6:09 · MP3 &amp; Printable PDF Script" data-zh="完整连播音频 · 6:09 · MP3 下载与英文导览词 PDF">Full Master Track · 6:09 · MP3 &amp; Printable PDF Script</span>
+            <div class="stop-title" data-en="Handcrafted Purple Clay Cup Complete Workshop Audio Guide (All 7 Stops)" data-zh="手工制作紫砂杯完整英文语音教学（全 7 站合集）">Handcrafted Purple Clay Cup Complete Workshop Audio Guide (All 7 Stops)</div>
+          </div>
+        </div>
+        <audio controls preload="none" style="margin-bottom: 10px;">
+          <source src="assets/audio/cup_full_audio_guide.mp3?v=p1" type="audio/mpeg" />
+        </audio>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <a href="assets/audio/cup_full_audio_guide.mp3?v=p1" download="Purple_Clay_Cup_Workshop_Full_Audio_Guide.mp3" class="btn-top" data-en="⬇️ Download Full MP3 (5.8 MB)" data-zh="⬇️ 下载完整 MP3 音频 (5.8 MB)">⬇️ Download Full MP3 (5.8 MB)</a>
+          <a href="assets/Purple_Clay_Cup_Workshop_Audio_Guide_Script_EN.pdf?v=p1" download="Purple_Clay_Cup_Workshop_Audio_Guide_Script_EN.pdf" class="btn-top btn-lang" data-en="📄 Download English Script PDF" data-zh="📄 下载英文导览词 PDF">📄 Download English Script PDF</a>
+          <a href="purple-clay-cup-showcase.html" class="btn-top" data-en="📐 Open Interactive Visual Guide →" data-zh="📐 打开交互式紫砂杯图解 →">📐 Open Interactive Visual Guide →</a>
+        </div>
+      </div>
+
+      <div class="keypad-bar" id="keypad-cup"></div>
+      <div class="audio-list" id="list-cup"></div>
     </section>
   </main>
 
@@ -866,121 +901,121 @@
       {
         num: "01",
         id: "shanjuan-01",
-        file: "assets/audio/shanjuan_01_intro.mp3?v=p2",
+        file: "assets/audio/shanjuan_01_intro.mp3?v=p3",
         keyEn: "Intro",
         keyZh: "开场总览",
-        kickerEn: "Shanjuan Stop 01 · 1:38 · Guzheng & Dizi Intro",
-        kickerZh: "善卷洞第 01 站 · 1:38 · 古筝与竹笛开场",
+        kickerEn: "Shanjuan Stop 01 · 1:30 · Guzheng & Dizi Intro",
+        kickerZh: "善卷洞第 01 站 · 1:30 · 古筝与竹笛开场",
         titleEn: "Welcome & Overview: Birthplace of Cave Tourism in China",
         titleZh: "开场导览：中国溶洞旅游起源处与梁祝故里",
-        subEn: "Visitor Center, Commercial Street, Mr. Chu Nanqiang’s 1934 Opening & The Three Great Wonder Caves of the World",
+        subEn: "Visitor Center, Pedestrian Village Street, Mr. Chu Nanqiang’s 1934 Opening & The Three Great Wonder Caves of the World",
         subZh: "游客中心商业街、1934年储南强先生开创中国溶洞旅游先河，与比利时汉人洞、法国里昂洞并称「世界三大奇洞」",
-        scriptEn: "Hello everyone! Welcome to the Shanjuan Cave Scenic Area—celebrated as the birthplace of karst cave tourism in China and the legendary setting of the classic Chinese romance, The Butterfly Lovers (Liang Shanbo and Zhu Yingtai). It is a real pleasure to be your guide today and share the stories and wonders of Shanjuan Cave with you. Please follow me this way. Right outside the Visitor Center on our left is the commercial street, which features newly introduced travel photography studios, convenience stores, the Limo Mountain House restaurant, and a themed cultural and creative shop. Located in Zhangzhu Town, about 23 kilometers southwest of downtown Yixing, the Shanjuan Cave Scenic Area is made up of five main themes: the karst caves, Butterfly Lovers culture, the Guoshan Stele, ancient and rare trees, and leisure attractions. Back in 1921, local visionary Mr. Chu Nanqiang began developing the cave. After thirteen years of tireless work, it officially opened to the public on November 11, 1934—pioneering cave tourism in China. Early on, it was hailed alongside the Caves of Han-sur-Lesse in Belgium and the caves of Lyon in France as one of the \"Three Great Wonder Caves of the World.\" Surrounded by lush hills and clear waters, the cave's natural rock formations are so breathtaking that ancient scholars praised it as an \"Ancient Sacred Marvel\" and a \"Fairy Capital in the Mortal World.\"",
+        scriptEn: "Hello everyone! Welcome to the Shanjuan Cave Scenic Area—celebrated as the birthplace of karst cave tourism in China and the legendary setting of the classic Chinese romance, The Butterfly Lovers. It is a real pleasure to be your guide today and share the stories and wonders of Shanjuan Cave with you. Please follow me this way. Just outside the Visitor Center on our left is the pedestrian village street, where you will find photo studios, convenience shops, a local country-style restaurant, and a cultural gift shop. Located in Zhangzhu Town, about 23 kilometers southwest of downtown Yixing, the scenic area brings together five highlights: the karst caves, Butterfly Lovers folklore, an ancient Third-Century stele, century-old trees, and leisure gardens. Back in 1921, local visionary Mr. Chu Nanqiang began developing the cave. After thirteen years of tireless work, it officially opened to the public on November 11, 1934—pioneering cave tourism in China. Early on, it was hailed alongside the Caves of Han-sur-Lesse in Belgium and the caves of Lyon in France as one of the \"Three Great Wonder Caves of the World.\" Surrounded by lush hills and clear streams, the cave's natural rock formations are so breathtaking that ancient scholars praised it as a \"Sacred Ancient Marvel\" and an \"Immortal Wonderland on Earth.\"",
         scriptZh: "各位游客大家好！欢迎来到被誉为“中国溶洞旅游起源处、梁祝爱情故事发生地”的善卷洞风景区。出了游客中心左手边是商业街（旅拍、便利店、离墨山房餐饮及主题文创展示店）。善卷洞位于宜兴市张渚镇，距市区23公里，由溶洞、梁祝文化、国山碑、古树名木和休闲娱乐五部分组成。1921年由储南强先生历时十三年开发，于1934年11月11日正式开放，创中国溶洞旅游先河，早期与比利时汉人洞、法兰西里昂洞并称“世界三大奇洞”，素有“万古灵迹”“欲界仙都”之美誉。"
       },
       {
         num: "02",
         id: "shanjuan-02",
-        file: "assets/audio/shanjuan_02_pailou.mp3?v=p2",
+        file: "assets/audio/shanjuan_02_pailou.mp3?v=p3",
         keyEn: "Archway",
         keyZh: "善卷牌楼",
-        kickerEn: "Shanjuan Stop 02 · 2:50 · Guzheng Glissando",
-        kickerZh: "善卷洞第 02 站 · 2:50 · 古筝刮奏",
-        titleEn: "The Grand Archway (Pailou) & The Ancient Names of Yixing",
+        kickerEn: "Shanjuan Stop 02 · 2:14 · Guzheng Glissando",
+        kickerZh: "善卷洞第 02 站 · 2:14 · 古筝刮奏",
+        titleEn: "The Grand Archway & The Ancient Names of Yixing",
         titleZh: "善卷洞牌楼与宜兴古称（荆溪、阳羡、义兴）",
-        subEn: "Juntao Glazed Roof Tiles, Fei Xinwo’s Left-Handed Calligraphy & How Jingxi and Yangxian Became Yixing",
+        subEn: "Jun-Glazed Roof Tiles, Fei Xinwo’s Left-Handed Calligraphy & How Jingxi and Yangxian Became Yixing",
         subZh: "均陶琉璃瓦、左笔书法家费新我题额、黄养辉楹联，以及宜兴7000年制陶史与2200年建县史演变",
-        scriptEn: "Walking across the plaza, right in front of us stands the majestic Shanjuan Cave Archway. Look up at the bright yellow glazed tiles on the roof—they were crafted using Yixing's famous traditional Juntao glazed pottery technique. The three bold characters for \"Shanjuan Cave\" on the gate were written by the renowned left-handed calligrapher Mr. Fei Xinwo. On both sides of the pillars, you can see a couplet written in 1986 by Mr. Huang Yanghui, a famous painter and calligrapher from Wuxi who studied under Master Xu Beihong. It reads: \"Every step in Jingxi is a scenic wonder; every corner of Yangxian holds a hidden grotto heaven.\" Both Jingxi and Yangxian are ancient names for Yixing. Over 6,000 years ago, this area faced the sea with mountains covered in wild brambles—called jing—and streams flowing down into the valleys, giving rise to the name \"Jingxi,\" or Bramble Stream. Later, in 221 BC, when the First Emperor Qin Shi Huang unified China and replaced the feudal system with 36 prefectures, Jingxi was renamed \"Yangxian.\" During the Jin Dynasty, a local hero named Zhou Qi raised an army three times to help the imperial court put down rebellions. To honor his achievements, the court renamed the prefecture \"Yixing,\" meaning Righteous Prosperity. Later, during the Song Dynasty, to avoid using a character from Emperor Taizong's personal name, the first character was changed to the \"Yi\" we use today—meaning a place suitable for living and thriving. Finally, in 1988, Yixing became a county-level city. With over 7,000 years of pottery-making history and more than 2,200 years as an established county, Yixing is proudly known across China as the \"Ancient Capital of Pottery, Oasis of Tea, Ocean of Bamboo, and World of Caves.\" According to local historical records, there are 87 karst caves scattered across Yixing's southwestern mountains, five of which are now open to visitors. Among them, Shanjuan Cave is world-famous for having a cave inside a mountain, a river inside a cave, and boats gliding along that underground river.",
+        scriptEn: "Walking across the plaza, right in front of us stands the grand Shanjuan Cave Archway. Look up at the bright yellow glazed tiles on the roof—they were crafted using Yixing's famous traditional Jun-glazed pottery technique. The three bold characters for \"Shanjuan Cave\" on the gate were written by the renowned left-handed calligrapher Mr. Fei Xinwo. On both sides of the pillars, you can see a couplet written in 1986 by Mr. Huang Yanghui, a famous painter and calligrapher who studied under Master Xu Beihong. It reads: \"Every step in Jingxi is a scenic wonder; every corner of Yangxian holds a hidden grotto heaven.\" Both Jingxi and Yangxian are ancient names for Yixing. Over 6,000 years ago, this area faced the sea with hills covered in wild brambles—called jing—and streams flowing down into the valleys, giving rise to the poetic name \"Jingxi,\" or Bramble Stream. Later, in 221 BC, when China's First Emperor Qin Shi Huang unified the country, Jingxi was renamed \"Yangxian.\" During the Jin Dynasty, after local hero Zhou Qi raised an army three times to help the imperial court put down rebellions, the court honored him by renaming the prefecture \"Yixing,\" meaning Righteous Prosperity. Later, during the Song Dynasty, to avoid using a character from the emperor's personal name, the first character was changed to the \"Yi\" we use today—meaning a place suitable for living and thriving. Finally, in 1988, Yixing became a county-level city. With over 7,000 years of pottery-making history and more than 2,200 years as an established county, Yixing is proudly known across China as the \"Ancient Capital of Pottery, Oasis of Tea, Ocean of Bamboo, and World of Caves.\" Historical records list 87 karst caves scattered across Yixing's southwestern hills, five of which are now open to visitors. Among them, Shanjuan Cave is world-famous for having a cave inside a mountain, a river inside a cave, and boats gliding along that underground river.",
         scriptZh: "穿过广场正前方是善卷洞牌楼，顶上黄色琉璃瓦采用宜兴均陶工艺，门楼“善卷洞”三字由著名左笔书法家费新我先生题写，两侧楹联“荆溪步步皆胜地，阳羡处处有洞天”由徐悲鸿弟子黄养辉先生书写。“荆溪”“阳羡”皆为宜兴古称：秦始皇二十六年改“荆溪”为“阳羡”；晋代表彰周玘（周处之子）三起义兵平叛改名“义兴”；宋太平兴国元年避宋太宗赵光义讳改“宜兴”，1988年撤县建市。宜兴被公认为“陶的古都、茶的绿洲、竹的海洋、洞的世界”，善卷洞以山中有洞、洞中有河、河可行舟著称于世。"
       },
       {
         num: "03",
         id: "shanjuan-03",
-        file: "assets/audio/shanjuan_03_statue_museum.mp3?v=p2",
+        file: "assets/audio/shanjuan_03_statue_museum.mp3?v=p3",
         keyEn: "Master & Hall",
         keyZh: "善卷与展馆",
-        kickerEn: "Shanjuan Stop 03 · 2:30 · Breeze & Chime",
-        kickerZh: "善卷洞第 03 站 · 2:30 · 清风雅音",
+        kickerEn: "Shanjuan Stop 03 · 1:50 · Breeze & Chime",
+        kickerZh: "善卷洞第 03 站 · 1:50 · 清风雅音",
         titleEn: "Master Shanjuan Statue & Chu Nanqiang Exhibition Hall",
         titleZh: "善卷老人雕像（跖耒而耕）与储南强展馆",
-        subEn: "The Sage Who Declined Emperor Shun’s Throne, the Ancient \"Lei\" Plow & The Pioneer of Chinese Cave Tourism",
+        subEn: "The Sage Who Declined Emperor Shun’s Throne, the Ancient \"Lei\" Spade & The Pioneer of Chinese Cave Tourism",
         subZh: "尧舜之师善卷先生拒受舜王禅让隐居于此、手持先秦翻土农具「耒」，以及宜兴旅游开拓者储南强三单元展馆",
-        scriptEn: "Please follow me through the archway. On our left stands a statue of the venerable Master Shanjuan. Legend has it that he lived here as a hermit, which is how Shanjuan Cave got its name. Master Shanjuan was a wise sage and the teacher of the legendary Emperors Yao and Shun. According to ancient texts, when Emperor Shun grew old, he saw that Shanjuan had the wisdom and virtue to govern the land, and offered to pass the throne to him. However, Master Shanjuan replied: \"I live freely and happily between heaven and earth—why would I ever need the throne?\" To avoid Emperor Shun's repeated offers, he traveled all the way from Changde in Hunan Province to these mountains, found this karst cave, and lived here in seclusion. He also brought advanced farming techniques to the local people and did many good deeds. To remember him, locals named the cave where he lived \"Shanjuan Cave.\" Notice the tool he is holding in his hand—it is called a lei (pronounced lěi). It was the primary soil-turning farming tool in pre-Qin China and the ancestor of the modern plow. Farmers would press the pointed tip into the soil and step on the crossbar to loosen the earth. Just ahead, we arrive at the Chu Nanqiang Exhibition Hall. Born in Yixing in 1876, Mr. Chu Nanqiang served as county magistrate of Yixing three times and twice in Nantong after the 1911 Revolution, earning a great reputation. Single-handedly spearheading the restoration and development of both Shanjuan Cave and Zhanggong Cave, he is remembered as the pioneer of cave tourism in China and the founder of modern tourism in Yixing. The hall is divided into three sections: A Family of Scholars, Moving Mountains with Determination, and Devotion to Country and Home. Right ahead is the ticket checkpoint. Let's have our tickets ready as we step inside the main cave—Shanjuan Cave!",
+        scriptEn: "Please follow me through the archway. On our left stands a statue of the ancient sage Master Shanjuan. Legend has it that he lived here as a hermit, which is how Shanjuan Cave got its name. Master Shanjuan was a revered philosopher and the teacher of the legendary Emperors Yao and Shun. According to ancient texts, when Emperor Shun grew old, he saw that Shanjuan had the wisdom and virtue to govern the land, and offered to pass the throne to him. However, Master Shanjuan replied: \"I live freely and happily between heaven and earth—why would I ever need the throne?\" To avoid Emperor Shun's repeated offers, he traveled all the way from Hunan Province to these quiet mountains, found this karst cave, and lived here in seclusion. He also taught advanced farming skills to the local villagers. To remember his kindness, locals named the cave where he lived \"Shanjuan Cave.\" Notice the wooden tool he is holding in his hand—it is called a lei, an ancient two-pronged spade used in pre-imperial China and the ancestor of the modern plow. Farmers would press the pointed tip into the soil and step on the crossbar to turn the earth. Just ahead, we arrive at the Chu Nanqiang Exhibition Hall. Born in Yixing in 1876, Mr. Chu Nanqiang was a respected civic leader who single-handedly spearheaded the restoration and development of both Shanjuan Cave and Zhanggong Cave. Remembered as the pioneer of cave tourism in China, his exhibition hall tells the story of his scholarly family, his determination to open the caves, and his lifelong devotion to his hometown. Right ahead is the ticket gate—let's step inside the main cavern of Shanjuan Cave!",
         scriptZh: "进入牌楼左侧是尧舜之师善卷老先生雕像。相传舜王欲将天下让给善卷治理，善卷答道：“我在天地之间逍遥快乐，又何必要什么天下呢？”遂从湖南常德来到此处溶洞隐居，并带来先进农耕生产力，百姓纪念他故名“善卷洞”。他手中的“耒”（lěi）是先秦翻土农具、犁的前身。前方为储南强展馆，储南强先生（1876—1959）一人开发善卷、张公两洞，馆内分为诗书之家、愚公移山、家国情怀三个单元。"
       },
       {
         num: "04",
         id: "shanjuan-04",
-        file: "assets/audio/shanjuan_04_middle_cave.mp3?v=p2",
+        file: "assets/audio/shanjuan_04_middle_cave.mp3?v=p3",
         keyEn: "Middle Cave",
         keyZh: "中洞狮象",
-        kickerEn: "Shanjuan Stop 04 · 4:22 · Water Drops & Guzheng",
-        kickerZh: "善卷洞第 04 站 · 4:22 · 水滴与古筝",
-        titleEn: "The Middle Cave: Lion and Elephant Arena (Shixiang Dachang)",
-        titleZh: "中洞·狮象大场（砥柱峰、青狮白象、紫砂观音海岛与欲界仙都）",
-        subEn: "30,000-Year-Old Mainstay Peak, Green Lion & White Elephant, Zisha Guanyin Sea Island & \"Yujie Xiandu\"",
+        kickerEn: "Shanjuan Stop 04 · 2:54 · Water Drops & Guzheng",
+        kickerZh: "善卷洞第 04 站 · 2:54 · 水滴与古筝",
+        titleEn: "The Middle Cave: The Lion and Elephant Hall",
+        titleZh: "中洞·狮象大场（砥柱峰、青狮白象、紫砂观音与欲界仙都）",
+        subEn: "30,000-Year-Old Pillar of Strength, Green Lion & White Elephant, Purple Clay Guanyin Shrine & \"Immortal Wonderland on Earth\"",
         subZh: "生长3万余年的7米砥柱峰与迎客佛、吕凤子题「狮象大场」、普陀山观音与8尊宜兴紫砂小观音、陶弘景篆书「欲界仙都」",
-        scriptEn: "Everyone, welcome inside Shanjuan Cave! Covering roughly 5,000 square meters, the cave is grand and magnificent—like an intricately carved stone palace or a natural museum of abstract art. The entire system spans three levels and four interconnected caverns: the Upper Cave, Middle Cave, Lower Cave, and Water Cave, each brought to life with its own themed light-and-shadow show. We are now in the Middle Cave. Look up toward the ceiling, where two butterflies seem to flutter side by side through a dreamlike realm. Behind them rises a massive stalagmite pillar called Mainstay Peak (Dizhu Peak), named because it looks like a mighty rock standing firm in the rushing Yellow River. Geologists tell us this seven-meter-tall pillar was formed drop by drop as calcium carbonate in the dripping cave water slowly crystallized over more than 30,000 years! Perched right at the top of the pillar is a natural rock formation resembling Maitreya Buddha—known as the \"Welcoming Buddha,\" smiling toward the entrance to greet visitors from all over the world. Above us, floating sky lanterns and dancing butterflies make the cavern feel like a celestial palace. You can even scan the QR code with your phone to write a wish and release your own digital sky lantern onto the cave ceiling! Also carved high above are the four characters for \"Lion and Elephant Arena\" (Shixiang Dachang), inscribed by the noted educator Mr. Lü Fengzi. Why is it called the Lion and Elephant Arena? Look to both sides of the hall, where two giant natural rock formations stand guard—one shaped like a Green Lion, and the other like a White Elephant. On the White Elephant, you can clearly make out its long trunk touching the ground, along with its tusks, front legs, and hind legs. Across from it, the Lion tilts its head slightly, with a curved waist, raised hindquarters, and a long tail trailing to the floor. There are interactive pads in front of both the Lion and the Elephant—feel free to step onto them to \"awaken\" these ancient guardians! An old poem describes this scene: \"At the cave entrance stands the Buddha; flanking the lotus throne are the Green Lion and White Elephant.\" Right beside the White Elephant sits a lifelike statue of Guanyin, the Bodhisattva of Compassion, invited here from Mount Putuo in Zhejiang. Hidden behind her are eight smaller Guanyin statues handcrafted from local Yixing Zisha purple clay. Together, they form the \"Guanyin Sea Island,\" a traditional layout often seen facing the back door of main Buddhist temple halls. As we walk forward toward the left pool, look up at the rock wall: the light projection recreates memory fragments of the Butterfly Lovers, Liang Shanbo and Zhu Yingtai, leaning together over their books, accompanied by two butterflies dancing in devotion before merging into one. This is a wonderful spot to pause and take photos. Now look straight ahead at the four large seal-script characters carved into the rock wall. Read from right to left, they say \"Yujie Xiandu\"—a phrase bestowed upon Shanjuan Cave by Tao Hongjing, the famous scholar and Taoist master of the Southern Liang Dynasty. In Buddhist and Taoist thought, Yujie refers to our busy mortal world, while Xiandu means the capital of immortals. Put together, it means \"A Fairy Paradise on Earth.\"",
+        scriptEn: "Everyone, welcome inside Shanjuan Cave! Covering roughly 5,000 square meters, the cave is grand and magnificent—like a naturally sculpted stone palace. The entire system spans three levels and four interconnected caverns: the Upper Cave, Middle Cave, Lower Cave, and Water Cave, each brought to life with its own themed light show. We are now in the Middle Cave. Look up toward the ceiling, where two projected butterflies flutter side by side. Behind them rises a massive seven-meter stalagmite pillar known as the Pillar of Strength, named because it stands like an unshakable rock in a rushing river. Geologists tell us this giant pillar grew drop by drop as minerals in the dripping cave water slowly crystallized over more than 30,000 years! Perched right at the top of the pillar is a natural rock formation resembling the Laughing Buddha—known as the \"Welcoming Buddha,\" smiling toward the entrance to greet visitors from around the world. Above us, floating sky lanterns and dancing butterflies make the cavern feel like a fairytale palace. You can even scan the QR code with your phone to write a wish and release your own digital sky lantern onto the cave ceiling! High above, you can also see four large characters meaning the \"Lion and Elephant Hall,\" inscribed by the noted educator Mr. Lü Fengzi. Why is it called the Lion and Elephant Hall? Look to both sides of the cavern, where two giant natural rock formations stand guard—one shaped like a Green Lion, and the other like a White Elephant. On the White Elephant, you can clearly make out its long trunk touching the ground, along with its tusks and legs. Across from it, the Lion tilts its head slightly with its long tail trailing to the floor. Feel free to step onto the interactive pads in front of them to awaken these ancient stone guardians! Right beside the White Elephant sits a lifelike statue of Guanyin, the Bodhisattva of Compassion, invited here from Mount Putuo. Nestled behind her are eight smaller Guanyin statues handcrafted from local Yixing purple clay, arranged like a traditional Buddhist island shrine. As we walk forward toward the pool on our left, look up at the rock wall: the light projection recreates scenes from the Butterfly Lovers, Liang Shanbo and Zhu Yingtai, studying side by side and transforming into two butterflies dancing together. This is a wonderful spot to pause for photos. Now look straight ahead at the four large seal-script characters carved into the rock face. Bestowed upon Shanjuan Cave 1,500 years ago by the famous Taoist scholar Tao Hongjing, they mean \"An Immortal Wonderland on Earth.\"",
         scriptZh: "善卷洞全洞面积约5000平方米，分上、中、下、水三层四洞。中洞7米高的“砥柱峰”由滴水碳酸钙凝结生长3万多年而成，峰顶有“迎客佛”。洞顶吕凤子题写“狮象大场”，两侧巨石形似青狮、白象（可站上互动装置唤醒）。白象旁供奉从浙江普陀山请来的观音像，身后藏有8尊宜兴本土紫砂泥制作的观音像，组成“观音海岛”。左前方石壁光影再现梁山伯与祝英台相依看书、双蝶合二为一。正前方石壁篆书“欲界仙都”为南北朝梁代陶弘景赞语，意为“人间天堂”。"
       },
       {
         num: "05",
         id: "shanjuan-05",
-        file: "assets/audio/shanjuan_05_upper_cave.mp3?v=p2",
+        file: "assets/audio/shanjuan_05_upper_cave.mp3?v=p3",
         keyEn: "Upper Cave",
         keyZh: "上洞云雾",
-        kickerEn: "Shanjuan Stop 05 · 3:16 · Bamboo Flute Melody",
-        kickerZh: "善卷洞第 05 站 · 3:16 · 悠远竹笛",
-        titleEn: "The Upper Cave: Cloud and Mist Arena (Yunwu Dachang)",
+        kickerEn: "Shanjuan Stop 05 · 2:27 · Bamboo Flute Melody",
+        kickerZh: "善卷洞第 05 站 · 2:27 · 悠远竹笛",
+        titleEn: "The Upper Cave: The Cloud and Mist Hall",
         titleZh: "上洞·云雾大场（四季23℃恒温、86版西游记取景地与盘古池）",
-        subEn: "Year-Round 23°C Eternal Spring, Auspicious Stone Bats, 1986 Journey to the West Filming Site & Pangu Pool",
+        subEn: "Year-Round 23°C Eternal Spring, Auspicious Stone Bats, 1986 Journey to the West Filming Site & Ancient Origin Pool",
         subZh: "常年23℃冬暖夏凉、蝶舞连枝、江南水乡图、五福临门、86版《西游记》黄风洞取景处与上百万年前海水溶蚀起点盘古池",
-        scriptEn: "Let's head up the stairs on the left toward the Upper Cave. Notice how the huge rock formation above acts like a natural curtain, blocking air convection between the Middle Cave and the Upper Cave. Because of this, the Upper Cave stays at a constant, comfortable temperature of around 23 degrees Celsius (73°F) all year round—warm in winter, cool in summer, like eternal spring! In winter, the temperature difference between the inside and outside fills the entire cavern with swirling white mist, which is why the Upper Cave is called the \"Cloud and Mist Arena.\" Straight ahead of us is a romantic scene of Butterflies Dancing Among Intertwined Branches. Two ancient trees appear to grow into one, surrounded by blooming flowers and fluttering butterflies—a symbol of freedom and eternal love. You can step onto the interactive platform here to experience this fairytale scene up close. On our left is a natural rock formation called \"Water Town of Jiangnan.\" By the pool stands a lush, lifelike stone \"willow tree.\" Look up above it, and you'll spot a giant stone bat spreading its wings as if flying toward us, with a smaller bat following right behind. In traditional Chinese culture, the word for bat (fu) sounds identical to the word for good fortune and blessing (fu), so seeing bats here means \"blessings arriving from all directions!\" Next to it, clusters of stalactites hang down like shy, budding lotus flowers reflected in the crystal-clear water below—creating a magical illusion of \"flowers in the water and the moon in the mirror.\" Fun fact: the Upper Cave's dramatic rock formations were so vivid that Episode 8 of the classic 1986 television series Journey to the West—the Yellow Wind Cave scene where the monk Tang Seng was tied up—was filmed right here! Look just above our heads at that translucent stalactite with tiny water droplets hanging from its tip. As each drop evaporates ever so slightly, a microscopic ring of calcium carbonate is left behind, allowing the stalactite to grow millimeter by millimeter over thousands of years. Beside it is a natural rock picture known as \"Mountain Eagle Teasing a Bear,\" and to the right stands a twin stone column that grew together over tens of thousands of years, symbolizing love that never parts. Beside us is Pangu Pool. See that small natural spring opening on the rock wall? Millions of years ago, ancient seawater broke through a tiny fissure right here and slowly dissolved the limestone to hollow out this vast cavern—so the Upper Cave actually began forming from this very spot!",
-        scriptZh: "拾级而上进入上洞“云雾大场”，巨岩阻隔对流使上洞常年保持23℃恒温，冬暖夏凉。正前方为“蝶舞连枝”互动奇观；左手边“江南水乡图”有翠柳、大小双蝠（寓意万福来朝）及水中倒映的钟乳石“荷花”（镜中月水中花）。1986版《西游记》第八集“黄风洞”绑唐僧场景即在此拍摄。旁有“山鹰戏熊”、生生相伴的连理石柱，以及上百万年前海水溶蚀起点“盘古池”。"
+        scriptEn: "Let's head up the stairs on the left toward the Upper Cave. Notice how the huge rock formation above acts like a natural curtain, blocking air circulation between the Middle Cave and the Upper Cave. Because of this, the Upper Cave stays at a comfortable temperature of around 23 degrees Celsius all year round—warm in winter and cool in summer, like eternal spring! In winter, the temperature difference between the inside and outside fills the cavern with swirling white mist, which is why the Upper Cave is called the \"Cloud and Mist Hall.\" Straight ahead of us is a romantic light installation of butterflies dancing around two intertwined ancient trees—a classic Chinese symbol of eternal love. You can step onto the interactive platform here to experience this fairytale scene up close. On our left is a natural rock landscape that looks just like a traditional southern Chinese water town, complete with a stone willow tree by the pond. Look up above it, and you'll spot a giant stone bat spreading its wings as if flying toward us, with a smaller bat following right behind. In Chinese culture, the word for bat (fu) sounds identical to the word for good fortune, so spotting bats here means \"blessings arriving from all directions!\" Next to it, clusters of stalactites hang down like budding lotus flowers reflected in the crystal-clear water below—creating a magical illusion of flowers in the water and the moon in a mirror. Fun fact: the Upper Cave's dramatic rock formations were so vivid that Episode 8 of the classic 1986 television series Journey to the West was filmed right here! Look just above our heads at that translucent stalactite with tiny water droplets hanging from its tip. As each drop slowly deposits a microscopic ring of minerals, the stalactite grows millimeter by millimeter over thousands of years. To our right stands a pair of stone columns that grew together over tens of thousands of years, symbolizing love that never parts. And right beside us is the Ancient Origin Pool. See that small natural spring opening on the rock wall? Millions of years ago, ancient seawater broke through a tiny fissure right here and slowly hollowed out this vast cavern—so the Upper Cave actually began forming from this very spot!",
+        scriptZh: "拾级而上进入上洞“云雾大场”，巨岩阻隔对流使上洞常年保持23℃恒温，冬暖夏凉。正前方为“蝶舞连枝”互动奇观；左手边“江南水乡图”有翠柳、大小双蝠（寓意万福来朝）及水中倒映的钟乳石“荷花”（镜中月水中花）。1986版《西游记》第八集“黄风洞”绑唐僧场景即在此拍摄。旁有连理石柱，以及上百万年前海水溶蚀起点“盘古池”。"
       },
       {
         num: "06",
         id: "shanjuan-06",
-        file: "assets/audio/shanjuan_06_baibing_xiaochu.mp3?v=p2",
+        file: "assets/audio/shanjuan_06_baibing_xiaochu.mp3?v=p3",
         keyEn: "Rong Inscription",
         keyZh: "百病消除",
-        kickerEn: "Shanjuan Stop 06 · 2:00 · Classical Guzheng",
-        kickerZh: "善卷洞第 06 站 · 2:00 · 典雅古筝",
-        titleEn: "The \"All Illnesses Vanish\" Inscription (Bai Bing Xiao Chu)",
+        kickerEn: "Shanjuan Stop 06 · 1:32 · Classical Guzheng",
+        kickerZh: "善卷洞第 06 站 · 1:32 · 典雅古筝",
+        titleEn: "The \"May All Illnesses Vanish\" Inscription",
         titleZh: "梯口石壁·荣德生与荣毅仁父子题写「百病消除」传奇",
         subEn: "The Touching Friendship of Industrialist Rong Desheng & Developer Chu Nanqiang, Re-inscribed by Rong Yiren",
         subZh: "无锡民族资本家荣德生仗义捐赠水泥钢筋助挚友储南强修洞，1934年游洞不药而愈题写「百病消除」，1986年荣毅仁复书",
-        scriptEn: "At the entrance to the stairway leading down, look at the four bold characters carved into the rock wall: \"Bai Bing Xiao Chu\"—meaning \"May All Illnesses Vanish.\" These characters were re-inscribed in October 1986 by Mr. Rong Yiren, the former Vice President of China. There is a touching story behind them. The original calligraphy was actually written by Rong Yiren's father, Mr. Rong Desheng, the famous patriotic industrialist from Wuxi. Mr. Rong and cave developer Mr. Chu Nanqiang were close friends. When Mr. Rong learned that Chu Nanqiang had exhausted his entire family fortune to restore Shanjuan Cave—even selling off his wife's jewelry and his daughter-in-law's dowry—he was deeply moved and generously donated all the cement and steel bars needed to finish the project. When Shanjuan Cave officially opened on November 11, 1934, Chu Nanqiang invited Mr. Rong to visit. Although Mr. Rong was feeling slightly unwell that day, he came anyway. After exploring the upper and lower caves, he was so captivated by the magical scenery and felt so uplifted that his discomfort completely disappeared! Inspired, he picked up a brush and wrote \"Bai Bing Xiao Chu\" (\"All Illnesses Vanish\"). Sadly, the original carving was destroyed during the Cultural Revolution, so his son Rong Yiren re-inscribed it here in 1986. Standing here today, I also wish all of you abundant health, happiness, and joy!",
+        scriptEn: "At the entrance to the stairway leading down, look at the four bold characters carved into the rock wall. They mean \"May All Illnesses Vanish,\" and they were re-inscribed in October 1986 by Mr. Rong Yiren, the former Vice President of China. There is a touching story behind them. The original calligraphy was written by Rong Yiren's father, Mr. Rong Desheng, a famous industrialist from nearby Wuxi. Mr. Rong and cave developer Mr. Chu Nanqiang were close friends. When Mr. Rong learned that Chu Nanqiang had exhausted his entire family fortune to restore Shanjuan Cave—even selling off his wife's jewelry and his daughter-in-law's dowry—he was deeply moved and generously donated all the cement and steel needed to finish the project. When Shanjuan Cave officially opened on November 11, 1934, Chu Nanqiang invited Mr. Rong to visit. Although Mr. Rong was feeling slightly unwell that day, he came anyway. After exploring the upper and lower caves, he was so captivated by the scenery and felt so uplifted that his discomfort completely disappeared! Inspired, he picked up a brush and wrote \"May All Illnesses Vanish.\" After the original carving was lost in the 1960s, his son Rong Yiren re-inscribed it here in 1986. Standing here today, I also wish all of you abundant health, happiness, and joy!",
         scriptZh: "梯口石壁“百病消除”四字为原国家副主席荣毅仁先生于1986年10月复书。原迹由其父、无锡民族资本家荣德生老先生题写。当年荣老得知挚友储南强为整修善卷洞变卖夫人首饰与儿媳嫁妆，仗义捐赠整修所需全部水泥钢筋。1934年11月11日开放当天，微恙抱病前来的荣老游洞后心旷神怡、不适尽消，遂提笔写下“百病消除”。在此也祝各位朋友健康喜乐！"
       },
       {
         num: "07",
         id: "shanjuan-07",
-        file: "assets/audio/shanjuan_07_lower_cave_waterfall.mp3?v=p2",
+        file: "assets/audio/shanjuan_07_lower_cave_waterfall.mp3?v=p3",
         keyEn: "Lower Cave",
         keyZh: "下洞飞瀑",
-        kickerEn: "Shanjuan Stop 07 · 2:34 · Waterfall & Chime",
-        kickerZh: "善卷洞第 07 站 · 2:34 · 飞瀑与古韵",
-        titleEn: "The Lower Cave & The Subterranean Waterfall",
-        titleZh: "下洞·十年人工隧洞、九叠池、佛手幕与悬崖飞瀑",
-        subEn: "The 10-Year Hand-Chiseled 105-Step Tunnel, Nine-Tiered Pools, Buddha’s Hand Curtain & Underground Waterfall",
-        subZh: "20名工匠用「敲锣定音法」历时10年凿通的105级五层楼深阶梯（风雷/波涛/金鼓/万马四门）与倒挂银河般的洞内飞瀑",
-        scriptEn: "Ahead of us is the 105-step staircase, descending five stories deep into the Lower Cave. Originally, the Middle Cave and Lower Cave were not connected at all—visitors had to walk outside and go around the mountain. Starting in 1925, twenty stonemasons worked here every single day to chisel a tunnel through the solid rock. Because explosives would have damaged the delicate cave structure, they couldn't use dynamite. Instead, they used an ingenious \"gong-striking sound method\"—tapping and listening to the echo through the rock while chiseling upward from the bottom and downward from the top at the same time. Progress was painstakingly slow, and it took a full ten years to carve out this shortcut! On rainy days, as you spiral down these stairs, every turn echoes with a different natural sound from the rushing water outside—first like roaring wind and thunder, then like surging ocean waves, then like ringing war drums, and finally like ten thousand galloping horses. That is why the four stone archways along the stairs are named Wind and Thunder, Surging Waves, Golden Drums, and Ten Thousand Horses. Stepping into the Lower Cave, you can see a figure seated in meditation beneath a towering stone pine—that is Master Shanjuan, the discoverer of our cave. Moving forward, on our right are the Nine-Tiered Pools (Jiudie Chi), formed naturally by dripping water and shaped just like terraced rice fields in southern China. In ancient China, the number nine represented the highest number, symbolizing infinity. On our left, sheets of hanging stalactites drape across the cave opening like a curtain of Buddha's hands, earning it the name \"Buddha's Hand Curtain.\" Beyond this curtain lies the signature spectacle of Shanjuan Cave: the cliffside waterfall plunging straight into the underground cavern! When developer Chu Nanqiang stood here, he wrote a famous poem comparing the waterfall to the Milky Way pouring down from heaven into the belly of the mountain, roaring like underground thunder.",
-        scriptZh: "前方“梯口”105级台阶有五层楼深。中洞与下洞原不相通，1925年起20名工匠为防震坏洞体不打炮，采用“敲锣定音法”上下对凿，整整10年打通此捷径。雨天拾级而下可闻风雷、波涛、金鼓、万马之声。下洞内可见通天石松下盘膝参悟的善卷老人、酷似南方梯田的“九叠池”、形如垂幕的“佛手幕”，以及善卷洞最具代表性的景观——悬崖飞瀑直泻下洞（储南强诗赞“倒挂银河笑口开”）。"
+        kickerEn: "Shanjuan Stop 07 · 1:50 · Waterfall & Chime",
+        kickerZh: "善卷洞第 07 站 · 1:50 · 飞瀑与古韵",
+        titleEn: "The Lower Cave & The Underground Waterfall",
+        titleZh: "下洞·十年人工隧洞、九叠池与悬崖飞瀑",
+        subEn: "The 10-Year Hand-Chiseled 105-Step Tunnel, Nine-Tiered Pools & Cliffside Underground Waterfall",
+        subZh: "20名工匠用「敲锣定音法」历时10年凿通的105级五层楼深阶梯与倒挂银河般的洞内飞瀑",
+        scriptEn: "Ahead of us is the 105-step staircase, descending five stories deep into the Lower Cave. Originally, the Middle Cave and Lower Cave were not connected at all—visitors had to walk outside and go around the mountain. Starting in 1925, twenty stonemasons worked here every single day to chisel a tunnel through the solid rock. Because explosives would have damaged the delicate cave structure, they couldn't use dynamite. Instead, they used an ingenious sound-locating method—striking gongs and listening to the echo through the rock while chiseling from both ends at the same time. It took a full ten years of hand-chiseling to carve out this shortcut! On rainy days, as you spiral down these stairs, every turn echoes with a different natural sound from the rushing water outside—first like roaring wind and thunder, then like surging ocean waves, then like beating war drums, and finally like ten thousand galloping horses. Stepping into the Lower Cave, you can see a figure seated in meditation beneath a towering stone pine—that is Master Shanjuan, the ancient sage who discovered our cave. Moving forward, on our right are the Nine-Tiered Pools, formed naturally by dripping water and shaped just like terraced rice fields in southern China. On our left, sheets of hanging stalactites drape across the cave opening like a natural stone curtain. Right beyond this curtain lies the signature spectacle of Shanjuan Cave: a dramatic cliffside waterfall plunging straight into the underground cavern! When developer Chu Nanqiang stood here, he wrote a famous poem comparing the waterfall to the Milky Way pouring down from heaven into the heart of the mountain, roaring like underground thunder.",
+        scriptZh: "前方“梯口”105级台阶有五层楼深。中洞与下洞原不相通，1925年起20名工匠为防震坏洞体不打炮，采用“敲锣定音法”上下对凿，整整10年打通此捷径。雨天拾级而下可闻风雷、波涛、金鼓、万马之声。下洞内可见通天石松下盘膝参悟的善卷老人、酷似南方梯田的“九叠池”、形如垂幕的钟乳石幕，以及善卷洞最具代表性的景观——悬崖飞瀑直泻下洞。"
       },
       {
         num: "08",
         id: "shanjuan-08",
-        file: "assets/audio/shanjuan_08_water_cave_closing.mp3?v=p2",
+        file: "assets/audio/shanjuan_08_water_cave_closing.mp3?v=p3",
         keyEn: "Water Cave",
         keyZh: "水洞泛舟",
-        kickerEn: "Shanjuan Stop 08 · 2:16 · Crystal River & Finale",
-        kickerZh: "善卷洞第 08 站 · 2:16 · 水晶宫泛舟与尾奏",
+        kickerEn: "Shanjuan Stop 08 · 1:51 · Crystal River & Finale",
+        kickerZh: "善卷洞第 08 站 · 1:51 · 水晶宫泛舟与尾奏",
         titleEn: "The Water Cave (Crystal Palace) Boat Ride & Finale",
         titleZh: "水洞（水晶宫）地下河泛舟与出「龙门」结语",
-        subEn: "120-Meter Underground River Boat Ride Through Three Bends, the Water Pass & Passing Through the Dragon Gate",
+        subEn: "120-Meter Underground River Boat Ride Through Three Bends, the Water Gate & Gliding Out the Dragon Gate",
         subZh: "乘船畅游120米三弯古老地下河，过水关、赏星河蝶影，船过龙门豁然开朗",
-        scriptEn: "Walking back from the waterfall, we arrive at our final highlight—the Water Cave, also known as the Crystal Palace. Please watch your step as we board the boat! The Water Cave is an ancient underground river stretching 120 meters long, winding through three gentle bends. Right ahead is the \"Water Pass\" (Shuiguan), where the rock ceiling dips to its lowest point. As our boat glides forward, dreamy butterfly lights dance across the vaulted ceiling like floating clouds and starry reflections on the water—making you feel as if you are rowing through the Milky Way itself. Look closely at the walls of the Water Cave, and you'll notice countless smaller grottos, all interconnected. Every single one was carved by underground water dissolving the limestone over millions of years. In fact, a karst cave is never truly finished—it is still changing and evolving every single moment. With its winding river bends, sheer rock cliffs, low overhanging ceiling, and fantastical stone shapes, riding through here feels just like traveling through a tunnel in time. As the famous Chinese poem goes: \"Where hills and streams seem to end and no path remains, beyond shady willows and bright flowers another village appears!\" As our boat rounds the third and final bend and passes through the \"Dragon Gate\" (Longmen), daylight suddenly opens up before us—bringing our dreamlike underground journey to a wonderful close. Ladies and gentlemen, please stay seated until the boat comes to a complete stop, and then step off carefully and follow the path out of the cave in an orderly line. Thank you all for exploring Shanjuan Cave with me today, and I wish you a wonderful rest of your trip in Yixing!",
+        scriptEn: "Walking back from the waterfall, we arrive at our final highlight—the Water Cave, also known as the Crystal Palace. Please watch your step as we board the boat! The Water Cave is an ancient underground river stretching 120 meters long, winding through three gentle bends. Right ahead is the Water Gate, where the rock ceiling dips to its lowest point. As our boat glides forward, dreamy butterfly lights dance across the vaulted ceiling like floating clouds and starry reflections on the water—making you feel as if you are rowing through the Milky Way itself. Look closely at the walls of the Water Cave, and you'll notice countless smaller grottos, all interconnected. Every single one was carved by underground water dissolving the limestone over millions of years. In fact, a karst cave is never truly finished—it is still changing and evolving every single moment. With its winding river bends, sheer rock cliffs, low overhanging ceiling, and fantastical stone shapes, riding through here feels just like traveling through a tunnel in time. As the famous Chinese poem goes: \"Where hills and streams seem to end and no path remains, beyond shady willows and bright flowers another village appears!\" As our boat rounds the third and final bend and glides out through the Dragon Gate, daylight suddenly opens up before us—bringing our underground journey to a wonderful close. Ladies and gentlemen, please stay seated until the boat comes to a complete stop, and then step off carefully and follow the path out of the cave. Thank you all for exploring Shanjuan Cave with me today, and enjoy the rest of your trip in Yixing!",
         scriptZh: "从瀑布往回走即达水洞——“水晶宫”。这条古老地下河长120米，曲折有三道弯，经过岩层最低处“水关”，头顶繁星蝶影宛若泛舟银河。洞壁无数小洞相连，展现出喀斯特地貌无时无刻不在变化的奇特魅力。“山穷水尽疑无路，柳暗花明又一村”，转过最后一道弯，船过“龙门”豁然开朗！请大家等船停稳后有序下船出洞，祝大家旅途愉快！"
       }
     ];
@@ -989,7 +1024,7 @@
       {
         num: "01",
         id: "museum-01",
-        file: "assets/audio/museum_01_intro.mp3?v=p1",
+        file: "assets/audio/museum_01_intro.mp3?v=p2",
         keyEn: "Intro",
         keyZh: "开场导览",
         kickerEn: "Museum Stop 01 · 0:55 · Guzheng & Dizi Intro",
@@ -1004,7 +1039,7 @@
       {
         num: "02",
         id: "museum-02",
-        file: "assets/audio/museum_02_hall1_ancient.mp3?v=p1",
+        file: "assets/audio/museum_02_hall1_ancient.mp3?v=p2",
         keyEn: "Hall 1: Ancient",
         keyZh: "古陶展厅",
         kickerEn: "Museum Stop 02 · 1:07 · Guzheng Glissando",
@@ -1019,7 +1054,7 @@
       {
         num: "03",
         id: "museum-03",
-        file: "assets/audio/museum_03_celadon_jar.mp3?v=p1",
+        file: "assets/audio/museum_03_celadon_jar.mp3?v=p2",
         keyEn: "Celadon Jar",
         keyZh: "青瓷谷仓罐",
         kickerEn: "Museum Stop 03 · 1:31 · Breeze & Chime",
@@ -1034,7 +1069,7 @@
       {
         num: "04",
         id: "museum-04",
-        file: "assets/audio/museum_04_red_clay_jar.mp3?v=p1",
+        file: "assets/audio/museum_04_red_clay_jar.mp3?v=p2",
         keyEn: "Red Clay Jar",
         keyZh: "双唇红陶罐",
         kickerEn: "Museum Stop 04 · 1:03 · Water Drops & Guzheng",
@@ -1049,7 +1084,7 @@
       {
         num: "05",
         id: "museum-05",
-        file: "assets/audio/museum_05_hall2_jun_pottery.mp3?v=p1",
+        file: "assets/audio/museum_05_hall2_jun_pottery.mp3?v=p2",
         keyEn: "Hall 2: Jun",
         keyZh: "均陶展厅",
         kickerEn: "Museum Stop 05 · 0:46 · Bamboo Flute Melody",
@@ -1064,7 +1099,7 @@
       {
         num: "06",
         id: "museum-06",
-        file: "assets/audio/museum_06_dragon_lotus_vat.mp3?v=p1",
+        file: "assets/audio/museum_06_dragon_lotus_vat.mp3?v=p2",
         keyEn: "Lotus Vat",
         keyZh: "龙头荷花缸",
         kickerEn: "Museum Stop 06 · 0:44 · Guzheng Glissando",
@@ -1079,7 +1114,7 @@
       {
         num: "07",
         id: "museum-07",
-        file: "assets/audio/museum_07_ou_and_ge_kilns.mp3?v=p1",
+        file: "assets/audio/museum_07_ou_and_ge_kilns.mp3?v=p2",
         keyEn: "Ou & Ge Kilns",
         keyZh: "欧窑与葛窑",
         kickerEn: "Museum Stop 07 · 0:52 · Breeze & Chime",
@@ -1094,7 +1129,7 @@
       {
         num: "08",
         id: "museum-08",
-        file: "assets/audio/museum_08_hall3_purple_clay.mp3?v=p1",
+        file: "assets/audio/museum_08_hall3_purple_clay.mp3?v=p2",
         keyEn: "Hall 3: Zisha",
         keyZh: "紫砂展厅",
         kickerEn: "Museum Stop 08 · 0:52 · Classical Guzheng",
@@ -1109,7 +1144,7 @@
       {
         num: "09",
         id: "museum-09",
-        file: "assets/audio/museum_09_lotus_wine_set.mp3?v=p1",
+        file: "assets/audio/museum_09_lotus_wine_set.mp3?v=p2",
         keyEn: "Lotus Wine Set",
         keyZh: "蒋蓉荷花酒具",
         kickerEn: "Museum Stop 09 · 0:54 · Water Drops & Guzheng",
@@ -1124,7 +1159,7 @@
       {
         num: "10",
         id: "museum-10",
-        file: "assets/audio/museum_10_wind_swept_mallow.mp3?v=p1",
+        file: "assets/audio/museum_10_wind_swept_mallow.mp3?v=p2",
         keyEn: "Wind Mallow Pot",
         keyZh: "杨凤年风卷葵",
         kickerEn: "Museum Stop 10 · 0:52 · Breeze & Chime",
@@ -1139,7 +1174,7 @@
       {
         num: "11",
         id: "museum-11",
-        file: "assets/audio/museum_11_hall4_gu_jingzhou.mp3?v=p1",
+        file: "assets/audio/museum_11_hall4_gu_jingzhou.mp3?v=p2",
         keyEn: "Hall 4: Master Gu",
         keyZh: "顾景舟艺术馆",
         kickerEn: "Museum Stop 11 · 0:26 · Bamboo Flute Melody",
@@ -1154,7 +1189,7 @@
       {
         num: "12",
         id: "museum-12",
-        file: "assets/audio/museum_12_tibi_tea_set.mp3?v=p1",
+        file: "assets/audio/museum_12_tibi_tea_set.mp3?v=p2",
         keyEn: "Tibi Tea Set",
         keyZh: "提璧茶具",
         kickerEn: "Museum Stop 12 · 1:09 · Guzheng Glissando",
@@ -1169,7 +1204,7 @@
       {
         num: "13",
         id: "museum-13",
-        file: "assets/audio/museum_13_monks_hat_closing.mp3?v=p1",
+        file: "assets/audio/museum_13_monks_hat_closing.mp3?v=p2",
         keyEn: "Monk’s Hat Finale",
         keyZh: "僧帽壶结语",
         kickerEn: "Museum Stop 13 · 1:01 · Water & Guzheng Finale",
@@ -1180,6 +1215,114 @@
         subZh: "源自元代瓷器造型的六方莲瓣僧帽壶，鸭嘴流、穿绳小孔与按指凹槽尽显巧思",
         scriptEn: "Let's finish our tour at one more classic by Gu Jingzhou: the Monk's Hat Teapot. This shape evolved from Yuan Dynasty porcelain and gets its name because the top looks just like a traditional Buddhist monk's cap. Building a six-sided pot like this by hand is incredibly difficult because every flat wall and sharp corner has to line up perfectly. Notice the duck-bill spout and the stepped lotus petals rising around the rim. The round knob on top looks like the crown of a hat, and right inside the petals is a tiny loop where you can tie a string to keep the lid from falling off when you pour. On the handle, a small thumb rest makes it comfortable to hold. Every part flows into the next effortlessly. Thank you for joining me on this tour of the China Yixing Ceramics Museum. Take your time exploring the rest of the galleries, and enjoy your visit to China's Pottery Capital!",
         scriptZh: "最后一站欣赏顾景舟方器经典《僧帽壶》。造型源于元代瓷器，六方块面挺括严谨，冠顶莲瓣层叠、鸭嘴流胥出自然，莲瓣内侧设系绳小孔防倾倒落盖，壶把设拇指按位。感谢各位今天的同行，祝大家在中国陶都宜兴旅途愉快！"
+      }
+    ];
+
+    var CUP_STOPS = [
+      {
+        num: "01",
+        id: "cup-01",
+        file: "assets/audio/cup_01_intro.mp3?v=p2",
+        keyEn: "Intro & Tools",
+        keyZh: "开场与工具",
+        kickerEn: "Workshop Stop 01 · 1:05 · Guzheng & Dizi Intro",
+        kickerZh: "紫砂杯工坊第 01 站 · 1:05 · 古筝与竹笛开场",
+        titleEn: "Welcome to the Yixing Purple Clay Cup Workshop",
+        titleZh: "欢迎来到宜兴紫砂杯全手工制作工坊",
+        subEn: "Why Authentic Purple Clay Is Hand-Built by Beating Slabs Rather Than Spun on a Wheel & The Traditional Toolkit",
+        subZh: "为什么紫砂不拉坯而是采用「拍打泥片、围筑身筒」非遗技法，以及桌上的传统制陶工具介绍",
+        scriptEn: "Hello everyone, and welcome to our Yixing Purple Clay Workshop! Today, you are going to experience a 600-year-old intangible cultural heritage with your own hands by crafting your very own purple clay tea cup. Unlike porcelain, which is spun on a fast potter's wheel, authentic Yixing purple clay is rich in natural quartz and iron minerals, giving it a sandy texture and unique \"double-pore\" breathability that keeps tea fragrant. Because of this special mineral structure, purple clay is never thrown on a wheel. Instead, artisans shape it entirely by hand—beating flat slabs of clay with a wooden mallet, wrapping the cylinder body, and bonding the pieces with fine clay paste. On the table in front of you, you'll find our traditional toolkit: the heavy wooden mallet, the compass circle cutter, a steel ruler and knife, the spinning turntable, a wooden paddle, and a damp smoothing cloth. Let's walk through the six simple steps to make your cup!",
+        scriptZh: "大家好，欢迎来到宜兴紫砂手作工坊！今天大家将亲手体验传承六百年的非遗技艺，制作一只专属紫砂品茗杯。与拉坯成型的瓷器不同，宜兴紫砂富含天然石英与铁质，具有独特的“双气孔”透气结构，因此从不在拉坯机上拉坯，而是采用木搭子拍打泥片、围筑身筒、脂泥镶接的全手工技法。桌上是今天用到的传统工具：木搭子、矩车（圆规刀）、钢尺与泥刀、转盘、木拍子和水布。下面我们一步步开始制作！"
+      },
+      {
+        num: "02",
+        id: "cup-02",
+        file: "assets/audio/cup_02_step1_round_disc.mp3?v=p2",
+        keyEn: "Step 1: Discs",
+        keyZh: "切圆与封孔",
+        kickerEn: "Workshop Stop 02 · 0:55 · Guzheng Glissando",
+        kickerZh: "紫砂杯工坊第 02 站 · 0:55 · 古筝刮奏",
+        titleEn: "Step 1: Cut the Circular Clay Discs & Seal the Center Pinhole",
+        titleZh: "第一步：旋切圆形泥片并立即填补圆心针孔",
+        subEn: "5mm Sizing Template Disc, 3mm Base Disc & The Leak-Proof Pinhole Trick",
+        subZh: "拍打5mm定型圆片与3mm杯底圆片，趁平放立即填平矩车圆心针孔，100%杜绝烧成后杯底漏水",
+        scriptEn: "Let's begin with Step One: cutting the circular clay discs and sealing the center pinhole. First, take a small block of purple clay and beat it evenly with the wooden mallet. We need two round discs of the exact same diameter: a thicker five-millimeter disc that acts as our inner sizing template, and a thinner three-millimeter disc that will become the bottom of your cup. Place the clay slab in the center of your turntable. Hold the compass cutter steady, press the pivot needle into the center, and spin the wheel smoothly to slice a clean circle. Here is the most important tip of the day: right after you cut the bottom disc, while it is still lying flat on the wheel, take a tiny dab of clay and firmly fill in the center pinhole left by the compass needle! Smoothing that pinhole closed right now takes just a few seconds and guarantees that your finished cup will never leak from the bottom.",
+        scriptZh: "第一步：旋切圆形泥片并封妥圆心针孔。先用木搭子拍打泥片，我们需要两片直径相同的圆片：一片厚约5毫米作为内部定型规片，另一片厚约3毫米作为杯底。将泥片放在转盘中心，用矩车旋切出正圆。今天最关键的秘诀来了：切出杯底圆片后，趁它还平放在转盘上，立即取一点泥星把圆心留下的针孔填平抹光！现在顺手封好针孔，就能百分之百保证烧成后的茶杯绝不漏水。"
+      },
+      {
+        num: "03",
+        id: "cup-03",
+        file: "assets/audio/cup_03_step2_body_slab.mp3?v=p2",
+        keyEn: "Step 2: 3-Point",
+        keyZh: "三点裁泥条",
+        kickerEn: "Workshop Stop 03 · 0:47 · Breeze & Chime",
+        kickerZh: "紫砂杯工坊第 03 站 · 0:47 · 清风雅音",
+        titleEn: "Step 2: Beat the Rectangular Body Strip & Cut via the 3-Point Method",
+        titleZh: "第二步：拍打长条泥片并用「三点定位法」裁切",
+        subEn: "Uniform 3–3.5mm Wall Thickness & Marking Left, Center, and Right for a Parallel Cut",
+        subZh: "由中心向外均匀拍打至3–3.5毫米厚，在左、中、右三点量出杯高连线一刀裁直，确保杯口与杯底绝对平行",
+        scriptEn: "Now for Step Two: beating the rectangular body strip and cutting it with the three-point method. Take a longer block of clay and beat it outward from the center until you have a flat, even strip about three to three-and-a-half millimeters thick. That thickness gives the finished cup a balanced, refined feel in your hand. Next, trim one long straight baseline along the bottom edge. To cut the top edge completely parallel, don't just measure two points—measure your desired cup height at three points: left, center, and right. Line up your steel ruler across all three marks and slice straight through in one clean stroke. Using three points ensures your cup rim and base will be perfectly level.",
+        scriptZh: "第二步：拍打杯身泥条并用三点定位法裁切。取长条泥块由中心向外拍打至3到3.5毫米厚，先裁出一条笔直底边，再用钢尺在左、中、右三处量出杯身高度点上记号，将钢尺对齐三个点一刀裁通。三点定位能保证杯口与杯底完全平行。"
+      },
+      {
+        num: "04",
+        id: "cup-04",
+        file: "assets/audio/cup_04_step3_wrap_seam.mp3?v=p2",
+        keyEn: "Step 3: 45° Seam",
+        keyZh: "围筒45°斜接",
+        kickerEn: "Workshop Stop 04 · 0:52 · Bamboo Flute Melody",
+        kickerZh: "紫砂杯工坊第 04 站 · 0:52 · 悠远竹笛",
+        titleEn: "Step 3: Wrap the Cylinder & Cut a 45-Degree Beveled Seam",
+        titleZh: "第三步：围筑圆筒并以 45° 斜角裁切合缝",
+        subEn: "Wrapping Around the 5mm Sizing Disc & Why a 45° Diagonal Joint Prevents Kiln Cracks",
+        subZh: "围绕5mm定型圆片围成圆筒，重叠处呈45度斜角一刀切透双层，比直角拼接增加40%贴合面积防窑烧开裂",
+        scriptEn: "In Step Three, we wrap the cylinder and cut a 45-degree beveled seam. Place your five-millimeter sizing disc in the center of the turntable, stand your rectangular clay strip upright, and wrap it snugly all the way around the disc until the two ends overlap. Where the two ends overlap, hold your knife at a 45-degree diagonal angle and slice through both layers at the same time. Why a 45-degree angle? Because a diagonal bevel creates 40 percent more contact surface than a straight cut, keeping the seam from cracking when the cup dries and fires in the kiln! Press the two beveled edges together, smooth the outer seam with your blade, and then support the outside wall with one hand while smoothing the inside seam. Once the cylinder is seamless, gently lift out the sizing disc.",
+        scriptZh: "第三步：围筑身筒并45度斜切合缝。将5毫米定型圆片放在转盘中央，把长方形泥条竖起紧紧围绕圆片一圈至首尾重叠。在重叠处手持泥刀呈45度斜角同时切透内外两层——45度斜面比直角对接多出40%的贴合面积，能防止干燥和窑烧时开裂！压实并抹平内外壁接缝后，轻轻取出定型圆片。"
+      },
+      {
+        num: "05",
+        id: "cup-05",
+        file: "assets/audio/cup_05_step4_attach_base.mp3?v=p2",
+        keyEn: "Step 4: Base",
+        keyZh: "涂泥与装底",
+        kickerEn: "Workshop Stop 05 · 0:43 · Water Drops & Guzheng",
+        kickerZh: "紫砂杯工坊第 05 站 · 0:43 · 水滴与古筝",
+        titleEn: "Step 4: Bevel the Rim, Apply Clay Paste & Attach the Base",
+        titleZh: "第四步：内沿切 45° 斜坡、涂抹脂泥并拍实杯底",
+        subEn: "45° Inner Rim Channel, Even Purple Clay Slip & Paddling the Pre-Sealed Base Tight",
+        subZh: "上沿内侧削45度斜坡形成粘接槽，涂匀紫砂脂泥浆，扣上第一步已封孔的底片并用木拍子拍合修齐",
+        scriptEn: "Moving on to Step Four: beveling the rim, applying clay paste, and attaching the base. With your hollow cylinder standing on the wheel, use your knife to trim a narrow 45-degree inward slope along the top rim. This creates a clean channel for bonding the base. Next, use a small spatula to spread smooth purple clay paste evenly all the way around that beveled edge. Take the circular bottom plate you prepared and sealed in Step One, lay it flat on top of the cylinder, and press it down gently. Then, use your wooden paddle to tap firmly around the edge so the base bonds tightly to the wall, and spin the wheel to trim away any excess clay around the foot.",
+        scriptZh: "第四步：内口削斜坡、涂抹脂泥并镶接杯底。用泥刀沿圆筒上沿内侧削出一圈45度内斜坡，涂匀细腻的紫砂脂泥浆，再把第一步已封好圆心孔的杯底圆片平铺在上面轻压贴合。用木拍子沿边缘拍打紧实，并转动转盘修齐底足多余的泥料。"
+      },
+      {
+        num: "06",
+        id: "cup-06",
+        file: "assets/audio/cup_06_step5_polish_rim.mp3?v=p2",
+        keyEn: "Step 5: Rim",
+        keyZh: "翻正与润口",
+        kickerEn: "Workshop Stop 06 · 0:37 · Breeze & Chime",
+        kickerZh: "紫砂杯工坊第 06 站 · 0:37 · 清风雅音",
+        titleEn: "Step 5: Flip the Cup Upright & Burnish the Drinking Rim",
+        titleZh: "第五步：翻正杯身并用湿水布润圆杯口",
+        subEn: "Rounding Off the Knife-Cut Edge with a Damp Smoothing Cloth for a Silky Lip Feel",
+        subZh: "双手轻托将茶杯正面朝上翻正，用湿水布包覆杯沿匀速转动转盘，让刀口瞬间变得圆润贴唇",
+        scriptEn: "Now comes Step Five: flipping the cup upright and burnishing the drinking rim. Now that the bottom is sealed and trimmed, gently cup the cylinder with both hands and flip it right-side up in the center of the turntable. Right now, the top rim was cut with a knife, so the edge is still flat and slightly sharp. Take your damp smoothing cloth, fold it gently over the lip of the cup, and spin the turntable steadily. In just a few turns, the sharp edge transforms into a smooth, rounded rim that feels silky and comfortable against your lips when sipping tea.",
+        scriptZh: "第五步：翻正杯身并润圆杯口。杯底封妥后，双手轻托杯身正面朝上放在转盘中央。此时刀切出的杯口还有些生硬，取湿润的水布轻搭包覆在杯口边缘，匀速转动转盘几圈，锋利的刀口就会变成温润光滑、触唇舒适的品茗杯沿。"
+      },
+      {
+        num: "07",
+        id: "cup-07",
+        file: "assets/audio/cup_07_step6_marking_closing.mp3?v=p2",
+        keyEn: "Step 6: Sign",
+        keyZh: "镌刻与落款",
+        kickerEn: "Workshop Stop 07 · 0:54 · Guzheng & Dizi Finale",
+        kickerZh: "紫砂杯工坊第 07 站 · 0:54 · 竹笛与古筝尾奏",
+        titleEn: "Step 6: Add Your Personal Signature & Kiln Firing",
+        titleZh: "第六步：镌刻个人专属落款与入窑烧制",
+        subEn: "Engraving Your Initials or Brushing Contrasting Slip Before the 1,180°C Firing",
+        subZh: "用刻刀镌刻姓名缩写或毛笔浅色泥绘装饰，务必在杯底清晰署名以便1180℃出窑后认领专属作品",
+        scriptEn: "Finally, Step Six: adding your own personal signature! Your handleless purple clay cup now has a clean, classic silhouette, and it is time to make it unmistakably yours. You can use a carving stylus to engrave your initials, the date, or a small motif onto the lower wall or the underside of the base. Or, if you prefer a painted look, dip a fine brush into contrasting light-colored clay slip to brush a minimalist design on the body. Please make sure to sign your initials clearly on the bottom of your cup so we can easily identify your piece when everyone's cups come out of the 1,180-degree kiln! Take your time, enjoy the meditative rhythm of working with Yixing purple clay, and have fun creating your one-of-a-kind souvenir!",
+        scriptZh: "最后一步：镌刻个人专属落款！你可以用刻刀在杯壁下方或杯底刻上姓名缩写、日期或小图案，也可以用细毛笔蘸浅色泥浆绘制极简纹饰。请大家务必在杯底清晰刻上自己的姓名缩写，方便所有作品经过1180度高温出窑后一眼认出自己的茶杯！祝大家尽情享受宜兴紫砂手作的乐趣！"
       }
     ];
 
@@ -1232,6 +1375,7 @@
       renderZone(BAMBOO_STOPS, "keypad-bamboo", "list-bamboo", true);
       renderZone(SHANJUAN_STOPS, "keypad-shanjuan", "list-shanjuan", false);
       renderZone(MUSEUM_STOPS, "keypad-museum", "list-museum", false);
+      renderZone(CUP_STOPS, "keypad-cup", "list-cup", false);
     }
 
     function toggleGuideLanguage() {
