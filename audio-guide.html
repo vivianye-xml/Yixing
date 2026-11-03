@@ -375,29 +375,29 @@
     <!-- 1. Collapsible Attraction Selector (Hides automatically after choosing) -->
     <div class="picker-bar">
       <button type="button" class="picker-trigger" id="picker-trigger" onclick="togglePickerMenu()">
-        <span id="current-zone-title">🏮 Part I: Gunan Street (01–09)</span>
+        <span id="current-zone-title">🏮 Part 1. Gunan Street (01–09)</span>
         <span class="caret" id="picker-caret">Switch ▾</span>
       </button>
 
       <div class="picker-menu" id="picker-menu">
         <button type="button" class="picker-option active" data-zone="gunan" onclick="selectZone('gunan')">
-          <span data-en="🏮 Part I: Gunan Street (01–09)" data-zh="🏮 第一部分：蜀山古南街 (01–09)">🏮 Part I: Gunan Street (01–09)</span>
-          <span>→</span>
-        </button>
-        <button type="button" class="picker-option" data-zone="bamboo" onclick="selectZone('bamboo')">
-          <span data-en="🎋 Part II: Bamboo Sea (01–11)" data-zh="🎋 第二部分：宜兴竹海 (01–11)">🎋 Part II: Bamboo Sea (01–11)</span>
-          <span>→</span>
-        </button>
-        <button type="button" class="picker-option" data-zone="shanjuan" onclick="selectZone('shanjuan')">
-          <span data-en="🦋 Part III: Shanjuan Cave (01–08)" data-zh="🦋 第三部分：善卷洞 (01–08)">🦋 Part III: Shanjuan Cave (01–08)</span>
+          <span data-en="🏮 Part 1. Gunan Street (01–09)" data-zh="🏮 Part 1. 蜀山古南街 (01–09)">🏮 Part 1. Gunan Street (01–09)</span>
           <span>→</span>
         </button>
         <button type="button" class="picker-option" data-zone="museum" onclick="selectZone('museum')">
-          <span data-en="🏺 Part IV: Ceramics Museum (01–13)" data-zh="🏺 第四部分：陶瓷博物馆 (01–13)">🏺 Part IV: Ceramics Museum (01–13)</span>
+          <span data-en="🏛️ Part 2. 11/4 Ceramics Museum (01–13)" data-zh="🏛️ Part 2. 11/4 陶瓷博物馆 (01–13)">🏛️ Part 2. 11/4 Ceramics Museum (01–13)</span>
           <span>→</span>
         </button>
         <button type="button" class="picker-option" data-zone="cup" onclick="selectZone('cup')">
-          <span data-en="🍵 Part V: Clay Cup DIY (01–07)" data-zh="🍵 第五部分：手工紫砂杯 (01–07)">🍵 Part V: Clay Cup DIY (01–07)</span>
+          <span data-en="🍵 Part 3. Clay Cup DIY (01–07)" data-zh="🍵 Part 3. 手工紫砂杯 (01–07)">🍵 Part 3. Clay Cup DIY (01–07)</span>
+          <span>→</span>
+        </button>
+        <button type="button" class="picker-option" data-zone="shanjuan" onclick="selectZone('shanjuan')">
+          <span data-en="🦋 Part 4. 11/4 Shanjuan Cave (01–08)" data-zh="🦋 Part 4. 11/4 善卷洞 (01–08)">🦋 Part 4. 11/4 Shanjuan Cave (01–08)</span>
+          <span>→</span>
+        </button>
+        <button type="button" class="picker-option" data-zone="bamboo" onclick="selectZone('bamboo')">
+          <span data-en="🎋 Part 5. 11/5 Bamboo Sea (01–11)" data-zh="🎋 Part 5. 11/5 宜兴竹海 (01–11)">🎋 Part 5. 11/5 Bamboo Sea (01–11)</span>
           <span>→</span>
         </button>
       </div>
@@ -429,8 +429,8 @@
     var ZONES = {
       gunan: {
         color: "#6e483b",
-        titleEn: "🏮 Part I: Gunan Street (01–09)",
-        titleZh: "🏮 第一部分：蜀山古南街 (01–09)",
+        titleEn: "🏮 Part 1. Gunan Street (01–09)",
+        titleZh: "🏮 Part 1. 蜀山古南街 (01–09)",
         stops: [
           { num: "01", en: "Intro", zh: "开场导览", file: "assets/audio/gunan_01_intro.mp3?v=p2" },
           { num: "02", en: "Square Kiln", zh: "小方窑", file: "assets/audio/gunan_02_xiaofang_kiln.mp3?v=p2" },
@@ -445,8 +445,8 @@
       },
       bamboo: {
         color: "#3b5749",
-        titleEn: "🎋 Part II: Bamboo Sea (01–11)",
-        titleZh: "🎋 第二部分：宜兴竹海 (01–11)",
+        titleEn: "🎋 Part 5. 11/5 Bamboo Sea (01–11)",
+        titleZh: "🎋 Part 5. 11/5 宜兴竹海 (01–11)",
         stops: [
           { num: "01", en: "Overview", zh: "开场总览", file: "assets/audio/zhuhai_01_intro.mp3?v=p2" },
           { num: "02", en: "Mirror Lake", zh: "镜湖水母", file: "assets/audio/zhuhai_02_mirror_lake.mp3?v=p2" },
@@ -463,8 +463,8 @@
       },
       shanjuan: {
         color: "#9b3528",
-        titleEn: "🦋 Part III: Shanjuan Cave (01–08)",
-        titleZh: "🦋 第三部分：善卷洞 (01–08)",
+        titleEn: "🦋 Part 4. 11/4 Shanjuan Cave (01–08)",
+        titleZh: "🦋 Part 4. 11/4 善卷洞 (01–08)",
         stops: [
           { num: "01", en: "Intro", zh: "开场总览", file: "assets/audio/shanjuan_01_intro.mp3?v=p3" },
           { num: "02", en: "Archway", zh: "善卷牌楼", file: "assets/audio/shanjuan_02_pailou.mp3?v=p3" },
@@ -478,8 +478,8 @@
       },
       museum: {
         color: "#b08d57",
-        titleEn: "🏺 Part IV: Ceramics Museum (01–13)",
-        titleZh: "🏺 第四部分：陶瓷博物馆 (01–13)",
+        titleEn: "🏛️ Part 2. 11/4 Ceramics Museum (01–13)",
+        titleZh: "🏛️ Part 2. 11/4 陶瓷博物馆 (01–13)",
         stops: [
           { num: "01", en: "Intro", zh: "开场导览", file: "assets/audio/museum_01_intro.mp3?v=p2" },
           { num: "02", en: "Hall 1: Ancient", zh: "古陶展厅", file: "assets/audio/museum_02_hall1_ancient.mp3?v=p2" },
@@ -498,8 +498,8 @@
       },
       cup: {
         color: "#7b4b3a",
-        titleEn: "🍵 Part V: Clay Cup DIY (01–07)",
-        titleZh: "🍵 第五部分：手工紫砂杯 (01–07)",
+        titleEn: "🍵 Part 3. Clay Cup DIY (01–07)",
+        titleZh: "🍵 Part 3. 手工紫砂杯 (01–07)",
         stops: [
           { num: "01", en: "Step 1: Intro", zh: "步骤1: 工具介绍", file: "assets/audio/cup_01_intro.mp3?v=p2" },
           { num: "02", en: "Step 2: Disc", zh: "步骤2: 切圆补孔", file: "assets/audio/cup_02_step1_round_disc.mp3?v=p2" },
