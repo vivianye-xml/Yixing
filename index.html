@@ -1553,28 +1553,22 @@
     window.selectScheduleDay = function(dayKey) {
       var d1 = document.getElementById("schedule-day1");
       var d2 = document.getElementById("schedule-day2");
-      var b1 = document.getElementById("btn-schedule-day1");
-      var b2 = document.getElementById("btn-schedule-day2");
+      var subEl = document.getElementById("schedule-day-subtitle");
       if (d1 && d2) {
         d1.style.display = (dayKey === "day1") ? "block" : "none";
         d2.style.display = (dayKey === "day2") ? "block" : "none";
       }
-      if (b1 && b2) {
-        if (dayKey === "day1") {
-          b1.style.background = "var(--celadon)";
-          b1.style.color = "#fff";
-          b1.style.borderColor = "var(--celadon)";
-          b2.style.background = "var(--silk-card)";
-          b2.style.color = "var(--ink-deep)";
-          b2.style.borderColor = "var(--hairline-strong)";
-        } else {
-          b2.style.background = "var(--zisha-clay)";
-          b2.style.color = "#fff";
-          b2.style.borderColor = "var(--zisha-clay)";
-          b1.style.background = "var(--silk-card)";
-          b1.style.color = "var(--ink-deep)";
-          b1.style.borderColor = "var(--hairline-strong)";
-        }
+      if (subEl) {
+        var isZh = (typeof currentLang !== "undefined" && currentLang === "zh");
+        var enTxt = (dayKey === "day1")
+          ? "Day 1 · 11/4 Watch Group · 07:30 – 17:30"
+          : "Day 2 · 11/5 Vision Group · 07:30 – 17:30";
+        var zhTxt = (dayKey === "day1")
+          ? "第一批 · 11/4 Watch 团队 · 07:30 – 17:30"
+          : "第二批 · 11/5 Vision 团队 · 07:30 – 17:30";
+        subEl.dataset.origEn = enTxt;
+        subEl.dataset.zhHtml = zhTxt;
+        subEl.textContent = isZh ? zhTxt : enTxt;
       }
     };
 
@@ -1651,7 +1645,8 @@
       ["<strong>Region</strong> West Shore of Lake Taihu", "<strong>地理区域</strong> 太湖西岸 · 苏浙皖三省交界"],
       ["<strong>Keepsake</strong> Hand-Built Zisha Vessel", "<strong>专属手作</strong> 个人定制紫砂杯（烧制后寄回）"],
       ["Outing Schedule & Itinerary", "活动日程安排"],
-      ["07:30 – 17:30 · Two-Day Weather-Adapted Schedule", "07:30 – 17:30 · 双日分批行程时间表"],
+      ["Day 1 · 11/4 Watch Group · 07:30 – 17:30", "第一批 · 11/4 Watch 团队 · 07:30 – 17:30"],
+      ["Day 2 · 11/5 Vision Group · 07:30 – 17:30", "第二批 · 11/5 Vision 团队 · 07:30 – 17:30"],
       ["🗓️ Day 1 · 11/4 Watch Group", "🗓️ 第一天 · 11/4 Watch 团队行程"],
       ["🗓️ Day 2 · 11/5 Vision Group", "🗓️ 第二天 · 11/5 Vision 团队行程"],
       ['🌤️ <strong>Weather Note:</strong> Please select the day your group is attending above. Due to weather conditions on November 4, the <strong>Day 1 (11/4 Watch Group)</strong> itinerary features the indoor galleries of the <strong>China Yixing Ceramics Museum</strong> and the constant-temperature subterranean caverns of <strong>Shanjuan Cave</strong>, while <strong>Day 2 (11/5 Vision Group)</strong> follows the outdoor <strong>Yixing Bamboo Sea</strong> route.',
@@ -2251,21 +2246,7 @@
       <!-- Curated Schedule -->
       <div class="section-header-row">
         <h2>Outing Schedule &amp; Itinerary</h2>
-        <span>07:30 – 17:30 · Two-Day Weather-Adapted Schedule</span>
-      </div>
-
-      <div style="margin-bottom: 20px; background: var(--silk-card); border: 1px solid var(--hairline-strong); padding: 18px 20px;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
-          <button type="button" id="btn-schedule-day1" class="btn-ink" style="padding: 13px 16px; background: var(--celadon); color: #fff; border: 1px solid var(--celadon); cursor: pointer;" onclick="selectScheduleDay('day1')">
-            🗓️ Day 1 · 11/4 Watch Group
-          </button>
-          <button type="button" id="btn-schedule-day2" class="btn-ink" style="padding: 13px 16px; background: var(--silk-card); color: var(--ink-deep); border: 1px solid var(--hairline-strong); cursor: pointer;" onclick="selectScheduleDay('day2')">
-            🗓️ Day 2 · 11/5 Vision Group
-          </button>
-        </div>
-        <p style="font-size: 0.86rem; color: var(--ink-medium); margin: 0;">
-          🌤️ <strong>Weather Note:</strong> Please select the day your group is attending above. Due to weather conditions on November 4, the <strong>Day 1 (11/4 Watch Group)</strong> itinerary features the indoor galleries of the <strong>China Yixing Ceramics Museum</strong> and the constant-temperature subterranean caverns of <strong>Shanjuan Cave</strong>, while <strong>Day 2 (11/5 Vision Group)</strong> follows the outdoor <strong>Yixing Bamboo Sea</strong> route.
-        </p>
+        <span id="schedule-day-subtitle">Day 1 · 11/4 Watch Group · 07:30 – 17:30</span>
       </div>
 
       <!-- DAY 1: 11/4 WATCH GROUP SCHEDULE -->
